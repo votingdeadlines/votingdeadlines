@@ -13,7 +13,7 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch",
-    "trim:vote.org": "npm run tsn -- bin/trimVote.org.ts dotenv_config_path=config.sh",
+    "trim:vote.org": "yarn tsn bin/trimVote.org.ts dotenv_config_path=config.sh",
     "tsn": "ts-node -r dotenv/config"
   },
   "engines": {
