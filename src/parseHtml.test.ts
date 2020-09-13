@@ -6,31 +6,34 @@ jest.mock('fs', () => ({
   writeFileSync: mockWriteFileSync,
 }))
 
-import { parseHtml, readAndParseHtml, readParseAndWriteHtml } from './parseHtml';
+import { parseHtml, readAndParseHtml, readParseAndWriteHtml } from './parseHtml'
 
 describe('parseHtml.ts', () => {
   describe('parseHtml', () => {
     it('works', () => {
-      const result = parseHtml("<html><body /></html>", "body")
+      const result = parseHtml('<html><body /></html>', 'body')
 
-      expect(result).toBe("<body></body>")
-    });
-  });
-  
+      expect(result).toBe('<body></body>')
+    })
+  })
+
   describe('readAndParseHtml', () => {
     it('works', () => {
-      const result = readAndParseHtml("/foo/index.html", "main")
+      const result = readAndParseHtml('/foo/index.html', 'main')
 
-      expect(result).toBe("<main>Hello world</main>")
-    });
-  });
+      expect(result).toBe('<main>Hello world</main>')
+    })
+  })
 
   describe('readParseAndWriteHtml', () => {
     it('works', () => {
-      readParseAndWriteHtml("/foo/index.html", "main", "/bar/output.html")
+      readParseAndWriteHtml('/foo/index.html', 'main', '/bar/output.html')
 
       expect(mockWriteFileSync).toHaveBeenCalledTimes(1)
-      expect(mockWriteFileSync).toHaveBeenCalledWith("/bar/output.html", "<main>Hello world</main>")
-    });
-  });
-});
+      expect(mockWriteFileSync).toHaveBeenCalledWith(
+        '/bar/output.html',
+        '<main>Hello world</main>'
+      )
+    })
+  })
+})

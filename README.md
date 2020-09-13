@@ -4,5 +4,5 @@ This project aims to scrape, verify, and re-publish information on voting deadli
 
 ## References
 
-* https://www.vote.org/voter-registration-deadlines/
-* https://projects.fivethirtyeight.com/how-to-vote-2020/
+- https://www.vote.org/voter-registration-deadlines/
+- https://projects.fivethirtyeight.com/how-to-vote-2020/

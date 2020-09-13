@@ -1,12 +1,12 @@
 import * as fs from 'fs'
 
-import { JSDOM } from "jsdom"
+import { JSDOM } from 'jsdom'
 
 // The main I/O function in this file is `readParseAndWriteHtml`, which takes
 // an input path and a desired selector, and writes it to an output file.
 
 export function parseHtml(html: string, selector: string): string {
-  const dom = new JSDOM(html);
+  const dom = new JSDOM(html)
   const parsedHtml = dom.window.document.querySelector(selector).outerHTML
   return parsedHtml
 }
@@ -18,7 +18,9 @@ export function readAndParseHtml(htmlPath: string, selector: string): string {
 }
 
 export function readParseAndWriteHtml(
-  inputPath: string, selector: string, outputPath: string
+  inputPath: string,
+  selector: string,
+  outputPath: string
 ): void {
   console.log(`Reading ${inputPath}.`)
   const parsedHtml = readAndParseHtml(inputPath, selector)
