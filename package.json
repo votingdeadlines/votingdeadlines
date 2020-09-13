@@ -9,7 +9,7 @@
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "eslint . --ext .ts,.tsx",
-    "format": "prettier . --write",
+    "format": "prettier bin src --write",
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch",
