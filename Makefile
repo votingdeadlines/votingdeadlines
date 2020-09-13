@@ -1,3 +1,5 @@
+default: test
+
 CWD := $(shell pwd)
 
 chmod:
@@ -6,3 +8,6 @@ chmod:
 
 curl:
 	bin/curl-vote.org.sh $(CWD)
+
+test:
+	npm run test
