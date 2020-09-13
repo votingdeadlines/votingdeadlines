@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "votingdeadlines",
+  "version": "0.0.0",
+  "description": "WIP: Parse, validate, and republish voting deadline info.",
+  "author": "zionillinois@users.noreply.github.com",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:watch": "jest --watch",
+    "trim:vote.org": "npm run tsn -- bin/trimVote.org.ts dotenv_config_path=config.sh",
+    "tsn": "ts-node -r dotenv/config"
+  },
+  "engines": {
+    "node": ">= 12.18"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^26.0.13",
+    "@types/jsdom": "^16.2.4",
+    "@types/node": "^14.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "jest": "^26.4.2",
+    "jsdom": "^16.4.0",
+    "prettier": "^2.1.1",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
