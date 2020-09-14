@@ -17,6 +17,8 @@ VOTE_ORG_GENERAL_FORMATTED_HTML_PATH="data-sources/vote.org/general-info.formatt
 VOTE_ORG_GENERAL_RAW_JSON_PATH="data-sources/vote.org/general-info.raw.json"
 # The raw JSON data after a first pass of cleanup and structuring.
 VOTE_ORG_GENERAL_CLEANED_JSON_PATH="data-sources/vote.org/general-info.cleaned.json"
+# The cleaned JSON data, with the language parse into more structured rules.
+VOTE_ORG_GENERAL_PARSED_JSON_PATH="data-sources/vote.org/general-info.parsed.json"
 
 # This URL is where vote.org lists COVID-related deadline changes.
 VOTE_ORG_COVID_URL="https://www.vote.org/covid-19/"

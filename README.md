@@ -12,8 +12,9 @@ The data from Vote.org is processed in several steps:
 2. **Trim** the raw HTML into just the relevant parts (`general-info.trimmed.html`)
 3. **Format** the trimmed HTML so it is human-readable (`general-info.formatted.html`)
 4. **Extract** the raw text from the HTML into a JSON file (`general-info.raw.json`)
-5. **Clean** the raw text into a more structured form (`general-info.cleaned.json`)
-6. **Normalize** the cleaned text into a standard form.
+5. **Clean** the text to remove HTML/whitespace artifacts (`general-info.cleaned.json`)
+6. **Parse** the language into a structured form.
+<!-- 7. **Normalize** the structure -->
 
 Each of these steps involves variables set in `config.sh`, functions in `src/`, and scripts in `bin/` that call the functions. For now you have to call each step one at a time, via the relevant `make` commands, e.g. `make extract`.
 

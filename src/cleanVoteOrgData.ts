@@ -8,14 +8,14 @@ import { readFile, writeFile } from './utilities'
 //-------//
 
 // An individual state's data.
-interface VoteOrgCleanedState {
+export interface VOCleanedState {
   InPerson: null | string
   ByMail: null | string
   Online: null | string
 }
 
-interface VoteOrgCleanedData {
-  [key: string]: VoteOrgCleanedState
+export interface VOCleanedData {
+  [key: string]: VOCleanedState
 }
 
 //---------//
@@ -23,7 +23,7 @@ interface VoteOrgCleanedData {
 //---------//
 
 // Cleans up an individual state's raw JSON data.
-export function cleanState(rawState: string): VoteOrgCleanedState {
+export function cleanState(rawState: string): VOCleanedState {
   // This is a bit fragile. We could also try the non-formatted HTML.
   const split = rawState.split('\n          \n          \n')
   const cleanedState = {
@@ -47,10 +47,10 @@ function cleanDeadline(deadlines: Array<string>, heading: string): string {
 export function cleanVoteOrgData(
   rawJson: string,
   entities = usaStates
-): VoteOrgCleanedData {
+): VOCleanedData {
   const rawData = JSON.parse(rawJson)
   const cleanedData = entities.reduce(
-    (memo: VoteOrgCleanedData, state: UsaEntity): VoteOrgCleanedData => {
+    (memo: VOCleanedData, state: UsaEntity): VOCleanedData => {
       const rawState = rawData[state.abbrev]
 
       if (!rawState) {
@@ -70,7 +70,7 @@ export function cleanVoteOrgData(
 export function readAndCleanVoteOrgData(
   jsonPath: string,
   entities = usaStates
-): VoteOrgCleanedData {
+): VOCleanedData {
   const json = readFile(jsonPath)
   return cleanVoteOrgData(json, entities)
 }

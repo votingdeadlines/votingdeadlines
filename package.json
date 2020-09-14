@@ -9,6 +9,7 @@
     "data:trim:vo": "yarn tsn bin/trimVoteOrgHtml.ts dotenv_config_path=config.sh",
     "data:extract:vo": "yarn tsn bin/extractVoteOrgData.ts dotenv_config_path=config.sh",
     "data:clean:vo": "yarn tsn bin/cleanVoteOrgData.bin.ts dotenv_config_path=config.sh",
+    "data:parse:vo": "yarn tsn bin/parseVoteOrgRules.bin.ts dotenv_config_path=config.sh",
     "format": "yarn prettier --write",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint . --ext .ts,.tsx",

@@ -30,6 +30,10 @@ clean: clean-json ## 5. Clean JSON data
 clean-json:
 	yarn data:clean:vo
 
+parse: parse-language ## 6. Parse the language
+parse-language:
+	yarn data:parse:vo
+
 # normalize:
 
 #-------#
