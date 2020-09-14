@@ -1,14 +1,23 @@
-import * as fs from 'fs'
-
 import { JSDOM } from 'jsdom'
+
+import { readFile, writeFile } from './utilities'
 
 // The main I/O function in this file is `readParseAndWriteHtml`, which takes
 // an input path and a desired selector, and writes it to an output file.
 
-export function parseHtml(html: string, selector: string): string {
+export function parseHtml(
+  html: string,
+  selector: string,
+  attribute = 'outerHTML'
+): string {
   const dom = new JSDOM(html)
-  const parsedHtml = dom.window.document.querySelector(selector).outerHTML
-  return parsedHtml
+  const parsedHtml = dom.window.document.querySelector(selector)
+
+  if (!parsedHtml) {
+    throw new Error(`Could not find HTML for selector ${selector}.`)
+  }
+
+  return attribute ? parsedHtml[attribute] : parsedHtml
 }
 
 export function readAndParseHtml(htmlPath: string, selector: string): string {
@@ -26,16 +35,4 @@ export function readParseAndWriteHtml(
   const parsedHtml = readAndParseHtml(inputPath, selector)
   console.log(`Writing ${outputPath}.`)
   writeFile(outputPath, parsedHtml)
-}
-
-//---------//
-// Helpers //
-//---------//
-
-function readFile(path: string): string {
-  return fs.readFileSync(path, { encoding: 'utf8' })
-}
-
-function writeFile(path: string, contents: string): void {
-  fs.writeFileSync(path, contents)
 }

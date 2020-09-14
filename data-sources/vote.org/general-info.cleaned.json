@@ -1,0 +1,252 @@
+{
+  "AL": {
+    "InPerson": "15 days before Election Day.",
+    "ByMail": "Postmarked 15 days before Election Day.",
+    "Online": "15 days before Election Day."
+  },
+  "AK": {
+    "InPerson": "30 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day. If this falls on a Sunday, postmarked 31 days before Election Day.",
+    "Online": "30 days before Election Day."
+  },
+  "AZ": {
+    "InPerson": "29 days before Election Day, or on the next immediate business day if the deadline falls on a legal holiday or weekend.",
+    "ByMail": "Postmarked 29 days before Election Day, or on the next immediate business day if the deadline falls on a legal holiday or weekend.",
+    "Online": "29 days before Election Day."
+  },
+  "AR": {
+    "InPerson": "30 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day. If this falls on a Sunday, postmarked 29 days before Election Day.",
+    "Online": "N/A"
+  },
+  "CA": {
+    "InPerson": "15 days before Election Day.",
+    "ByMail": "Postmarked 15 days before Election Day.",
+    "Online": "15 days before Election Day."
+  },
+  "CO": {
+    "InPerson": "Election Day.",
+    "ByMail": "Received 8 days before Election Day.",
+    "Online": "8 days before Election Day."
+  },
+  "CT": {
+    "InPerson": "7 days before Election Day.",
+    "ByMail": "Postmarked 7 days before Election Day.",
+    "Online": "7 days before Election Day."
+  },
+  "DE": {
+    "InPerson": "24 days before Election Day.",
+    "ByMail": "Postmarked 24 days before Election Day.",
+    "Online": "The fourth Saturday before Election Day."
+  },
+  "FL": {
+    "InPerson": "29 days before Election Day.",
+    "ByMail": "Postmarked 29 days before Election Day.",
+    "Online": "29 days before Election Day."
+  },
+  "GA": {
+    "InPerson": "29 days before Election Day.",
+    "ByMail": "Postmarked 29 days before Election Day.",
+    "Online": "The fifth Monday before Election Day."
+  },
+  "HI": {
+    "InPerson": "30 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day.",
+    "Online": "30 days before Election Day."
+  },
+  "ID": {
+    "InPerson": "24 days before Election Day. If you miss this deadline, you may also register on Election Day. (You must show proof of residence to register at the polls on Election Day.)",
+    "ByMail": "Postmarked 25 days before Election Day.",
+    "Online": "25 days before Election Day."
+  },
+  "IL": {
+    "InPerson": "27 days before Election Day, after which you may register during the early voting period through Election Day.",
+    "ByMail": "Postmarked 28 days before Election Day.",
+    "Online": "16 days before Election Day."
+  },
+  "IN": {
+    "InPerson": "29 days before Election Day.",
+    "ByMail": "Postmarked 29 days before Election Day.",
+    "Online": "29 days before Election Day."
+  },
+  "IA": {
+    "InPerson": "10 days before Election Day. If you miss the deadline, you can also register to vote in-person during early vote or on Election Day.",
+    "ByMail": "Postmarked 15 days before Election Day or received 10 days before Election Day.",
+    "Online": "10 days before Election Day."
+  },
+  "KS": {
+    "InPerson": "21 days before Election Day.",
+    "ByMail": "Postmarked 21 days before Election Day.",
+    "Online": "21 days before Election Day."
+  },
+  "KY": {
+    "InPerson": "29 days before Election Day.",
+    "ByMail": "Postmarked 29 days before Election Day.",
+    "Online": "29 days before Election Day."
+  },
+  "LA": {
+    "InPerson": "30 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day.",
+    "Online": "20 days before Election Day."
+  },
+  "ME": {
+    "InPerson": "Election Day.",
+    "ByMail": "Received 15 business days before Election Day.",
+    "Online": "N/A"
+  },
+  "MD": {
+    "InPerson": "21 days before Election Day. You may also register during early voting or on Election Day with proof of address. See Election Day registration instructions.",
+    "ByMail": "Postmarked 21 days before Election Day.",
+    "Online": "21 days before Election Day."
+  },
+  "MA": {
+    "InPerson": "20 days before Election Day.",
+    "ByMail": "Postmarked 20 days before Election Day.",
+    "Online": "20 days before Election Day."
+  },
+  "MI": {
+    "InPerson": "Election Day at your city or township clerk office. The voter registration deadline is 15 days before Election Day, if you submit an application form through a voter registration drive or deliver it to a county clerk or secretary of state office.",
+    "ByMail": "Postmarked 15 days before Election Day.",
+    "Online": "15 days before Election Day."
+  },
+  "MN": {
+    "InPerson": "Election Day.",
+    "ByMail": "Received 21 days before Election Day.",
+    "Online": "21 days before Election Day."
+  },
+  "MS": {
+    "InPerson": "30 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day.",
+    "Online": "N/A"
+  },
+  "MO": {
+    "InPerson": "27 days before Election Day.",
+    "ByMail": "Postmarked 27 days before Election Day.",
+    "Online": "27 days before Election Day."
+  },
+  "MT": {
+    "InPerson": "Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day. Received 27 days before Election Day.",
+    "Online": "N/A"
+  },
+  "NE": {
+    "InPerson": "11 days before Election Day.",
+    "ByMail": "Postmarked 18 days before Election Day. Received 14 days before Election Day, if there's an illegible postmark.",
+    "Online": "18 days before Election Day"
+  },
+  "NV": {
+    "InPerson": "Election Day.",
+    "ByMail": "Postmarked 28 days before Election Day.",
+    "Online": "5 days before Election Day"
+  },
+  "NH": {
+    "InPerson": "Election Day. Before Election Day, the last day to register is the last meeting of the Supervisors of the Checklist. The supervisors meet once, 6-13 days before Election Day. Check your town/city website, or call your clerk's office for the date, time, and location of the Supervisor's meeting.",
+    "ByMail": "Received between 6 and 13 days before Election Day, depending on which town you live in.",
+    "Online": "N/A"
+  },
+  "NJ": {
+    "InPerson": "21 days before Election Day.",
+    "ByMail": "Postmarked 21 days before Election Day.",
+    "Online": "N/A"
+  },
+  "NM": {
+    "InPerson": "Saturday before Election Day at the county clerk's office. 28 days before Election Day otherwise.",
+    "ByMail": "Postmarked 28 days before Election Day. However, an application may be accepted through the Friday following the deadline if the application is postmarked before the deadline.",
+    "Online": "28 days before Election Day"
+  },
+  "NY": {
+    "InPerson": "25 days before Election Day.",
+    "ByMail": "Postmarked 25 days before Election Day. Received 20 days before Election Day.",
+    "Online": "25 days before Election Day"
+  },
+  "NC": {
+    "InPerson": "The Saturday before Election Day if voting early in person. Otherwise 25 days before Election Day.",
+    "ByMail": "Postmarked 25 days before Election Day. If the postmark is missing or unclear, the application will still be processed if it is Received 20 days before Election Day.",
+    "Online": "25 days before Election Day"
+  },
+  "ND": {
+    "InPerson": "North Dakota does not have voter registration. You simply need to bring valid proof of ID and residency to the polls in order to vote.",
+    "ByMail": "North Dakota does not have voter registration. You simply need to bring valid proof of ID and residency to the polls in order to vote.",
+    "Online": "N/A"
+  },
+  "OH": {
+    "InPerson": "30 days before Election Day, extended to the next business day if this falls on a Sunday.",
+    "ByMail": "Postmarked 30 days before Election Day, extended to the next business day if this falls on a Sunday.",
+    "Online": "30 days before Election Day"
+  },
+  "OK": {
+    "InPerson": "25 days before Election Day.",
+    "ByMail": "Postmarked 25 days before Election Day.",
+    "Online": "N/A"
+  },
+  "OR": {
+    "InPerson": "21 days before Election Day.",
+    "ByMail": "Received 21 days before Election Day.",
+    "Online": "21 days before Election Day"
+  },
+  "PA": {
+    "InPerson": "15 days before Election Day.",
+    "ByMail": "Received 15 days before Election Day.",
+    "Online": "15 days before Election Day"
+  },
+  "RI": {
+    "InPerson": "30 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day. If the postmark is missing or unclear and the registration form is received no later than 5 days after the deadline, the individual shall be presumed to have been registered by the deadline.",
+    "Online": "30 days before Election Day"
+  },
+  "SC": {
+    "InPerson": "30 days before Election Day. If this falls on a Sunday, the last preceding day that the county board of voter registration and elections is open.",
+    "ByMail": "Postmarked 30 days before Election Day, the deadline is extended to the next business day if this falls on a Sunday.",
+    "Online": "30 days before Election Day"
+  },
+  "SD": {
+    "InPerson": "15 days before Election Day.",
+    "ByMail": "Received 15 days before Election Day.",
+    "Online": "N/A"
+  },
+  "TN": {
+    "InPerson": "30 days before Election Day. If this falls on a Sunday, 29 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day, the deadline is extended to the next business day if this falls on a Sunday.",
+    "Online": "30 days before Election Day"
+  },
+  "TX": {
+    "InPerson": "30 days before Election Day. If this falls on a Sunday, 29 days before Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day, the deadline is extended to the next business day if this falls on a Sunday.",
+    "Online": "N/A"
+  },
+  "UT": {
+    "InPerson": "7 days before Election Day in clerk's office, but may also register during early vote and on Election Day.However, individuals must vote by provisional ballot if they: (i) register online or in person between 7 and 14 days before Election Day, (ii) register during early voting, or (iii) register on Election Day.",
+    "ByMail": "Postmarked 30 days before Election Day, the deadline is extended to the next business day if this falls on a Sunday.",
+    "Online": "7 days before Election Day"
+  },
+  "VT": {
+    "InPerson": "Election Day (you must show proof of residence to register at the polls on Election Day).",
+    "ByMail": "Received Election Day.",
+    "Online": "Election Day. But if you register online the day before or on Election Day, your application may not be processed and your name may not appear on the checklist and you may be asked to fill out another application at the polls. To be sure your name appears on the checklist, please register by the Friday before the election."
+  },
+  "VA": {
+    "InPerson": "22 days before Election Day. If this day falls on a Sunday, 21 days before Election Day.",
+    "ByMail": "Postmarked 22 days before Election Day, the deadline is extended to the next business day if this falls on a Sunday.",
+    "Online": "22 days before Election Day"
+  },
+  "WA": {
+    "InPerson": "Election Day.",
+    "ByMail": "Received 8 days before Election Day.",
+    "Online": "8 days before Election Day"
+  },
+  "WV": {
+    "InPerson": "21 days before Election Day.",
+    "ByMail": "Postmarked 21 days before Election Day.",
+    "Online": "21 days before Election Day"
+  },
+  "WI": {
+    "InPerson": "The Friday before Election Day.",
+    "ByMail": "Postmarked the 3rd Wednesday before Election Day.",
+    "Online": "20 days before Election Day"
+  },
+  "WY": {
+    "InPerson": "14 days before Election Day.",
+    "ByMail": "Postmarked 14 days before Election Day. After this date, individuals may register to vote by mail if their registration is also accompanied by an absentee ballot request.",
+    "Online": "N/A"
+  }
+}

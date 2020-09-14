@@ -1,15 +1,22 @@
 #!/bin/bash
 
-# This file contains variables (URLs, etc.) that are used in various places.
+# This file contains variables (URLs, paths) that are used in various places.
+# Paths are relative to project root, and generally are made absolute later.
 
 # This URL is where vote.org lists standard deadline info.
 VOTE_ORG_GENERAL_URL="https://www.vote.org/voter-registration-deadlines/"
-# This is where we save it locally for further processing (about 190 KB)
+# Where we save it locally for further processing (about 190 KB).
 VOTE_ORG_GENERAL_RAW_HTML_PATH="data-sources/vote.org/general-info.raw.html"
-# This is the main HTML element that contains the data table we care about.
+# The main HTML element that contains the data table we care about.
 VOTE_ORG_GENERAL_TABLE_SELECTOR="table.states-chart"
-# This is the HTML extracted from the file using the above selector.
+# The HTML extracted from the file using the above selector (about 40 KB).
 VOTE_ORG_GENERAL_TRIMMED_HTML_PATH="data-sources/vote.org/general-info.trimmed.html"
+# A pretty-printed version of the trimmed HTML.
+VOTE_ORG_GENERAL_FORMATTED_HTML_PATH="data-sources/vote.org/general-info.formatted.html"
+# The raw text data extracted from the HTML.
+VOTE_ORG_GENERAL_RAW_JSON_PATH="data-sources/vote.org/general-info.raw.json"
+# The raw JSON data after a first pass of cleanup and structuring.
+VOTE_ORG_GENERAL_CLEANED_JSON_PATH="data-sources/vote.org/general-info.cleaned.json"
 
 # This URL is where vote.org lists COVID-related deadline changes.
 VOTE_ORG_COVID_URL="https://www.vote.org/covid-19/"

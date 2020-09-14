@@ -17,5 +17,5 @@
     "sourceMap": true,
     "strictNullChecks": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "bin/**/*", ]
 }
