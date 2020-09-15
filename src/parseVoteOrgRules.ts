@@ -17,9 +17,7 @@ type VORulesetsMap = {
 }
 
 // An individual state's rules data.
-type VOEntityRuleset =
-  VOEntitySimpleRuleset |
-  VOEntityFreeformRuleset
+type VOEntityRuleset = VOEntitySimpleRuleset | VOEntityFreeformRuleset
 
 // A "simple" uniony case. Possibly better than the "simplest" approach.
 type VOEntitySimpleRuleset = {
@@ -84,23 +82,22 @@ type OnlineNotAvailable = {
 // Regexes
 const daysBeforeElectionRx = /^(\d{1,3}) days before Election Day\.?$/
 const onElectionDayRx = /^Election Day\.?$/
-const postmarkedDaysBeforeElectionRx =
-  /^Postmarked (\d{1,3}) days before Election Day\.?$/
-const receivedDaysBeforeElectionRx =
-  /^Received (\d{1,3}) days before Election Day\.?$/
+const postmarkedDaysBeforeElectionRx = /^Postmarked (\d{1,3}) days before Election Day\.?$/
+const receivedDaysBeforeElectionRx = /^Received (\d{1,3}) days before Election Day\.?$/
 const naRx = /^N\/A\.?$/
 
 // Parse the JSON data for an individual state.
 function parseVOStateRules(cleanedState: VOCleanedState): VOEntityRuleset {
   const ruleset =
-    _parseSimpleRuleset(cleanedState) ||
-    _parseFreeformRuleset(cleanedState)
+    _parseSimpleRuleset(cleanedState) || _parseFreeformRuleset(cleanedState)
 
   return ruleset
 }
 
 // Parse states with simpler guidelines with the "simple" union type above.
-function _parseSimpleRuleset(cleanedState: VOCleanedState): VOEntitySimpleRuleset | false {
+function _parseSimpleRuleset(
+  cleanedState: VOCleanedState
+): VOEntitySimpleRuleset | false {
   const { InPerson, ByMail, Online } = cleanedState
 
   const _ruleset = { Online: null, ByMail: null, InPerson: null }
@@ -112,7 +109,7 @@ function _parseSimpleRuleset(cleanedState: VOCleanedState): VOEntitySimpleRulese
   if (olMatch) {
     _ruleset.Online = {
       kind: 'OnlineDaysBeforeElection',
-      daysBefore: Number(olMatch[1])
+      daysBefore: Number(olMatch[1]),
     }
   }
 
@@ -132,7 +129,7 @@ function _parseSimpleRuleset(cleanedState: VOCleanedState): VOEntitySimpleRulese
   if (bmPostmarkedMatch) {
     _ruleset.ByMail = {
       kind: 'PostmarkedDaysBeforeElection',
-      daysBefore: Number(bmPostmarkedMatch[1])
+      daysBefore: Number(bmPostmarkedMatch[1]),
     }
   }
 
@@ -140,7 +137,7 @@ function _parseSimpleRuleset(cleanedState: VOCleanedState): VOEntitySimpleRulese
   if (bmReceivedMatch) {
     _ruleset.ByMail = {
       kind: 'ReceivedDaysBeforeElection',
-      daysBefore: Number(bmReceivedMatch[1])
+      daysBefore: Number(bmReceivedMatch[1]),
     }
   }
 
@@ -155,7 +152,7 @@ function _parseSimpleRuleset(cleanedState: VOCleanedState): VOEntitySimpleRulese
   if (ipDaysBeforeMatch) {
     _ruleset.InPerson = {
       kind: 'InPersonDaysBeforeElection',
-      daysBefore: Number(ipDaysBeforeMatch[1])
+      daysBefore: Number(ipDaysBeforeMatch[1]),
     }
   }
 
@@ -190,7 +187,9 @@ function _parseSimpleRuleset(cleanedState: VOCleanedState): VOEntitySimpleRulese
 }
 
 // Fallback for states whose rulesets are more complicated or not yet supported.
-function _parseFreeformRuleset(cleanedState: VOCleanedState): VOEntityFreeformRuleset {
+function _parseFreeformRuleset(
+  cleanedState: VOCleanedState
+): VOEntityFreeformRuleset {
   const dummyRuleset: VOEntityFreeformRuleset = {
     kind: 'freeform',
     InPerson: cleanedState.InPerson,
@@ -229,10 +228,10 @@ function _sortVORules(rulesetMap: VORulesetsMap): VORulesetsMap {
 
   // First add non-freeform rules, then freeform rules
   const rulesetEntries = Object.entries(rulesetMap)
-  const freeform = rulesetEntries.filter(e => e[1].kind === 'freeform')
-  const nonFreeform = rulesetEntries.filter(e => e[1].kind !== 'freeform')
-  nonFreeform.forEach(e => sortedRules[e[0]] = e[1])
-  freeform.forEach(e => sortedRules[e[0]] = e[1])
+  const freeform = rulesetEntries.filter((e) => e[1].kind === 'freeform')
+  const nonFreeform = rulesetEntries.filter((e) => e[1].kind !== 'freeform')
+  nonFreeform.forEach((e) => (sortedRules[e[0]] = e[1]))
+  freeform.forEach((e) => (sortedRules[e[0]] = e[1]))
 
   return sortedRules
 }
@@ -252,4 +251,3 @@ export function readParseAndWriteVORules(
   const parsedJson = JSON.stringify(parsedData, null, 2)
   writeFile(outputPath, parsedJson)
 }
-

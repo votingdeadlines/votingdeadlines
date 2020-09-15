@@ -1,0 +1,811 @@
+{
+  "AL": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+      "es": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote",
+      "es": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 19, 2020",
+    "olDeadline": "Monday, October 19, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 19, 2020"
+    }
+  },
+  "AK": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://voterregistration.alaska.gov/",
+      "es": "https://voterregistration.alaska.gov/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.elections.alaska.gov/Core/voterregistration.php",
+      "es": "https://www.elections.alaska.gov/Core/spanishinformation.php"
+    },
+    "ipDeadline": "Sunday, October 4, 2020",
+    "olDeadline": "Sunday, October 4, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Sunday, October 4, 2020"
+    }
+  },
+  "AZ": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://servicearizona.com/VoterRegistration/selectLanguage",
+      "es": "https://servicearizona.com/VoterRegistration/selectLanguage"
+    },
+    "moreInfoLinks": {
+      "en": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information",
+      "es": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information-sp"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 5, 2020"
+    }
+  },
+  "AR": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://www.sos.arkansas.gov/elections/voter-information/",
+      "es": "https://www.sos.arkansas.gov/elections/voter-information/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Sunday, October 4, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Sunday, October 4, 2020"
+    }
+  },
+  "CA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://registertovote.ca.gov/",
+      "es": "https://registertovote.ca.gov/es-mx"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.ca.gov/elections/voting-resources/voting-california/registering-vote/",
+      "es": "https://www.sos.ca.gov/elections/voting-resources/voting-california/spanish/registering-vote/"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Monday, October 19, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 19, 2020"
+    }
+  },
+  "CO": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml",
+      "es": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html",
+      "es": "https://www.sos.state.co.us/pubs/spanish/spanishHome.html"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Monday, October 26, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 26, 2020"
+    }
+  },
+  "CT": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://voterregistration.ct.gov/OLVR/welcome.do",
+      "es": "https://voterregistration.ct.gov/OLVR/welcome.do"
+    },
+    "moreInfoLinks": {
+      "en": "https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Voter-Fact-Sheet",
+      "es": "https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Voter-Fact-Sheet",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Tuesday, October 27, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 27, 2020"
+    }
+  },
+  "DE": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://ivote.de.gov/VoterView/",
+      "es": "https://ivote.de.gov/voterview/?culture=es-MX"
+    },
+    "moreInfoLinks": {
+      "en": "https://elections.delaware.gov/voter/votereg.shtml",
+      "es": "https://elections.delaware.gov/voter/votereg.shtml",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Saturday, October 10, 2020",
+    "olDeadline": "Saturday, October 10, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Saturday, October 10, 2020"
+    }
+  },
+  "FL": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://registertovoteflorida.gov/eligibilityreactive",
+      "es": "https://registertovoteflorida.gov/home"
+    },
+    "moreInfoLinks": {
+      "en": "https://registertovoteflorida.gov/home",
+      "es": "https://registertovoteflorida.gov/home"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 5, 2020"
+    }
+  },
+  "GA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
+      "es": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.ga.gov/index.php/Elections/register_to_vote",
+      "es": "https://sos.ga.gov/index.php/Elections/register_to_vote",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 5, 2020"
+    }
+  },
+  "HI": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://olvr.hawaii.gov/",
+      "es": "https://olvr.hawaii.gov/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://elections.hawaii.gov/voters/registration/",
+      "es": "https://elections.hawaii.gov/voters/registration/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 5, 2020"
+    }
+  },
+  "ID": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://apps.idahovotes.gov/OnlineVoterRegistration",
+      "es": "https://apps.idahovotes.gov/OnlineVoterRegistration",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://idahovotes.gov/voting/",
+      "es": "https://idahovotes.gov/voting/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Friday, October 9, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Friday, October 9, 2020"
+    }
+  },
+  "IL": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://ova.elections.il.gov/",
+      "es": "https://spanish-ova.elections.il.gov/"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.elections.il.gov/Default.aspx",
+      "es": "https://www.elections.il.gov/Default.aspx",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Sunday, October 18, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Tuesday, October 6, 2020"
+    }
+  },
+  "IN": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://indianavoters.in.gov/",
+      "es": "https://indianavoters.in.gov/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.in.gov/sos/elections/2403.htm",
+      "es": "https://www.in.gov/sos/elections/2403.htm",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 5, 2020"
+    }
+  },
+  "IA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
+      "es": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.iowa.gov/elections/voterinformation/voterregistration.html",
+      "es": "https://sos.iowa.gov/elections/voterinformation/voterregistration.html",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Saturday, October 24, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Saturday, October 24, 2020"
+    }
+  },
+  "KS": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
+      "es": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.ks.gov/elections/voter-information.html",
+      "es": "https://sos.ks.gov/elections/voter-information.html",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, October 13, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "KY": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://vrsws.sos.ky.gov/ovrweb/",
+      "es": "https://vrsws.sos.ky.gov/ovrweb/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://elect.ky.gov/Resources/Pages/Registration.aspx",
+      "es": "https://elect.ky.gov/Resources/Pages/Registration.aspx",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 5, 2020"
+    }
+  },
+  "LA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://voterportal.sos.la.gov/VoterRegistration",
+      "es": "https://voterportal.sos.la.gov/VoterRegistration",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
+      "es": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Sunday, October 4, 2020",
+    "olDeadline": "Wednesday, October 14, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Sunday, October 4, 2020"
+    }
+  },
+  "ME": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html",
+      "es": "https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "MD": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",
+      "es": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.elections.maryland.gov/voter_registration/application.html",
+      "es": "https://www.elections.maryland.gov/voter_registration/application.html",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "MA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.sec.state.ma.us/ovr/",
+      "es": "https://www.sec.state.ma.us/ovr/"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sec.state.ma.us/ele/eleifv/howreg.htm",
+      "es": "https://www.sec.state.ma.us/ele/eleifv/howreg.htm",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Saturday, October 24, 2020",
+    "olDeadline": "Saturday, October 24, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Saturday, October 24, 2020"
+    }
+  },
+  "MI": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://mvic.sos.state.mi.us/registervoter",
+      "es": "https://mvic.sos.state.mi.us/registervoter",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://mvic.sos.state.mi.us/",
+      "es": "https://mvic.sos.state.mi.us/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Monday, October 19, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 19, 2020"
+    }
+  },
+  "MN": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
+      "es": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.state.mn.us/elections-voting/register-to-vote/",
+      "es": "https://www.sos.state.mn.us/elections-voting/spanish"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "MS": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://www.sos.ms.gov/Vote/Pages/default.aspx",
+      "es": "https://www.sos.ms.gov/Vote/Pages/default.aspx",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 5, 2020"
+    }
+  },
+  "MO": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://s1.sos.mo.gov/elections/voterregistration/",
+      "es": "https://s1.sos.mo.gov/elections/voterregistration/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.mo.gov/elections/goVoteMissouri/register",
+      "es": "https://www.sos.mo.gov/elections/goVoteMissouri/register",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Wednesday, October 7, 2020",
+    "olDeadline": "Wednesday, October 7, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Wednesday, October 7, 2020"
+    }
+  },
+  "MT": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://sosmt.gov/elections/vote/",
+      "es": "https://sosmt.gov/elections/vote/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 26, 2020"
+    }
+  },
+  "NE": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.nebraska.gov/apps-sos-voter-registration/",
+      "es": "https://www.nebraska.gov/apps-sos-voter-registration/"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.nebraska.gov/elections/voter-forms",
+      "es": "https://sos.nebraska.gov/elections/voter-forms"
+    },
+    "ipDeadline": "Friday, October 23, 2020",
+    "olDeadline": "Friday, October 16, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Friday, October 16, 2020"
+    }
+  },
+  "NV": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.nvsos.gov/SOSVoterServices/start.aspx",
+      "es": "https://www.nvsos.gov/SOSVoterServices/start.aspx"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.nvsos.gov/sos/elections/voters/registering-to-vote",
+      "es": "https://www.nvsos.gov/sos/elections/voters/registering-to-vote",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, October 6, 2020",
+    "olDeadline": "Thursday, October 29, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 6, 2020"
+    }
+  },
+  "NH": {
+    "registrationType": "in-person",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://sos.nh.gov/elections/voters/register-to-vote/",
+      "es": "https://sos.nh.gov/elections/voters/register-to-vote/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "bmDeadlines": {}
+  },
+  "NJ": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://nj.gov/state/elections/voter-registration.shtml",
+      "es": "https://nj.gov/state/elections/voter-registration.shtml",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "NM": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",
+      "es": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.state.nm.us/voting-and-elections/voter-information/voter-registration-information/",
+      "es": "https://www.sos.state.nm.us/voting-and-elections/voter-information/voter-registration-information/"
+    },
+    "ipDeadline": "Saturday, October 31, 2020",
+    "olDeadline": "Tuesday, October 6, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 6, 2020"
+    }
+  },
+  "NY": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
+      "es": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.elections.ny.gov/votingregister.html",
+      "es": "https://www.elections.ny.gov/votingregister.html",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Friday, October 9, 2020",
+    "olDeadline": "Friday, October 9, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Friday, October 9, 2020"
+    }
+  },
+  "NC": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+      "es": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.ncsbe.gov/registering/how-register",
+      "es": "https://www.ncsbe.gov/registering/how-register",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Saturday, October 31, 2020",
+    "olDeadline": "Friday, October 9, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Friday, October 9, 2020"
+    }
+  },
+  "ND": {
+    "registrationType": "not-needed",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://vip.sos.nd.gov/PortalList.aspx",
+      "es": "https://vip.sos.nd.gov/PortalList.aspx",
+      "englishOnly": "true"
+    },
+    "bmDeadlines": {}
+  },
+  "OH": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://olvr.ohiosos.gov/",
+      "es": "https://olvr.ohiosos.gov/"
+    },
+    "moreInfoLinks": {
+      "en": "https://ohio.gov/wps/portal/gov/site/government/resources/register-to-vote-or-update-your-registration",
+      "es": "https://ohio.gov/wps/portal/gov/site/government/resources/register-to-vote-or-update-your-registration",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 5, 2020"
+    }
+  },
+  "OK": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html",
+      "es": "https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Friday, October 9, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Friday, October 9, 2020"
+    }
+  },
+  "OR": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://secure.sos.state.or.us/orestar/vr/register.do",
+      "es": "https://secure.sos.state.or.us/orestar/vr/register.do"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.oregon.gov/voting/Pages/registration.aspx",
+      "es": "https://sos.oregon.gov/voting/Pages/registration.aspx"
+    },
+    "ipDeadline": "Tuesday, October 13, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "PA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
+      "es": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.pa.gov/guides/voting-and-elections/#RegisteringtoVote",
+      "es": "https://www.pa.gov/guides/voting-and-elections/#RegisteringtoVote",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 19, 2020",
+    "olDeadline": "Monday, October 19, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 19, 2020"
+    }
+  },
+  "RI": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://vote.sos.ri.gov/Home/RegistertoVote",
+      "es": "https://vote.sos.ri.gov/Home/RegistertoVote"
+    },
+    "moreInfoLinks": {
+      "en": "https://vote.sos.ri.gov/Voter/RegisterToVote",
+      "es": "https://vote.sos.ri.gov/VoterSpanish/RegisterToVote"
+    },
+    "ipDeadline": "Sunday, October 4, 2020",
+    "olDeadline": "Sunday, October 4, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Sunday, October 4, 2020"
+    }
+  },
+  "SC": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
+      "es": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.scvotes.gov/south-carolina-voter-registration-information",
+      "es": "https://www.scvotes.gov/south-carolina-voter-registration-information",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Sunday, October 4, 2020",
+    "olDeadline": "Sunday, October 4, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Sunday, October 4, 2020"
+    }
+  },
+  "SD": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
+      "es": "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Monday, October 19, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 19, 2020"
+    }
+  },
+  "TN": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://ovr.govote.tn.gov/",
+      "es": "https://ovr.govote.tn.gov/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.tn.gov/products/elections/register-vote",
+      "es": "https://sos.tn.gov/products/elections/register-vote",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Sunday, October 4, 2020",
+    "olDeadline": "Sunday, October 4, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Sunday, October 4, 2020"
+    }
+  },
+  "TX": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://www.votetexas.gov/register-to-vote/index.html",
+      "es": "https://www.votetexas.gov/es/registrese-para-votar/index.html"
+    },
+    "ipDeadline": "Monday, October 5, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Monday, October 5, 2020"
+    }
+  },
+  "UT": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://secure.utah.gov/voterreg/index.html",
+      "es": "https://secure.utah.gov/voterreg/index.html",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://voteinfo.utah.gov/",
+      "es": "https://voteinfo.utah.gov/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Friday, October 23, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Friday, October 23, 2020"
+    }
+  },
+  "VT": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://olvr.vermont.gov/",
+      "es": "https://olvr.vermont.gov/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://sos.vermont.gov/elections/voters/registration/",
+      "es": "https://sos.vermont.gov/elections/voters/registration/",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Friday, October 30, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Friday, October 30, 2020"
+    }
+  },
+  "VA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://www.elections.virginia.gov/citizen-portal/",
+      "es": "https://www.elections.virginia.gov/citizen-portal/",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.elections.virginia.gov/registration/how-to-register/",
+      "es": "https://www.elections.virginia.gov/es/registro/"
+    },
+    "ipDeadline": "Tuesday, October 13, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "WA": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://voter.votewa.gov/WhereToVote.aspx",
+      "es": "https://voter.votewa.gov/WhereToVote.aspx"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.sos.wa.gov/elections/voters/",
+      "es": "https://www.sos.wa.gov/elections/voters/"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Monday, October 26, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 26, 2020"
+    }
+  },
+  "WV": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://ovr.sos.wv.gov/Register/Landing",
+      "es": "https://ovr.sos.wv.gov/Register/Landing",
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://ovr.sos.wv.gov/Register/Landing",
+      "es": "https://ovr.sos.wv.gov/Register/Landing",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, October 13, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Tuesday, October 13, 2020"
+    }
+  },
+  "WI": {
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://myvote.wi.gov/en-us/RegisterToVote",
+      "es": "https://myvote.wi.gov/es-es/RegisterToVote"
+    },
+    "moreInfoLinks": {
+      "en": "https://elections.wi.gov/voters/first-time",
+      "es": "https://elections.wi.gov/voters/first-time",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "olDeadline": "Wednesday, October 14, 2020",
+    "bmDeadlines": {
+      "postmarkedBy": "Wednesday, October 14, 2020"
+    }
+  },
+  "WY": {
+    "registrationType": "by-mail",
+    "registrationLinks": {},
+    "moreInfoLinks": {
+      "en": "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx",
+      "es": "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Monday, October 19, 2020"
+    }
+  }
+}

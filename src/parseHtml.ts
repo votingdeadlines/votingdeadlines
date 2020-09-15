@@ -20,6 +20,21 @@ export function parseHtml(
   return attribute ? parsedHtml[attribute] : parsedHtml
 }
 
+export function parseHtmlV2(
+  html: string,
+  selector: string
+  // options: parseHtmlV2Options = {}
+): Array<Node> {
+  const dom = new JSDOM(html)
+  const nodes = dom.window.document.querySelectorAll(selector)
+
+  if (!nodes) {
+    throw new Error(`Could not find nodes for selector ${selector}.`)
+  }
+
+  return Array.from(nodes)
+}
+
 export function readAndParseHtml(htmlPath: string, selector: string): string {
   const html = readFile(htmlPath)
   const parsedHtml = parseHtml(html, selector)

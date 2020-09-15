@@ -1,328 +1,335 @@
-// This data was copied from npmjs.com/package/usa-states (relevant file:
+// This data was adapted from npmjs.com/package/usa-states (relevant file:
 // https://github.com/nathanbarrett/usa-states/blob/master/src/usa-states.ts).
 // The package seems to have a TypeScript issue that has not been fixed yet.
 
-export interface UsaEntity {
+export type UsaState = {
+  kind: 'state'
   name: string
   slug: string
   abbrev: string
-  isState?: boolean
-  isDistrict?: boolean // DC
-  isTerritory?: boolean
 }
 
-const usaEntities: Array<UsaEntity> = [
+export type UsaDistrict = {
+  kind: 'district'
+  name: string
+  slug: string
+  abbrev: string
+}
+
+function addSlug(entity) {
+  return {
+    ...entity,
+    slug: entity.name.toLowerCase().replace(/ /g, '-'),
+  }
+}
+
+export const usaStates: Array<UsaState> = [
   {
+    kind: 'state',
     name: 'Alabama',
     abbrev: 'AL',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Alaska',
     abbrev: 'AK',
-    isState: true,
   },
-  // {
-  //     name: "American Samoa",
-  //     abbrev: "AS",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Arizona',
     abbrev: 'AZ',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Arkansas',
     abbrev: 'AR',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'California',
     abbrev: 'CA',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Colorado',
     abbrev: 'CO',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Connecticut',
     abbrev: 'CT',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Delaware',
     abbrev: 'DE',
-    isState: true,
   },
   {
-    name: 'District Of Columbia',
-    abbrev: 'DC',
-    isDistrict: true,
-  },
-  // {
-  //     name: "Federated States Of Micronesia",
-  //     abbrev: "FM",
-  //     isTerritory: true,
-  // },
-  {
+    kind: 'state',
     name: 'Florida',
     abbrev: 'FL',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Georgia',
     abbrev: 'GA',
-    isState: true,
   },
-  // {
-  //     name: "Guam",
-  //     abbrev: "GU",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Hawaii',
     abbrev: 'HI',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Idaho',
     abbrev: 'ID',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Illinois',
     abbrev: 'IL',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Indiana',
     abbrev: 'IN',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Iowa',
     abbrev: 'IA',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Kansas',
     abbrev: 'KS',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Kentucky',
     abbrev: 'KY',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Louisiana',
     abbrev: 'LA',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Maine',
     abbrev: 'ME',
-    isState: true,
   },
-  // {
-  //     name: "Marshall Islands",
-  //     abbrev: "MH",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Maryland',
     abbrev: 'MD',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Massachusetts',
     abbrev: 'MA',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Michigan',
     abbrev: 'MI',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Minnesota',
     abbrev: 'MN',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Mississippi',
     abbrev: 'MS',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Missouri',
     abbrev: 'MO',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Montana',
     abbrev: 'MT',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Nebraska',
     abbrev: 'NE',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Nevada',
     abbrev: 'NV',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'New Hampshire',
     abbrev: 'NH',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'New Jersey',
     abbrev: 'NJ',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'New Mexico',
     abbrev: 'NM',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'New York',
     abbrev: 'NY',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'North Carolina',
     abbrev: 'NC',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'North Dakota',
     abbrev: 'ND',
-    isState: true,
   },
-  // {
-  //     name: "Northern Mariana Islands",
-  //     abbrev: "MP",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Ohio',
     abbrev: 'OH',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Oklahoma',
     abbrev: 'OK',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Oregon',
     abbrev: 'OR',
-    isState: true,
   },
-  // {
-  //     name: "Palau",
-  //     abbrev: "PW",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Pennsylvania',
     abbrev: 'PA',
-    isState: true,
   },
-  // {
-  //     name: "Puerto Rico",
-  //     abbrev: "PR",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Rhode Island',
     abbrev: 'RI',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'South Carolina',
     abbrev: 'SC',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'South Dakota',
     abbrev: 'SD',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Tennessee',
     abbrev: 'TN',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Texas',
     abbrev: 'TX',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Utah',
     abbrev: 'UT',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Vermont',
     abbrev: 'VT',
-    isState: true,
   },
-  // {
-  //     name: "Virgin Islands",
-  //     abbrev: "VI",
-  //     isTerritory: true,
-  // },
   {
+    kind: 'state',
     name: 'Virginia',
     abbrev: 'VA',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Washington',
     abbrev: 'WA',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'West Virginia',
     abbrev: 'WV',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Wisconsin',
     abbrev: 'WI',
-    isState: true,
   },
   {
+    kind: 'state',
     name: 'Wyoming',
     abbrev: 'WY',
-    isState: true,
   },
-].map((e) => ({
-  ...e,
-  slug: e.name.toLowerCase().replace(/ /g, '-'),
-}))
+].map(addSlug)
 
-// Possibly territories can be supported later.
-export const usaStates = usaEntities.filter((e) => e.isState)
-export const usaStatesAndDc = usaEntities.filter(
-  (e) => e.isState || e.abbrev == 'DC'
-)
+const washingtonDc: UsaDistrict = addSlug({
+  kind: 'district',
+  name: 'District of Columbia',
+  abbrev: 'DC',
+})
 
-const _top5SwingStates = ['FL', 'PA', 'WI', 'MI', 'AZ']
-const _top10SwingStates = [..._top5SwingStates, 'MN', 'NC', 'NV', 'CO', 'OH']
-export const top5SwingStates = usaStates.filter((s) =>
-  _top5SwingStates.includes(s.abbrev)
-)
-export const top10SwingStates = usaStates.filter((s) =>
-  _top10SwingStates.includes(s.abbrev)
-)
+export const usaStatesAndDc = [...usaStates, washingtonDc]
+
+// const UsaTerritories: Array<UsaTerritory> = [
+// {
+//     kind: 'territory',
+//     name: American Samoa,
+//     abbrev: "AS",
+// },
+// {
+//     kind: 'territory',
+//     name: Federated States Of Micronesia,
+//     abbrev: "FM",
+// },
+// {
+//     kind: 'territory',
+//     name: Guam,
+//     abbrev: "GU",
+// },
+// {
+//     kind: 'territory',
+//     name: Marshall Islands,
+//     abbrev: "MH",
+// },
+// {
+//     kind: 'territory',
+//     name: Northern Mariana Islands,
+//     abbrev: "MP",
+// },
+// {
+//     kind: 'territory',
+//     name: Palau,
+//     abbrev: "PW",
+// },
+// {
+//     kind: 'territory',
+//     name: Puerto Rico,
+//     abbrev: "PR",
+// },
+// {
+//     kind: 'territory',
+//     name: Virgin Islands,
+//     abbrev: "VI",
+// },
+// ].map(addSlug)
+
+// TODO: DC
+
+// TODO: territories?
+
+// const top5SwingStates = ['FL', 'PA', 'WI', 'MI', 'AZ']
+// const top10SwingStates = [...top5SwingStates, 'MN', 'NC', 'NV', 'CO', 'OH']

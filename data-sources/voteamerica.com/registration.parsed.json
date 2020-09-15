@@ -1,0 +1,990 @@
+{
+  "AL": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ]
+  },
+  "AK": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-04"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-03"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-04"
+      }
+    ]
+  },
+  "AZ": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "AR": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "CA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ]
+  },
+  "CO": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-26"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-26"
+      }
+    ]
+  },
+  "CT": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-27"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-27"
+      }
+    ]
+  },
+  "DE": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-10"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-10"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-10"
+      }
+    ]
+  },
+  "FL": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "GA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "HI": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "ID": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ]
+  },
+  "IL": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-06"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-18"
+      }
+    ]
+  },
+  "IN": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "IA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-24"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-24"
+      }
+    ]
+  },
+  "KS": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "KY": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "LA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "ME": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "MD": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "MA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-24"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-24"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-24"
+      }
+    ]
+  },
+  "MI": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ]
+  },
+  "MN": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "MS": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "MO": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-07"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-07"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "MT": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-26"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "NE": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-23"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-16"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-16"
+      }
+    ]
+  },
+  "NV": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-06"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-29"
+      }
+    ]
+  },
+  "NH": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-24"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "NJ": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "NM": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-31"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-06"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-06"
+      }
+    ]
+  },
+  "NY": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ]
+  },
+  "NC": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-31"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ]
+  },
+  "ND": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegNotAvailable"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegNotAvailable"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "OH": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ]
+  },
+  "OK": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-09"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "OR": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "PA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ]
+  },
+  "RI": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-03"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-04"
+      }
+    ]
+  },
+  "SC": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-02"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-04"
+      }
+    ]
+  },
+  "SD": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "TN": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-04"
+      }
+    ]
+  },
+  "TX": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-05"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  },
+  "UT": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-23"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-23"
+      }
+    ]
+  },
+  "VT": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ]
+  },
+  "VA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "WA": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-26"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-26"
+      }
+    ]
+  },
+  "WV": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ]
+  },
+  "WI": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegPostmarkedDeadline",
+        "isoDate": "2020-10-14"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-14"
+      }
+    ]
+  },
+  "WY": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-19"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
+  }
+}

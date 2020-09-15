@@ -1,6 +1,6 @@
 // This is meant to clean up the raw JSON into something more usable.
 
-import { UsaEntity, usaStates } from './usaStates' // TODO: add DC, maybe territories
+import { UsaState, usaStates } from './usaStates' // TODO: add DC, maybe territories
 import { readFile, writeFile } from './utilities'
 
 //-------//
@@ -50,7 +50,7 @@ export function cleanVoteOrgData(
 ): VOCleanedData {
   const rawData = JSON.parse(rawJson)
   const cleanedData = entities.reduce(
-    (memo: VOCleanedData, state: UsaEntity): VOCleanedData => {
+    (memo: VOCleanedData, state: UsaState): VOCleanedData => {
       const rawState = rawData[state.abbrev]
 
       if (!rawState) {

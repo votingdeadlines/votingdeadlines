@@ -1,0 +1,257 @@
+{
+  "Alabama": {
+    "byMail": "postmarked by October 19, 2020",
+    "inPerson": "received by October 19, 2020",
+    "online": "received by October 19, 2020"
+  },
+  "Alaska": {
+    "byMail": "postmarked by October 3, 2020",
+    "inPerson": "received by October 4, 2020",
+    "online": "received by October 4, 2020"
+  },
+  "Arizona": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Arkansas": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "N/A"
+  },
+  "California": {
+    "byMail": "postmarked by October 19, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 19, 2020"
+  },
+  "Colorado": {
+    "byMail": "postmarked by October 26, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 26, 2020"
+  },
+  "Connecticut": {
+    "byMail": "postmarked by October 27, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 27, 2020"
+  },
+  "Delaware": {
+    "byMail": "postmarked by October 10, 2020",
+    "inPerson": "received by October 10, 2020",
+    "online": "received by October 10, 2020"
+  },
+  "District of Columbia": {
+    "byMail": "received by October 13, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "N/A"
+  },
+  "Florida": {
+    "byMail": "received by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Georgia": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Hawaii": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Idaho": {
+    "byMail": "postmarked by October 9, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 9, 2020"
+  },
+  "Illinois": {
+    "byMail": "received by October 6, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 18, 2020"
+  },
+  "Indiana": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Iowa": {
+    "byMail": "received by October 24, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 24, 2020"
+  },
+  "Kansas": {
+    "byMail": "postmarked by October 13, 2020",
+    "inPerson": "received by October 13, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Kentucky": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Louisiana": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Maine": {
+    "byMail": "received by October 19, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "N/A"
+  },
+  "Maryland": {
+    "byMail": "postmarked by October 13, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Massachusetts": {
+    "byMail": "postmarked by October 24, 2020",
+    "inPerson": "received by October 24, 2020",
+    "online": "received by October 24, 2020"
+  },
+  "Michigan": {
+    "byMail": "postmarked by October 19, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 19, 2020"
+  },
+  "Minnesota": {
+    "byMail": "received by October 13, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Mississippi": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "N/A"
+  },
+  "Missouri": {
+    "byMail": "postmarked by October 7, 2020",
+    "inPerson": "received by October 7, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Montana": {
+    "byMail": "postmarked by October 26, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "N/A"
+  },
+  "Nebraska": {
+    "byMail": "postmarked by October 16, 2020",
+    "inPerson": "received by October 23, 2020",
+    "online": "received by October 16, 2020"
+  },
+  "Nevada": {
+    "byMail": "postmarked by October 6, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 29, 2020"
+  },
+  "New Hampshire": {
+    "byMail": "received by October 24, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "N/A"
+  },
+  "New Jersey": {
+    "byMail": "received by October 13, 2020",
+    "inPerson": "received by October 13, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "New Mexico": {
+    "byMail": "postmarked by October 6, 2020",
+    "inPerson": "received by October 31, 2020",
+    "online": "received by October 6, 2020"
+  },
+  "New York": {
+    "byMail": "postmarked by October 9, 2020",
+    "inPerson": "received by October 9, 2020",
+    "online": "received by October 9, 2020"
+  },
+  "North Carolina": {
+    "byMail": "postmarked by October 9, 2020",
+    "inPerson": "received by October 31, 2020",
+    "online": "received by October 9, 2020"
+  },
+  "North Dakota": {
+    "byMail": "N/A",
+    "inPerson": "N/A",
+    "online": "N/A"
+  },
+  "Ohio": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 5, 2020"
+  },
+  "Oklahoma": {
+    "byMail": "postmarked by October 9, 2020",
+    "inPerson": "received by October 9, 2020",
+    "online": "N/A"
+  },
+  "Oregon": {
+    "byMail": "postmarked by October 13, 2020",
+    "inPerson": "received by October 13, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Pennsylvania": {
+    "byMail": "received by October 19, 2020",
+    "inPerson": "received by October 19, 2020",
+    "online": "received by October 19, 2020"
+  },
+  "Rhode Island": {
+    "byMail": "postmarked by October 3, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 4, 2020"
+  },
+  "South Carolina": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 2, 2020",
+    "online": "received by October 4, 2020"
+  },
+  "South Dakota": {
+    "byMail": "received by October 19, 2020",
+    "inPerson": "received by October 19, 2020",
+    "online": "N/A"
+  },
+  "Tennessee": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "received by October 4, 2020"
+  },
+  "Texas": {
+    "byMail": "postmarked by October 5, 2020",
+    "inPerson": "received by October 5, 2020",
+    "online": "N/A"
+  },
+  "Utah": {
+    "byMail": "received by October 23, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 23, 2020"
+  },
+  "Vermont": {
+    "byMail": "received by November 3, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by November 3, 2020"
+  },
+  "Virginia": {
+    "byMail": "postmarked by October 13, 2020",
+    "inPerson": "received by October 13, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Washington": {
+    "byMail": "received by October 26, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 26, 2020"
+  },
+  "West Virginia": {
+    "byMail": "postmarked by October 13, 2020",
+    "inPerson": "received by October 13, 2020",
+    "online": "received by October 13, 2020"
+  },
+  "Wisconsin": {
+    "byMail": "postmarked by October 14, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "received by October 14, 2020"
+  },
+  "Wyoming": {
+    "byMail": "received by October 19, 2020",
+    "inPerson": "received by November 3, 2020",
+    "online": "N/A"
+  }
+}
