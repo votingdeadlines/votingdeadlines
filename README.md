@@ -2,7 +2,17 @@
 
 This project aims to scrape, verify, and re-publish information on voting deadlines in the USA.
 
-## Pipeline
+## Dependencies
+
+Most can be installed with `yarn`.
+
+On macOS, install `trash-cli` with `brew install macos-trash` (used by `bin/` scripts).
+
+<!-- TODO: possibly rewrite the `bin/` shell scripts as Node scripts.  -->
+
+## Data pipeline
+
+Data is ingested from the sources below, merged into the `data/` folder, and copied to the webapp (`datafile.ts`).
 
 ### Vote.gov
 
@@ -10,7 +20,12 @@ Vote.gov contains voting registration deadlines and links, and is open source. T
 
 1. **Download** the source code of the website (`data-sources/vote.gov/src`)
 2. **Trim** the source code to just the file we care about (`state-info.raw.json`)
-3. **Clean** the source JSON into a standardized format (`state-info.cleaned.json`)
+3. **Clean** the source JSON into a simplified format (`state-info.cleaned.json`)
+4. **Parse** the JSON data into a standardized format (`state-info.cleaned.json`)
+
+### VoteAmerica.com
+
+This data is parsed in stages similar to Vote.org's below, but with a better final result.
 
 ### Vote.org
 
@@ -23,10 +38,9 @@ The data from Vote.org is processed in several steps:
 5. **Clean** the text to remove HTML/whitespace artifacts (`general-info.cleaned.json`)
 6. **Parse** the language into a structure where feasible (`general-info.parsed.json`)
 
-Each of these steps involves variables set in `config.sh`, functions in `src/`, and scripts in `bin/` that call the functions. For now you have to call each step one at a time, via the relevant `make` commands, e.g. `make extract`.
+Each of these steps involves variables set in `config.sh`, functions in `src/`, and scripts in `bin/` that call the functions.
 
 Many states from this data are pretty messy still, but it may be useful to compare with other sources.
-
 
 ## References
 

@@ -807,5 +807,20 @@
     "bmDeadlines": {
       "receivedBy": "Monday, October 19, 2020"
     }
+  },
+  "DC": {
+    "registrationType": "by-mail",
+    "registrationLinks": {
+      "englishOnly": "true"
+    },
+    "moreInfoLinks": {
+      "en": "https://www.vote4dc.com/ApplyInstructions/Register",
+      "es": "https://www.vote4dc.com/ApplyInstructions/Register",
+      "englishOnly": "true"
+    },
+    "ipDeadline": "Tuesday, November 3, 2020",
+    "bmDeadlines": {
+      "receivedBy": "Tuesday, October 13, 2020"
+    }
   }
 }

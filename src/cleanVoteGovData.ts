@@ -1,5 +1,5 @@
-import { UsaState, usaStates } from './usaStates'
-import { readFile, writeFile } from './utilities'
+import { UsaState, usaStatesAndDc } from './usaStates'
+import { logProgress, readFile, writeFile } from './utilities'
 
 //-------//
 // Types //
@@ -79,10 +79,10 @@ export type CleanedVGState = {
 
 export function cleanVGData(
   rawData: RawVGDataset,
-  entities = usaStates
+  entities = usaStatesAndDc
 ): CleanedVGDataset {
   const cleanedData = entities.reduce(
-    (memo: CleanedVGDataset, state: UsaState): CleanedVGDataset => {
+    (memo: CleanedVGDataset, state: UsaState, i: number): CleanedVGDataset => {
       // The || is because the keys have an inconsistent format.
       const rawState = rawData[state.slug] || rawData[state.name]
 
@@ -90,6 +90,7 @@ export function cleanVGData(
         throw new Error(`Could not find state '${state.slug}' in raw data.`)
       }
 
+      logProgress('Clean Vote.gov', state.abbrev, i)
       memo[state.abbrev] = cleanState(rawState)
 
       return memo
@@ -141,7 +142,7 @@ function cleanState(rawState: RawVGState): CleanedVGState {
 export function readCleanAndWriteVGData(
   inputPath: string,
   outputPath: string,
-  entities = usaStates
+  entities = usaStatesAndDc
 ): void {
   const rawJson = readFile(inputPath)
   const rawData: RawVGDataset = JSON.parse(rawJson)

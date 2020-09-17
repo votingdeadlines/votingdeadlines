@@ -984,5 +984,24 @@
         "kind": "OnlineRegNotAvailable"
       }
     ]
+  },
+  "DC": {
+    "inPersonRegPolicies": [
+      {
+        "kind": "InPersonRegDeadline",
+        "isoDate": "2020-11-03"
+      }
+    ],
+    "mailRegPolicies": [
+      {
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-13"
+      }
+    ],
+    "onlineRegPolicies": [
+      {
+        "kind": "OnlineRegNotAvailable"
+      }
+    ]
   }
 }

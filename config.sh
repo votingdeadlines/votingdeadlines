@@ -3,6 +3,10 @@
 # This file contains variables (URLs, paths) that are used in various places.
 # Paths are relative to project root, and generally are made absolute later.
 
+# The merged data from the various data sources below.
+MERGED_DATA_JSON_PATH="data/votingDeadlines.json"
+SVELTE_DATAFILE_PATH="views/svelte/src/datafile.ts"
+
 #----------#
 # Vote.gov #
 #----------#

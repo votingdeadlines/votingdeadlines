@@ -13,12 +13,12 @@ const { parseUsaDateToNaiveIsoDate } = v1
 //-------------
 
 // The top-level index of all states and their parsed registration policy data.
-type ParsedVAStatesIndex = {
+export type ParsedVAStatesIndex = {
   [key: string]: ParsedVAStateRegPolicies
 }
 
 // An individual state's registration policies.
-type ParsedVAStateRegPolicies = {
+export type ParsedVAStateRegPolicies = {
   inPersonRegPolicies: Array<InPersonRegPolicy>
   mailRegPolicies: Array<MailRegPolicy>
   onlineRegPolicies: Array<OnlineRegPolicy>
@@ -105,7 +105,7 @@ export function parseVAStateRegPolicies(
     inPersonUsaDate = inPersonMatch[1]
     ipIsoDate = parseUsaDateToNaiveIsoDate(inPersonUsaDate)
   } catch {
-    console.warn(`Could not parse inPerson: ${inPerson}`)
+    // console.warn(`Could not parse inPerson: ${inPerson}`)
   }
 
   // If it worked, save it and continue.
@@ -144,13 +144,15 @@ export function parseVAStateRegPolicies(
     mailPostmarkedUsaDate = mailPostmarkedMatch[1]
     mailPostmarkedIsoDate = parseUsaDateToNaiveIsoDate(mailPostmarkedUsaDate)
   } catch {
-    console.warn(`Could not parse mailPostmarkedUsaDate: ${mailPostmarkedUsaDate}`)
+    // console.warn(
+    //   `Could not parse mailPostmarkedUsaDate: ${mailPostmarkedUsaDate}`
+    // )
   }
   try {
     mailReceivedUsaDate = mailReceivedMatch[1]
     mailReceivedIsoDate = parseUsaDateToNaiveIsoDate(mailReceivedUsaDate)
   } catch {
-    console.warn(`Could not parse mailReceivedUsaDate: ${mailReceivedUsaDate}`)
+    // console.warn(`Could not parse mailReceivedUsaDate: ${mailReceivedUsaDate}`)
   }
 
   // If it worked, save it with the appropriate type and continue.
@@ -192,7 +194,7 @@ export function parseVAStateRegPolicies(
     onlineUsaDate = onlineMatch[1]
     onlineIsoDate = parseUsaDateToNaiveIsoDate(onlineUsaDate)
   } catch {
-    console.warn(`Could not parse online: ${online}`)
+    // console.warn(`Could not parse online: ${online}`)
   }
 
   // If it worked, save it and continue.

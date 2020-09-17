@@ -46,8 +46,6 @@ export function readParseAndWriteHtml(
   selector: string,
   outputPath: string
 ): void {
-  console.log(`Reading ${inputPath}.`)
   const parsedHtml = readAndParseHtml(inputPath, selector)
-  console.log(`Writing ${outputPath}.`)
   writeFile(outputPath, parsedHtml)
 }

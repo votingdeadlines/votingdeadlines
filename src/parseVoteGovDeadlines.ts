@@ -2,7 +2,7 @@
 
 import { CleanedVGState } from './cleanVoteGovData'
 import { v1 } from './timeUtilities'
-import { UsaState, usaStates } from './usaStates'
+import { UsaState, usaStatesAndDc } from './usaStates'
 import { readFile, writeFile } from './utilities'
 
 const { parseUsaLongDateToNaiveIsoDate } = v1
@@ -15,12 +15,12 @@ const { parseUsaLongDateToNaiveIsoDate } = v1
 //-------------
 
 // The top-level index of all states and their parsed deadline data.
-type VGStatesIndex = {
-  [key: string]: VGStateRegPolicies
+export type ParsedVGStatesIndex = {
+  [key: string]: ParsedVGStateRegPolicies
 }
 
 // An individual state's registration deadlines.
-type VGStateRegPolicies = {
+export type ParsedVGStateRegPolicies = {
   inPersonRegPolicies: Array<InPersonRegPolicy>
   mailRegPolicies: Array<MailRegPolicy>
   onlineRegPolicies: Array<OnlineRegPolicy>
@@ -94,7 +94,7 @@ type OnlineRegNotAvailable = {
 // Parse the JSON data for an individual state.
 function parseVGStateRegPolicies(
   cleanedState: CleanedVGState
-): VGStateRegPolicies {
+): ParsedVGStateRegPolicies {
   const { registrationType, ipDeadline, bmDeadlines, olDeadline } = cleanedState
   const { NOT_NEEDED, IN_PERSON, ONLINE } = REGISTRATION_TYPES
   // A few states don't have registration deadlines, at least in this data.
@@ -209,7 +209,7 @@ function parseVGStateRegPolicies(
     throw new Error(`Could not parse olDeadline: '${olDeadline}'`)
   }
 
-  const deadlines: VGStateRegPolicies = {
+  const deadlines: ParsedVGStateRegPolicies = {
     inPersonRegPolicies: data.inPersonRegPolicies,
     mailRegPolicies: data.mailRegPolicies,
     onlineRegPolicies: data.onlineRegPolicies,
@@ -221,12 +221,12 @@ function parseVGStateRegPolicies(
 // Parse the JSON data for all states.
 export function parseVORules(
   cleanedJson: string,
-  entities = usaStates
-): VGStatesIndex {
+  entities = usaStatesAndDc
+): ParsedVGStatesIndex {
   const cleanedData = JSON.parse(cleanedJson)
 
   const rulesetMap = entities.reduce(
-    (memo: VGStatesIndex, state: UsaState): VGStatesIndex => {
+    (memo: ParsedVGStatesIndex, state: UsaState): ParsedVGStatesIndex => {
       const cleanedState: CleanedVGState = cleanedData[state.abbrev]
 
       if (!cleanedState) {
@@ -252,7 +252,7 @@ export function parseVORules(
 export function readParseAndWriteVGDeadlines(
   inputPath: string,
   outputPath: string,
-  entities = usaStates
+  entities = usaStatesAndDc
 ): void {
   const json = readFile(inputPath)
   const parsedData = parseVORules(json, entities)

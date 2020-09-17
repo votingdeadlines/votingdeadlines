@@ -2,6 +2,11 @@
   "printWidth": 80,
   "semi": false,
   "singleQuote": true,
+  "svelteAllowShorthand": false,
+  "svelteBracketNewLine": true,
+  "svelteIndentScriptAndStyle": false,
+  "svelteSortOrder" : "styles-scripts-markup",
+  "svelteStrictMode": true,
   "trailingComma": "es5",
   "overrides": [
     {

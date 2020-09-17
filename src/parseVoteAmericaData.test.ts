@@ -10,24 +10,24 @@ describe('parseVoteAmericaDeadlines.ts', () => {
       const result = parseVADeadlines(mockCleanedData, mockStates)
 
       expect(result).toEqual({
-        "AK": {
-          "inPersonRegPolicies": [
+        AK: {
+          inPersonRegPolicies: [
             {
-              "kind": "InPersonRegDeadline",
-              "isoDate": "2020-11-03"
-            }
+              kind: 'InPersonRegDeadline',
+              isoDate: '2020-11-03',
+            },
           ],
-          "mailRegPolicies": [
+          mailRegPolicies: [
             {
-              "kind": "MailRegReceivedDeadline",
-              "isoDate": "2020-10-13"
-            }
+              kind: 'MailRegReceivedDeadline',
+              isoDate: '2020-10-13',
+            },
           ],
-          "onlineRegPolicies": [
+          onlineRegPolicies: [
             {
-              "kind": "OnlineRegNotAvailable",
-            }
-          ]
+              kind: 'OnlineRegNotAvailable',
+            },
+          ],
         },
       })
     })

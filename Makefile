@@ -4,13 +4,15 @@ CWD := $(shell pwd)
 
 chmod:
 	chmod +x config.sh
-	chmod +x bin/*
+	chmod +x bin/*.sh
 
 #-----------------#
 # Data processing #
 #-----------------#
 
-process: download trim format extract clean parse
+process:    download    trim    format    extract    clean    parse    merge
+process-vg: download-vg trim-vg                      clean-vg parse-vg
+process-va: download-va trim-va format-va extract-va clean-va parse-va
 
 download: download-vg download-va ## 1. Download data
 download-vg: ## 1a. Download Vote.gov data
@@ -60,7 +62,11 @@ diff:
 	diff -y data-sources/vote.gov/state-data.parsed.json \
 		data-sources/voteamerica.com/registration.parsed.json
 
-# normalize:
+merge:
+	yarn data:merge
+
+prepublish:
+	bin/prepublish-data.sh $(CWD)
 
 #-------#
 # Tests #
