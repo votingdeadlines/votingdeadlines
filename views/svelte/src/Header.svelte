@@ -1,19 +1,34 @@
 <style>
-/* Colors */
 
 :root {
+
+  /* Layout */
+  --logoGraphicWidth: 32px;
+  --logoGraphicHeight: var(--logoGraphicWidth);
+  --logoTypeFontSize: 14px;
+  --logoTypeMarginTop: 4px;
+  --logoTypePaddingLeft: 16px;
+
+  /* Colors */
+
   --logoGray: rgba(0, 0, 0, 0.1);
   --titleBlack: rgba(0, 0, 0, 0.8);
-  --underlineRed: hsla(1, 68%, 54%, 0.9);
+  --underlineRed: var(--brandRed);
   --subtitleGray: hsl(0, 0%, 67%);
 }
 
 /* Layout */
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
   text-align: center;
-  position: relative;
+  /*position: relative;*/
   display: flex;
+  display: none;
   align-items: baseline; /* aligns copy */
 
   /* If not in <main> column */
@@ -21,8 +36,8 @@ header {
 }
 
 header #logo {
-  height: 48px;
-  width: 48px;
+  height: var(--logoGraphicWidth);
+  width: var(--logoGraphicHeight);
   margin: 0;
   align-self: flex-end; /* removes logo from baseline alignment */
 }
@@ -36,11 +51,11 @@ header #logo {
 header .title {
   font-family: 'Montserrat';
   font-weight: 800;
-  font-size: 16px;
+  font-size: var(--logoTypeFontSize);
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  margin-top: 11px;
-  padding-left: 20px;
+  margin-top: var(--logoTypeMarginTop);
+  padding-left: var(--logoTypePaddingLeft);
 }
 
 header .title-copy {
@@ -50,13 +65,11 @@ header .title-copy {
 
 header .title-copy .words {
   padding-bottom: 1px;
-  border-bottom: 3px solid var(--underlineGray);
   border-bottom: 3px solid var(--underlineRed);
 }
 
 header .title-copy .voting {
   color: var(--titleBlack);
-  /*color: var(--titleRed);*/
 }
 
 header .title-copy .period {

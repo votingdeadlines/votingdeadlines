@@ -1,9 +1,9 @@
 <style>
   p {
     margin-top: 0;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
-    color: hsl(0, 0%, 60%);
+    color: var(--taglineGray);
   }
 
   p a {
@@ -15,6 +15,10 @@
   }
 </style>
 
-<p>
+<script type="text/javascript">
+  export let className = ''
+</script>
+
+<p class={className}>
   <slot></slot>
 </p>

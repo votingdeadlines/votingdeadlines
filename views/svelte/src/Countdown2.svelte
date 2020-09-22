@@ -22,20 +22,20 @@
     letter-spacing: 0.07em;
   }
 
-  section.gt-30d {
-    background: hsl(111, 55%, 95%); /* green */
+  /*section.gt-30d {
+    background: hsl(111, 55%, 95%);
   }
 
   section.lt-30d {
-    background: hsl(75, 68%, 95%); /* lime */
+    background: hsl(75, 68%, 95%);
   }
 
   section.lt-21d {
-    background: hsl(52, 68%, 95%); /* yellow */
+    background: hsl(52, 68%, 95%);
   }
 
   section.lt-14d {
-    background: hsl(30, 68%, 95%); /* orange */
+    background: hsl(30, 68%, 95%);
   }
 
   section.lt-7d {
@@ -44,24 +44,24 @@
 
   .gt-30d h1 {
     color: green;
-    color: hsl(111, 55%, 60%); /* green */
+    color: hsl(111, 55%, 60%);
   }
 
   .lt-30d h1 {
-    color: hsl(75, 68%, 54%); /* lime */
+    color: hsl(75, 68%, 54%);
   }
 
   .lt-21d h1 {
-    color: hsl(52, 68%, 54%); /* yellow */
+    color: hsl(52, 68%, 54%);
   }
 
   .lt-14d h1 {
-    color: hsl(30, 68%, 54%); /* orange */
+    color: hsl(30, 68%, 54%);
   }
 
   .lt-7d h1 {
     color: var(--titleRed);
-  }
+  }*/
 
 </style>
 
@@ -88,11 +88,11 @@ if (type === 'ml') typeDisplay = '🐌 Mail Registration'
 const duration = getDurationFromIsoDate(fromIsoDate)
 const durationDays = duration && duration.D
 let durationTier
-if (durationDays > 30) durationTier = 'gt-30d' // green
-if (durationDays < 30) durationTier = 'lt-30d' // lime green
-if (durationDays < 21) durationTier = 'lt-21d' // yellow
-if (durationDays < 14) durationTier = 'lt-14d' // orange
-if (durationDays < 7) durationTier = 'lt-7d' // red
+// if (durationDays > 30) durationTier = 'gt-30d' // green
+// if (durationDays < 30) durationTier = 'lt-30d' // lime green
+// if (durationDays < 21) durationTier = 'lt-21d' // yellow
+// if (durationDays < 14) durationTier = 'lt-14d' // orange
+// if (durationDays < 7) durationTier = 'lt-7d' // red
 if (!durationDays) durationTier = 'na' // gray
 
 </script>

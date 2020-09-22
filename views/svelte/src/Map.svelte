@@ -4,7 +4,7 @@
 /************************/
 
 .map-usa {
-  width: 85%;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -35,7 +35,7 @@
 /*****************************/
 
 .state, .dc {
-  opacity: 0.8;
+  opacity: 0.83;
 }
 
 #ILm {
@@ -50,68 +50,39 @@
   opacity: 1;
 }
 
+/* TODO: DRY with Crosshatch */
+
 .ctGreen1 {
-  fill: var(--ctGreen1);
+  fill: var(--ctGreen);
 }
 
 .ctYellow1 {
-  fill: var(--ctYellow1);
-}
-
-.ctOrange1 {
-  fill: var(--ctOrange1);
+  fill: var(--ctYellow);
 }
 
 .ctRed1 {
-  fill: var(--ctRed1);
+  fill: var(--ctRed);
 }
 
-.ctLightGray1 {
-  fill: var(--ctLightGray1);
+.ctGray1 {
+  fill: var(--ctGray);
 }
-
-/*******************/
-/* WIP USA, take 3 */
-/*******************/
-
-
 
 </style>
 
 <script lang="typescript" type="text/typescript">
   // Imports
-  import DS from './DS.svelte'
+  import Legend from './Legend.svelte'
   import { stateOutlines } from './mapOutlines'
-  import { getStateTierV0, getStateColors, getStateColorsIndex } from './mapUtilities'
+  import { getStateColors, getStateColorsIndex } from './mapUtilities'
 
   // Props
   export let statesAndDc
 
-  // console.log(`1. About to get state colors index.`)
-  // const colors1 = Object.entries(statesAndDc).reduce((memo, entity) => {
-  //   const abbrev = entity[0]
-  //   const data = entity[1]
-  //   const onlineIsoDate = data.onlineRegPolicies.policies[0].isoDate
-  //   const ipIsoDate = data.inPersonRegPolicies.policies[0].isoDate
-  //   memo[abbrev] = getStateTierV0(onlineIsoDate) || getStateTierV0(ipIsoDate) || 'na'
-
-  //   // IL 2 (WIP)
-  //   if (abbrev === 'IL') {
-  //     console.log(`2. At IL. memo.IL is:`, memo.IL)
-  //     memo[abbrev] = getStateColors(data)
-  //     console.log(`2b. After IL call. memo.IL is:`, memo.IL)
-  //   }
-
-  //   return memo
-  // }, {})
-  // console.log(`3. OK so IL is colors.IL:`, colors1.IL)
-
   const colors = getStateColorsIndex(statesAndDc)
 
-  const statesAndDcAbbrevs = Object.keys(statesAndDc)
+  const statesAndDcAbbrevs = Object.keys(statesAndDc).sort()
   const statesOnlyAbbrevs = statesAndDcAbbrevs.filter(k => k !== 'DC')
-
-  console.log(`5. Now via getStateColorsIndex, colors.IL:`, colors.IL)
 </script>
 
 <figure class='map-usa'>
@@ -120,6 +91,7 @@
 
     <g class="states">
       {#each statesAndDcAbbrevs as entityAbbrev}
+        <!-- TODO: replace with <Crosshatch /> -->
         <pattern
           id="{entityAbbrev}p"
           width="9"
@@ -149,9 +121,11 @@
       <!-- DC  -->
 
       <a href="#DC">
-        <circle class='dc' fill="url(#DCp)" cx="801.3" cy="251.8" r="4.5"></circle>
+        <circle class='dc' fill="url(#DCp)" cx="800" cy="251.8" r="5"></circle>
         <title>District of Columbia</title>
       </a>
     </g>
   </svg>
 </figure>
+
+<Legend />

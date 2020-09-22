@@ -2,16 +2,35 @@
 /* Layout */
 
 main {
-  padding: 8px 16px;
+  padding: 44px 16px;
   max-width: 1024px;
   margin: 0 auto;
 }
 
-.legend {
-  /*flex-basis: 30%;*/
-  background: #eee;
-  height: 30px;
+.headline-row {
+  display: flex;
+  justify-content: center;
 }
+
+.headline-wrapper {
+  position: relative;
+}
+
+.alpha {
+  position: absolute;
+  top: -4px;
+  right: -36px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: var(--systemSansFontStack);
+
+  color: var(--ctRed);
+}
+
+.map-wrapper {
+  margin-bottom: 4rem;
+}
+
 
 </style>
 
@@ -29,15 +48,25 @@ export let statesAndDc
 
 <Header />
 <main>
-  <Headline>Voter Registration Deadlines</Headline>
-  <Tagline>Register while you still can! Data combined from public, nonprofit, and media sources.</Tagline>
-  <TaglineS>Updated 11 hours ago. (<Link href='https://github.com'>Changelog</Link>) (<Link href='https://github.com'>Source code</Link>)</TaglineS>
+  <div class='copy'>
+    <div class='headline-row'>
+      <div class='headline-wrapper'>
+        <Headline>Voter Registration Deadlines <span class='alpha'>alpha</span></Headline>
+      </div>
+    </div>
+    <Tagline>Register while you still can!
+      <strong>Alaska</strong>,
+      <strong>Florida</strong>,
+      <strong>Arizona</strong>, &
+      <strong>Georgia</strong>
+      are closing soon.
+    </Tagline>
+    <TaglineS className='mb12'>Time remaining as of Tuesday, September 22, 2020. Data from Vote.gov.</TaglineS>
+  </div>
 
   <div class="map-wrapper">
     <Map statesAndDc={statesAndDc} />
   </div>
-
-  <div class="legend"></div>
 
   <!-- Index -->
   <ol class="states-index">

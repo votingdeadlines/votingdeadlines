@@ -1,9 +1,15 @@
 <style>
   p {
     margin-top: 0;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
-    color: hsl(0, 0%, 60%);
+    margin-bottom: 16px;
+
+    color: var(--taglineGray);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   p a {

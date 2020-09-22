@@ -38,7 +38,7 @@ function now(): dayjs.Dayjs {
 
 // This requires a duration argument.
 function formatDuration(duration: Duration, elements = MAX_DURATION_ELEMENTS): string {
-  const { Y, M, D, hrs, min, sec } = duration;
+  const { D, hrs, min, sec } = duration;
   const strings = [];
 
   const isNegative = Object.values(duration).some((n) => n < 0);
