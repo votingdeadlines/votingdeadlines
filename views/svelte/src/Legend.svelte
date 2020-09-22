@@ -110,7 +110,7 @@
     </svg>
   </dt>
   <dd class='multiple-deadlines'>
-    <div>Depends on method</div>
-    <div>(online, mail, or in person)</div>
+    <div>Deadlines depend on method</div>
+    <div>(online, mail, in person)</div>
   </dd>
 </dl>

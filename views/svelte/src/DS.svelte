@@ -10,7 +10,7 @@
   --systemSansFontStack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
-  --taglineGray: hsl(0, 0%, 55%);
+  --taglineGray: hsl(0, 0%, 50%);
 }
 
 /*************/

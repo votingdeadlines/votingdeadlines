@@ -54,14 +54,15 @@ export let statesAndDc
         <Headline>Voter Registration Deadlines <span class='alpha'>alpha</span></Headline>
       </div>
     </div>
-    <Tagline>Register while you still can!
+    <Tagline>
       <strong>Alaska</strong>,
       <strong>Florida</strong>,
       <strong>Arizona</strong>, &
       <strong>Georgia</strong>
-      are closing soon.
+      are closing soon!
+      <span>Register while you still can.</span>
     </Tagline>
-    <TaglineS className='mb12'>Time remaining as of Tuesday, September 22, 2020. Data from Vote.gov.</TaglineS>
+    <TaglineS className='mb12'>Time left as of Tuesday, September 22, 2020. Data from Vote.gov.</TaglineS>
   </div>
 
   <div class="map-wrapper">
