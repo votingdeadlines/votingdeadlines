@@ -10,9 +10,9 @@ chmod:
 # Data processing #
 #-----------------#
 
-process:    download    trim    format    extract    clean    parse    merge
-process-vg: download-vg trim-vg                      clean-vg parse-vg
-process-va: download-va trim-va format-va extract-va clean-va parse-va
+process:    download    trim    format    extract    clean    parse    merge ## Run data pipelines
+process-vg: download-vg trim-vg                      clean-vg parse-vg ## Run Vote.gov data pipeline
+process-va: download-va trim-va format-va extract-va clean-va parse-va ## Run VoteAmerica.com data pipeline
 
 download: download-vg download-va ## 1. Download data
 download-vg: ## 1a. Download Vote.gov data
@@ -72,8 +72,13 @@ prepublish:
 # Tests #
 #-------#
 
-test:
+test: test-backend test-frontend
+
+test-backend:
 	yarn test
+
+test-frontend:
+	cd web/svelte && yarn test
 
 #------#
 # Help #

@@ -1,8 +1,8 @@
-import {
+import type {
   ParsedVAStatesIndex,
   ParsedVAStateRegPolicies,
 } from './parseVoteAmericaDeadlines'
-import {
+import type {
   ParsedVGStatesIndex,
   ParsedVGStateRegPolicies,
 } from './parseVoteGovDeadlines'
@@ -17,17 +17,20 @@ import { readFile, writeFile } from './utilities'
 //-------------
 
 // The top-level index of all states and their parsed registration policy data.
-type MergedStatesIndex = {
+export type MergedStatesIndex = {
   [key: string]: MergedStateRegPolicies
 }
 
 // An individual state's registration policies.
-type MergedStateRegPolicies = {
+export type MergedStateRegPolicies = {
+  stateAbbrev: string,
+  stateName: string,
   inPersonRegPolicies: MergedInPersonRegPolicy
   mailRegPolicies: MergedMailRegPolicy
   onlineRegPolicies: MergedOnlineRegPolicy
   // sos
   // links
+  // stateName
 }
 
 // Merged policies. For v0 let's try just merging the arrays and seeing if they
@@ -116,6 +119,8 @@ function mergeStateRegPolicies(
   voteAmericaState // ignore for phase 0
 
   const mergedState = {
+    stateAbbrev: voteGovState.stateAbbrev,
+    stateName: voteGovState.stateName,
     inPersonRegPolicies: {
       policies: [
         ...voteGovState.inPersonRegPolicies, // add source? we lose
@@ -158,7 +163,7 @@ function mergeVGAndVAData(
       i: number
     ): MergedStatesIndex => {
       const vgState: ParsedVGStateRegPolicies = vgData[state.abbrev]
-      const vaState: ParsedVGStateRegPolicies = vaData[state.abbrev]
+      const vaState: ParsedVAStateRegPolicies = vaData[state.abbrev]
 
       console.log(`${'.'.repeat(i)}${state.abbrev}`)
       if (!vgState) {

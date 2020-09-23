@@ -1,5 +1,7 @@
 {
   "AL": {
+    "stateAbbrev": "AL",
+    "stateName": "Alabama",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
@@ -18,6 +20,8 @@
     }
   },
   "AK": {
+    "stateAbbrev": "AK",
+    "stateName": "Alaska",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://voterregistration.alaska.gov/",
@@ -35,6 +39,8 @@
     }
   },
   "AZ": {
+    "stateAbbrev": "AZ",
+    "stateName": "Arizona",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://servicearizona.com/VoterRegistration/selectLanguage",
@@ -51,6 +57,8 @@
     }
   },
   "AR": {
+    "stateAbbrev": "AR",
+    "stateName": "Arkansas",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -64,6 +72,8 @@
     }
   },
   "CA": {
+    "stateAbbrev": "CA",
+    "stateName": "California",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://registertovote.ca.gov/",
@@ -80,6 +90,8 @@
     }
   },
   "CO": {
+    "stateAbbrev": "CO",
+    "stateName": "Colorado",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml",
@@ -96,6 +108,8 @@
     }
   },
   "CT": {
+    "stateAbbrev": "CT",
+    "stateName": "Connecticut",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://voterregistration.ct.gov/OLVR/welcome.do",
@@ -113,6 +127,8 @@
     }
   },
   "DE": {
+    "stateAbbrev": "DE",
+    "stateName": "Delaware",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://ivote.de.gov/VoterView/",
@@ -130,6 +146,8 @@
     }
   },
   "FL": {
+    "stateAbbrev": "FL",
+    "stateName": "Florida",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://registertovoteflorida.gov/eligibilityreactive",
@@ -146,6 +164,8 @@
     }
   },
   "GA": {
+    "stateAbbrev": "GA",
+    "stateName": "Georgia",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
@@ -164,6 +184,8 @@
     }
   },
   "HI": {
+    "stateAbbrev": "HI",
+    "stateName": "Hawaii",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://olvr.hawaii.gov/",
@@ -182,6 +204,8 @@
     }
   },
   "ID": {
+    "stateAbbrev": "ID",
+    "stateName": "Idaho",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://apps.idahovotes.gov/OnlineVoterRegistration",
@@ -200,6 +224,8 @@
     }
   },
   "IL": {
+    "stateAbbrev": "IL",
+    "stateName": "Illinois",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://ova.elections.il.gov/",
@@ -217,6 +243,8 @@
     }
   },
   "IN": {
+    "stateAbbrev": "IN",
+    "stateName": "Indiana",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://indianavoters.in.gov/",
@@ -235,6 +263,8 @@
     }
   },
   "IA": {
+    "stateAbbrev": "IA",
+    "stateName": "Iowa",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
@@ -253,6 +283,8 @@
     }
   },
   "KS": {
+    "stateAbbrev": "KS",
+    "stateName": "Kansas",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
@@ -271,6 +303,8 @@
     }
   },
   "KY": {
+    "stateAbbrev": "KY",
+    "stateName": "Kentucky",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://vrsws.sos.ky.gov/ovrweb/",
@@ -289,6 +323,8 @@
     }
   },
   "LA": {
+    "stateAbbrev": "LA",
+    "stateName": "Louisiana",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://voterportal.sos.la.gov/VoterRegistration",
@@ -307,6 +343,8 @@
     }
   },
   "ME": {
+    "stateAbbrev": "ME",
+    "stateName": "Maine",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -320,6 +358,8 @@
     }
   },
   "MD": {
+    "stateAbbrev": "MD",
+    "stateName": "Maryland",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",
@@ -337,6 +377,8 @@
     }
   },
   "MA": {
+    "stateAbbrev": "MA",
+    "stateName": "Massachusetts",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.sec.state.ma.us/ovr/",
@@ -354,6 +396,8 @@
     }
   },
   "MI": {
+    "stateAbbrev": "MI",
+    "stateName": "Michigan",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://mvic.sos.state.mi.us/registervoter",
@@ -372,6 +416,8 @@
     }
   },
   "MN": {
+    "stateAbbrev": "MN",
+    "stateName": "Minnesota",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
@@ -389,6 +435,8 @@
     }
   },
   "MS": {
+    "stateAbbrev": "MS",
+    "stateName": "Mississippi",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -402,6 +450,8 @@
     }
   },
   "MO": {
+    "stateAbbrev": "MO",
+    "stateName": "Missouri",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://s1.sos.mo.gov/elections/voterregistration/",
@@ -420,6 +470,8 @@
     }
   },
   "MT": {
+    "stateAbbrev": "MT",
+    "stateName": "Montana",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -433,6 +485,8 @@
     }
   },
   "NE": {
+    "stateAbbrev": "NE",
+    "stateName": "Nebraska",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.nebraska.gov/apps-sos-voter-registration/",
@@ -449,6 +503,8 @@
     }
   },
   "NV": {
+    "stateAbbrev": "NV",
+    "stateName": "Nevada",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.nvsos.gov/SOSVoterServices/start.aspx",
@@ -466,6 +522,8 @@
     }
   },
   "NH": {
+    "stateAbbrev": "NH",
+    "stateName": "New Hampshire",
     "registrationType": "in-person",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -477,6 +535,8 @@
     "bmDeadlines": {}
   },
   "NJ": {
+    "stateAbbrev": "NJ",
+    "stateName": "New Jersey",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -490,6 +550,8 @@
     }
   },
   "NM": {
+    "stateAbbrev": "NM",
+    "stateName": "New Mexico",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",
@@ -506,6 +568,8 @@
     }
   },
   "NY": {
+    "stateAbbrev": "NY",
+    "stateName": "New York",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
@@ -524,6 +588,8 @@
     }
   },
   "NC": {
+    "stateAbbrev": "NC",
+    "stateName": "North Carolina",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
@@ -542,6 +608,8 @@
     }
   },
   "ND": {
+    "stateAbbrev": "ND",
+    "stateName": "North Dakota",
     "registrationType": "not-needed",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -552,6 +620,8 @@
     "bmDeadlines": {}
   },
   "OH": {
+    "stateAbbrev": "OH",
+    "stateName": "Ohio",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://olvr.ohiosos.gov/",
@@ -569,6 +639,8 @@
     }
   },
   "OK": {
+    "stateAbbrev": "OK",
+    "stateName": "Oklahoma",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -582,6 +654,8 @@
     }
   },
   "OR": {
+    "stateAbbrev": "OR",
+    "stateName": "Oregon",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://secure.sos.state.or.us/orestar/vr/register.do",
@@ -598,6 +672,8 @@
     }
   },
   "PA": {
+    "stateAbbrev": "PA",
+    "stateName": "Pennsylvania",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
@@ -615,6 +691,8 @@
     }
   },
   "RI": {
+    "stateAbbrev": "RI",
+    "stateName": "Rhode Island",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://vote.sos.ri.gov/Home/RegistertoVote",
@@ -631,6 +709,8 @@
     }
   },
   "SC": {
+    "stateAbbrev": "SC",
+    "stateName": "South Carolina",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
@@ -649,6 +729,8 @@
     }
   },
   "SD": {
+    "stateAbbrev": "SD",
+    "stateName": "South Dakota",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -662,6 +744,8 @@
     }
   },
   "TN": {
+    "stateAbbrev": "TN",
+    "stateName": "Tennessee",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://ovr.govote.tn.gov/",
@@ -680,6 +764,8 @@
     }
   },
   "TX": {
+    "stateAbbrev": "TX",
+    "stateName": "Texas",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -692,6 +778,8 @@
     }
   },
   "UT": {
+    "stateAbbrev": "UT",
+    "stateName": "Utah",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://secure.utah.gov/voterreg/index.html",
@@ -710,6 +798,8 @@
     }
   },
   "VT": {
+    "stateAbbrev": "VT",
+    "stateName": "Vermont",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://olvr.vermont.gov/",
@@ -728,6 +818,8 @@
     }
   },
   "VA": {
+    "stateAbbrev": "VA",
+    "stateName": "Virginia",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://www.elections.virginia.gov/citizen-portal/",
@@ -745,6 +837,8 @@
     }
   },
   "WA": {
+    "stateAbbrev": "WA",
+    "stateName": "Washington",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://voter.votewa.gov/WhereToVote.aspx",
@@ -761,6 +855,8 @@
     }
   },
   "WV": {
+    "stateAbbrev": "WV",
+    "stateName": "West Virginia",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://ovr.sos.wv.gov/Register/Landing",
@@ -779,6 +875,8 @@
     }
   },
   "WI": {
+    "stateAbbrev": "WI",
+    "stateName": "Wisconsin",
     "registrationType": "online",
     "registrationLinks": {
       "en": "https://myvote.wi.gov/en-us/RegisterToVote",
@@ -796,6 +894,8 @@
     }
   },
   "WY": {
+    "stateAbbrev": "WY",
+    "stateName": "Wyoming",
     "registrationType": "by-mail",
     "registrationLinks": {},
     "moreInfoLinks": {
@@ -809,6 +909,8 @@
     }
   },
   "DC": {
+    "stateAbbrev": "DC",
+    "stateName": "District of Columbia",
     "registrationType": "by-mail",
     "registrationLinks": {
       "englishOnly": "true"

@@ -5,7 +5,7 @@
     "node": true
   },
   // It seems sensible to let the Svelte app do its own linting.
-  "ignorePatterns": ["views/svelte"],
+  "ignorePatterns": ["web/svelte"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "tsconfig.json",

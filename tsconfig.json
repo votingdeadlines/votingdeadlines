@@ -18,5 +18,5 @@
     "sourceMap": true,
     "strictNullChecks": false
   },
-  "include": ["src/**/*", "bin/**/*", "data/**/*", ]
+  "include": ["src/**/*", "bin/**/*", "data/**/*", "data-sources/**/*.ts"]
 }

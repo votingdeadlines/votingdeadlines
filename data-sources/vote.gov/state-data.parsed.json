@@ -1,5 +1,7 @@
 {
   "AL": {
+    "stateAbbrev": "AL",
+    "stateName": "Alabama",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -20,6 +22,8 @@
     ]
   },
   "AK": {
+    "stateAbbrev": "AK",
+    "stateName": "Alaska",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -40,6 +44,8 @@
     ]
   },
   "AZ": {
+    "stateAbbrev": "AZ",
+    "stateName": "Arizona",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -60,6 +66,8 @@
     ]
   },
   "AR": {
+    "stateAbbrev": "AR",
+    "stateName": "Arkansas",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -79,6 +87,8 @@
     ]
   },
   "CA": {
+    "stateAbbrev": "CA",
+    "stateName": "California",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -99,6 +109,8 @@
     ]
   },
   "CO": {
+    "stateAbbrev": "CO",
+    "stateName": "Colorado",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -119,6 +131,8 @@
     ]
   },
   "CT": {
+    "stateAbbrev": "CT",
+    "stateName": "Connecticut",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -139,6 +153,8 @@
     ]
   },
   "DE": {
+    "stateAbbrev": "DE",
+    "stateName": "Delaware",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -159,6 +175,8 @@
     ]
   },
   "FL": {
+    "stateAbbrev": "FL",
+    "stateName": "Florida",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -179,6 +197,8 @@
     ]
   },
   "GA": {
+    "stateAbbrev": "GA",
+    "stateName": "Georgia",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -199,6 +219,8 @@
     ]
   },
   "HI": {
+    "stateAbbrev": "HI",
+    "stateName": "Hawaii",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -219,6 +241,8 @@
     ]
   },
   "ID": {
+    "stateAbbrev": "ID",
+    "stateName": "Idaho",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -239,6 +263,8 @@
     ]
   },
   "IL": {
+    "stateAbbrev": "IL",
+    "stateName": "Illinois",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -259,6 +285,8 @@
     ]
   },
   "IN": {
+    "stateAbbrev": "IN",
+    "stateName": "Indiana",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -279,6 +307,8 @@
     ]
   },
   "IA": {
+    "stateAbbrev": "IA",
+    "stateName": "Iowa",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -299,6 +329,8 @@
     ]
   },
   "KS": {
+    "stateAbbrev": "KS",
+    "stateName": "Kansas",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -319,6 +351,8 @@
     ]
   },
   "KY": {
+    "stateAbbrev": "KY",
+    "stateName": "Kentucky",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -339,6 +373,8 @@
     ]
   },
   "LA": {
+    "stateAbbrev": "LA",
+    "stateName": "Louisiana",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -359,6 +395,8 @@
     ]
   },
   "ME": {
+    "stateAbbrev": "ME",
+    "stateName": "Maine",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -378,6 +416,8 @@
     ]
   },
   "MD": {
+    "stateAbbrev": "MD",
+    "stateName": "Maryland",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -398,6 +438,8 @@
     ]
   },
   "MA": {
+    "stateAbbrev": "MA",
+    "stateName": "Massachusetts",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -418,6 +460,8 @@
     ]
   },
   "MI": {
+    "stateAbbrev": "MI",
+    "stateName": "Michigan",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -438,6 +482,8 @@
     ]
   },
   "MN": {
+    "stateAbbrev": "MN",
+    "stateName": "Minnesota",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -458,6 +504,8 @@
     ]
   },
   "MS": {
+    "stateAbbrev": "MS",
+    "stateName": "Mississippi",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -477,6 +525,8 @@
     ]
   },
   "MO": {
+    "stateAbbrev": "MO",
+    "stateName": "Missouri",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -497,6 +547,8 @@
     ]
   },
   "MT": {
+    "stateAbbrev": "MT",
+    "stateName": "Montana",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -516,6 +568,8 @@
     ]
   },
   "NE": {
+    "stateAbbrev": "NE",
+    "stateName": "Nebraska",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -536,6 +590,8 @@
     ]
   },
   "NV": {
+    "stateAbbrev": "NV",
+    "stateName": "Nevada",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -556,6 +612,8 @@
     ]
   },
   "NH": {
+    "stateAbbrev": "NH",
+    "stateName": "New Hampshire",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -574,6 +632,8 @@
     ]
   },
   "NJ": {
+    "stateAbbrev": "NJ",
+    "stateName": "New Jersey",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -593,6 +653,8 @@
     ]
   },
   "NM": {
+    "stateAbbrev": "NM",
+    "stateName": "New Mexico",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -613,6 +675,8 @@
     ]
   },
   "NY": {
+    "stateAbbrev": "NY",
+    "stateName": "New York",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -633,6 +697,8 @@
     ]
   },
   "NC": {
+    "stateAbbrev": "NC",
+    "stateName": "North Carolina",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -653,6 +719,8 @@
     ]
   },
   "ND": {
+    "stateAbbrev": "ND",
+    "stateName": "North Dakota",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegNotAvailable"
@@ -670,6 +738,8 @@
     ]
   },
   "OH": {
+    "stateAbbrev": "OH",
+    "stateName": "Ohio",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -690,6 +760,8 @@
     ]
   },
   "OK": {
+    "stateAbbrev": "OK",
+    "stateName": "Oklahoma",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -709,6 +781,8 @@
     ]
   },
   "OR": {
+    "stateAbbrev": "OR",
+    "stateName": "Oregon",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -729,6 +803,8 @@
     ]
   },
   "PA": {
+    "stateAbbrev": "PA",
+    "stateName": "Pennsylvania",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -749,6 +825,8 @@
     ]
   },
   "RI": {
+    "stateAbbrev": "RI",
+    "stateName": "Rhode Island",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -769,6 +847,8 @@
     ]
   },
   "SC": {
+    "stateAbbrev": "SC",
+    "stateName": "South Carolina",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -789,6 +869,8 @@
     ]
   },
   "SD": {
+    "stateAbbrev": "SD",
+    "stateName": "South Dakota",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -808,6 +890,8 @@
     ]
   },
   "TN": {
+    "stateAbbrev": "TN",
+    "stateName": "Tennessee",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -828,6 +912,8 @@
     ]
   },
   "TX": {
+    "stateAbbrev": "TX",
+    "stateName": "Texas",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -847,6 +933,8 @@
     ]
   },
   "UT": {
+    "stateAbbrev": "UT",
+    "stateName": "Utah",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -867,6 +955,8 @@
     ]
   },
   "VT": {
+    "stateAbbrev": "VT",
+    "stateName": "Vermont",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -887,6 +977,8 @@
     ]
   },
   "VA": {
+    "stateAbbrev": "VA",
+    "stateName": "Virginia",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -907,6 +999,8 @@
     ]
   },
   "WA": {
+    "stateAbbrev": "WA",
+    "stateName": "Washington",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -927,6 +1021,8 @@
     ]
   },
   "WV": {
+    "stateAbbrev": "WV",
+    "stateName": "West Virginia",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -947,6 +1043,8 @@
     ]
   },
   "WI": {
+    "stateAbbrev": "WI",
+    "stateName": "Wisconsin",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -967,6 +1065,8 @@
     ]
   },
   "WY": {
+    "stateAbbrev": "WY",
+    "stateName": "Wyoming",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
@@ -986,6 +1086,8 @@
     ]
   },
   "DC": {
+    "stateAbbrev": "DC",
+    "stateName": "District of Columbia",
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",

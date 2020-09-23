@@ -7,4 +7,10 @@ module.exports = {
   testRegex: '.test.(ts|js)x?$',
   coverageDirectory: 'coverage',
   collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}', '!src/**/*.d.ts'],
+  roots: [
+    '<rootDir>/bin',
+    '<rootDir>/data',
+    '<rootDir>/data-sources',
+    '<rootDir>/src',
+  ]
 }

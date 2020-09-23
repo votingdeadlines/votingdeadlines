@@ -1,0 +1,17 @@
+// See also:
+// https://github.com/tonyrewin/svelte3-ts-boilerplate/blob/master/tsconfig.json
+
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types", // redundant?
+      "./node_modules/@pyoner/svelte-types",
+      "./node_modules/@types/jest", // redundant?
+      "./src/types"
+    ],
+    "types": ["@pyoner/svelte-types", "@types/jest"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
+}

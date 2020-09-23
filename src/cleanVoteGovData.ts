@@ -50,6 +50,9 @@ export type CleanedVGDataset = {
 }
 
 export type CleanedVGState = {
+  // Technically redundant with the key, but useful to have downstream.
+  stateAbbrev: string
+  stateName: string
   // This field seems a bit overloaded. Look more into at the display phase.
   // Also, having trouble with union types, hence the `| string`. At a later
   // stage we could try importing the file instead of using readFile, and
@@ -104,13 +107,15 @@ export function cleanVGData(
 // Lightly cleans up the data for an individual state, e.g. dropping redundant
 // info and labeling the mail-by data more clearly.
 function cleanState(rawState: RawVGState): CleanedVGState {
-  const { registration_type, english, spanish } = rawState
+  const { state_name, state_abbreviation, registration_type, english, spanish } = rawState
   const {
     registration_link_english_only,
     more_info_link_english_only,
   } = spanish
 
   const cleanedState: CleanedVGState = {
+    stateAbbrev: state_abbreviation.toUpperCase(),
+    stateName: state_name,
     registrationType: registration_type,
     registrationLinks: {
       en: english.registration_link,

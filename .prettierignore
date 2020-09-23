@@ -1,6 +1,6 @@
 // Most of the time, prettier should be run via package.json#prettier:defaults,
 // which has a default set of folders.
 //
-// views/svelte is included in that list at present, because most of those
+// web/svelte is included in that list at present, because most of those
 // files should be formatted, but svelte/public/build is an exception.
 */svelte/public/build

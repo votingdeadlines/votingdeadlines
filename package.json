@@ -22,7 +22,7 @@
     "lint:eslint": "eslint . --ext .ts,.tsx",
     "lint:prettier": "yarn prettier:defaults --check --debug-check",
     "prettier": "prettier",
-    "prettier:defaults": "prettier bin src views",
+    "prettier:defaults": "prettier bin src web",
     "test": "yarn lint && yarn test:jest",
     "test:jest": "jest",
     "test:cov": "jest --coverage",

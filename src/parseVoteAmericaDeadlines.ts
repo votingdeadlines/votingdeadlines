@@ -1,4 +1,4 @@
-import { CleanVAState } from './cleanVoteAmericaData'
+import type { CleanVAState } from './cleanVoteAmericaData'
 import { v1 } from './timeUtilities'
 import { UsaState, usaStates } from './usaStates'
 import { readFile, writeFile } from './utilities'

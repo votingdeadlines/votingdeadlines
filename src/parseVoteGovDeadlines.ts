@@ -1,6 +1,6 @@
 // This is meant to clean up the raw JSON into something more usable.
 
-import { CleanedVGState } from './cleanVoteGovData'
+import type { CleanedVGState } from './cleanVoteGovData'
 import { v1 } from './timeUtilities'
 import { UsaState, usaStatesAndDc } from './usaStates'
 import { readFile, writeFile } from './utilities'
@@ -21,6 +21,8 @@ export type ParsedVGStatesIndex = {
 
 // An individual state's registration deadlines.
 export type ParsedVGStateRegPolicies = {
+  stateAbbrev: string,
+  stateName: string,
   inPersonRegPolicies: Array<InPersonRegPolicy>
   mailRegPolicies: Array<MailRegPolicy>
   onlineRegPolicies: Array<OnlineRegPolicy>
@@ -210,6 +212,8 @@ function parseVGStateRegPolicies(
   }
 
   const deadlines: ParsedVGStateRegPolicies = {
+    stateAbbrev: cleanedState.stateAbbrev,
+    stateName: cleanedState.stateName,
     inPersonRegPolicies: data.inPersonRegPolicies,
     mailRegPolicies: data.mailRegPolicies,
     onlineRegPolicies: data.onlineRegPolicies,
