@@ -91,7 +91,7 @@ export default {
       policies: [
         {
           kind: 'InPersonRegDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -100,7 +100,7 @@ export default {
       policies: [
         {
           kind: 'MailRegPostmarkedDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -496,7 +496,7 @@ export default {
       policies: [
         {
           kind: 'InPersonRegDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -505,7 +505,7 @@ export default {
       policies: [
         {
           kind: 'MailRegPostmarkedDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -514,7 +514,7 @@ export default {
       policies: [
         {
           kind: 'OnlineRegDeadline',
-          isoDate: '2020-10-14',
+          isoDate: '2020-10-13',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -1124,7 +1124,7 @@ export default {
       policies: [
         {
           kind: 'InPersonRegDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-02',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -1133,7 +1133,7 @@ export default {
       policies: [
         {
           kind: 'MailRegPostmarkedDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -1181,7 +1181,7 @@ export default {
       policies: [
         {
           kind: 'InPersonRegDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -1190,7 +1190,7 @@ export default {
       policies: [
         {
           kind: 'MailRegPostmarkedDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],
@@ -1199,7 +1199,7 @@ export default {
       policies: [
         {
           kind: 'OnlineRegDeadline',
-          isoDate: '2020-10-04',
+          isoDate: '2020-10-05',
         },
       ],
       warnings: ["Don't use this data until this warning is removed."],

@@ -58,9 +58,9 @@
       "es": "https://www.sos.arkansas.gov/elections/voter-information/",
       "englishOnly": "true"
     },
-    "ipDeadline": "Sunday, October 4, 2020",
+    "ipDeadline": "Monday, October 5, 2020",
     "bmDeadlines": {
-      "postmarkedBy": "Sunday, October 4, 2020"
+      "postmarkedBy": "Monday, October 5, 2020"
     }
   },
   "CA": {
@@ -300,10 +300,10 @@
       "es": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
       "englishOnly": "true"
     },
-    "ipDeadline": "Sunday, October 4, 2020",
-    "olDeadline": "Wednesday, October 14, 2020",
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
     "bmDeadlines": {
-      "postmarkedBy": "Sunday, October 4, 2020"
+      "postmarkedBy": "Monday, October 5, 2020"
     }
   },
   "ME": {
@@ -642,10 +642,10 @@
       "es": "https://www.scvotes.gov/south-carolina-voter-registration-information",
       "englishOnly": "true"
     },
-    "ipDeadline": "Sunday, October 4, 2020",
+    "ipDeadline": "Friday, October 2, 2020",
     "olDeadline": "Sunday, October 4, 2020",
     "bmDeadlines": {
-      "postmarkedBy": "Sunday, October 4, 2020"
+      "postmarkedBy": "Monday, October 5, 2020"
     }
   },
   "SD": {
@@ -673,10 +673,10 @@
       "es": "https://sos.tn.gov/products/elections/register-vote",
       "englishOnly": "true"
     },
-    "ipDeadline": "Sunday, October 4, 2020",
-    "olDeadline": "Sunday, October 4, 2020",
+    "ipDeadline": "Monday, October 5, 2020",
+    "olDeadline": "Monday, October 5, 2020",
     "bmDeadlines": {
-      "postmarkedBy": "Sunday, October 4, 2020"
+      "postmarkedBy": "Monday, October 5, 2020"
     }
   },
   "TX": {

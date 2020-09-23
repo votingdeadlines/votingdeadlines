@@ -109,7 +109,7 @@
       "policies": [
         {
           "kind": "InPersonRegDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -120,7 +120,7 @@
       "policies": [
         {
           "kind": "MailRegPostmarkedDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -598,7 +598,7 @@
       "policies": [
         {
           "kind": "InPersonRegDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -609,7 +609,7 @@
       "policies": [
         {
           "kind": "MailRegPostmarkedDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -620,7 +620,7 @@
       "policies": [
         {
           "kind": "OnlineRegDeadline",
-          "isoDate": "2020-10-14"
+          "isoDate": "2020-10-13"
         }
       ],
       "warnings": [
@@ -1358,7 +1358,7 @@
       "policies": [
         {
           "kind": "InPersonRegDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-02"
         }
       ],
       "warnings": [
@@ -1369,7 +1369,7 @@
       "policies": [
         {
           "kind": "MailRegPostmarkedDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -1427,7 +1427,7 @@
       "policies": [
         {
           "kind": "InPersonRegDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -1438,7 +1438,7 @@
       "policies": [
         {
           "kind": "MailRegPostmarkedDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
@@ -1449,7 +1449,7 @@
       "policies": [
         {
           "kind": "OnlineRegDeadline",
-          "isoDate": "2020-10-04"
+          "isoDate": "2020-10-05"
         }
       ],
       "warnings": [
