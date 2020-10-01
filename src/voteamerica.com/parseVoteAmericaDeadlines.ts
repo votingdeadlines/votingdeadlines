@@ -1,7 +1,7 @@
 import type { CleanVAState } from './cleanVoteAmericaData'
-import { v1 } from './timeUtilities'
-import { UsaState, usaStates } from './usaStates'
-import { readFile, writeFile } from './utilities'
+import { v1 } from '../timeUtilities'
+import { UsaState, usaStates } from '../usaStates'
+import { readFile, writeFile } from '../utilities'
 
 const { parseUsaDateToNaiveIsoDate } = v1
 

@@ -1,5 +1,5 @@
 import { parseVADeadlines } from './parseVoteAmericaDeadlines'
-import { usaStates } from './usaStates'
+import { usaStates } from '../usaStates'
 
 describe('parseVoteAmericaDeadlines.ts', () => {
   const mockCleanedData = `{ "Alaska": { "byMail": "received by October 13, 2020", "inPerson": "received by November 3, 2020", "online": "N/A" } }`

@@ -1,5 +1,5 @@
-import { UsaState, usaStatesAndDc } from './usaStates'
-import { logProgress, readFile, writeFile } from './utilities'
+import { UsaState, usaStatesAndDc } from '../usaStates'
+import { logProgress, readFile, writeFile } from '../utilities'
 
 //-------//
 // Types //

@@ -16,15 +16,15 @@ process-va: download-va trim-va format-va extract-va clean-va parse-va ## Run Vo
 
 download: download-vg download-va ## 1. Download data
 download-vg: ## 1a. Download Vote.gov data
-	bin/download-vg-git.sh $(CWD)
+	bin/vote.gov/download-vg-git.sh $(CWD)
 download-va: ## 1b. Download VoteAmerica.com HTML
-	bin/download-voteamerica-html.sh $(CWD)
+	bin/voteamerica.com/download-voteamerica-html.sh $(CWD)
 # download-vo: ## 1. Download HTML
 # 	bin/download-vote-org-html.sh $(CWD)
 
 trim: trim-vg trim-va ## 2. Trim downloaded data
 trim-vg: ## 2a. Trim Vote.gov source files
-	bin/trim-vg-files.sh $(CWD)
+	bin/vote.gov/trim-vg-files.sh $(CWD)
 trim-va: ## 2b. Trim VoteAmerica.com HTML file
 	yarn data:trim:va
 # trim-vo: ## 2. Trim Vote.org HTML
@@ -32,7 +32,7 @@ trim-va: ## 2b. Trim VoteAmerica.com HTML file
 
 format: format-va ## 3. Format trimmed HTML for easier reading
 format-va: # 3a. Format trimmed VoteAmerica.com HTML
-	bin/format-voteamerica-html.sh $(CWD)
+	bin/voteamerica.com/format-voteamerica-html.sh $(CWD)
 # format-vo: ## 3. Format HTML
 # 	bin/format-vote-org-html.sh $(CWD)
 

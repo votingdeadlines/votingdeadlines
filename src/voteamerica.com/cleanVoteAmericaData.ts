@@ -1,7 +1,7 @@
 // This data is already pretty clean, so all this file does it copy it over.
 // It also defines what the data should look like for other files to import.
 
-import { readFile, writeFile } from './utilities'
+import { readFile, writeFile } from '../utilities'
 
 //-------//
 // Types //

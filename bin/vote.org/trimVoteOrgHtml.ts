@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 
-import { readParseAndWriteHtml } from '../src/parseHtml'
+import { readParseAndWriteHtml } from '../../src/parseHtml'
 
 const {
   VOTE_ORG_GENERAL_RAW_HTML_PATH,
@@ -9,10 +9,10 @@ const {
 } = process.env
 
 const generalRawHtmlPath = resolve(
-  `${__dirname}/../${VOTE_ORG_GENERAL_RAW_HTML_PATH}`
+  `${__dirname}/../../${VOTE_ORG_GENERAL_RAW_HTML_PATH}`
 )
 const generalTrimmedPath = resolve(
-  `${__dirname}/../${VOTE_ORG_GENERAL_TRIMMED_HTML_PATH}`
+  `${__dirname}/../../${VOTE_ORG_GENERAL_TRIMMED_HTML_PATH}`
 )
 
 readParseAndWriteHtml(

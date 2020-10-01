@@ -1,5 +1,5 @@
-import { parseHtmlV2 } from './parseHtml'
-import { readFile, writeFile } from './utilities'
+import { parseHtmlV2 } from '../parseHtml'
+import { readFile, writeFile } from '../utilities'
 
 interface RawVAData {
   [key: string]: {

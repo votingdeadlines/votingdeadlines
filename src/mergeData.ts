@@ -1,11 +1,11 @@
 import type {
   ParsedVAStatesIndex,
   ParsedVAStateRegPolicies,
-} from './parseVoteAmericaDeadlines'
+} from './voteamerica.com/parseVoteAmericaDeadlines'
 import type {
   ParsedVGStatesIndex,
   ParsedVGStateRegPolicies,
-} from './parseVoteGovDeadlines'
+} from './vote.gov/parseVoteGovDeadlines'
 import { UsaState, usaStatesAndDc } from './usaStates'
 import { readFile, writeFile } from './utilities'
 

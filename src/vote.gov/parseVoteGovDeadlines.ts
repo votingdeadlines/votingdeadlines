@@ -1,9 +1,9 @@
 // This is meant to clean up the raw JSON into something more usable.
 
 import type { CleanedVGState } from './cleanVoteGovData'
-import { v1 } from './timeUtilities'
-import { UsaState, usaStatesAndDc } from './usaStates'
-import { readFile, writeFile } from './utilities'
+import { v1 } from '../timeUtilities'
+import { UsaState, usaStatesAndDc } from '../usaStates'
+import { readFile, writeFile } from '../utilities'
 
 const { parseUsaLongDateToNaiveIsoDate } = v1
 
