@@ -15,7 +15,10 @@ strong {
 <script lang="ts" type="text/typescript">
 import DeadlineCard from './DeadlineCard.svelte'
 import DeadlineCountdownDetails from './DeadlineCountdownDetails.svelte'
-import { getInPersonUiBooleans, getInPersonDeadlineUiDates } from './stateUtilities'
+import {
+  getInPersonUiBooleans,
+  getInPersonDeadlineUiDates,
+} from './stateUtilities'
 import SvgLocationPin from './SvgLocationPin.svelte'
 
 // Props
@@ -29,47 +32,44 @@ const { stateName } = stateData
 const ui = getInPersonUiBooleans(stateData)
 
 // Relevant dates (if countdown)
-const dates = ui.isCountdown ? getInPersonDeadlineUiDates(stateData, timeNow) : null
+const dates = ui.isCountdown
+  ? getInPersonDeadlineUiDates(stateData, timeNow)
+  : null
 </script>
 
-<DeadlineCard title='In Person' color={color}>
-  <figure slot='svg'>
+<DeadlineCard title="In Person" color="{color}">
+  <figure slot="svg">
     <SvgLocationPin />
   </figure>
 
   {#if ui.isCountdown}
-    <p class='blurb'>
-      <strong>{dates.mainDeadlineDisplay}</strong>
-      is the last day to register in person in {stateName}.
-      <span>This is in</span>
+    <p class="blurb">
+      <strong>{dates.mainDeadlineDisplay}</strong> is the last day to register in
+      person in {stateName}. <span>This is in</span>
     </p>
-    <time style='display: block; margin-bottom: 1em'>
-      <strong style='font-size: 3em'>{dates.mainCountdown.daysString}</strong>
-      <strong style='font-size: 2em'>+{dates.mainCountdown.hmsString}</strong>
+    <time style="display: block; margin-bottom: 1em">
+      <strong style="font-size: 3em">{dates.mainCountdown.daysString}</strong>
+      <strong style="font-size: 2em">+{dates.mainCountdown.hmsString}</strong>
     </time>
-    <DeadlineCountdownDetails stateName={stateName} dates={dates} />
-
+    <DeadlineCountdownDetails stateName="{stateName}" dates="{dates}" />
   {:else if ui.isNotAvailable}
-    <p class='blurb'>
+    <p class="blurb">
       <strong>Online registration is not available in this state.</strong>
     </p>
-
   {:else if ui.isUnsure}
-    <p class='blurb'>
+    <p class="blurb">
       <strong>
-        We're not sure if online registration is available, possibly due to a bug
-        on our end, or issues with data. Check the links below for a second
+        We're not sure if online registration is available, possibly due to a
+        bug on our end, or issues with data. Check the links below for a second
         opinion!
       </strong>
     </p>
-
   {:else}
-    <p class='blurb'>
+    <p class="blurb">
       <strong>
-        We're not sure if online registration is available, probably due to a bug
-        on our end. Check the links below for a better answer.
+        We're not sure if online registration is available, probably due to a
+        bug on our end. Check the links below for a better answer.
       </strong>
     </p>
-
   {/if}
 </DeadlineCard>

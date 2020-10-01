@@ -89,8 +89,8 @@ const stateColorsIndex = getStateColorsIndex(statesAndDc, timeNow)
       </div>
     </div>
     <Tagline>
-      A dozen states are closing in less than 10 days!
-      <span>Register while you still can.</span>
+      A dozen states are closing in less than 10 days! <span>Register while you
+        still can.</span>
     </Tagline>
     <TaglineS className="mb12">
       Time left as of Saturday, September 26, 2020. Data from Vote.gov.
@@ -98,20 +98,19 @@ const stateColorsIndex = getStateColorsIndex(statesAndDc, timeNow)
   </div>
 
   <div class="map-wrapper">
-    <Map
-      stateColorsIndex={stateColorsIndex}
-      statesAndDc={statesAndDc}
-    />
+    <Map stateColorsIndex="{stateColorsIndex}" statesAndDc="{statesAndDc}" />
   </div>
 
   <StateIndex
-    stateColorsIndex={stateColorsIndex}
-    entries={statesAndDc}
-    timeNow={timeNow}
+    stateColorsIndex="{stateColorsIndex}"
+    entries="{statesAndDc}"
+    timeNow="{timeNow}"
   />
 
   <footer>
-    This website was made using data from Vote.gov, with manual and automated comparisons to data from VoteAmerica.com and FiveThirtyEight.com. Code will be open source soon on GitHub.
+    This website was made using data from Vote.gov, with manual and automated
+    comparisons to data from VoteAmerica.com and FiveThirtyEight.com. Code will
+    be open source soon on GitHub.
   </footer>
 </main>
 

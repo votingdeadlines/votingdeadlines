@@ -23,12 +23,10 @@ describe('clientTimeUtilities.ts', () => {
 
         expect(result).toStrictEqual({ D: 41, hrs: 1, min: 0, sec: 0 })
       })
-
-      })
     })
+  })
 
   describe('v2', () => {
-
     //-----------//
     // Timezones //
     //-----------//
@@ -79,10 +77,16 @@ describe('clientTimeUtilities.ts', () => {
 
       it('calculates differences across time zones', () => {
         // 1. Your current time is: 2020-09-24 15:45:00 PDT
-        const currentLocalTime = dayjs.tz('2020-09-24T15:45:00', 'America/Los_Angeles')
+        const currentLocalTime = dayjs.tz(
+          '2020-09-24T15:45:00',
+          'America/Los_Angeles'
+        )
 
         // 2. Current Alaska time: 2020-09-24 14:45:00 AKDT [+0, just tz change]
-        const currentAlaskaTime = dayjs.tz('2020-09-24T14:45:00', 'America/Anchorage')
+        const currentAlaskaTime = dayjs.tz(
+          '2020-09-24T14:45:00',
+          'America/Anchorage'
+        )
 
         // Sanity check that we don't have a problem already at this stage.
         const currentTimeDiff = currentLocalTime.diff(currentAlaskaTime)
@@ -90,7 +94,10 @@ describe('clientTimeUtilities.ts', () => {
 
         // 3. Start of final day: 2020-10-04 00:00:00 AKST
         const startOfFinalDay = '2020-10-04T00:00:00'
-        const startOfFinalDayAlaskaTime = dayjs.tz(`${startOfFinalDay}`, 'America/Anchorage')
+        const startOfFinalDayAlaskaTime = dayjs.tz(
+          `${startOfFinalDay}`,
+          'America/Anchorage'
+        )
 
         // Verify actual deadline difference (future.diff(present) is positive)
         const alaskaDiff = startOfFinalDayAlaskaTime.diff(currentAlaskaTime)

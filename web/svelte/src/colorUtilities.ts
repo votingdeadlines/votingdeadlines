@@ -1,6 +1,11 @@
 import { v1 } from './clientTimeUtils'
 import { MS_PER_DAY } from './clientTimeUtilities'
-import type { ClientStateData, ColorsIndex, StateColors, REG_NOT_AVAILABLE } from './clientTypes'
+import type {
+  ClientStateData,
+  ColorsIndex,
+  StateColors,
+  REG_NOT_AVAILABLE,
+} from './clientTypes'
 import {
   getIsOnlineRegAvailable,
   getOnlineDeadlineUiDates,

@@ -21,8 +21,8 @@ export type ParsedVGStatesIndex = {
 
 // An individual state's registration deadlines.
 export type ParsedVGStateRegPolicies = {
-  stateAbbrev: string,
-  stateName: string,
+  stateAbbrev: string
+  stateName: string
   inPersonRegPolicies: Array<InPersonRegPolicy>
   mailRegPolicies: Array<MailRegPolicy>
   onlineRegPolicies: Array<OnlineRegPolicy>

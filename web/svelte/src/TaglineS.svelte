@@ -12,7 +12,6 @@ p {
   }
 }
 
-
 p a {
   color: red !important;
 }

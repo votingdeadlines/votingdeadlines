@@ -34,7 +34,6 @@ header a:hover {
   text-decoration: none;
 }
 
-
 @media screen and (min-width: 900px) {
   header > a {
     justify-content: flex-start;
@@ -88,7 +87,7 @@ header a:hover {
 </script>
 
 <header>
-    <a href='/'>
+  <a href="/">
     <div id="logo">
       <svg
         width="301"

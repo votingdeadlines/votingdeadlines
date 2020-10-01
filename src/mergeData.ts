@@ -23,8 +23,8 @@ export type MergedStatesIndex = {
 
 // An individual state's registration policies.
 export type MergedStateRegPolicies = {
-  stateAbbrev: string,
-  stateName: string,
+  stateAbbrev: string
+  stateName: string
   inPersonRegPolicies: MergedInPersonRegPolicy
   mailRegPolicies: MergedMailRegPolicy
   onlineRegPolicies: MergedOnlineRegPolicy

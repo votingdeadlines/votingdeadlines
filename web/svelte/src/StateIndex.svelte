@@ -18,7 +18,8 @@ export let timeNow
     <StateItem
       abbrev="{st[0]}"
       data="{st[1]}"
-      stateColors={stateColorsIndex[st[0]]}
-      timeNow={timeNow} />
+      stateColors="{stateColorsIndex[st[0]]}"
+      timeNow="{timeNow}"
+    />
   {/each}
 </ol>

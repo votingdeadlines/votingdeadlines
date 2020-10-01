@@ -107,7 +107,13 @@ export function cleanVGData(
 // Lightly cleans up the data for an individual state, e.g. dropping redundant
 // info and labeling the mail-by data more clearly.
 function cleanState(rawState: RawVGState): CleanedVGState {
-  const { state_name, state_abbreviation, registration_type, english, spanish } = rawState
+  const {
+    state_name,
+    state_abbreviation,
+    registration_type,
+    english,
+    spanish,
+  } = rawState
   const {
     registration_link_english_only,
     more_info_link_english_only,

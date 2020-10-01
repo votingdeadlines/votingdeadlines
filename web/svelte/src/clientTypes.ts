@@ -25,7 +25,9 @@ type OnlineRegNotAvailable = {
   kind: 'OnlineRegNotAvailable'
 }
 
-export type ClientInPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable
+export type ClientInPersonRegPolicy =
+  | InPersonRegDeadline
+  | InPersonRegNotAvailable
 
 type InPersonRegDeadline = {
   kind: 'InPersonRegDeadline'

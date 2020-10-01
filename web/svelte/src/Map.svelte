@@ -75,7 +75,7 @@ export let stateColorsIndex
 export let statesAndDc
 
 const colors = stateColorsIndex
-const statesAndDcAbbrevs = statesAndDc.map(entry => entry[0]).sort()
+const statesAndDcAbbrevs = statesAndDc.map((entry) => entry[0]).sort()
 const statesOnlyAbbrevs = statesAndDcAbbrevs.filter((k) => k !== 'DC')
 </script>
 

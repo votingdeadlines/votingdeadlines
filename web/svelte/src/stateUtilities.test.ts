@@ -2,7 +2,7 @@ import type { ClientStateData } from './clientTypes'
 import {
   getOnlineUiBooleans,
   getInPersonUiBooleans,
-  getMailUiBooleans
+  getMailUiBooleans,
 } from './stateUtilities'
 
 describe('stateUtilities.ts', () => {
@@ -14,7 +14,7 @@ describe('stateUtilities.ts', () => {
           warnings: [],
         },
         inPersonRegPolicies: { policies: [], warnings: [] },
-        mailRegPolicies: { policies: [], warnings: [] }
+        mailRegPolicies: { policies: [], warnings: [] },
       }
       const result = getOnlineUiBooleans(mockStateData)
 
@@ -33,7 +33,7 @@ describe('stateUtilities.ts', () => {
           warnings: [],
         },
         inPersonRegPolicies: { policies: [], warnings: [] },
-        mailRegPolicies: { policies: [], warnings: [] }
+        mailRegPolicies: { policies: [], warnings: [] },
       }
       const result = getOnlineUiBooleans(mockStateData)
 
@@ -54,7 +54,7 @@ describe('stateUtilities.ts', () => {
           policies: [{ kind: 'InPersonRegNotAvailable' }],
           warnings: [],
         },
-        mailRegPolicies: { policies: [], warnings: [] }
+        mailRegPolicies: { policies: [], warnings: [] },
       }
       const result = getInPersonUiBooleans(mockStateData)
 
@@ -73,7 +73,7 @@ describe('stateUtilities.ts', () => {
           policies: [{ kind: 'InPersonRegDeadline', isoDate: 'isoDate' }],
           warnings: [],
         },
-        mailRegPolicies: { policies: [], warnings: [] }
+        mailRegPolicies: { policies: [], warnings: [] },
       }
       const result = getInPersonUiBooleans(mockStateData)
 

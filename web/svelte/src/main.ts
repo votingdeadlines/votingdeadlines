@@ -1,14 +1,18 @@
 import App from './App.svelte'
 import * as datafile from './datafile'
 import * as statesOrder from './statesOrder'
-import { getOnlineDeadlineUiDates, getInPersonDeadlineUiDates, getMailDeadlineUiDates } from './stateUtilities'
+import {
+  getOnlineDeadlineUiDates,
+  getInPersonDeadlineUiDates,
+  getMailDeadlineUiDates,
+} from './stateUtilities'
 import { v2 } from './clientTimeUtilities'
 
 const timeNow = v2.now()
 
 const states = Object.entries(datafile.default)
 
-const filteredStates = states.filter(state => true)
+const filteredStates = states.filter((state) => true)
 
 const statesIndices = {}
 

@@ -29,47 +29,45 @@ const { stateName } = stateData
 const ui = getOnlineUiBooleans(stateData)
 
 // Relevant dates (if countdown)
-const dates = ui.isCountdown ? getOnlineDeadlineUiDates(stateData, timeNow) : null
+const dates = ui.isCountdown
+  ? getOnlineDeadlineUiDates(stateData, timeNow)
+  : null
 </script>
 
-<DeadlineCard title='Online' color={color}>
-  <figure slot='svg'>
+<DeadlineCard title="Online" color="{color}">
+  <figure slot="svg">
     <SvgSmartphone />
   </figure>
 
   {#if ui.isCountdown}
-    <p class='blurb'>
-      <strong>{dates.mainDeadlineDisplay}</strong>
-      is the last day to register online in {stateName}. This is in
+    <p class="blurb">
+      <strong>{dates.mainDeadlineDisplay}</strong> is the last day to register online
+      in {stateName}. This is in
     </p>
-    <time style='display: block; margin-bottom: 1em'>
-      <strong style='font-size: 3em'>{dates.mainCountdown.daysString}</strong>
-      <strong style='font-size: 2em'>+{dates.mainCountdown.hmsString}</strong>
+    <time style="display: block; margin-bottom: 1em">
+      <strong style="font-size: 3em">{dates.mainCountdown.daysString}</strong>
+      <strong style="font-size: 2em">+{dates.mainCountdown.hmsString}</strong>
     </time>
-    <DeadlineCountdownDetails stateName={stateName} dates={dates} />
-
+    <DeadlineCountdownDetails stateName="{stateName}" dates="{dates}" />
   {:else if ui.isNotAvailable}
-    <p class='blurb'>
+    <p class="blurb">
       <strong>Online registration</strong>
       <strong>is not available in {stateName}.</strong>
     </p>
-
   {:else if ui.isUnsure}
-    <p class='blurb'>
+    <p class="blurb">
       <strong>
-        We're not sure if online registration is available, possibly due to a bug
-        on our end, or issues with data. Check the links below for a second
+        We're not sure if online registration is available, possibly due to a
+        bug on our end, or issues with data. Check the links below for a second
         opinion!
       </strong>
     </p>
-
   {:else}
-    <p class='blurb'>
+    <p class="blurb">
       <strong>
-        We're not sure if online registration is available, probably due to a bug
-        on our end. Check the links below for a better answer.
+        We're not sure if online registration is available, probably due to a
+        bug on our end. Check the links below for a better answer.
       </strong>
     </p>
-
   {/if}
 </DeadlineCard>

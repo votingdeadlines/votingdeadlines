@@ -38,7 +38,6 @@ section > :global(.blurb) {
   flex: 1 1;
   margin: 12px 0 8px;
 }
-
 </style>
 
 <script lang="ts" type="text/typescript">
@@ -49,8 +48,8 @@ export let title = ''
 export let color = ''
 </script>
 
-<section class='{color}'>
+<section class="{color}">
   <CapsHeading h3>{title}</CapsHeading>
-  <slot name='svg' />
+  <slot name="svg" />
   <slot />
 </section>

@@ -1,33 +1,33 @@
 <style>
-
 /* TODO: DRY variables with Header.svelte */
 
 /*:root {*/
-  /* Layout */
-  /*--logoGraphicWidth: 32px;*/
-  /*--logoGraphicHeight: var(--logoGraphicWidth);*/
-  /*--logoTypeFontSize: 14px;*/
-  /*--logoTypeMarginTop: 2px;*/
-  /*--logoTypePaddingLeft: 16px;*/
+/* Layout */
+/*--logoGraphicWidth: 32px;*/
+/*--logoGraphicHeight: var(--logoGraphicWidth);*/
+/*--logoTypeFontSize: 14px;*/
+/*--logoTypeMarginTop: 2px;*/
+/*--logoTypePaddingLeft: 16px;*/
 
-  /* Colors */
+/* Colors */
 
-  /*--logoGray: rgba(0, 0, 0, 0.1);*/
-  /*--titleBlack: rgba(0, 0, 0, 0.8);*/
-  /*--underlineRed: var(--brandRed);*/
-  /*--subtitleGray: hsl(0, 0%, 67%);*/
+/*--logoGray: rgba(0, 0, 0, 0.1);*/
+/*--titleBlack: rgba(0, 0, 0, 0.8);*/
+/*--underlineRed: var(--brandRed);*/
+/*--subtitleGray: hsl(0, 0%, 67%);*/
 /*}*/
 
 /* Layout */
 
-h2, h3 {
+h2,
+h3 {
   font-family: 'Montserrat';
   font-weight: 800;
   font-size: var(--logoTypeFontSize);
   text-transform: uppercase;
   letter-spacing: 0.07em;
   text-align: center;
-  line-height: 2.0;
+  line-height: 2;
 
   color: var(--titleBlack);
 }
@@ -62,10 +62,14 @@ const wordsClass = `words${addUnderline ? ' underlined' : ''}`
 
 {#if h3}
   <h3>
-    <span class="{wordsClass}"><slot /></span>{#if addPeriod}<span class="period">.</span>{/if}
+    <span class="{wordsClass}"><slot /></span>{#if addPeriod}
+      <span class="period">.</span>
+    {/if}
   </h3>
 {:else}
   <h2>
-    <span class="{wordsClass}"><slot /></span>{#if addPeriod}<span class="period">.</span>{/if}
+    <span class="{wordsClass}"><slot /></span>{#if addPeriod}
+      <span class="period">.</span>
+    {/if}
   </h2>
 {/if}

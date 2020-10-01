@@ -6,8 +6,8 @@ import type {
   ClientStateData,
   ClientOnlineRegPolicy,
   ClientInPersonRegPolicy,
-  ClientMailRegPolicy
- } from './clientTypes'
+  ClientMailRegPolicy,
+} from './clientTypes'
 import { DurationV2, v2 } from './clientTimeUtilities'
 import { mainStateTimezones } from './stateTzs'
 
@@ -111,9 +111,12 @@ function getOnlineUiKind(stateData: ClientStateData): OnlineUiKind {
 // - true  == we know it's available (at least, according to the first policy).
 // - false == we know it's unavilable (at least, according to the first policy).
 // - null  == we can't resolve either of the cases above (e.g. no policy found).
-export function getIsOnlineRegAvailable(stateData: ClientStateData): boolean | null {
-  const firstOnlinePolicy: ClientOnlineRegPolicy | null =
-    getFirstOnlineRegPolicy(stateData)
+export function getIsOnlineRegAvailable(
+  stateData: ClientStateData
+): boolean | null {
+  const firstOnlinePolicy: ClientOnlineRegPolicy | null = getFirstOnlineRegPolicy(
+    stateData
+  )
 
   if (!firstOnlinePolicy) return null
   const isAvailable = firstOnlinePolicy.kind === 'OnlineRegDeadline'
@@ -124,7 +127,9 @@ export function getIsOnlineRegAvailable(stateData: ClientStateData): boolean | n
 }
 
 // Get the first online registration policy we have. Later we can check for >1.
-function getFirstOnlineRegPolicy(stateData: ClientStateData): ClientOnlineRegPolicy | null {
+function getFirstOnlineRegPolicy(
+  stateData: ClientStateData
+): ClientOnlineRegPolicy | null {
   let firstOnlinePolicy: ClientOnlineRegPolicy | undefined
 
   try {
@@ -153,15 +158,18 @@ function getFirstOnlineRegDeadline(stateData: ClientStateData): string | null {
 // This is an object that has all the various dates/times needed in the UI.
 // Probably easier than calling a bunch of individual functions separately.
 type OnlineDeadlineUiDates = {
-  mainDeadlineDisplay: string,
-  mainCountdown: DurationV2,
-  currentBrowserTimeDisplay: string, // 2020-09-24 09:00 (UTC-7:00)
-  currentStateTimeDisplay: string, // 2020-09-24 08:00 (UTC-8:00)
-  startOfFinalDayStateTimeDisplay: string, // 2020-10-04 00:00 (UTC-8:00)
-  stateDiffString: string, // '0 days + 00:00:00', from mainCountdown
+  mainDeadlineDisplay: string
+  mainCountdown: DurationV2
+  currentBrowserTimeDisplay: string // 2020-09-24 09:00 (UTC-7:00)
+  currentStateTimeDisplay: string // 2020-09-24 08:00 (UTC-8:00)
+  startOfFinalDayStateTimeDisplay: string // 2020-10-04 00:00 (UTC-8:00)
+  stateDiffString: string // '0 days + 00:00:00', from mainCountdown
 }
 
-export function getOnlineDeadlineUiDates(stateData: ClientStateData, timeNow): OnlineDeadlineUiDates | null {
+export function getOnlineDeadlineUiDates(
+  stateData: ClientStateData,
+  timeNow
+): OnlineDeadlineUiDates | null {
   const isoDeadline = getFirstOnlineRegDeadline(stateData)
   if (!isoDeadline) {
     // Should never get here if we only call this in the right cases.
@@ -184,7 +192,9 @@ export function getOnlineDeadlineUiDates(stateData: ClientStateData, timeNow): O
   // 4. Start of final day, state time:
   const startOfFinalDay = `${isoDeadline}T00:00:00`
   const startOfFinalDayStateTime = dayjs.tz(startOfFinalDay, stateTz)
-  const startOfFinalDayStateTimeDisplay = isoDateDisplay(startOfFinalDayStateTime)
+  const startOfFinalDayStateTimeDisplay = isoDateDisplay(
+    startOfFinalDayStateTime
+  )
 
   // 5. Countdown until start of final day (future, present)
   const mainCountdown = getDuration(startOfFinalDayStateTime, currentStateTime)
@@ -240,9 +250,12 @@ function getInPersonUiKind(stateData: ClientStateData): InPersonUiKind {
 // - true  == we know it's available (at least, according to the first policy).
 // - false == we know it's unavilable (at least, according to the first policy).
 // - null  == we can't resolve either of the cases above (e.g. no policy found).
-export function getIsInPersonRegAvailable(stateData: ClientStateData): boolean | null {
-  const firstInPersonPolicy: ClientInPersonRegPolicy | null =
-    getFirstInPersonRegPolicy(stateData)
+export function getIsInPersonRegAvailable(
+  stateData: ClientStateData
+): boolean | null {
+  const firstInPersonPolicy: ClientInPersonRegPolicy | null = getFirstInPersonRegPolicy(
+    stateData
+  )
 
   if (!firstInPersonPolicy) return null
   const isAvailable = firstInPersonPolicy.kind === 'InPersonRegDeadline'
@@ -254,7 +267,9 @@ export function getIsInPersonRegAvailable(stateData: ClientStateData): boolean |
 
 // x NOT USED BY MAIL (mail uses `getMailRegPolicies`)
 // Get the first in person registration policy we have. Later we can check for >1.
-function getFirstInPersonRegPolicy(stateData: ClientStateData): ClientInPersonRegPolicy | null {
+function getFirstInPersonRegPolicy(
+  stateData: ClientStateData
+): ClientInPersonRegPolicy | null {
   let firstInPersonPolicy: ClientInPersonRegPolicy | undefined
 
   try {
@@ -269,7 +284,9 @@ function getFirstInPersonRegPolicy(stateData: ClientStateData): ClientInPersonRe
 
 // x NOT USED BY MAIL (mail uses `getMailRegPolicies`)
 // Get the likely in person deadline, for display as a countdown later.
-function getFirstInPersonRegDeadline(stateData: ClientStateData): string | null {
+function getFirstInPersonRegDeadline(
+  stateData: ClientStateData
+): string | null {
   // We have to gate getting .isoDate behind these checks to keep TS happy.
   // In theory checking isAvailable should make checking the .kind unnecessary,
   // but in practice that doesn't seem to be working.
@@ -284,15 +301,18 @@ function getFirstInPersonRegDeadline(stateData: ClientStateData): string | null 
 // This is an object that has all the various dates/times needed in the UI.
 // Probably easier than calling a bunch of individual functions separately.
 type InPersonDeadlineUiDates = {
-  mainDeadlineDisplay: string,
-  mainCountdown: DurationV2,
-  currentBrowserTimeDisplay: string, // 2020-09-24 09:00 (UTC-7:00)
-  currentStateTimeDisplay: string, // 2020-09-24 08:00 (UTC-8:00)
-  startOfFinalDayStateTimeDisplay: string, // 2020-10-04 00:00 (UTC-8:00)
-  stateDiffString: string, // '0 days + 00:00:00', from mainCountdown
+  mainDeadlineDisplay: string
+  mainCountdown: DurationV2
+  currentBrowserTimeDisplay: string // 2020-09-24 09:00 (UTC-7:00)
+  currentStateTimeDisplay: string // 2020-09-24 08:00 (UTC-8:00)
+  startOfFinalDayStateTimeDisplay: string // 2020-10-04 00:00 (UTC-8:00)
+  stateDiffString: string // '0 days + 00:00:00', from mainCountdown
 }
 
-export function getInPersonDeadlineUiDates(stateData: ClientStateData, timeNow): InPersonDeadlineUiDates | null {
+export function getInPersonDeadlineUiDates(
+  stateData: ClientStateData,
+  timeNow
+): InPersonDeadlineUiDates | null {
   const isoDeadline = getFirstInPersonRegDeadline(stateData)
   if (!isoDeadline) {
     // Should never get here if we only call this in the right cases.
@@ -315,7 +335,9 @@ export function getInPersonDeadlineUiDates(stateData: ClientStateData, timeNow):
   // 4. Start of final day, in [Alaska] Time:
   const startOfFinalDay = `${isoDeadline}T00:00:00`
   const startOfFinalDayStateTime = dayjs.tz(startOfFinalDay, stateTz)
-  const startOfFinalDayStateTimeDisplay = isoDateDisplay(startOfFinalDayStateTime)
+  const startOfFinalDayStateTimeDisplay = isoDateDisplay(
+    startOfFinalDayStateTime
+  )
 
   // 5. Countdown until start of final day (future, present)
   const mainCountdown = getDuration(startOfFinalDayStateTime, currentStateTime)
@@ -337,9 +359,7 @@ export function getInPersonDeadlineUiDates(stateData: ClientStateData, timeNow):
 
 // x DIFFERENT return types
 // Package the UI kind into booleans so the components need less logic.
-export function getMailUiBooleans(
-  stateData: ClientStateData
-): MailUiBooleans {
+export function getMailUiBooleans(stateData: ClientStateData): MailUiBooleans {
   const mailUiKind = getMailUiKind(stateData)
   return {
     isPostmarkedCountdown: mailUiKind === MailUiKind.PostmarkedCountdown,
@@ -392,7 +412,9 @@ function getMailUiKind(stateData: ClientStateData): MailUiKind {
 }
 
 // Initially we didn't have this but it seems we need it.
-export function getIsMailRegAvailable(stateData: ClientStateData): boolean | null {
+export function getIsMailRegAvailable(
+  stateData: ClientStateData
+): boolean | null {
   const mailPolicies: Array<ClientMailRegPolicy> = getMailRegPolicies(stateData)
 
   // If we've made a mistake with the data structure (e.g. backend changes):
@@ -410,7 +432,9 @@ export function getIsMailRegAvailable(stateData: ClientStateData): boolean | nul
 // This is an alternative to `getIsFooRegAvailable` (used by online/in person),
 // because it's not as simple as a boolean with mail – we nee to know what type
 // of mail deadline it is. Called by `getMailUiKind` to determine the UI.
-function getMailRegPolicies(stateData: ClientStateData): Array<ClientMailRegPolicy> | null {
+function getMailRegPolicies(
+  stateData: ClientStateData
+): Array<ClientMailRegPolicy> | null {
   let mailPolicies: Array<ClientMailRegPolicy> | undefined
 
   try {
@@ -431,29 +455,33 @@ function getMailRegPolicies(stateData: ClientStateData): Array<ClientMailRegPoli
 // Mail UI dates
 
 type MailDeadlineUiDates =
-  MailPostmarkedDeadlineUiDates | MailReceivedDeadlineUiDates
+  | MailPostmarkedDeadlineUiDates
+  | MailReceivedDeadlineUiDates
 
 type MailPostmarkedDeadlineUiDates = {
-  kind: 'MailPostmarkedDeadlineUiDates',
-  mainDeadlineDisplay: string,
-  mainCountdown: DurationV2,
-  currentBrowserTimeDisplay: string, // 2020-09-24 09:00 (UTC-7:00)
-  currentStateTimeDisplay: string, // 2020-09-24 08:00 (UTC-8:00)
-  startOfFinalDayStateTimeDisplay: string, // 2020-10-04 00:00 (UTC-8:00)
-  stateDiffString: string, // '0 days + 00:00:00', from mainCountdown
+  kind: 'MailPostmarkedDeadlineUiDates'
+  mainDeadlineDisplay: string
+  mainCountdown: DurationV2
+  currentBrowserTimeDisplay: string // 2020-09-24 09:00 (UTC-7:00)
+  currentStateTimeDisplay: string // 2020-09-24 08:00 (UTC-8:00)
+  startOfFinalDayStateTimeDisplay: string // 2020-10-04 00:00 (UTC-8:00)
+  stateDiffString: string // '0 days + 00:00:00', from mainCountdown
 }
 
 type MailReceivedDeadlineUiDates = {
-  kind: 'MailReceivedDeadlineUiDates',
-  mainDeadlineDisplay: string,
-  mainCountdown: DurationV2,
-  currentBrowserTimeDisplay: string, // 2020-09-24 09:00 (UTC-7:00)
-  currentStateTimeDisplay: string, // 2020-09-24 08:00 (UTC-8:00)
-  startOfFinalDayStateTimeDisplay: string, // 2020-10-04 00:00 (UTC-8:00)
-  stateDiffString: string, // '0 days + 00:00:00', from mainCountdown
+  kind: 'MailReceivedDeadlineUiDates'
+  mainDeadlineDisplay: string
+  mainCountdown: DurationV2
+  currentBrowserTimeDisplay: string // 2020-09-24 09:00 (UTC-7:00)
+  currentStateTimeDisplay: string // 2020-09-24 08:00 (UTC-8:00)
+  startOfFinalDayStateTimeDisplay: string // 2020-10-04 00:00 (UTC-8:00)
+  stateDiffString: string // '0 days + 00:00:00', from mainCountdown
 }
 
-export function getMailDeadlineUiDates(stateData: ClientStateData, timeNow): MailDeadlineUiDates | null {
+export function getMailDeadlineUiDates(
+  stateData: ClientStateData,
+  timeNow
+): MailDeadlineUiDates | null {
   // The beginning of this function is a bit WET with `getMailUiKind` for now.
 
   // 1. Get the mail policy.
@@ -479,7 +507,9 @@ export function getMailDeadlineUiDates(stateData: ClientStateData, timeNow): Mai
   const currentStateTimeDisplay = isoDateDisplay(currentStateTime)
   const startOfFinalDay = `${isoDeadline}T00:00:00`
   const startOfFinalDayStateTime = dayjs.tz(startOfFinalDay, stateTz)
-  const startOfFinalDayStateTimeDisplay = isoDateDisplay(startOfFinalDayStateTime)
+  const startOfFinalDayStateTimeDisplay = isoDateDisplay(
+    startOfFinalDayStateTime
+  )
   const mainCountdown = getDuration(startOfFinalDayStateTime, currentStateTime)
 
   // 4. Determine the kind of mail deadline.

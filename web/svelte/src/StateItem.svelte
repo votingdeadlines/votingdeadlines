@@ -86,24 +86,40 @@ const lcStateName = stateName.toLowerCase()
 </script>
 
 <article id="{abbrev}">
-  <BrandCapsHeading>{stateData.stateName} Registration&nbsp;Deadlines</BrandCapsHeading>
+  <BrandCapsHeading>
+    {stateData.stateName} Registration&nbsp;Deadlines
+  </BrandCapsHeading>
 
   <div class="deadline-cards">
-    <DeadlineCardOnline stateData={stateData} timeNow={timeNow} color={stateColors.ol} />
-    <DeadlineCardInPerson stateData={stateData} timeNow={timeNow} color={stateColors.ip} />
-    <DeadlineCardMail stateData={stateData} timeNow={timeNow} color={stateColors.ml} />
+    <DeadlineCardOnline
+      stateData="{stateData}"
+      timeNow="{timeNow}"
+      color="{stateColors.ol}"
+    />
+    <DeadlineCardInPerson
+      stateData="{stateData}"
+      timeNow="{timeNow}"
+      color="{stateColors.ip}"
+    />
+    <DeadlineCardMail
+      stateData="{stateData}"
+      timeNow="{timeNow}"
+      color="{stateColors.ml}"
+    />
   </div>
 
-  <div class='more-info'>
+  <div class="more-info">
     <CapsHeading h3>Double check this info:</CapsHeading>
-    <div class='links'>
-      <a href="https://www.voteamerica.com/register-to-vote-{lcStateName}">VoteAmerica.com</a>
-      &nbsp;·&nbsp;
-      <a href="https://projects.fivethirtyeight.com/how-to-vote-2020/#{stateAbbrev}-info">FiveThirtyEight.com</a>
-      &nbsp;·&nbsp;
-      <a href="https://vote.gov/register/{stateAbbrev}">Vote.gov</a>
+    <div class="links">
+      <a
+        href="https://www.voteamerica.com/register-to-vote-{lcStateName}"
+      >VoteAmerica.com</a> &nbsp;·&nbsp; <a
+        href="https://projects.fivethirtyeight.com/how-to-vote-2020/#{stateAbbrev}-info"
+      >FiveThirtyEight.com</a> &nbsp;·&nbsp; <a
+        href="https://vote.gov/register/{stateAbbrev}"
+      >Vote.gov</a>
     </div>
 
-    <a href='#map'>⬆ Back to map</a>
+    <a href="#map">⬆ Back to map</a>
   </div>
 </article>

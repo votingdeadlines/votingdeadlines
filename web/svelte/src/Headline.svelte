@@ -15,7 +15,6 @@ h1 {
     margin-bottom: 16px;
   }
 }
-
 </style>
 
 <h1>
