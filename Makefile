@@ -72,13 +72,8 @@ prepublish:
 # Tests #
 #-------#
 
-test: test-backend test-frontend
-
-test-backend:
+test:
 	yarn test
-
-test-frontend:
-	cd web/svelte && yarn test
 
 #------#
 # Help #
