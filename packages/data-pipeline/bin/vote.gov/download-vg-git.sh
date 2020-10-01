@@ -16,8 +16,10 @@ fi
 
 
 
-# Copy the file we care about
-cp $1/$VOTE_GOV_SOURCE_PATH/$VOTE_GOV_SOURCE_JSON_PATH $1/$VOTE_GOV_RAW_JSON_PATH
-
-# Delete the full source
+# Download full source code from GitHub
+cd $1
 yarn trash $1/$VOTE_GOV_SOURCE_PATH
+git clone $VOTE_GOV_GIT_URL $1/$VOTE_GOV_SOURCE_PATH --depth 1
+
+# Delete .git
+yarn trash $1/$VOTE_GOV_SOURCE_PATH/.git
