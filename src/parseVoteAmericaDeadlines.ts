@@ -240,7 +240,6 @@ export function parseVADeadlines(
         throw new Error(`Could not find state ${state.abbrev} in cleaned data.`)
       }
 
-      console.log(state.abbrev)
       memo[state.abbrev] = parseVAStateRegPolicies(cleanedState)
 
       return memo
