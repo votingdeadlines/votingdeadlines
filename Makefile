@@ -75,6 +75,15 @@ prepublish:
 test:
 	yarn test
 
+#-------------#
+# Screenshots #
+#-------------#
+
+ss: screenshot
+
+screenshot:
+	cd e2e && yarn screenshot
+
 #------#
 # Help #
 #------#

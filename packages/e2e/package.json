@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "votingdeadlines-e2e",
+  "version": "0.0.0",
+  "description": "End-to-end tests and scripts and their dependencies",
+  "license": "UNLICENSED",
+  "scripts": {
+    "ss": "yarn screenshot",
+    "screenshot": "yarn screenshot:firefox",
+    "screenshot:firefox": "testcafe firefox scripts/screenshot.js"
+  },
+  "devDependencies": {
+    "testcafe": "^1.9.3"
+  }
+}
