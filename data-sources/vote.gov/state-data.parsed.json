@@ -1100,10 +1100,6 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "onlineRegPolicies": [
-      {
-        "kind": "OnlineRegNotAvailable"
-      }
-    ]
+    "onlineRegPolicies": []
   }
 }

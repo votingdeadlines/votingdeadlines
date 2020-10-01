@@ -6,7 +6,7 @@
   },
   "Alaska": {
     "byMail": "postmarked by October 3, 2020",
-    "inPerson": "received by October 4, 2020",
+    "inPerson": "received by November 3, 2020",
     "online": "received by October 4, 2020"
   },
   "Arizona": {
@@ -42,10 +42,10 @@
   "District of Columbia": {
     "byMail": "received by October 13, 2020",
     "inPerson": "received by November 3, 2020",
-    "online": "N/A"
+    "online": "received by October 13, 2020"
   },
   "Florida": {
-    "byMail": "received by October 5, 2020",
+    "byMail": "postmarked by October 5, 2020",
     "inPerson": "received by October 5, 2020",
     "online": "received by October 5, 2020"
   },
@@ -127,7 +127,7 @@
   "Missouri": {
     "byMail": "postmarked by October 7, 2020",
     "inPerson": "received by October 7, 2020",
-    "online": "received by October 5, 2020"
+    "online": "received by October 7, 2020"
   },
   "Montana": {
     "byMail": "postmarked by October 26, 2020",
@@ -145,7 +145,7 @@
     "online": "received by October 29, 2020"
   },
   "New Hampshire": {
-    "byMail": "received by October 24, 2020",
+    "byMail": "received by October 20, 2020 (may vary, please confirm with your\n            local election office)",
     "inPerson": "received by November 3, 2020",
     "online": "N/A"
   },
@@ -212,7 +212,7 @@
   "Tennessee": {
     "byMail": "postmarked by October 5, 2020",
     "inPerson": "received by October 5, 2020",
-    "online": "received by October 4, 2020"
+    "online": "received by October 5, 2020"
   },
   "Texas": {
     "byMail": "postmarked by October 5, 2020",
@@ -245,9 +245,9 @@
     "online": "received by October 13, 2020"
   },
   "Wisconsin": {
-    "byMail": "postmarked by October 14, 2020",
+    "byMail": "postmarked by October 21, 2020",
     "inPerson": "received by November 3, 2020",
-    "online": "received by October 14, 2020"
+    "online": "received by October 21, 2020"
   },
   "Wyoming": {
     "byMail": "received by October 19, 2020",

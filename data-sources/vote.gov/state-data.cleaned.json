@@ -911,8 +911,10 @@
   "DC": {
     "stateAbbrev": "DC",
     "stateName": "District of Columbia",
-    "registrationType": "by-mail",
+    "registrationType": "online",
     "registrationLinks": {
+      "en": "https://forms.dc.gov/f/DC_Voter_Registration_Form",
+      "es": "https://forms.dc.gov/f/DC_Voter_Registration_Form",
       "englishOnly": "true"
     },
     "moreInfoLinks": {

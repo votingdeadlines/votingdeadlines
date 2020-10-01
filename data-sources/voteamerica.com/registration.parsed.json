@@ -23,7 +23,7 @@
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
-        "isoDate": "2020-10-04"
+        "isoDate": "2020-11-03"
       }
     ],
     "mailRegPolicies": [
@@ -167,7 +167,7 @@
     ],
     "mailRegPolicies": [
       {
-        "kind": "MailRegReceivedDeadline",
+        "kind": "MailRegPostmarkedDeadline",
         "isoDate": "2020-10-05"
       }
     ],
@@ -492,7 +492,7 @@
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-05"
+        "isoDate": "2020-10-07"
       }
     ]
   },
@@ -565,7 +565,7 @@
     "mailRegPolicies": [
       {
         "kind": "MailRegReceivedDeadline",
-        "isoDate": "2020-10-24"
+        "isoDate": "2020-10-20"
       }
     ],
     "onlineRegPolicies": [
@@ -825,7 +825,7 @@
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-04"
+        "isoDate": "2020-10-05"
       }
     ]
   },
@@ -958,13 +958,13 @@
     "mailRegPolicies": [
       {
         "kind": "MailRegPostmarkedDeadline",
-        "isoDate": "2020-10-14"
+        "isoDate": "2020-10-21"
       }
     ],
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-14"
+        "isoDate": "2020-10-21"
       }
     ]
   },

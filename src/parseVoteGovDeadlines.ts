@@ -97,7 +97,7 @@ type OnlineRegNotAvailable = {
 function parseVGStateRegPolicies(
   cleanedState: CleanedVGState
 ): ParsedVGStateRegPolicies {
-  const { registrationType, ipDeadline, bmDeadlines, olDeadline } = cleanedState
+  const { stateAbbrev, registrationType, ipDeadline, bmDeadlines, olDeadline } = cleanedState
   const { NOT_NEEDED, IN_PERSON, ONLINE } = REGISTRATION_TYPES
   // A few states don't have registration deadlines, at least in this data.
   const noRegistration = registrationType === NOT_NEEDED
@@ -190,7 +190,7 @@ function parseVGStateRegPolicies(
   try {
     onlineIsoDate = parseUsaLongDateToNaiveIsoDate(olDeadline)
   } catch {
-    console.warn(`Could not parse olDeadline: ${olDeadline}`)
+    console.warn(`Could not parse olDeadline for ${stateAbbrev}: ${olDeadline}`)
   }
 
   // If it worked, save it and continue.
@@ -207,8 +207,17 @@ function parseVGStateRegPolicies(
   }
 
   // Check that at least one of the above worked.
-  if (!data.onlineRegPolicies.length) {
-    throw new Error(`Could not parse olDeadline: '${olDeadline}'`)
+  // This check successfully noticed an omission in the Vote.gov data, where
+  // DC was listed as an "online" state and with a registration URL, but
+  // without an online deadline. To prevent this known error from stopping
+  // the entire pipeline, we allow it here, but similar mistakes should
+  // still be investigated. (DC should get fixed when we merge in VoteAmerica
+  // data, or we can do a manual correction.)
+  const isAllowableOlError = ["DC"].includes(stateAbbrev)
+  const onlineError = !data.onlineRegPolicies.length && !isAllowableOlError
+  if (onlineError) {
+    const msg = `Could not parse olDeadline for ${stateAbbrev}: ${olDeadline}`
+    throw new Error(msg)
   }
 
   const deadlines: ParsedVGStateRegPolicies = {

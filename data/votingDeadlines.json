@@ -1861,11 +1861,7 @@
       ]
     },
     "onlineRegPolicies": {
-      "policies": [
-        {
-          "kind": "OnlineRegNotAvailable"
-        }
-      ],
+      "policies": [],
       "warnings": [
         "Don't use this data until this warning is removed."
       ]
