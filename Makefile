@@ -68,6 +68,25 @@ merge:
 prepublish:
 	bin/prepublish-data.sh $(CWD)
 
+#--------#
+# Deploy #
+#--------#
+
+# deploy-staging:
+# deploy-production:
+
+#---------#
+# Metrics #
+#---------#
+
+metrics: print-metrics
+
+print-metrics:
+	yarn metrics
+
+update-metrics:
+	yarn metrics:update
+
 #-------#
 # Tests #
 #-------#

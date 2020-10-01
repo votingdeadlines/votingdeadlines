@@ -17,6 +17,8 @@
     "data:parse:va": "yarn tsn bin/parseVoteAmericaDeadlines.bin.ts dotenv_config_path=config.sh",
     "data:parse:vo": "yarn tsn bin/parseVoteOrgRules.bin.ts dotenv_config_path=config.sh",
     "data:merge": "yarn tsn bin/mergeData.bin.ts dotenv_config_path=config.sh",
+    "metrics": "cat metrics.json",
+    "metrics:update": "yarn tsn bin/updateMetrics.ts dotenv_config_path=config.sh",
     "format": "yarn prettier:defaults --write",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint . --ext .ts,.tsx",
