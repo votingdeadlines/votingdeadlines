@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
-    "console": "node console.js",
     "dev": "rollup --config --watch --failAfterWarnings",
     "start": "sirv public",
     "start:spa": "sirv public --single",
