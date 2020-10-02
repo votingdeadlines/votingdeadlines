@@ -20,7 +20,11 @@ type NaiveIsoDate = {
   djs: dayjs.Dayjs // the underlying instance for debugging/etc.
 }
 
+// Not sure how to export this type via the `v1` object (as type vs as value).
+export type DayjsType = dayjs.Dayjs
+
 type timeUtilities = {
+  dayjs: (arg?: any) => DayjsType
   parseUsaDateToNaiveIsoDate: (dateString: string) => NaiveIsoDate
   parseUsaLongDateToNaiveIsoDate: (dateString: string) => NaiveIsoDate
 }
@@ -121,6 +125,7 @@ function parseUsaLongDateToNaiveIsoDate(date: string): NaiveIsoDate {
 // Versioning because time is tricky, and we may need several passes at it.
 // It is easier to append a new version than fix and be backwards-compatible.
 export const v1: timeUtilities = {
+  dayjs,
   parseUsaDateToNaiveIsoDate,
   parseUsaLongDateToNaiveIsoDate,
 }

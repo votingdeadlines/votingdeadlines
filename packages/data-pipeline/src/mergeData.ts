@@ -3,8 +3,9 @@ import type {
   ParsedVAStateRegPolicies,
 } from './voteamerica.com/parseVoteAmericaDeadlines'
 import type {
-  ParsedVGStatesIndex,
-  ParsedVGStateRegPolicies,
+  ParsedVGStateIndex,
+  ParsedVGStateReg,
+  RegNotNeeded,
 } from './vote.gov/parseVoteGovDeadlines'
 import { UsaState, usaStatesAndDc } from './usaStates'
 import { readFile, writeFile } from './utilities'
@@ -17,18 +18,18 @@ import { readFile, writeFile } from './utilities'
 //-------------
 
 // The top-level index of all states and their parsed registration policy data.
-export type MergedStatesIndex = {
-  [key: string]: MergedStateRegPolicies
+export type MergedStateRegIndex = {
+  [key: string]: MergedStateReg
 }
 
 // An individual state's registration policies.
-export type MergedStateRegPolicies = {
+export type MergedStateReg = {
   stateAbbrev: string
   stateName: string
   inPersonRegPolicies: MergedInPersonRegPolicy
   mailRegPolicies: MergedMailRegPolicy
   onlineRegPolicies: MergedOnlineRegPolicy
-  // sos
+  registrationLinkEn: string | null
   // links
   // stateName
 }
@@ -54,10 +55,22 @@ type MergedOnlineRegPolicy = {
   warnings: Array<string>
 }
 
+// A union of policy primitives, both dated and non-dated.
+export type RegPolicy = InPersonRegPolicy
+  | MailRegPolicy
+  | OnlineRegPolicy
+
+// A union of dated policy primitives.
+export type RegDeadline = InPersonRegDeadline
+  | MailRegPostmarkedDeadline
+  | MailRegReceivedDeadline
+  | OnlineRegDeadline
+
 // For now these are the same types as in ./parseVoteGovDeadlines. Hopefully
 // they don't have to change and become V1 of the normalized universal types.
 
-type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable
+
+type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable | RegNotNeeded
 
 type InPersonRegDeadline = {
   kind: 'InPersonRegDeadline'
@@ -75,6 +88,7 @@ type MailRegPolicy =
   | MailRegPostmarkedDeadline
   | MailRegReceivedDeadline
   | MailRegNotAvailable
+  | RegNotNeeded
 
 type MailRegPostmarkedDeadline = {
   kind: 'MailRegPostmarkedDeadline'
@@ -90,7 +104,7 @@ type MailRegNotAvailable = {
   kind: 'MailRegNotAvailable'
 }
 
-type OnlineRegPolicy = OnlineRegDeadline | OnlineRegNotAvailable
+type OnlineRegPolicy = OnlineRegDeadline | OnlineRegNotAvailable | RegNotNeeded
 
 type OnlineRegDeadline = {
   kind: 'OnlineRegDeadline'
@@ -106,14 +120,14 @@ type OnlineRegNotAvailable = {
 //-----------------//
 
 type PremergeStatePolicies = {
-  voteGovState: ParsedVGStateRegPolicies
+  voteGovState: ParsedVGStateReg
   voteAmericaState: ParsedVAStateRegPolicies
 }
 
 // Merge an individual state.
 function mergeStateRegPolicies(
   premergeStatePolicies: PremergeStatePolicies
-): MergedStateRegPolicies {
+): MergedStateReg {
   const { voteGovState, voteAmericaState } = premergeStatePolicies
 
   voteAmericaState // ignore for phase 0
@@ -142,6 +156,7 @@ function mergeStateRegPolicies(
       ],
       warnings: ["Don't use this data until this warning is removed."],
     },
+    registrationLinkEn: voteGovState.registrationLinkEn,
   }
 
   return mergedState
@@ -152,17 +167,17 @@ function mergeVGAndVAData(
   vgJson: string,
   vaJson: string,
   entities = usaStatesAndDc
-): MergedStatesIndex {
-  const vgData: ParsedVGStatesIndex = JSON.parse(vgJson)
+): MergedStateRegIndex {
+  const vgData: ParsedVGStateIndex = JSON.parse(vgJson)
   const vaData: ParsedVAStatesIndex = JSON.parse(vaJson)
 
   const mergedData = entities.reduce(
     (
-      memo: MergedStatesIndex,
+      memo: MergedStateRegIndex,
       state: UsaState,
       i: number
-    ): MergedStatesIndex => {
-      const vgState: ParsedVGStateRegPolicies = vgData[state.abbrev]
+    ): MergedStateRegIndex => {
+      const vgState: ParsedVGStateReg = vgData[state.abbrev]
       const vaState: ParsedVAStateRegPolicies = vaData[state.abbrev]
 
       console.log(`${'.'.repeat(i)}${state.abbrev}`)

@@ -6,6 +6,7 @@
   "author": "zionillinois@users.noreply.github.com",
   "license": "ISC",
   "scripts": {
+    "console": "yarn tsn src/console.ts dotenv_config_path=config.sh",
     "data:trim:va": "yarn tsn bin/voteamerica.com/trimVoteAmericaHtml.bin.ts dotenv_config_path=config.sh",
     "data:extract:va": "yarn tsn bin/voteamerica.com/extractVoteAmericaData.bin.ts dotenv_config_path=config.sh",
     "data:clean:vg": "yarn tsn bin/vote.gov/cleanVoteGovData.bin.ts dotenv_config_path=config.sh",

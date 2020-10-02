@@ -15,17 +15,18 @@ const { parseUsaLongDateToNaiveIsoDate } = v1
 //-------------
 
 // The top-level index of all states and their parsed deadline data.
-export type ParsedVGStatesIndex = {
-  [key: string]: ParsedVGStateRegPolicies
+export type ParsedVGStateIndex = {
+  [key: string]: ParsedVGStateReg
 }
 
 // An individual state's registration deadlines.
-export type ParsedVGStateRegPolicies = {
+export type ParsedVGStateReg = {
   stateAbbrev: string
   stateName: string
   inPersonRegPolicies: Array<InPersonRegPolicy>
   mailRegPolicies: Array<MailRegPolicy>
   onlineRegPolicies: Array<OnlineRegPolicy>
+  registrationLinkEn: string | null
 }
 
 // Deadline types
@@ -39,7 +40,14 @@ const REGISTRATION_TYPES = {
   IN_PERSON: 'in-person', // present on NH, though that seems inaccurate
 }
 
-type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable
+// This type is currently just applicable to North Dakota, where you may vote
+// if you can prove residency, and there is no separate registration process.
+export type RegNotNeeded = {
+  kind: 'RegNotNeeded'
+  isoDate: string // It is convenient to consider Election Day the "deadline".
+}
+
+type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable | RegNotNeeded
 
 type InPersonRegDeadline = {
   kind: 'InPersonRegDeadline'
@@ -57,6 +65,7 @@ type MailRegPolicy =
   | MailRegPostmarkedDeadline
   | MailRegReceivedDeadline
   | MailRegNotAvailable
+  | RegNotNeeded
 
 type MailRegPostmarkedDeadline = {
   kind: 'MailRegPostmarkedDeadline'
@@ -72,7 +81,7 @@ type MailRegNotAvailable = {
   kind: 'MailRegNotAvailable'
 }
 
-type OnlineRegPolicy = OnlineRegDeadline | OnlineRegNotAvailable
+type OnlineRegPolicy = OnlineRegDeadline | OnlineRegNotAvailable | RegNotNeeded
 
 type OnlineRegDeadline = {
   kind: 'OnlineRegDeadline'
@@ -93,16 +102,22 @@ type OnlineRegNotAvailable = {
 // Parsing methods //
 //-----------------//
 
+function getRegNotNeededPolicy(): RegNotNeeded {
+  const ELECTION_DATE = '2020-11-03' // effective deadline for voting
+  return { kind: 'RegNotNeeded', isoDate: ELECTION_DATE }
+}
+
 // Parse the JSON data for an individual state.
 function parseVGStateRegPolicies(
-  cleanedState: CleanedVGState
-): ParsedVGStateRegPolicies {
-  const { stateAbbrev, registrationType, ipDeadline, bmDeadlines, olDeadline } = cleanedState
+  cleaned: CleanedVGState
+): ParsedVGStateReg {
+  const { stateAbbrev, stateName, registrationType, ipDeadline, bmDeadlines, olDeadline, registrationLinks } = cleaned
   const { NOT_NEEDED, IN_PERSON, ONLINE } = REGISTRATION_TYPES
+
   // A few states don't have registration deadlines, at least in this data.
-  const noRegistration = registrationType === NOT_NEEDED
+  const regNotNeeded = registrationType === NOT_NEEDED
   const noMailRegistration = [NOT_NEEDED, IN_PERSON].includes(registrationType)
-  const noOnlineRegistration = registrationType !== ONLINE
+  const noOnlineRegistration = registrationType !== ONLINE // unreliable in data
 
   const data = {
     inPersonRegPolicies: [],
@@ -130,8 +145,8 @@ function parseVGStateRegPolicies(
   }
 
   // Otherwise, it could be ND. Verify that it is ND and not an error first.
-  if (!ipIsoDate && noRegistration) {
-    data.inPersonRegPolicies.push({ kind: 'InPersonRegNotAvailable' })
+  if (!ipIsoDate && regNotNeeded) {
+    data.inPersonRegPolicies.push(getRegNotNeededPolicy())
   }
 
   // Check that at least one of the above worked.
@@ -171,7 +186,10 @@ function parseVGStateRegPolicies(
     })
   }
 
-  // Otherwise, it could be ND or NH. Verify that it is and not an error first.
+  // Otherwise, it could be ND or NH.
+  if (!data.mailRegPolicies.length && regNotNeeded) {
+    data.mailRegPolicies.push(getRegNotNeededPolicy())
+  }
   if (!data.mailRegPolicies.length && noMailRegistration) {
     data.mailRegPolicies.push({ kind: 'MailRegNotAvailable' })
   }
@@ -202,7 +220,10 @@ function parseVGStateRegPolicies(
   }
 
   // Otherwise, it is likely one of the several states that doesn't offer it.
-  if (!onlineIsoDate && noOnlineRegistration) {
+  if (!data.onlineRegPolicies.length && regNotNeeded) {
+    data.onlineRegPolicies.push(getRegNotNeededPolicy())
+  }
+  if (!data.onlineRegPolicies.length && noOnlineRegistration) {
     data.onlineRegPolicies.push({ kind: 'OnlineRegNotAvailable' })
   }
 
@@ -220,26 +241,36 @@ function parseVGStateRegPolicies(
     throw new Error(msg)
   }
 
-  const deadlines: ParsedVGStateRegPolicies = {
-    stateAbbrev: cleanedState.stateAbbrev,
-    stateName: cleanedState.stateName,
+  // Links
+  //-------
+
+  const registrationLinkEn = (registrationLinks && registrationLinks.en) || null
+  const isLinkMissing = !registrationLinkEn && !noOnlineRegistration
+  if (isLinkMissing) {
+    throw new Error(`Online reg link seems to be missing for ${stateAbbrev}`)
+  }
+
+  const parsedData: ParsedVGStateReg = {
+    stateAbbrev,
+    stateName,
     inPersonRegPolicies: data.inPersonRegPolicies,
     mailRegPolicies: data.mailRegPolicies,
     onlineRegPolicies: data.onlineRegPolicies,
+    registrationLinkEn,
   }
 
-  return deadlines
+  return parsedData
 }
 
 // Parse the JSON data for all states.
 export function parseVORules(
   cleanedJson: string,
   entities = usaStatesAndDc
-): ParsedVGStatesIndex {
+): ParsedVGStateIndex {
   const cleanedData = JSON.parse(cleanedJson)
 
   const rulesetMap = entities.reduce(
-    (memo: ParsedVGStatesIndex, state: UsaState): ParsedVGStatesIndex => {
+    (memo: ParsedVGStateIndex, state: UsaState): ParsedVGStateIndex => {
       const cleanedState: CleanedVGState = cleanedData[state.abbrev]
 
       if (!cleanedState) {

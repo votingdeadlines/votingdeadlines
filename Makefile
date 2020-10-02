@@ -7,9 +7,18 @@ chmod:
 	chmod +x packages/data-pipeline/config.sh
 	chmod +x packages/data-pipeline/bin/*.sh
 
-#-----------------#
-# Data processing #
-#-----------------#
+#---------#
+# Console #
+#---------#
+
+c: console
+
+console:
+	cd packages/data-pipeline && yarn console
+
+#------#
+# Data #
+#------#
 
 process:    download    trim    format    extract    clean    parse    merge ## Run data pipelines
 process-vg: download-vg trim-vg                      clean-vg parse-vg ## Run Vote.gov data pipeline
