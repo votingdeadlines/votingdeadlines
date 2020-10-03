@@ -9,7 +9,9 @@ const replServer = repl.start({})
 // Data & code
 replServer.context.data = data
 replServer.context.VDStateIndex = VDStateIndex
-replServer.context.index = VDStateIndex.fromMap(data as MergedStateRegIndex)
+const index = VDStateIndex.fromMap(data as MergedStateRegIndex)
+replServer.context.index = index
+replServer.context.ak = index.states.find(s => s.abbrev === 'AK')
 
 // Fixtures for testing
 replServer.context.VD_FIXTURE = VD_FIXTURE

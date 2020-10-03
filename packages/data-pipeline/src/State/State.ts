@@ -103,29 +103,87 @@ export class VDStateIndex {
       || null
   }
 
+  get sortAlpha() {
+    function _compareAlphabetically(state1: VDState, state2: VDState): number {
+      if (state1.abbrev > state2.abbrev) return 1
+      if (state1.abbrev < state2.abbrev) return -1
+      throw new Error('States ${state1} and ${state2} not sortable A-Z.')
+    }
+    return this.states.sort(_compareAlphabetically)
+  }
+
+  get sortByDate() {
+    return this.sortStatesByFinalDeadlineDate // shorthand
+  }
+
+  // Compare function to pass to array.sort().
+  compareByFinalDeadline(state1: VDState, state2: VDState): number {
+    if (state1.finalDeadlineDate > state2.finalDeadlineDate) return 1
+    if (state1.finalDeadlineDate < state2.finalDeadlineDate) return -1
+    return 0
+  }
+
+  get sortStatesByFinalDeadlineDate() {
+    // v1: Final deadline date
+    // (v2: Final active deadline date? Or move inactive to end of sort?)
+    return this.states.sort(this.compareByFinalDeadline)
+  }
+
+  // This could be interpreted/implemented multiple ways, e.g. with final or
+  // first deadlines, etc. For now, let's assume we want to be able to get
+  // "all states with their final deadline between min and max (inclusive)."
+  filterByDate(minDate: string, maxDate: string = '2020-11-03') {
+    function _filterByFinalDeadline(state: VDState) {
+      const date = state.finalDeadlineDate
+      const dateIsBeforeMin = date < minDate
+      const dateIsAfterMax = date > maxDate
+      return !dateIsBeforeMin && !dateIsAfterMax
+    }
+
+    return this.states.filter(_filterByFinalDeadline)
+  }
+
   // This currently only has day-level precision, based on the browser time.
   // This will make it a bit inaccurate, especially in non-USA timezones.
   // (Previous versions were timezone accurate but perhaps overcomplex.)
   // TODO: restore dayjs().tz()? See also: <details> in vanilla svelte webapp.
   get activeStates() {
-    const currentIsoDate = '2020-10-00' // TODO:
-    // Better would be currentIsoDate in state local time
-    return this.states.filter(s => s.finalDeadlineDate >= currentIsoDate)
+    return this.filterByDate(this.currentDate)
   }
 
-  get sortedByDate() {
-    return this.statesSortedByFinalDeadlineDate // shorthand
+  endingSoonest(daysInFuture: number = 10) {
+    const nDaysInFuture = this.currentTime.add(daysInFuture, 'd')
+    const nDaysInFutureIsoString = nDaysInFuture.format('YYYY-MM-DD')
+    const states = this.filterByDate(this.currentDate, nDaysInFutureIsoString)
+    return states.sort(this.compareByFinalDeadline)
   }
 
-  get statesSortedByFinalDeadlineDate() {
-    // v1: Final deadline date
-    // (v2: Final active deadline date?)
-    function compareStates(state1: VDState, state2: VDState): number {
-      if (state1.finalDeadlineDate > state2.finalDeadlineDate) return 1
-      if (state1.finalDeadlineDate < state2.finalDeadlineDate) return -1
-      return 0
+  get regions() {
+    const regionMap = {
+      Northeast: "RI NY DE NJ PA MA ME MD DC CT VT NH".split(" "),
+      South: "SC FL GA KY AR MS TN TX OK VA WV LA AL NC".split(" "),
+      Midwest: "IN OH MO KS SD NE MI IL MN WI IA ND".split(" "),
+      West: "AK AZ OR NV NM HI ID WY UT CO MT CA WA".split(" "),
     }
-    return this.states.sort(compareStates)
+
+    const { compareByFinalDeadline } = this
+    function _filter(states: Array<VDState>, region: string): Array<VDState> {
+      const filtered = states.filter(s => regionMap[region].includes(s.abbrev))
+      return filtered.sort(compareByFinalDeadline)
+    }
+
+    return {
+      Northeast: _filter(this.states, 'Northeast'),
+      South: _filter(this.states, 'South'),
+      Midwest: _filter(this.states, 'Midwest'),
+      West: _filter(this.states, 'West'),
+    }
+  }
+
+  get swingStates() {
+    const stateAbbrevs = 'FL PA WI MI AZ MN NC NV CO OH'.split(' ')
+    const states = this.states.filter(s => stateAbbrevs.includes(s.abbrev))
+    return states.sort(this.compareByFinalDeadline)
   }
 }
 
@@ -180,12 +238,49 @@ export class VDState {
     return this._deadlineDates
   }
 
-  // Possibly there isn't really much benefit in adding time precision at this
-  // stage. Local browser date (even outside of US time zones) is probably fine.
-  // get activeDeadlineDates() {
-  //   const deadlines = this.truthyDeadlineDates
-  //   return deadlines.filter(deadline => deadline)
-  // }
+  // Should return a number indicating the _approximate_ amount of days left.
+  // As usual with time, context is important and it can be interpreted in
+  // multiple ways. The current intended interpretation is:
+  // 1. Hour/minute/second precision seems to be TMI for many purposes.
+  // 2. Calendar days seem more intuitive than days as 24 hour periods.
+  // 3. E.g. if it is 2020-10-01, and the deadline is 2020-10-05, "4 days left".
+  // 4. For now, the first time (2020-10-01) will be local browser time, so
+  //    this will be somewhat imprecise depending on the browser timezone.
+  // 5. Soon we can add in dayjs.tz (see vanilla svelte app) to add precision.
+  get deadlinesInDays(): [number | null, number | null, number | null] {
+    const currentIsoDate = this.index.currentDate // removes time precision
+    function _deadlineInDays(isoDate: string | null): number | null {
+      if (!isoDate) return null
+      const days = dayjs(isoDate).diff(currentIsoDate, 'd')
+      return days
+    }
+
+    // TypeScript tuples don't seem to like array.map
+    return [
+      _deadlineInDays(this.deadlineDates[0]),
+      _deadlineInDays(this.deadlineDates[1]),
+      _deadlineInDays(this.deadlineDates[2]),
+    ]
+  }
+
+  get deadlinesDisplay(): [string | null, string | null, string | null] {
+    function _deadlineDisplay(days: number | null): string | null{
+      if (!days === null) return null
+      if (days > 1) return `${days} days`
+      if (days === 1) return 'tomorrow'
+      if (days === 0) return 'today'
+      if (days === -1) return 'yesterday'
+      if (days < -1) return `${days} days ago`
+      throw new Error(`Error calculating deadlineDisplay: ${days}`)
+    }
+
+    // TypeScript tuples don't seem to like array.map
+    return [
+      _deadlineDisplay(this.deadlinesInDays[0]),
+      _deadlineDisplay(this.deadlinesInDays[1]),
+      _deadlineDisplay(this.deadlinesInDays[2]),
+    ]
+  }
 
   get truthyDeadlineDates() {
     const deadlines = this.deadlineDates
@@ -238,5 +333,15 @@ export const VD_FIXTURE: VDStateDataArray = [
     inPersonRegPolicies: { policies: [], warnings: [], },
     mailRegPolicies: { policies: [], warnings: [], },
     registrationLinkEn: 'https://calaska.gov.example.com/register.aspx'
+  },
+  {
+    stateAbbrev: 'DA',
+    stateName: 'Dalaska',
+    onlineRegPolicies: { policies: [
+      { kind: 'OnlineRegDeadline', isoDate: '2020-10-01' }
+    ], warnings: [], },
+    inPersonRegPolicies: { policies: [], warnings: [], },
+    mailRegPolicies: { policies: [], warnings: [], },
+    registrationLinkEn: 'https://dalaska.gov.example.com/register.php'
   },
 ]
