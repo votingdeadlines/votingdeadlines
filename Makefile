@@ -69,8 +69,8 @@ parse-va: ## 6b. Parse cleaned VoteAmerica.com data
 # 	cd packages/data-pipeline && yarn data:parse:vo
 
 diff:
-	diff -y data-sources/vote.gov/state-data.parsed.json \
-		data-sources/voteamerica.com/registration.parsed.json
+	diff -y packages/data-pipeline/data-sources/vote.gov/state-data.parsed.json \
+		packages/data-pipeline/data-sources/voteamerica.com/registration.parsed.json
 
 merge:
 	cd packages/data-pipeline && yarn data:merge
