@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "votingdeadlines-data-pipeline",
+  "name": "votingdeadlines-data",
   "version": "0.0.1",
   "description": "WIP: Parse, validate, and republish voting deadline info.",
   "author": "zionillinois@users.noreply.github.com",

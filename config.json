@@ -1,8 +1,8 @@
 {
   "description": [
-    "Like packages/data-pipeline/config.sh, this file contains variables to be",
+    "Like packages/data/config.sh, this file contains variables to be",
     "used in scripts. Paths are relative to project root. This may supersede ",
-    "packages/data-pipeline/config.sh if we convert .sh scripts to .ts."
+    "packages/data/config.sh if we convert .sh scripts to .ts."
   ],
   "METRICS_JSON_PATH": "metrics.json",
   "WEB_CSS_BUNDLE_PATH": "web/svelte/public/build/bundle.css",

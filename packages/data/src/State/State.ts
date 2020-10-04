@@ -5,6 +5,11 @@ const { dayjs } = v1
 
 // Convenience functions wrapped around the data.
 
+// TODOs / NTHs
+// - colors
+// - abbrevs array + nonDCAbbrevs array
+// - OR^ states + nonDCStates + state.colors = { ol, ip, ml }
+
 //-------//
 // Types //
 //-------//

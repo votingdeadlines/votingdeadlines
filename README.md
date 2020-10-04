@@ -12,7 +12,7 @@ On macOS, install `trash-cli` with `brew install macos-trash` (used by `bin/` sc
 
 ## Organization
 
-* The scrapers and data pipeline are in `packages/data-pipeline`.
+* The scrapers and data pipeline are in `packages/data`.
 * The crappy/slow v1 vanilla webapp is in `packages/svelte`.
 * (WIP) A v2 Svelte + Sapper webapp is in `packages/web`.
 * (WIP) A setup for visual and E2E testing is in `packages/e2e`.
