@@ -1,4 +1,4 @@
-import * as repl from 'repl'
+import repl from 'repl'
 import { VD_FIXTURE, VDStateIndex } from './models/State'
 import * as data from '../data/votingDeadlines.json'
 import type { MergedStateRegIndex } from './mergeData'

@@ -108,6 +108,10 @@ export class VDStateIndex {
       || null
   }
 
+  get nonDCStates() {
+    return this.states // .filter(s => s.abbrev !== 'DC')
+  }
+
   get sortAlpha() {
     function _compareAlphabetically(state1: VDState, state2: VDState): number {
       if (state1.abbrev > state2.abbrev) return 1
@@ -118,34 +122,49 @@ export class VDStateIndex {
   }
 
   get sortByDate() {
-    return this.sortStatesByFinalDeadlineDate // shorthand
+    return this.sortStatesByFinalActiveDeadline // shorthand
   }
 
   // Compare function to pass to array.sort().
-  compareByFinalDeadline(state1: VDState, state2: VDState): number {
-    if (state1.finalDeadlineDate > state2.finalDeadlineDate) return 1
-    if (state1.finalDeadlineDate < state2.finalDeadlineDate) return -1
-    return 0
+  compareByFinalActiveDeadline(state1: VDState, state2: VDState): number {
+    // Send null/expired to the end.
+    if (state1.finalActiveDeadline === null) return 1
+    if (state2.finalActiveDeadline === null) return -1
+
+    if (state1.finalActiveDeadline > state2.finalActiveDeadline) return 1
+    if (state1.finalActiveDeadline < state2.finalActiveDeadline) return -1
+    // Tiebreaker
+    function _byMeanActiveDeadline(state1: VDState, state2: VDState): number {
+      if (state1.meanActiveDeadlineInDays > state2.meanActiveDeadlineInDays) {
+        return 1
+      }
+      if (state1.meanActiveDeadlineInDays < state2.meanActiveDeadlineInDays) {
+        return -1
+      }
+      return 0
+    }
+    return _byMeanActiveDeadline(state1, state2)
   }
 
-  get sortStatesByFinalDeadlineDate() {
+  get sortStatesByFinalActiveDeadline() {
     // v1: Final deadline date
     // (v2: Final active deadline date? Or move inactive to end of sort?)
-    return this.states.sort(this.compareByFinalDeadline)
+    return this.states.sort(this.compareByFinalActiveDeadline)
   }
 
   // This could be interpreted/implemented multiple ways, e.g. with final or
   // first deadlines, etc. For now, let's assume we want to be able to get
   // "all states with their final deadline between min and max (inclusive)."
   filterByDate(minDate: string, maxDate: string = '2020-11-03') {
-    function _filterByFinalDeadline(state: VDState) {
-      const date = state.finalDeadlineDate
+    function _filterByFinalActiveDeadline(state: VDState) {
+      const date = state.finalActiveDeadline
+      if (date === null) return false
       const dateIsBeforeMin = date < minDate
       const dateIsAfterMax = date > maxDate
       return !dateIsBeforeMin && !dateIsAfterMax
     }
 
-    return this.states.filter(_filterByFinalDeadline)
+    return this.states.filter(_filterByFinalActiveDeadline)
   }
 
   // This currently only has day-level precision, based on the browser time.
@@ -160,7 +179,7 @@ export class VDStateIndex {
     const nDaysInFuture = this.currentTime.add(daysInFuture, 'd')
     const nDaysInFutureIsoString = nDaysInFuture.format('YYYY-MM-DD')
     const states = this.filterByDate(this.currentDate, nDaysInFutureIsoString)
-    return states.sort(this.compareByFinalDeadline)
+    return states.sort(this.compareByFinalActiveDeadline)
   }
 
   get regions() {
@@ -171,10 +190,10 @@ export class VDStateIndex {
       West: "AK AZ OR NV NM HI ID WY UT CO MT CA WA".split(" "),
     }
 
-    const { compareByFinalDeadline } = this
+    const { compareByFinalActiveDeadline } = this
     function _filter(states: Array<VDState>, region: string): Array<VDState> {
       const filtered = states.filter(s => regionMap[region].includes(s.abbrev))
-      return filtered.sort(compareByFinalDeadline)
+      return filtered.sort(compareByFinalActiveDeadline)
     }
 
     return {
@@ -185,12 +204,20 @@ export class VDStateIndex {
     }
   }
 
+  get senateRaces() {
+    const closeRaces = 'MI AZ CO GA IA ME MT NC GA KS SC AK'.split(' ')
+    const states = this.states.filter(s => closeRaces.includes(s.abbrev))
+    return states.sort(this.compareByFinalActiveDeadline)
+  }
+
   get swingStates() {
-    const stateAbbrevs = 'FL PA WI MI AZ MN NC NV CO OH'.split(' ')
+    const stateAbbrevs = 'FL PA WI MI AZ MN NC NV CO OH GA IA ME NE'.split(' ')
     const states = this.states.filter(s => stateAbbrevs.includes(s.abbrev))
-    return states.sort(this.compareByFinalDeadline)
+    return states.sort(this.compareByFinalActiveDeadline)
   }
 }
+
+
 
 //---------//
 // VDState //
@@ -202,8 +229,10 @@ export class VDState {
 
   data: VDStateData
   index: VDStateIndex // reference to parent for e.g. date logic
-  _deadlineDates?: [string | null, string | null, string | null]
-  _finalDeadlineDate?: string
+  _deadlines?: [string | null, string | null, string | null]
+  _soonestActiveDeadline?: string
+  _meanActiveDeadlineInDays?: number
+  _finalActiveDeadline?: string
 
   // Construction
   //----------------
@@ -224,23 +253,125 @@ export class VDState {
     return this.data.stateName
   }
 
-  // Time
-  //------
+  // Policies
+  //----------
 
-  get deadlineDates() {
-    if (this._deadlineDates) return this._deadlineDates
+  // Currently these just get the first, i.e. assuming a length of 1. Later
+  // we could make it more sophisticated to handle more complex policies, but
+  // if so any of this first/[0] logic will need to be reviewed.
+
+  get firstOnlinePolicy(): RegPolicy | undefined {
+    return this.data.onlineRegPolicies.policies[0]
+  }
+
+  get isOnlineNotNeeded(): boolean {
+    const policy = this.firstOnlinePolicy
+    return policy && policy.kind === 'RegNotNeeded'
+  }
+
+  get isOnlineUnavailable(): boolean {
+    const policy = this.firstOnlinePolicy
+    return policy && policy.kind === 'OnlineRegNotAvailable'
+  }
+
+  get isOnlineDeadline(): boolean {
+    const policy = this.firstOnlinePolicy
+    return policy && policy.kind === 'OnlineRegDeadline'
+  }
+
+  get firstInPersonPolicy(): RegPolicy | undefined {
+    return this.data.inPersonRegPolicies.policies[0]
+  }
+
+  get isInPersonNotNeeded(): boolean {
+    const policy = this.firstInPersonPolicy
+    return policy && policy.kind === 'RegNotNeeded'
+  }
+
+  get isInPersonUnavailable(): boolean {
+    const policy = this.firstInPersonPolicy
+    return policy && policy.kind === 'InPersonRegNotAvailable'
+  }
+
+  get isInPersonDeadline(): boolean {
+    const policy = this.firstInPersonPolicy
+    return policy && policy.kind === 'InPersonRegDeadline'
+  }
+
+  get firstMailPolicy(): RegPolicy | undefined {
+    return this.data.mailRegPolicies.policies[0]
+  }
+
+  get isMailNotNeeded(): boolean {
+    const policy = this.firstMailPolicy
+    return policy && policy.kind === 'RegNotNeeded'
+  }
+
+  get isMailUnavailable(): boolean {
+    const policy = this.firstMailPolicy
+    return policy && policy.kind === 'MailRegNotAvailable'
+  }
+
+  get isMailPostmarkedDeadline(): boolean {
+    const policy = this.firstMailPolicy
+    return policy && policy.kind === 'MailRegPostmarkedDeadline'
+  }
+
+  get isMailReceivedDeadline(): boolean {
+    const policy = this.firstMailPolicy
+    return policy && policy.kind === 'MailRegReceivedDeadline'
+  }
+
+  // Time: meta
+  //------------
+
+  get currentDate(): string {
+    return this.index.currentDate
+  }
+
+  // Time: collections
+  //-------------------
+
+  get deadlines() {
+    if (this._deadlines) return this._deadlines
 
     function _isoDateOrNull(policy: RegPolicy | undefined) {
       const isDeadline = policy && Object.keys(policy).includes('isoDate') // 🤔
       return isDeadline ? (policy as RegDeadline).isoDate : null
     }
 
-    this._deadlineDates = [
-      _isoDateOrNull(this.data.onlineRegPolicies.policies[0]),
-      _isoDateOrNull(this.data.inPersonRegPolicies.policies[0]),
-      _isoDateOrNull(this.data.mailRegPolicies.policies[0]),
+    if (!this.data.onlineRegPolicies) {
+      // console.log(this.abbrev, this.data)
+    } else {
+      // console.log(this.abbrev)
+    }
+
+    this._deadlines = [
+      _isoDateOrNull(this.firstOnlinePolicy),
+      _isoDateOrNull(this.firstInPersonPolicy),
+      _isoDateOrNull(this.firstMailPolicy),
     ]
-    return this._deadlineDates
+    return this._deadlines
+  }
+
+  // Helper for `deadlinesInDays` and `activeDeadlineRangeInDays`, etc.
+  deadlineInDays(isoDate: string | null): number | null {
+    const currentIsoDate = this.index.currentDate
+    if (!isoDate) return null
+    const days = dayjs(isoDate).diff(currentIsoDate, 'd')
+    return days
+  }
+
+  get deadlineInDaysOnline(): number | null {
+    return this.deadlinesInDays[0]
+  }
+
+  get deadlineInDaysInPerson(): number | null {
+    return this.deadlinesInDays[1]
+  }
+
+  get deadlineInDaysMail(): number | null {
+    return this.deadlinesInDays[1]
   }
 
   // Should return a number indicating the _approximate_ amount of days left.
@@ -253,29 +384,24 @@ export class VDState {
   //    this will be somewhat imprecise depending on the browser timezone.
   // 5. Soon we can add in dayjs.tz (see vanilla svelte app) to add precision.
   get deadlinesInDays(): [number | null, number | null, number | null] {
-    const currentIsoDate = this.index.currentDate // removes time precision
-    function _deadlineInDays(isoDate: string | null): number | null {
-      if (!isoDate) return null
-      const days = dayjs(isoDate).diff(currentIsoDate, 'd')
-      return days
-    }
-
     // TypeScript tuples don't seem to like array.map
     return [
-      _deadlineInDays(this.deadlineDates[0]),
-      _deadlineInDays(this.deadlineDates[1]),
-      _deadlineInDays(this.deadlineDates[2]),
+      this.deadlineInDays(this.deadlines[0]),
+      this.deadlineInDays(this.deadlines[1]),
+      this.deadlineInDays(this.deadlines[2]),
     ]
   }
 
+  // Short/countdown form of the deadline, e.g. 14 days. Does not handle
+  // falsey values.
   get deadlinesDisplay(): [string | null, string | null, string | null] {
     function _deadlineDisplay(days: number | null): string | null{
-      if (!days === null) return null
+      if (days === null) return null
       if (days > 1) return `${days} days`
       if (days === 1) return 'tomorrow'
       if (days === 0) return 'today'
       if (days === -1) return 'yesterday'
-      if (days < -1) return `${days} days ago`
+      if (days < -1) return `${Math.abs(days)} days ago`
       throw new Error(`Error calculating deadlineDisplay: ${days}`)
     }
 
@@ -287,23 +413,373 @@ export class VDState {
     ]
   }
 
-  get truthyDeadlineDates() {
-    const deadlines = this.deadlineDates
+
+  // Long form of the deadline, e.g. Monday, October 10, 2020
+  get deadlinesDisplayLong(): [string | null, string | null, string | null] {
+    function _deadlineDisplayLong(isoDate: string | null): string | null {
+      if (isoDate === null) return null
+      return dayjs(isoDate).format('dddd, MMMM D')
+    }
+
+    // TypeScript tuples don't seem to like array.map
+    return [
+      _deadlineDisplayLong(this.deadlines[0]),
+      _deadlineDisplayLong(this.deadlines[1]),
+      _deadlineDisplayLong(this.deadlines[2]),
+    ]
+  }
+
+
+  get truthyDeadlines() {
+    const deadlines = this.deadlines
     return deadlines.filter(deadline => deadline)
   }
 
-  get finalDeadlineDate() {
-    if (this._finalDeadlineDate) return this._finalDeadlineDate
+  // ❗️ An important method. Deadlines that exist and aren't in the past yet.
+  get activeDeadlines() {
+    const truthyDeadlines = this.truthyDeadlines
+    return truthyDeadlines.filter(deadline => {
+      const isActive = deadline >= this.currentDate
+      return isActive
+    })
+  }
 
-    const deadlines = this.truthyDeadlineDates
-    if (!deadlines.length) {
-      throw new Error(`${this.abbrev}: No non-null deadline dates found.`)
+  // Time: reductions
+  //------------------
+
+  // The next (possibly first) date to close. Null if all dates are in the past.
+  get soonestActiveDeadline(): string | null {
+    if (this._soonestActiveDeadline) return this._soonestActiveDeadline
+
+    const activeDeadlines = this.activeDeadlines
+    // console.log(activeDeadlines)
+    if (!activeDeadlines.length) return null
+
+    this._soonestActiveDeadline = activeDeadlines.sort()[0]
+    return this._soonestActiveDeadline
+  }
+
+  // The "average" active date to close. For breaking ties during sorts.
+  // Technically just the midpoint of the range, not a true mean.
+  get meanActiveDeadlineInDays(): number | null {
+    if (this._meanActiveDeadlineInDays) return this._meanActiveDeadlineInDays
+
+    const activeDeadlineRange = this.activeDeadlineRangeInDays
+    if (!activeDeadlineRange || !activeDeadlineRange.length) return null
+
+    const midpoint = (activeDeadlineRange[0] + activeDeadlineRange[1]) / 2
+    return midpoint
+  }
+
+  // The last date to close (aka last chance to register). Null if in the past.
+  get finalActiveDeadline(): string | null {
+    if (this._finalActiveDeadline) return this._finalActiveDeadline
+
+    const activeDeadlines = this.activeDeadlines
+    if (!activeDeadlines.length) return null
+
+    this._finalActiveDeadline = activeDeadlines.sort().reverse()[0]
+    return this._finalActiveDeadline
+  }
+
+  // Returns a tuple, even if both dates are the same, i.e. [earliest, latest].
+  get activeDeadlineRange(): Array<string> | null {
+    const range = [this.soonestActiveDeadline, this.finalActiveDeadline]
+    if (range.includes(null)) return null
+    return range
+  }
+
+  // Returns a tuple, even if both dates are the same, i.e. [earliest, latest].
+  get activeDeadlineRangeInDays(): Array<number> | null {
+    const range = [
+      this.deadlineInDays(this.soonestActiveDeadline),
+      this.deadlineInDays(this.finalActiveDeadline),
+   ]
+    // console.log(range)
+    if (range.includes(null)) return null
+    return range
+  }
+
+  // Returns "2-5" if a range, or "2" if the ends of the range are the same.
+  get activeDeadlineRangeInDaysString() {
+    const range = this.activeDeadlineRangeInDays
+    // console.log(range)
+    if (!range) return ''
+    const isSingleDay = range[0] === range[1]
+    const numericCopy = isSingleDay ? `${range[0]}` : `${range[0]}-${range[1]}`
+    return numericCopy
+  }
+
+  // Returns activeDeadlineRangeInDaysString with enhancements.
+  get activeDeadlineRangeInDaysDisplay() {
+    const literalString = this.activeDeadlineRangeInDaysString
+    if (literalString === "") return "closed" // messy :/
+    if (literalString === "0") return "TODAY"
+    return `${literalString}d`
+  }
+
+  // Colors
+  //--------
+
+  get colors() {
+    const COLOR_TIERS = {
+      NA: { max: null, colors: 'gray' },
+      PASSED: { max: -1, colors: 'gray' },
+      TODAY: { max: 0, colors: 'red' },
+      SOONEST: { max: 5, colors: 'red' },
+      SOONER: { max: 10,  colors: 'yellow' },
+      LATER: { max: null, colors: 'green' },
     }
 
-    this._finalDeadlineDate = deadlines.sort().reverse()[0]
-    return this._finalDeadlineDate
+    const colorTiers = this.deadlinesInDays.map(d => {
+      if (isNaN(d)) {
+        throw new Error("NaN deadline passed to colors getter")
+      }
+
+      if (d === null) return COLOR_TIERS.NA
+      if (d <= COLOR_TIERS.PASSED.max) return COLOR_TIERS.PASSED
+      if (d <= COLOR_TIERS.TODAY.max) return COLOR_TIERS.TODAY
+      if (d <= COLOR_TIERS.SOONEST.max) return COLOR_TIERS.SOONEST
+      if (d <= COLOR_TIERS.SOONER.max) return COLOR_TIERS.SOONER
+      return COLOR_TIERS.LATER
+    })
+
+    return {
+      ol: colorTiers[0].colors,
+      ip: colorTiers[1].colors,
+      ml: colorTiers[2].colors,
+    }
+  }
+
+  get colorsKey() {
+    const colors = this.colors
+    return `${colors.ol}-${colors.ip}-${colors.ml}`
+  }
+
+  // UI types & copy
+  //-----------------
+
+  get isTooLateToRegisterOnline(): boolean {
+    console.log({ oput: this.onlinePolicyUIType })
+    return this.onlinePolicyUIType === 'Passed'
+  }
+
+  get isTooLateToRegister(): boolean {
+    return !Boolean(this.finalActiveDeadline)
+  }
+
+  get onlinePolicyUIType(): PolicyUIEnum {
+    if (this.isOnlineUnavailable) return 'Unavailable'
+    if (this.isOnlineNotNeeded) return 'NotNeeded'
+    if (this.isOnlineDeadline) {
+      const days = this.deadlineInDaysOnline
+      if (days >= 0) return 'Countdown'
+      if (days < 0) return 'Passed'
+    }
+    return 'Unsure'
+  }
+
+  get inPersonPolicyUIType(): PolicyUIEnum {
+    if (this.isInPersonUnavailable) return 'Unavailable'
+    if (this.isInPersonNotNeeded) return 'NotNeeded'
+    if (this.isInPersonDeadline) {
+      const days = this.deadlineInDaysInPerson
+      if (days >= 0) return 'Countdown'
+      if (days < 0) return 'Passed'
+    }
+    return 'Unsure'
+  }
+
+  get mailPolicyUIType(): PolicyUIEnum {
+    if (this.isMailUnavailable) return 'Unavailable'
+    if (this.isMailNotNeeded) return 'NotNeeded'
+    if (this.isMailPostmarkedDeadline) {
+      const days = this.deadlineInDaysMail
+      if (days >= 0) return 'MailPostmarkedCountdown'
+      if (days < 0) return 'Passed'
+    }
+    if (this.isMailReceivedDeadline) {
+      const days = this.deadlineInDaysMail
+      if (days >= 0) return 'MailReceivedCountdown'
+      if (days < 0) return 'Passed'
+    }
+    return 'Unsure'
+  }
+
+  policyUIBooleans(regUIType: RegUIType): PolicyUIBooleans {
+    function _getBooleans(uiType: PolicyUIEnum) {
+      return {
+        // Method types
+        isOnline: regUIType === 'ONLINE',
+        isInPerson: regUIType === 'IN_PERSON',
+        isMail: regUIType === 'MAIL',
+
+        // UI types
+        isCountdown: uiType === 'Countdown',
+        isMailPostmarkedCountdown: uiType === 'MailPostmarkedCountdown',
+        isMailReceivedCountdown: uiType === 'MailReceivedCountdown',
+        isPassed: uiType === 'Passed',
+        isNotNeeded: uiType === 'NotNeeded',
+        isUnavailable: uiType === 'Unavailable',
+        isUnsure: uiType === 'Unsure',
+      }
+    }
+    if (regUIType == 'ONLINE') return _getBooleans(this.onlinePolicyUIType)
+    if (regUIType == 'IN_PERSON') return _getBooleans(this.inPersonPolicyUIType)
+    if (regUIType == 'MAIL') return _getBooleans(this.mailPolicyUIType)
+    throw new Error(`Could not get policyUIBooleans for ${regUIType}`)
+  }
+
+  // Most copy is in the medium-specific methods below, but this one is generic.
+  get copy() {
+    return {
+      // Assumes "AZ " already prefixed, e.g. "10d" for "AZ 10d".
+      buttonCopy: this.activeDeadlineRangeInDaysDisplay
+    }
+  }
+
+  // Copy helper for "This is in 2 days" vs. "This is tomorrow" in UI.
+  thisIs(copy: string | null): string | null {
+    if (copy === null) return null
+    if (copy.slice(0, 2).toLowerCase() === 'to') return 'This is'
+    if (copy.slice(0, 6).toLowerCase() === 'passed') return 'This has'
+    return 'This is in'
+  }
+
+  get onlineUICopy(): OnlineUICopy {
+    let summaryDeadlineDisplay = this.deadlinesDisplay[0]
+    if (!summaryDeadlineDisplay && this.isOnlineUnavailable) {
+      summaryDeadlineDisplay = 'unavailable'
+    }
+
+    // TODO: NotNeeded
+    // TODO: Passed
+    return {
+      title: "Online",
+      methodCaps: "Online",
+      byMethod: "online",
+      summaryDeadlineDisplay, // the part visible before expanding the caret
+      mainDeadlineDisplay: this.deadlinesDisplayLong[0], // Monday, October 2...
+      thisIs: this.thisIs(this.deadlinesDisplay[0]), // details prefix
+      deadlineDisplayLarge: this.deadlinesDisplay[0], // details
+    }
+  }
+
+  get inPersonUICopy(): InPersonUICopy {
+    let summaryDeadlineDisplay = this.deadlinesDisplay[1]
+    if (!summaryDeadlineDisplay && this.isInPersonUnavailable) {
+      summaryDeadlineDisplay = 'unavailable'
+    }
+
+    // TODO: NotNeeded
+    // TODO: Passed
+    return {
+      title: "In Person",
+      methodCaps: "In-person",
+      byMethod: "in person",
+      summaryDeadlineDisplay,
+      mainDeadlineDisplay: this.deadlinesDisplayLong[1], // Monday, October 2...
+      thisIs: this.thisIs(this.deadlinesDisplay[1]), // details prefix
+      deadlineDisplayLarge: this.deadlinesDisplay[1], // details
+    }
+  }
+
+  get mailUICopy(): MailUICopy {
+    let summaryDeadlineDisplay = this.deadlinesDisplay[2]
+    if (!summaryDeadlineDisplay && this.isMailUnavailable) {
+      summaryDeadlineDisplay = 'unavailable'
+    }
+
+    // TODO: NotNeeded
+    // TODO: Passed
+    return {
+      title: "Mail",
+      methodCaps: "Mail", // workshop copy to clarify mail reg vs. mail voting
+      byMethod: "by mail",
+      summaryDeadlineDisplay,
+      mainDeadlineDisplay: this.deadlinesDisplayLong[2], // Monday, October 2...
+      thisIs: this.thisIs(this.deadlinesDisplay[2]), // details prefix
+      deadlineDisplayLarge: this.deadlinesDisplay[2], // details
+    }
+  }
+
+  policyUICopy(regUIType: RegUIType): PolicyUICopy {
+    if (regUIType === 'ONLINE') return this.onlineUICopy
+    if (regUIType === 'IN_PERSON') return this.inPersonUICopy
+    if (regUIType === 'MAIL') return this.mailUICopy
+    throw new Error('Could not get policyUICopy.')
+  }
+
+  stringToSlug(string: string): string {
+    const lcString = string.toLowerCase()
+    const saferString = lcString.replace(/[^a-z0-9 -]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+    return saferString
+  }
+
+  get slug() {
+    return this.stringToSlug(this.name)
+  }
+
+  // Links
+
+  get officialRegistrationLink(): string | null {
+    return this.data.registrationLinkEn
+  }
+
+  get officialInfoLink(): string {
+    return this.data.moreInfoLinkEn
+  }
+
+  get officialCheckRegStatusLink(): string {
+    return this.data.checkRegStatusLink
   }
 }
+
+// TODO: DRY with types/deadlineCards.ts
+type RegUIType = 'ONLINE' | 'IN_PERSON' | 'MAIL'
+// High level user-facing projections of the policies in the data.
+// (How to best move into the class? The union/enum is also too loose.)
+type PolicyUIBooleans = {
+  isCountdown: boolean, // is generic/non-mail countdown, more precisely
+  isMailPostmarkedCountdown: boolean,
+  isMailReceivedCountdown: boolean,
+  isPassed: boolean,
+  isNotNeeded: boolean,
+  isUnavailable: boolean,
+  isUnsure: boolean,
+}
+
+type PolicyUIBooleansTuple = {
+  onlineUI: PolicyUIBooleans
+  inPersonUI: PolicyUIBooleans
+  mailUI: PolicyUIBooleans
+}
+
+type PolicyUIEnum = 'Countdown'
+ | 'MailPostmarkedCountdown'
+ | 'MailReceivedCountdown'
+ | 'NotNeeded'
+ | 'Passed'
+ | 'Unavailable'
+ | 'Unsure'
+
+type PolicyUICopy = OnlineUICopy | InPersonUICopy | MailUICopy
+
+type OnlineUICopy = {
+  [key: string]: string,
+}
+
+type InPersonUICopy = {
+  [key: string]: string,
+}
+
+type MailUICopy = {
+  [key: string]: string,
+}
+
+
 
 // Fake states with minimal data for testing
 export const VD_FIXTURE: VDStateDataArray = [
@@ -317,7 +793,8 @@ export const VD_FIXTURE: VDStateDataArray = [
       { kind: 'InPersonRegDeadline', isoDate: '2020-11-03' }
     ], warnings: [], },
     mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://akaska.gov.example.com/register.htm'
+    registrationLinkEn: 'https://akaska.gov.example.com/register.htm',
+    moreInfoLinkEn: 'https://akaska.gov.example.com/info.htm',
   },
   {
     stateAbbrev: 'BA',
@@ -327,7 +804,8 @@ export const VD_FIXTURE: VDStateDataArray = [
     ], warnings: [], },
     inPersonRegPolicies: { policies: [], warnings: [], },
     mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://balaska.gov.example.com/register.html'
+    registrationLinkEn: 'https://balaska.gov.example.com/register.html',
+    moreInfoLinkEn: 'https://balaska.gov.example.com/info.html',
   },
   {
     stateAbbrev: 'CA',
@@ -337,7 +815,8 @@ export const VD_FIXTURE: VDStateDataArray = [
     ], warnings: [], },
     inPersonRegPolicies: { policies: [], warnings: [], },
     mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://calaska.gov.example.com/register.aspx'
+    registrationLinkEn: 'https://calaska.gov.example.com/register.aspx',
+    moreInfoLinkEn: 'https://calaska.gov.example.com/info.aspx',
   },
   {
     stateAbbrev: 'DA',
@@ -347,6 +826,7 @@ export const VD_FIXTURE: VDStateDataArray = [
     ], warnings: [], },
     inPersonRegPolicies: { policies: [], warnings: [], },
     mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://dalaska.gov.example.com/register.php'
+    registrationLinkEn: 'https://dalaska.gov.example.com/register.php',
+    moreInfoLinkEn: 'https://dalaska.gov.example.com/info.php',
   },
 ]

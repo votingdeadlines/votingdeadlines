@@ -30,16 +30,23 @@ VOTE_GOV_PARSED_JSON_PATH="data-sources/vote.gov/state-data.parsed.json"
 
 # This URL is where voteamerica.com lists standard registration deadline info.
 VOTEAMERICA_REG_URL="https://www.voteamerica.com/voter-registration-deadlines/"
-# Where we save it locally for further processing (about 200 KB).
+# This URL is where voteamerica.com lists registration status links.
+VOTEAMERICA_REG_STATUS_URL="https://www.voteamerica.com/am-i-registered-to-vote/"
+# Where we save those links locally for further processing.
 VOTEAMERICA_REG_RAW_HTML_PATH="data-sources/voteamerica.com/registration.raw.html"
-# The main HTML element that contains the data table we care about.
+VOTEAMERICA_REG_STATUS_RAW_HTML_PATH="data-sources/voteamerica.com/registration-status.raw.html"
+# The main HTML elements that contain the data table we care about.
 VOTEAMERICA_REG_TABLE_SELECTOR="table"
+VOTEAMERICA_REG_STATUS_TABLE_SELECTOR="section.hero"
 # The HTML extracted from the file using the above selector.
 VOTEAMERICA_REG_TRIMMED_HTML_PATH="data-sources/voteamerica.com/registration.trimmed.html"
+VOTEAMERICA_REG_STATUS_TRIMMED_HTML_PATH="data-sources/voteamerica.com/registration-status.trimmed.html"
 # A pretty-printed version of the trimmed HTML.
 VOTEAMERICA_REG_FORMATTED_HTML_PATH="data-sources/voteamerica.com/registration.formatted.html"
+VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH="data-sources/voteamerica.com/registration-status.formatted.html"
 # # The raw text data extracted from the HTML.
 VOTEAMERICA_REG_RAW_JSON_PATH="data-sources/voteamerica.com/registration.raw.json"
+VOTEAMERICA_REG_STATUS_RAW_JSON_PATH="data-sources/voteamerica.com/registration-status.raw.json"
 # # The raw JSON data after a first pass of cleanup and structuring.
 VOTEAMERICA_REG_CLEANED_JSON_PATH="data-sources/voteamerica.com/registration.cleaned.json"
 # The cleaned JSON data, with the language parsed into quantified deadlines.

@@ -160,7 +160,7 @@
     "ipDeadline": "Monday, October 5, 2020",
     "olDeadline": "Monday, October 5, 2020",
     "bmDeadlines": {
-      "receivedBy": "Monday, October 5, 2020"
+      "postmarkedBy": "Monday, October 5, 2020"
     }
   },
   "GA": {
@@ -537,14 +537,18 @@
   "NJ": {
     "stateAbbrev": "NJ",
     "stateName": "New Jersey",
-    "registrationType": "by-mail",
-    "registrationLinks": {},
+    "registrationType": "online",
+    "registrationLinks": {
+      "en": "https://voter.svrs.nj.gov/register",
+      "es": "https://voter.svrs.nj.gov/register"
+    },
     "moreInfoLinks": {
       "en": "https://nj.gov/state/elections/voter-registration.shtml",
       "es": "https://nj.gov/state/elections/voter-registration.shtml",
       "englishOnly": "true"
     },
     "ipDeadline": "Tuesday, October 13, 2020",
+    "olDeadline": "Tuesday, October 13, 2020",
     "bmDeadlines": {
       "receivedBy": "Tuesday, October 13, 2020"
     }

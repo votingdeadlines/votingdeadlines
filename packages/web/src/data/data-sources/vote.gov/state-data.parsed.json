@@ -20,7 +20,8 @@
         "isoDate": "2020-10-19"
       }
     ],
-    "registrationLinkEn": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action"
+    "registrationLinkEn": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+    "moreInfoLinkEn": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote"
   },
   "AK": {
     "stateAbbrev": "AK",
@@ -43,7 +44,8 @@
         "isoDate": "2020-10-04"
       }
     ],
-    "registrationLinkEn": "https://voterregistration.alaska.gov/"
+    "registrationLinkEn": "https://voterregistration.alaska.gov/",
+    "moreInfoLinkEn": "https://www.elections.alaska.gov/Core/voterregistration.php"
   },
   "AZ": {
     "stateAbbrev": "AZ",
@@ -66,7 +68,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage"
+    "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage",
+    "moreInfoLinkEn": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information"
   },
   "AR": {
     "stateAbbrev": "AR",
@@ -88,7 +91,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.sos.arkansas.gov/elections/voter-information/"
   },
   "CA": {
     "stateAbbrev": "CA",
@@ -111,7 +115,8 @@
         "isoDate": "2020-10-19"
       }
     ],
-    "registrationLinkEn": "https://registertovote.ca.gov/"
+    "registrationLinkEn": "https://registertovote.ca.gov/",
+    "moreInfoLinkEn": "https://www.sos.ca.gov/elections/voting-resources/voting-california/registering-vote/"
   },
   "CO": {
     "stateAbbrev": "CO",
@@ -134,7 +139,8 @@
         "isoDate": "2020-10-26"
       }
     ],
-    "registrationLinkEn": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml"
+    "registrationLinkEn": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml",
+    "moreInfoLinkEn": "https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html"
   },
   "CT": {
     "stateAbbrev": "CT",
@@ -157,7 +163,8 @@
         "isoDate": "2020-10-27"
       }
     ],
-    "registrationLinkEn": "https://voterregistration.ct.gov/OLVR/welcome.do"
+    "registrationLinkEn": "https://voterregistration.ct.gov/OLVR/welcome.do",
+    "moreInfoLinkEn": "https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Voter-Fact-Sheet"
   },
   "DE": {
     "stateAbbrev": "DE",
@@ -180,7 +187,8 @@
         "isoDate": "2020-10-10"
       }
     ],
-    "registrationLinkEn": "https://ivote.de.gov/VoterView/"
+    "registrationLinkEn": "https://ivote.de.gov/VoterView/",
+    "moreInfoLinkEn": "https://elections.delaware.gov/voter/votereg.shtml"
   },
   "FL": {
     "stateAbbrev": "FL",
@@ -193,7 +201,7 @@
     ],
     "mailRegPolicies": [
       {
-        "kind": "MailRegReceivedDeadline",
+        "kind": "MailRegPostmarkedDeadline",
         "isoDate": "2020-10-05"
       }
     ],
@@ -203,7 +211,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://registertovoteflorida.gov/eligibilityreactive"
+    "registrationLinkEn": "https://registertovoteflorida.gov/eligibilityreactive",
+    "moreInfoLinkEn": "https://registertovoteflorida.gov/home"
   },
   "GA": {
     "stateAbbrev": "GA",
@@ -226,7 +235,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button"
+    "registrationLinkEn": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
+    "moreInfoLinkEn": "https://sos.ga.gov/index.php/Elections/register_to_vote"
   },
   "HI": {
     "stateAbbrev": "HI",
@@ -249,7 +259,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://olvr.hawaii.gov/"
+    "registrationLinkEn": "https://olvr.hawaii.gov/",
+    "moreInfoLinkEn": "https://elections.hawaii.gov/voters/registration/"
   },
   "ID": {
     "stateAbbrev": "ID",
@@ -272,7 +283,8 @@
         "isoDate": "2020-10-09"
       }
     ],
-    "registrationLinkEn": "https://apps.idahovotes.gov/OnlineVoterRegistration"
+    "registrationLinkEn": "https://apps.idahovotes.gov/OnlineVoterRegistration",
+    "moreInfoLinkEn": "https://idahovotes.gov/voting/"
   },
   "IL": {
     "stateAbbrev": "IL",
@@ -295,7 +307,8 @@
         "isoDate": "2020-10-18"
       }
     ],
-    "registrationLinkEn": "https://ova.elections.il.gov/"
+    "registrationLinkEn": "https://ova.elections.il.gov/",
+    "moreInfoLinkEn": "https://www.elections.il.gov/Default.aspx"
   },
   "IN": {
     "stateAbbrev": "IN",
@@ -318,7 +331,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://indianavoters.in.gov/"
+    "registrationLinkEn": "https://indianavoters.in.gov/",
+    "moreInfoLinkEn": "https://www.in.gov/sos/elections/2403.htm"
   },
   "IA": {
     "stateAbbrev": "IA",
@@ -341,7 +355,8 @@
         "isoDate": "2020-10-24"
       }
     ],
-    "registrationLinkEn": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration"
+    "registrationLinkEn": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
+    "moreInfoLinkEn": "https://sos.iowa.gov/elections/voterinformation/voterregistration.html"
   },
   "KS": {
     "stateAbbrev": "KS",
@@ -364,7 +379,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx"
+    "registrationLinkEn": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
+    "moreInfoLinkEn": "https://sos.ks.gov/elections/voter-information.html"
   },
   "KY": {
     "stateAbbrev": "KY",
@@ -387,7 +403,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://vrsws.sos.ky.gov/ovrweb/"
+    "registrationLinkEn": "https://vrsws.sos.ky.gov/ovrweb/",
+    "moreInfoLinkEn": "https://elect.ky.gov/Resources/Pages/Registration.aspx"
   },
   "LA": {
     "stateAbbrev": "LA",
@@ -410,7 +427,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://voterportal.sos.la.gov/VoterRegistration"
+    "registrationLinkEn": "https://voterportal.sos.la.gov/VoterRegistration",
+    "moreInfoLinkEn": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx"
   },
   "ME": {
     "stateAbbrev": "ME",
@@ -432,7 +450,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html"
   },
   "MD": {
     "stateAbbrev": "MD",
@@ -455,7 +474,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1"
+    "registrationLinkEn": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",
+    "moreInfoLinkEn": "https://www.elections.maryland.gov/voter_registration/application.html"
   },
   "MA": {
     "stateAbbrev": "MA",
@@ -478,7 +498,8 @@
         "isoDate": "2020-10-24"
       }
     ],
-    "registrationLinkEn": "https://www.sec.state.ma.us/ovr/"
+    "registrationLinkEn": "https://www.sec.state.ma.us/ovr/",
+    "moreInfoLinkEn": "https://www.sec.state.ma.us/ele/eleifv/howreg.htm"
   },
   "MI": {
     "stateAbbrev": "MI",
@@ -501,7 +522,8 @@
         "isoDate": "2020-10-19"
       }
     ],
-    "registrationLinkEn": "https://mvic.sos.state.mi.us/registervoter"
+    "registrationLinkEn": "https://mvic.sos.state.mi.us/registervoter",
+    "moreInfoLinkEn": "https://mvic.sos.state.mi.us/"
   },
   "MN": {
     "stateAbbrev": "MN",
@@ -524,7 +546,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx"
+    "registrationLinkEn": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
+    "moreInfoLinkEn": "https://www.sos.state.mn.us/elections-voting/register-to-vote/"
   },
   "MS": {
     "stateAbbrev": "MS",
@@ -546,7 +569,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.sos.ms.gov/Vote/Pages/default.aspx"
   },
   "MO": {
     "stateAbbrev": "MO",
@@ -569,7 +593,8 @@
         "isoDate": "2020-10-07"
       }
     ],
-    "registrationLinkEn": "https://s1.sos.mo.gov/elections/voterregistration/"
+    "registrationLinkEn": "https://s1.sos.mo.gov/elections/voterregistration/",
+    "moreInfoLinkEn": "https://www.sos.mo.gov/elections/goVoteMissouri/register"
   },
   "MT": {
     "stateAbbrev": "MT",
@@ -591,7 +616,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sosmt.gov/elections/vote/"
   },
   "NE": {
     "stateAbbrev": "NE",
@@ -614,7 +640,8 @@
         "isoDate": "2020-10-16"
       }
     ],
-    "registrationLinkEn": "https://www.nebraska.gov/apps-sos-voter-registration/"
+    "registrationLinkEn": "https://www.nebraska.gov/apps-sos-voter-registration/",
+    "moreInfoLinkEn": "https://sos.nebraska.gov/elections/voter-forms"
   },
   "NV": {
     "stateAbbrev": "NV",
@@ -637,7 +664,8 @@
         "isoDate": "2020-10-29"
       }
     ],
-    "registrationLinkEn": "https://www.nvsos.gov/SOSVoterServices/start.aspx"
+    "registrationLinkEn": "https://www.nvsos.gov/SOSVoterServices/start.aspx",
+    "moreInfoLinkEn": "https://www.nvsos.gov/sos/elections/voters/registering-to-vote"
   },
   "NH": {
     "stateAbbrev": "NH",
@@ -658,7 +686,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sos.nh.gov/elections/voters/register-to-vote/"
   },
   "NJ": {
     "stateAbbrev": "NJ",
@@ -677,10 +706,12 @@
     ],
     "onlineRegPolicies": [
       {
-        "kind": "OnlineRegNotAvailable"
+        "kind": "OnlineRegDeadline",
+        "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": "https://voter.svrs.nj.gov/register",
+    "moreInfoLinkEn": "https://nj.gov/state/elections/voter-registration.shtml"
   },
   "NM": {
     "stateAbbrev": "NM",
@@ -703,7 +734,8 @@
         "isoDate": "2020-10-06"
       }
     ],
-    "registrationLinkEn": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx"
+    "registrationLinkEn": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",
+    "moreInfoLinkEn": "https://www.sos.state.nm.us/voting-and-elections/voter-information/voter-registration-information/"
   },
   "NY": {
     "stateAbbrev": "NY",
@@ -726,7 +758,8 @@
         "isoDate": "2020-10-09"
       }
     ],
-    "registrationLinkEn": "https://dmv.ny.gov/more-info/electronic-voter-registration-application"
+    "registrationLinkEn": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
+    "moreInfoLinkEn": "https://www.elections.ny.gov/votingregister.html"
   },
   "NC": {
     "stateAbbrev": "NC",
@@ -749,7 +782,8 @@
         "isoDate": "2020-10-09"
       }
     ],
-    "registrationLinkEn": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx"
+    "registrationLinkEn": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+    "moreInfoLinkEn": "https://www.ncsbe.gov/registering/how-register"
   },
   "ND": {
     "stateAbbrev": "ND",
@@ -772,7 +806,8 @@
         "isoDate": "2020-11-03"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://vip.sos.nd.gov/PortalList.aspx"
   },
   "OH": {
     "stateAbbrev": "OH",
@@ -795,7 +830,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://olvr.ohiosos.gov/"
+    "registrationLinkEn": "https://olvr.ohiosos.gov/",
+    "moreInfoLinkEn": "https://ohio.gov/wps/portal/gov/site/government/resources/register-to-vote-or-update-your-registration"
   },
   "OK": {
     "stateAbbrev": "OK",
@@ -817,7 +853,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html"
   },
   "OR": {
     "stateAbbrev": "OR",
@@ -840,7 +877,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://secure.sos.state.or.us/orestar/vr/register.do"
+    "registrationLinkEn": "https://secure.sos.state.or.us/orestar/vr/register.do",
+    "moreInfoLinkEn": "https://sos.oregon.gov/voting/Pages/registration.aspx"
   },
   "PA": {
     "stateAbbrev": "PA",
@@ -863,7 +901,8 @@
         "isoDate": "2020-10-19"
       }
     ],
-    "registrationLinkEn": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx"
+    "registrationLinkEn": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
+    "moreInfoLinkEn": "https://www.pa.gov/guides/voting-and-elections/#RegisteringtoVote"
   },
   "RI": {
     "stateAbbrev": "RI",
@@ -886,7 +925,8 @@
         "isoDate": "2020-10-04"
       }
     ],
-    "registrationLinkEn": "https://vote.sos.ri.gov/Home/RegistertoVote"
+    "registrationLinkEn": "https://vote.sos.ri.gov/Home/RegistertoVote",
+    "moreInfoLinkEn": "https://vote.sos.ri.gov/Voter/RegisterToVote"
   },
   "SC": {
     "stateAbbrev": "SC",
@@ -909,7 +949,8 @@
         "isoDate": "2020-10-04"
       }
     ],
-    "registrationLinkEn": "https://info.scvotes.sc.gov/eng/ovr/start.aspx"
+    "registrationLinkEn": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
+    "moreInfoLinkEn": "https://www.scvotes.gov/south-carolina-voter-registration-information"
   },
   "SD": {
     "stateAbbrev": "SD",
@@ -931,7 +972,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx"
   },
   "TN": {
     "stateAbbrev": "TN",
@@ -954,7 +996,8 @@
         "isoDate": "2020-10-05"
       }
     ],
-    "registrationLinkEn": "https://ovr.govote.tn.gov/"
+    "registrationLinkEn": "https://ovr.govote.tn.gov/",
+    "moreInfoLinkEn": "https://sos.tn.gov/products/elections/register-vote"
   },
   "TX": {
     "stateAbbrev": "TX",
@@ -976,7 +1019,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.votetexas.gov/register-to-vote/index.html"
   },
   "UT": {
     "stateAbbrev": "UT",
@@ -999,7 +1043,8 @@
         "isoDate": "2020-10-23"
       }
     ],
-    "registrationLinkEn": "https://secure.utah.gov/voterreg/index.html"
+    "registrationLinkEn": "https://secure.utah.gov/voterreg/index.html",
+    "moreInfoLinkEn": "https://voteinfo.utah.gov/"
   },
   "VT": {
     "stateAbbrev": "VT",
@@ -1022,7 +1067,8 @@
         "isoDate": "2020-10-30"
       }
     ],
-    "registrationLinkEn": "https://olvr.vermont.gov/"
+    "registrationLinkEn": "https://olvr.vermont.gov/",
+    "moreInfoLinkEn": "https://sos.vermont.gov/elections/voters/registration/"
   },
   "VA": {
     "stateAbbrev": "VA",
@@ -1045,7 +1091,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/"
+    "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/",
+    "moreInfoLinkEn": "https://www.elections.virginia.gov/registration/how-to-register/"
   },
   "WA": {
     "stateAbbrev": "WA",
@@ -1068,7 +1115,8 @@
         "isoDate": "2020-10-26"
       }
     ],
-    "registrationLinkEn": "https://voter.votewa.gov/WhereToVote.aspx"
+    "registrationLinkEn": "https://voter.votewa.gov/WhereToVote.aspx",
+    "moreInfoLinkEn": "https://www.sos.wa.gov/elections/voters/"
   },
   "WV": {
     "stateAbbrev": "WV",
@@ -1091,7 +1139,8 @@
         "isoDate": "2020-10-13"
       }
     ],
-    "registrationLinkEn": "https://ovr.sos.wv.gov/Register/Landing"
+    "registrationLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
+    "moreInfoLinkEn": "https://ovr.sos.wv.gov/Register/Landing"
   },
   "WI": {
     "stateAbbrev": "WI",
@@ -1114,7 +1163,8 @@
         "isoDate": "2020-10-14"
       }
     ],
-    "registrationLinkEn": "https://myvote.wi.gov/en-us/RegisterToVote"
+    "registrationLinkEn": "https://myvote.wi.gov/en-us/RegisterToVote",
+    "moreInfoLinkEn": "https://elections.wi.gov/voters/first-time"
   },
   "WY": {
     "stateAbbrev": "WY",
@@ -1136,7 +1186,8 @@
         "kind": "OnlineRegNotAvailable"
       }
     ],
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx"
   },
   "DC": {
     "stateAbbrev": "DC",
@@ -1154,6 +1205,7 @@
       }
     ],
     "onlineRegPolicies": [],
-    "registrationLinkEn": "https://forms.dc.gov/f/DC_Voter_Registration_Form"
+    "registrationLinkEn": "https://forms.dc.gov/f/DC_Voter_Registration_Form",
+    "moreInfoLinkEn": "https://www.vote4dc.com/ApplyInstructions/Register"
   }
 }

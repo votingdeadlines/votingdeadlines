@@ -27,6 +27,7 @@ export type ParsedVGStateReg = {
   mailRegPolicies: Array<MailRegPolicy>
   onlineRegPolicies: Array<OnlineRegPolicy>
   registrationLinkEn: string | null
+  moreInfoLinkEn: string | null
 }
 
 // Deadline types
@@ -111,7 +112,16 @@ function getRegNotNeededPolicy(): RegNotNeeded {
 function parseVGStateRegPolicies(
   cleaned: CleanedVGState
 ): ParsedVGStateReg {
-  const { stateAbbrev, stateName, registrationType, ipDeadline, bmDeadlines, olDeadline, registrationLinks } = cleaned
+  const {
+    stateAbbrev,
+    stateName,
+    registrationType,
+    ipDeadline,
+    bmDeadlines,
+    olDeadline,
+    registrationLinks,
+    moreInfoLinks
+  } = cleaned
   const { NOT_NEEDED, IN_PERSON, ONLINE } = REGISTRATION_TYPES
 
   // A few states don't have registration deadlines, at least in this data.
@@ -245,9 +255,13 @@ function parseVGStateRegPolicies(
   //-------
 
   const registrationLinkEn = (registrationLinks && registrationLinks.en) || null
-  const isLinkMissing = !registrationLinkEn && !noOnlineRegistration
-  if (isLinkMissing) {
+  const isRegLinkMissing = !registrationLinkEn && !noOnlineRegistration
+  if (isRegLinkMissing) {
     throw new Error(`Online reg link seems to be missing for ${stateAbbrev}`)
+  }
+  const moreInfoLinkEn = (moreInfoLinks && moreInfoLinks.en) || null
+  if (!moreInfoLinkEn) {
+    throw new Error(`More info link seems to be missing for ${stateAbbrev}`)
   }
 
   const parsedData: ParsedVGStateReg = {
@@ -257,6 +271,7 @@ function parseVGStateRegPolicies(
     mailRegPolicies: data.mailRegPolicies,
     onlineRegPolicies: data.onlineRegPolicies,
     registrationLinkEn,
+    moreInfoLinkEn,
   }
 
   return parsedData

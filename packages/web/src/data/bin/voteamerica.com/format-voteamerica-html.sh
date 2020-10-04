@@ -21,8 +21,10 @@ fi
 
 
 
-# Make a copy, given that prettier prefers to format in place
+# Make copies, given that prettier prefers to format in place
 cp $1/$VOTEAMERICA_REG_TRIMMED_HTML_PATH $1/$VOTEAMERICA_REG_FORMATTED_HTML_PATH
+cp $1/$VOTEAMERICA_REG_STATUS_TRIMMED_HTML_PATH $1/$VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH
 # Format it
 cd $1
 yarn prettier $1/$VOTEAMERICA_REG_FORMATTED_HTML_PATH --write
+yarn prettier $1/$VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH --write

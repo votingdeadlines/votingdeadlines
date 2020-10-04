@@ -35,7 +35,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action"
+    "registrationLinkEn": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+    "moreInfoLinkEn": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote",
+    "checkRegStatusLink": "https://myinfo.alabamavotes.gov/VoterView/RegistrantSearch.do"
   },
   "AK": {
     "stateAbbrev": "AK",
@@ -73,7 +75,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://voterregistration.alaska.gov/"
+    "registrationLinkEn": "https://voterregistration.alaska.gov/",
+    "moreInfoLinkEn": "https://www.elections.alaska.gov/Core/voterregistration.php",
+    "checkRegStatusLink": "https://myvoterinformation.alaska.gov/"
   },
   "AZ": {
     "stateAbbrev": "AZ",
@@ -111,7 +115,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage"
+    "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage",
+    "moreInfoLinkEn": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information",
+    "checkRegStatusLink": "https://my.arizona.vote/WhereToVote.aspx?s=individual&Language=en"
   },
   "AR": {
     "stateAbbrev": "AR",
@@ -148,7 +154,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.sos.arkansas.gov/elections/voter-information/",
+    "checkRegStatusLink": "https://www.voterview.ar-nova.org/voterview"
   },
   "CA": {
     "stateAbbrev": "CA",
@@ -186,7 +194,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://registertovote.ca.gov/"
+    "registrationLinkEn": "https://registertovote.ca.gov/",
+    "moreInfoLinkEn": "https://www.sos.ca.gov/elections/voting-resources/voting-california/registering-vote/",
+    "checkRegStatusLink": "https://voterstatus.sos.ca.gov/"
   },
   "CO": {
     "stateAbbrev": "CO",
@@ -224,7 +234,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml"
+    "registrationLinkEn": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml",
+    "moreInfoLinkEn": "https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html",
+    "checkRegStatusLink": "https://www.sos.state.co.us/voter/pages/pub/olvr/findVoterReg.xhtml"
   },
   "CT": {
     "stateAbbrev": "CT",
@@ -262,7 +274,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://voterregistration.ct.gov/OLVR/welcome.do"
+    "registrationLinkEn": "https://voterregistration.ct.gov/OLVR/welcome.do",
+    "moreInfoLinkEn": "https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Voter-Fact-Sheet",
+    "checkRegStatusLink": "https://portaldir.ct.gov/sots/LookUp.aspx"
   },
   "DE": {
     "stateAbbrev": "DE",
@@ -300,7 +314,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://ivote.de.gov/VoterView/"
+    "registrationLinkEn": "https://ivote.de.gov/VoterView/",
+    "moreInfoLinkEn": "https://elections.delaware.gov/voter/votereg.shtml",
+    "checkRegStatusLink": "https://ivote.de.gov/VoterView"
   },
   "FL": {
     "stateAbbrev": "FL",
@@ -319,7 +335,7 @@
     "mailRegPolicies": {
       "policies": [
         {
-          "kind": "MailRegReceivedDeadline",
+          "kind": "MailRegPostmarkedDeadline",
           "isoDate": "2020-10-05"
         }
       ],
@@ -338,7 +354,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://registertovoteflorida.gov/eligibilityreactive"
+    "registrationLinkEn": "https://registertovoteflorida.gov/eligibilityreactive",
+    "moreInfoLinkEn": "https://registertovoteflorida.gov/home",
+    "checkRegStatusLink": "https://registration.elections.myflorida.com/CheckVoterStatus"
   },
   "GA": {
     "stateAbbrev": "GA",
@@ -376,7 +394,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button"
+    "registrationLinkEn": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
+    "moreInfoLinkEn": "https://sos.ga.gov/index.php/Elections/register_to_vote",
+    "checkRegStatusLink": "https://www.mvp.sos.ga.gov/MVP/mvp.do"
   },
   "HI": {
     "stateAbbrev": "HI",
@@ -414,7 +434,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://olvr.hawaii.gov/"
+    "registrationLinkEn": "https://olvr.hawaii.gov/",
+    "moreInfoLinkEn": "https://elections.hawaii.gov/voters/registration/",
+    "checkRegStatusLink": "https://olvr.hawaii.gov/"
   },
   "ID": {
     "stateAbbrev": "ID",
@@ -452,7 +474,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://apps.idahovotes.gov/OnlineVoterRegistration"
+    "registrationLinkEn": "https://apps.idahovotes.gov/OnlineVoterRegistration",
+    "moreInfoLinkEn": "https://idahovotes.gov/voting/",
+    "checkRegStatusLink": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/VoterSearch.aspx"
   },
   "IL": {
     "stateAbbrev": "IL",
@@ -490,7 +514,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://ova.elections.il.gov/"
+    "registrationLinkEn": "https://ova.elections.il.gov/",
+    "moreInfoLinkEn": "https://www.elections.il.gov/Default.aspx",
+    "checkRegStatusLink": "https://ova.elections.il.gov/RegistrationLookup.aspx"
   },
   "IN": {
     "stateAbbrev": "IN",
@@ -528,7 +554,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://indianavoters.in.gov/"
+    "registrationLinkEn": "https://indianavoters.in.gov/",
+    "moreInfoLinkEn": "https://www.in.gov/sos/elections/2403.htm",
+    "checkRegStatusLink": "https://indianavoters.in.gov/"
   },
   "IA": {
     "stateAbbrev": "IA",
@@ -566,7 +594,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration"
+    "registrationLinkEn": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
+    "moreInfoLinkEn": "https://sos.iowa.gov/elections/voterinformation/voterregistration.html",
+    "checkRegStatusLink": "https://sos.iowa.gov/elections/voterreg/regtovote/search.aspx"
   },
   "KS": {
     "stateAbbrev": "KS",
@@ -604,7 +634,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx"
+    "registrationLinkEn": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
+    "moreInfoLinkEn": "https://sos.ks.gov/elections/voter-information.html",
+    "checkRegStatusLink": "https://myvoteinfo.voteks.org/VoterView"
   },
   "KY": {
     "stateAbbrev": "KY",
@@ -642,7 +674,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://vrsws.sos.ky.gov/ovrweb/"
+    "registrationLinkEn": "https://vrsws.sos.ky.gov/ovrweb/",
+    "moreInfoLinkEn": "https://elect.ky.gov/Resources/Pages/Registration.aspx",
+    "checkRegStatusLink": "https://vrsws.sos.ky.gov/VIC/"
   },
   "LA": {
     "stateAbbrev": "LA",
@@ -680,7 +714,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://voterportal.sos.la.gov/VoterRegistration"
+    "registrationLinkEn": "https://voterportal.sos.la.gov/VoterRegistration",
+    "moreInfoLinkEn": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
+    "checkRegStatusLink": "https://voterportal.sos.la.gov/Home/VoterLogin"
   },
   "ME": {
     "stateAbbrev": "ME",
@@ -717,7 +753,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html",
+    "checkRegStatusLink": "https://www1.maine.gov/portal/government/edemocracy/voter_lookup.php"
   },
   "MD": {
     "stateAbbrev": "MD",
@@ -755,7 +793,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1"
+    "registrationLinkEn": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",
+    "moreInfoLinkEn": "https://www.elections.maryland.gov/voter_registration/application.html",
+    "checkRegStatusLink": "https://voterservices.elections.maryland.gov/VoterSearch"
   },
   "MA": {
     "stateAbbrev": "MA",
@@ -793,7 +833,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.sec.state.ma.us/ovr/"
+    "registrationLinkEn": "https://www.sec.state.ma.us/ovr/",
+    "moreInfoLinkEn": "https://www.sec.state.ma.us/ele/eleifv/howreg.htm",
+    "checkRegStatusLink": "https://www.sec.state.ma.us/voterregistrationsearch/myvoterregstatus.aspx"
   },
   "MI": {
     "stateAbbrev": "MI",
@@ -831,7 +873,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://mvic.sos.state.mi.us/registervoter"
+    "registrationLinkEn": "https://mvic.sos.state.mi.us/registervoter",
+    "moreInfoLinkEn": "https://mvic.sos.state.mi.us/",
+    "checkRegStatusLink": "https://mvic.sos.state.mi.us/"
   },
   "MN": {
     "stateAbbrev": "MN",
@@ -869,7 +913,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx"
+    "registrationLinkEn": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
+    "moreInfoLinkEn": "https://www.sos.state.mn.us/elections-voting/register-to-vote/",
+    "checkRegStatusLink": "https://mnvotes.sos.state.mn.us/VoterStatus.aspx"
   },
   "MS": {
     "stateAbbrev": "MS",
@@ -906,7 +952,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.sos.ms.gov/Vote/Pages/default.aspx",
+    "checkRegStatusLink": "https://www.msegov.com/sos/voter_registration/amiregistered/Search"
   },
   "MO": {
     "stateAbbrev": "MO",
@@ -944,7 +992,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://s1.sos.mo.gov/elections/voterregistration/"
+    "registrationLinkEn": "https://s1.sos.mo.gov/elections/voterregistration/",
+    "moreInfoLinkEn": "https://www.sos.mo.gov/elections/goVoteMissouri/register",
+    "checkRegStatusLink": "https://s1.sos.mo.gov/elections/voterlookup/"
   },
   "MT": {
     "stateAbbrev": "MT",
@@ -981,7 +1031,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sosmt.gov/elections/vote/",
+    "checkRegStatusLink": "https://app.mt.gov/cgi-bin/voterinfo/voterinfo.cgi"
   },
   "NE": {
     "stateAbbrev": "NE",
@@ -1019,7 +1071,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.nebraska.gov/apps-sos-voter-registration/"
+    "registrationLinkEn": "https://www.nebraska.gov/apps-sos-voter-registration/",
+    "moreInfoLinkEn": "https://sos.nebraska.gov/elections/voter-forms",
+    "checkRegStatusLink": "https://www.votercheck.necvr.ne.gov/VoterView/RegistrantSearch.do"
   },
   "NV": {
     "stateAbbrev": "NV",
@@ -1057,7 +1111,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.nvsos.gov/SOSVoterServices/start.aspx"
+    "registrationLinkEn": "https://www.nvsos.gov/SOSVoterServices/start.aspx",
+    "moreInfoLinkEn": "https://www.nvsos.gov/sos/elections/voters/registering-to-vote",
+    "checkRegStatusLink": "https://www.nvsos.gov/votersearch/"
   },
   "NH": {
     "stateAbbrev": "NH",
@@ -1093,7 +1149,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sos.nh.gov/elections/voters/register-to-vote/",
+    "checkRegStatusLink": "https://app.sos.nh.gov/Public/PartyInfo.aspx"
   },
   "NJ": {
     "stateAbbrev": "NJ",
@@ -1123,14 +1181,17 @@
     "onlineRegPolicies": {
       "policies": [
         {
-          "kind": "OnlineRegNotAvailable"
+          "kind": "OnlineRegDeadline",
+          "isoDate": "2020-10-13"
         }
       ],
       "warnings": [
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": "https://voter.svrs.nj.gov/register",
+    "moreInfoLinkEn": "https://nj.gov/state/elections/voter-registration.shtml",
+    "checkRegStatusLink": "https://voter.svrs.nj.gov/registration-check"
   },
   "NM": {
     "stateAbbrev": "NM",
@@ -1168,7 +1229,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx"
+    "registrationLinkEn": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",
+    "moreInfoLinkEn": "https://www.sos.state.nm.us/voting-and-elections/voter-information/voter-registration-information/",
+    "checkRegStatusLink": "https://voterportal.servis.sos.state.nm.us/wheretovote.aspx?AspxAutoDetectCookieSupport=1"
   },
   "NY": {
     "stateAbbrev": "NY",
@@ -1206,7 +1269,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://dmv.ny.gov/more-info/electronic-voter-registration-application"
+    "registrationLinkEn": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
+    "moreInfoLinkEn": "https://www.elections.ny.gov/votingregister.html",
+    "checkRegStatusLink": "https://voterlookup.elections.ny.gov/"
   },
   "NC": {
     "stateAbbrev": "NC",
@@ -1244,7 +1309,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx"
+    "registrationLinkEn": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+    "moreInfoLinkEn": "https://www.ncsbe.gov/registering/how-register",
+    "checkRegStatusLink": "https://vt.ncsbe.gov/RegLkup/"
   },
   "ND": {
     "stateAbbrev": "ND",
@@ -1282,7 +1349,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://vip.sos.nd.gov/PortalList.aspx",
+    "checkRegStatusLink": "https://vip.sos.nd.gov/WhereToVoteID.aspx?tab=VoterLookup&ptlPKID=7&ptlhPKID=50"
   },
   "OH": {
     "stateAbbrev": "OH",
@@ -1320,7 +1389,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://olvr.ohiosos.gov/"
+    "registrationLinkEn": "https://olvr.ohiosos.gov/",
+    "moreInfoLinkEn": "https://ohio.gov/wps/portal/gov/site/government/resources/register-to-vote-or-update-your-registration",
+    "checkRegStatusLink": "https://voterlookup.ohiosos.gov/voterlookup.aspx"
   },
   "OK": {
     "stateAbbrev": "OK",
@@ -1357,7 +1428,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html",
+    "checkRegStatusLink": "https://okvoterportal.okelections.us/"
   },
   "OR": {
     "stateAbbrev": "OR",
@@ -1395,7 +1468,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://secure.sos.state.or.us/orestar/vr/register.do"
+    "registrationLinkEn": "https://secure.sos.state.or.us/orestar/vr/register.do",
+    "moreInfoLinkEn": "https://sos.oregon.gov/voting/Pages/registration.aspx",
+    "checkRegStatusLink": "https://secure.sos.state.or.us/orestar/vr/showVoterSearch.do"
   },
   "PA": {
     "stateAbbrev": "PA",
@@ -1433,7 +1508,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx"
+    "registrationLinkEn": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
+    "moreInfoLinkEn": "https://www.pa.gov/guides/voting-and-elections/#RegisteringtoVote",
+    "checkRegStatusLink": "https://www.pavoterservices.pa.gov/pages/voterregistrationstatus.aspx"
   },
   "RI": {
     "stateAbbrev": "RI",
@@ -1471,7 +1548,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://vote.sos.ri.gov/Home/RegistertoVote"
+    "registrationLinkEn": "https://vote.sos.ri.gov/Home/RegistertoVote",
+    "moreInfoLinkEn": "https://vote.sos.ri.gov/Voter/RegisterToVote",
+    "checkRegStatusLink": "https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0"
   },
   "SC": {
     "stateAbbrev": "SC",
@@ -1509,7 +1588,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://info.scvotes.sc.gov/eng/ovr/start.aspx"
+    "registrationLinkEn": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
+    "moreInfoLinkEn": "https://www.scvotes.gov/south-carolina-voter-registration-information",
+    "checkRegStatusLink": "https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo"
   },
   "SD": {
     "stateAbbrev": "SD",
@@ -1546,7 +1627,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
+    "checkRegStatusLink": "https://vip.sdsos.gov/viplogin.aspx"
   },
   "TN": {
     "stateAbbrev": "TN",
@@ -1584,7 +1667,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://ovr.govote.tn.gov/"
+    "registrationLinkEn": "https://ovr.govote.tn.gov/",
+    "moreInfoLinkEn": "https://sos.tn.gov/products/elections/register-vote",
+    "checkRegStatusLink": "https://tnmap.tn.gov/voterlookup/"
   },
   "TX": {
     "stateAbbrev": "TX",
@@ -1621,7 +1706,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://www.votetexas.gov/register-to-vote/index.html",
+    "checkRegStatusLink": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do"
   },
   "UT": {
     "stateAbbrev": "UT",
@@ -1659,7 +1746,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://secure.utah.gov/voterreg/index.html"
+    "registrationLinkEn": "https://secure.utah.gov/voterreg/index.html",
+    "moreInfoLinkEn": "https://voteinfo.utah.gov/",
+    "checkRegStatusLink": "https://secure.utah.gov/voterreg/login.html?selection=REGISTER"
   },
   "VT": {
     "stateAbbrev": "VT",
@@ -1697,7 +1786,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://olvr.vermont.gov/"
+    "registrationLinkEn": "https://olvr.vermont.gov/",
+    "moreInfoLinkEn": "https://sos.vermont.gov/elections/voters/registration/",
+    "checkRegStatusLink": "https://mvp.vermont.gov/"
   },
   "VA": {
     "stateAbbrev": "VA",
@@ -1735,7 +1826,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/"
+    "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/",
+    "moreInfoLinkEn": "https://www.elections.virginia.gov/registration/how-to-register/",
+    "checkRegStatusLink": "https://vote.elections.virginia.gov/VoterInformation"
   },
   "WA": {
     "stateAbbrev": "WA",
@@ -1773,7 +1866,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://voter.votewa.gov/WhereToVote.aspx"
+    "registrationLinkEn": "https://voter.votewa.gov/WhereToVote.aspx",
+    "moreInfoLinkEn": "https://www.sos.wa.gov/elections/voters/",
+    "checkRegStatusLink": "https://voter.votewa.gov/WhereToVote.aspx"
   },
   "WV": {
     "stateAbbrev": "WV",
@@ -1811,7 +1906,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://ovr.sos.wv.gov/Register/Landing"
+    "registrationLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
+    "moreInfoLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
+    "checkRegStatusLink": "https://services.sos.wv.gov/Elections/Voter/AmIRegisteredToVote"
   },
   "WI": {
     "stateAbbrev": "WI",
@@ -1849,7 +1946,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://myvote.wi.gov/en-us/RegisterToVote"
+    "registrationLinkEn": "https://myvote.wi.gov/en-us/RegisterToVote",
+    "moreInfoLinkEn": "https://elections.wi.gov/voters/first-time",
+    "checkRegStatusLink": "https://myvote.wi.gov/en-us/MyVoterInfo"
   },
   "WY": {
     "stateAbbrev": "WY",
@@ -1886,7 +1985,9 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": null
+    "registrationLinkEn": null,
+    "moreInfoLinkEn": "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx",
+    "checkRegStatusLink": "http://soswy.state.wy.us/Elections/Docs/WYCountyClerks.pdf"
   },
   "DC": {
     "stateAbbrev": "DC",
@@ -1919,6 +2020,8 @@
         "Don't use this data until this warning is removed."
       ]
     },
-    "registrationLinkEn": "https://forms.dc.gov/f/DC_Voter_Registration_Form"
+    "registrationLinkEn": "https://forms.dc.gov/f/DC_Voter_Registration_Form",
+    "moreInfoLinkEn": "https://www.vote4dc.com/ApplyInstructions/Register",
+    "checkRegStatusLink": "https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status"
   }
 }

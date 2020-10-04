@@ -30,8 +30,8 @@ export type MergedStateReg = {
   mailRegPolicies: MergedMailRegPolicy
   onlineRegPolicies: MergedOnlineRegPolicy
   registrationLinkEn: string | null
-  // links
-  // stateName
+  moreInfoLinkEn: string | null
+  checkRegStatusLink?: string | null
 }
 
 // Merged policies. For v0 let's try just merging the arrays and seeing if they
@@ -157,6 +157,7 @@ function mergeStateRegPolicies(
       warnings: ["Don't use this data until this warning is removed."],
     },
     registrationLinkEn: voteGovState.registrationLinkEn,
+    moreInfoLinkEn: voteGovState.moreInfoLinkEn,
   }
 
   return mergedState
