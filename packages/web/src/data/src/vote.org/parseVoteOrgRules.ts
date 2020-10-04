@@ -1,8 +1,8 @@
 // This is meant to clean up the raw JSON into something more usable.
 
-import { VOCleanedState } from './cleanVoteOrgData'
-import { UsaEntity, usaStates } from './usaStates'
-import { readFile, writeFile } from './utilities'
+import type { VOCleanedState } from './cleanVoteOrgData'
+import { UsaState, usaStates } from '../usaStates'
+import { readFile, writeFile } from '../utilities'
 
 //-------//
 // Types //
@@ -207,7 +207,7 @@ export function parseVORules(
   const cleanedData = JSON.parse(cleanedJson)
 
   const rulesetMap = entities.reduce(
-    (memo: VORulesetsMap, state: UsaEntity): VORulesetsMap => {
+    (memo: VORulesetsMap, state: UsaState): VORulesetsMap => {
       const cleanedState: VOCleanedState = cleanedData[state.abbrev]
       if (!cleanedState) {
         throw new Error(`Could not find state ${state.abbrev} in cleaned data.`)

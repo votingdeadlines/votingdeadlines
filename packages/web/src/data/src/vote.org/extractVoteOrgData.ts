@@ -1,8 +1,8 @@
 // This is meant to extract useful data from VOTE_ORG_GENERAL_FORMATTED_HTML_PATH.
 
-import { parseHtml } from './parseHtml'
-import { UsaEntity, usaStates } from './usaStates' // TODO: add DC, maybe territories
-import { readFile, writeFile } from './utilities'
+import { parseHtml } from '../parseHtml'
+import { UsaState, usaStates } from '../usaStates' // TODO: add DC, maybe territories
+import { readFile, writeFile } from '../utilities'
 
 interface VoteOrgRawData {
   [key: string]: string
@@ -11,7 +11,7 @@ interface VoteOrgRawData {
 // Parses Vote.org HTML into JSON data.
 export function extractVoteOrgData(html: string): VoteOrgRawData {
   const rawData = usaStates.reduce(
-    (memo: VoteOrgRawData, state: UsaEntity): VoteOrgRawData => {
+    (memo: VoteOrgRawData, state: UsaState): VoteOrgRawData => {
       // The ID (#alabama) gets us the table row.
       // This longer selector just gets us the deadline data we want.
       // We could return the full HTML, but the text content is all we need.

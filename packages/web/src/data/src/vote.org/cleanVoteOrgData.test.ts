@@ -10,7 +10,7 @@ import {
   cleanVoteOrgData,
   readCleanAndWriteVoteOrgData,
 } from './cleanVoteOrgData'
-import { usaStates } from './usaStates'
+import { usaStates } from '../usaStates'
 
 describe('cleanVoteOrgData.ts', () => {
   const mockStates = usaStates.filter((s) => s.abbrev === 'AL')

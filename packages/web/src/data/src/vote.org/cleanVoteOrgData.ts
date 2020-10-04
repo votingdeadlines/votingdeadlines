@@ -1,7 +1,7 @@
 // This is meant to clean up the raw JSON into something more usable.
 
-import { UsaState, usaStates } from './usaStates' // TODO: add DC, maybe territories
-import { readFile, writeFile } from './utilities'
+import { UsaState, usaStates } from '../usaStates' // TODO: add DC, maybe territories
+import { readFile, writeFile } from '../utilities'
 
 //-------//
 // Types //

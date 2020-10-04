@@ -1,6 +1,5 @@
-packages/data/coverage
-packages/data/node_modules
+coverage
+node_modules
 
-packages/e2e/node_modules
 packages/e2e/screenshots
 packages/e2e/yarn-error.log
