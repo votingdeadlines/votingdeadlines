@@ -126,7 +126,7 @@ const emoji = stateEmojis[abbrev]
     <h3>
       <a class='emoji-link' target="_blank" href={linkHref}>{emoji}</a><span>&nbsp;</span>{name}
     </h3>
-    <a class='top-link' target="_blank" href="#top">Top ⬆</a>
+    <a class='top-link' href="#top">Top ⬆</a>
   </div>
   <p>Voter registration deadlines:</p>
   <div class='deadline-cards'>
