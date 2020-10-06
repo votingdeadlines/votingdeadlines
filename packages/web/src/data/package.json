@@ -1,10 +1,10 @@
 {
   "private": true,
   "name": "votingdeadlines-data",
-  "version": "0.0.1",
-  "description": "WIP: Parse, validate, and republish voting deadline info.",
+  "version": "0.1.0",
+  "description": "Parse, validate, and republish voting deadline info.",
   "author": "zionillinois@users.noreply.github.com",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "scripts": {
     "console": "yarn tsn src/console.ts dotenv_config_path=config.sh",
     "data:trim:va": "yarn tsn bin/voteamerica.com/trimVoteAmericaHtml.bin.ts dotenv_config_path=config.sh",

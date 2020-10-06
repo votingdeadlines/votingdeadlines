@@ -2,10 +2,14 @@ default: help
 
 CWD := $(shell pwd)
 DATA_PIPELINE_DIR := $(shell pwd)/packages/web/src/data
+VERSION := $(shell cat version)
 
 chmod:
 	chmod +x packages/web/src/data/config.sh
 	chmod +x packages/web/src/data/bin/*.sh
+
+release:
+	cd packages/web && yarn export && cp -R __sapper__/export dist/$(VERSION)
 
 #---------#
 # Console #

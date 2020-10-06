@@ -1,7 +1,9 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "private": true,
+  "name": "votingdeadlines-data",
+  "version": "0.1.0",
+  "description": "Parse, validate, and republish voting deadline info.",
+  "license": "UNLICENSED",
   "scripts": {
     "console": "ts-node src/data/src/console.ts",
     "dev": "sapper dev",

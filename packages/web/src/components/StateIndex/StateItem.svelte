@@ -139,8 +139,8 @@ const emoji = stateEmojis[abbrev]
       <li>
         <span class='dot'>🌐</span>
         <span class='copy'>
-            Check registration status (official):
-            <a target="_blank" href={officialCheckRegStatusLink}>{officialCheckRegStatusLink}</a>
+          Check registration status (official):
+          <a target="_blank" href={officialCheckRegStatusLink}>{officialCheckRegStatusLink}</a>
         </span>
       </li>
     {/if}
@@ -154,8 +154,8 @@ const emoji = stateEmojis[abbrev]
       <li>
         <span class='dot'>🌐</span>
         <span class='copy register {isTooLateToRegisterOnline ? 'tooLate' : ''}'>
-            Register online (official):
-            <a target="_blank" href={officialRegistrationLink}>{officialRegistrationLink}</a>
+          Register online (official):
+          <a target="_blank" href={officialRegistrationLink}>{officialRegistrationLink}</a>
         </span>
       </li>
     {/if}
