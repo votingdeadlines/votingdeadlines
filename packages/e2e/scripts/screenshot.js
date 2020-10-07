@@ -1,6 +1,7 @@
 import { Selector } from 'testcafe';
 
-const DEV_URL = 'http://localhost:5000'
+const DEV_PORT = 3001
+const DEV_URL = `http://localhost:${DEV_PORT}`
 const WEB_URL = DEV_URL
 
 fixture(WEB_URL)
