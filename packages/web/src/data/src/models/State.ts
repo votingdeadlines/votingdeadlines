@@ -72,8 +72,9 @@ export class VDStateIndex {
   }
 
   get currentTimeDisplay() {
-    const compactDatetimeFormat = 'ddd, M/D @ h:mm a' // "Sun, 10/2 @ 3:45 pm"
-    return this.currentDjs.format(compactDatetimeFormat)
+    // const compactDatetimeFormat = 'ddd, M/D @ h:mm a' // "Sun, 10/2 @ 3:45 pm"
+    const longDatetimeFormat = 'dddd, MMMM D, YYYY' // "Sun, 10/2 @ 3:45 pm"
+    return this.currentDjs.format(longDatetimeFormat)
   }
 
   setCurrentTime(djs = dayjs()) {
