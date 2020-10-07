@@ -399,7 +399,7 @@ export class VDState {
       if (days === null) return null
       if (days > 1) return `${days} days`
       if (days === 1) return 'tomorrow'
-      if (days === 0) return 'today'
+      if (days === 0) return 'TODAY'
       if (days === -1) return 'yesterday'
       if (days < -1) return `${Math.abs(days)} days ago`
       throw new Error(`Error calculating deadlineDisplay: ${days}`)
