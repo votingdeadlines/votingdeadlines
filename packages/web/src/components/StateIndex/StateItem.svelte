@@ -88,6 +88,19 @@ li .copy {
   flex: 1 1;
 }
 
+/* Site of strange iOS font-size overflow bug. */
+li span,
+li span a,
+li .dot,
+li .copy {
+  font-size: 1rem;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+}
+
 .register.tooLate {
   text-decoration: line-through;
 }
