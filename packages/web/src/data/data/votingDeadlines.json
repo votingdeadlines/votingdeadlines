@@ -2015,7 +2015,12 @@
       ]
     },
     "onlineRegPolicies": {
-      "policies": [],
+      "policies": [
+        {
+          "kind": "OnlineRegDeadline",
+          "isoDate": "2020-10-13"
+        }
+      ],
       "warnings": [
         "Don't use this data until this warning is removed."
       ]
