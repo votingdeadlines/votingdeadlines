@@ -175,7 +175,7 @@ const emoji = stateEmojis[abbrev]
         ·
         <a target="_blank" href="https://www.voteamerica.com/register-to-vote-{slug}/">VoteAmerica</a>
         ·
-        <a target="_blank" href="https://vote.gov/register/{abbrev}">Vote.gov</a>
+        <a target="_blank" href="https://vote.gov/register/{abbrev.toLowerCase()}">Vote.gov</a>
       </span>
     </li>
   </ul>
