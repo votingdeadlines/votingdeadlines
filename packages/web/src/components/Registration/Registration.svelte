@@ -50,13 +50,19 @@ import Footer from '../Footer/Footer.svelte'
 // smoothscroll.polyfill()
 
 const vdStateIndex = VDStateIndex.fromMap(datafile as MergedStateRegIndex)
-const { swingStates, senateRaces, regions} = vdStateIndex
+const { currentTimeDisplay, swingStates, senateRaces, regions } = vdStateIndex
 const endingSoonest = vdStateIndex.endingSoonest(10)
+
+// Hacky way to adjust the line break.
+const currentTimeEls = currentTimeDisplay.split(' ')
 </script>
 
 <aside id="top" />
 <h1>Voter Registration</h1>
-<p>Days left as of Tuesday, October&nbsp;6,&nbsp;2020.</p>
+<p>
+  Days left as of {currentTimeEls[0]}
+  {currentTimeEls[1]}&nbsp;{currentTimeEls[2]}&nbsp;{currentTimeEls[3]}.
+</p>
 <p>
   <a target="_blank" href="https://www.headcount.org/verify-voter-registration/">Triple-check your registration status</a> if you haven't already!
 </p>
