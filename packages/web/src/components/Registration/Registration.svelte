@@ -42,10 +42,10 @@ import { default as datafile } from '../../data/data/votingDeadlines.json'
 import type { MergedStateRegIndex } from '../../data/src/mergeData'
 import { VDStateIndex } from '../../data/src/models/State'
 import DS from '../DS/DS.svelte'
+import Footer from '../Footer/Footer.svelte'
 import ButtonGroup from '../ButtonGroup/ButtonGroup.svelte'
 import Map from '../Map/Map.svelte'
 import StateIndex from '../StateIndex/StateIndex.svelte'
-import Footer from '../Footer/Footer.svelte'
 
 // smoothscroll.polyfill()
 
@@ -80,6 +80,7 @@ const currentTimeEls = currentTimeDisplay.split(' ')
 
 <StateIndex stateIndex={vdStateIndex} />
 
+<Footer />
 <!-- It seem that to import the DS CSS (e.g. :root vars), we need to include -->
 <!-- actual markup from DS.svelte. Maybe we should move this to global CSS. -->
 <DS />
