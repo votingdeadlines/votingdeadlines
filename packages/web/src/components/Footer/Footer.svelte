@@ -1,5 +1,5 @@
 <style>
-  footer {
+  .footer {
     background: rgb(226, 226, 226);
     color: var(--taglineGray);
     margin-top: 4rem;
@@ -36,7 +36,7 @@
   }
 </style>
 
-<footer>
+<div class='footer'>
   <p>
     <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Data</a> from <a href="https://vote.gov">Vote.gov</a> and <a href="https://voteamerica.com">VoteAmerica</a>, plus manual comparisons with data from <a href="projects.fivethirtyeight.com/how-to-vote-2020/">FiveThirtyEight</a> and <a href="https://vote.org">Vote.org</a>. Built with TypeScript and Svelte.
   <p>
@@ -60,4 +60,4 @@
   <p class='license'>
     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a>.
   </p>
-</footer>
+</div>
