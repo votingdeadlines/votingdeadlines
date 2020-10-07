@@ -5,11 +5,6 @@ const { dayjs } = v1
 
 // Convenience functions wrapped around the data.
 
-// TODOs / NTHs
-// - colors
-// - abbrevs array + nonDCAbbrevs array
-// - OR^ states + nonDCStates + state.colors = { ol, ip, ml }
-
 //-------//
 // Types //
 //-------//
@@ -73,7 +68,7 @@ export class VDStateIndex {
 
   get currentTimeDisplay() {
     // const compactDatetimeFormat = 'ddd, M/D @ h:mm a' // "Sun, 10/2 @ 3:45 pm"
-    const longDatetimeFormat = 'dddd, MMMM D, YYYY' // "Sun, 10/2 @ 3:45 pm"
+    const longDatetimeFormat = 'dddd, MMMM D, YYYY'
     return this.currentDjs.format(longDatetimeFormat)
   }
 
@@ -109,6 +104,7 @@ export class VDStateIndex {
       || null
   }
 
+  // TODO: fix or remove
   get nonDCStates() {
     return this.states // .filter(s => s.abbrev !== 'DC')
   }
@@ -223,6 +219,8 @@ export class VDStateIndex {
 //---------//
 // VDState //
 //---------//
+
+// TODO: break into separate files
 
 export class VDState {
   // Instance types
@@ -341,12 +339,6 @@ export class VDState {
       return isDeadline ? (policy as RegDeadline).isoDate : null
     }
 
-    if (!this.data.onlineRegPolicies) {
-      // console.log(this.abbrev, this.data)
-    } else {
-      // console.log(this.abbrev)
-    }
-
     this._deadlines = [
       _isoDateOrNull(this.firstOnlinePolicy),
       _isoDateOrNull(this.firstInPersonPolicy),
@@ -414,7 +406,6 @@ export class VDState {
     ]
   }
 
-
   // Long form of the deadline, e.g. Monday, October 10, 2020
   get deadlinesDisplayLong(): [string | null, string | null, string | null] {
     function _deadlineDisplayLong(isoDate: string | null): string | null {
@@ -429,7 +420,6 @@ export class VDState {
       _deadlineDisplayLong(this.deadlines[2]),
     ]
   }
-
 
   get truthyDeadlines() {
     const deadlines = this.deadlines
@@ -653,8 +643,6 @@ export class VDState {
       summaryDeadlineDisplay = 'unavailable'
     }
 
-    // TODO: NotNeeded
-    // TODO: Passed
     return {
       title: "Online",
       methodCaps: "Online",
@@ -672,8 +660,6 @@ export class VDState {
       summaryDeadlineDisplay = 'unavailable'
     }
 
-    // TODO: NotNeeded
-    // TODO: Passed
     return {
       title: "In Person",
       methodCaps: "In-person",
@@ -691,8 +677,6 @@ export class VDState {
       summaryDeadlineDisplay = 'unavailable'
     }
 
-    // TODO: NotNeeded
-    // TODO: Passed
     return {
       title: "Mail",
       methodCaps: "Mail", // workshop copy to clarify mail reg vs. mail voting
@@ -740,6 +724,7 @@ export class VDState {
 
 // TODO: DRY with types/deadlineCards.ts
 type RegUIType = 'ONLINE' | 'IN_PERSON' | 'MAIL'
+
 // High level user-facing projections of the policies in the data.
 // (How to best move into the class? The union/enum is also too loose.)
 type PolicyUIBooleans = {
@@ -779,55 +764,3 @@ type InPersonUICopy = {
 type MailUICopy = {
   [key: string]: string,
 }
-
-
-
-// Fake states with minimal data for testing
-export const VD_FIXTURE: VDStateDataArray = [
-  {
-    stateAbbrev: 'AA',
-    stateName: 'Akaska',
-    onlineRegPolicies: { policies: [
-      { kind: 'OnlineRegDeadline', isoDate: '2020-10-05' }
-    ], warnings: [], },
-    inPersonRegPolicies: { policies: [
-      { kind: 'InPersonRegDeadline', isoDate: '2020-11-03' }
-    ], warnings: [], },
-    mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://akaska.gov.example.com/register.htm',
-    moreInfoLinkEn: 'https://akaska.gov.example.com/info.htm',
-  },
-  {
-    stateAbbrev: 'BA',
-    stateName: 'Balaska',
-    onlineRegPolicies: { policies: [
-      { kind: 'OnlineRegDeadline', isoDate: '2020-10-04' }
-    ], warnings: [], },
-    inPersonRegPolicies: { policies: [], warnings: [], },
-    mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://balaska.gov.example.com/register.html',
-    moreInfoLinkEn: 'https://balaska.gov.example.com/info.html',
-  },
-  {
-    stateAbbrev: 'CA',
-    stateName: 'Calaska',
-    onlineRegPolicies: { policies: [
-      { kind: 'OnlineRegDeadline', isoDate: '2020-10-06' }
-    ], warnings: [], },
-    inPersonRegPolicies: { policies: [], warnings: [], },
-    mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://calaska.gov.example.com/register.aspx',
-    moreInfoLinkEn: 'https://calaska.gov.example.com/info.aspx',
-  },
-  {
-    stateAbbrev: 'DA',
-    stateName: 'Dalaska',
-    onlineRegPolicies: { policies: [
-      { kind: 'OnlineRegDeadline', isoDate: '2020-10-01' }
-    ], warnings: [], },
-    inPersonRegPolicies: { policies: [], warnings: [], },
-    mailRegPolicies: { policies: [], warnings: [], },
-    registrationLinkEn: 'https://dalaska.gov.example.com/register.php',
-    moreInfoLinkEn: 'https://dalaska.gov.example.com/info.php',
-  },
-]

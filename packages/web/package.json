@@ -1,11 +1,10 @@
 {
   "private": true,
-  "name": "votingdeadlines-data",
-  "version": "0.1.0",
+  "name": "votingdeadlines-web",
+  "version": "0.1.1",
   "description": "Parse, validate, and republish voting deadline info.",
   "license": "UNLICENSED",
   "scripts": {
-    "console": "ts-node src/data/src/console.ts",
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",

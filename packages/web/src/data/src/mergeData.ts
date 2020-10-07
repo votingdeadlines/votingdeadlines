@@ -69,7 +69,6 @@ export type RegDeadline = InPersonRegDeadline
 // For now these are the same types as in ./parseVoteGovDeadlines. Hopefully
 // they don't have to change and become V1 of the normalized universal types.
 
-
 type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable | RegNotNeeded
 
 type InPersonRegDeadline = {
@@ -130,31 +129,31 @@ function mergeStateRegPolicies(
 ): MergedStateReg {
   const { voteGovState, voteAmericaState } = premergeStatePolicies
 
-  voteAmericaState // ignore for phase 0
+  voteAmericaState // add in a future release
 
   const mergedState = {
     stateAbbrev: voteGovState.stateAbbrev,
     stateName: voteGovState.stateName,
     inPersonRegPolicies: {
       policies: [
-        ...voteGovState.inPersonRegPolicies, // add source? we lose
+        ...voteGovState.inPersonRegPolicies,
         // ...voteAmericaState.inPersonRegPolicies,
       ],
-      warnings: ["Don't use this data until this warning is removed."],
+      warnings: [],
     },
     mailRegPolicies: {
       policies: [
         ...voteGovState.mailRegPolicies,
         // ...voteAmericaState.mailRegPolicies,
       ],
-      warnings: ["Don't use this data until this warning is removed."],
+      warnings: [],
     },
     onlineRegPolicies: {
       policies: [
         ...voteGovState.onlineRegPolicies,
         // ...voteAmericaState.onlineRegPolicies
       ],
-      warnings: ["Don't use this data until this warning is removed."],
+      warnings: [],
     },
     registrationLinkEn: voteGovState.registrationLinkEn,
     moreInfoLinkEn: voteGovState.moreInfoLinkEn,

@@ -93,12 +93,6 @@ type OnlineRegNotAvailable = {
   kind: 'OnlineRegNotAvailable'
 }
 
-// "ipDeadline": "Monday, October 19, 2020",
-// "olDeadline": "Monday, October 19, 2020",
-// "bmDeadlines": {
-//   "postmarkedBy": "Monday, October 19, 2020"
-// }
-
 //-----------------//
 // Parsing methods //
 //-----------------//

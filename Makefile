@@ -106,7 +106,7 @@ update-metrics:
 #-------#
 
 test:
-	yarn test
+	cd packages/web/src/data && yarn test
 
 #-------------#
 # Screenshots #
