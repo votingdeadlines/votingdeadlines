@@ -211,7 +211,7 @@ const color = {
 
       {#if ui.isCountdown}
         <p class="blurb">
-          <strong>{copy.mainDeadlineDisplay}</strong> is the last day to register online
+          <strong>{copy.mainDeadlineDisplay}</strong> is the last day to register {copy.byMethod}
           in {state.name}. {copy.thisIs}
         </p>
         <time>
