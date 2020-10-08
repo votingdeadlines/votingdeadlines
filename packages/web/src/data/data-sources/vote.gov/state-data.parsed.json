@@ -53,19 +53,19 @@
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
-        "isoDate": "2020-10-05"
+        "isoDate": "2020-10-23"
       }
     ],
     "mailRegPolicies": [
       {
-        "kind": "MailRegPostmarkedDeadline",
-        "isoDate": "2020-10-05"
+        "kind": "MailRegReceivedDeadline",
+        "isoDate": "2020-10-23"
       }
     ],
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-05"
+        "isoDate": "2020-10-23"
       }
     ],
     "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage",

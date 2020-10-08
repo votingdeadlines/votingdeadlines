@@ -42,7 +42,7 @@
   <p>
 
   <p>
-    This is version v0.2.0, published October 8, 2020. (Biggest recent change: AZ has been pushed back to October 23.) The data should be almost identical to the <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Vote.gov data</a>, which may have errors, or be out of date; other errors may have been introduced by our code. Check your state's official website for the most authoritative information. To give feedback or report errors, email <a href="mailto:votingdeadlines@almnac.com">votingdeadlines@almnac.com</a>.
+    This is version v0.2.1, published October 8, 2020. (Biggest recent change: AZ has been pushed back to October 23.) The data should be almost identical to the <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Vote.gov data</a>, which may have errors, or be out of date; other errors may have been introduced by our code. Check your state's official website for the most authoritative information. To give feedback or report errors, email <a href="mailto:votingdeadlines@almnac.com">votingdeadlines@almnac.com</a>.
   </p>
 
   <ul>
