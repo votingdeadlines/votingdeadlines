@@ -3,6 +3,7 @@ default: help
 CWD := $(shell pwd)
 DATA_PIPELINE_DIR := $(shell pwd)/packages/web/src/data
 VERSION := $(shell cat version)
+PKG_JSON_VERSION := $(shell cat packages/web/package.json | grep '"version":')
 
 #-------#
 # Setup #
@@ -114,8 +115,9 @@ test: ## Run tests
 #---------#
 
 release: ## Build the website and copy to packages/web/dist/
-	@echo Building $(VERSION)...
-	cd packages/web && yarn export && cp -R __sapper__/export dist/$(VERSION)
+	test '$(PKG_JSON_VERSION)' = '  "version": "$(VERSION)",' || exit 1
+	@echo Building v$(VERSION)...
+	cd packages/web && yarn export && cp -R __sapper__/export dist/v$(VERSION)
 
 #------#
 # Help #
