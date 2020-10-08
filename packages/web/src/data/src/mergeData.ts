@@ -56,12 +56,11 @@ type MergedOnlineRegPolicy = {
 }
 
 // A union of policy primitives, both dated and non-dated.
-export type RegPolicy = InPersonRegPolicy
-  | MailRegPolicy
-  | OnlineRegPolicy
+export type RegPolicy = InPersonRegPolicy | MailRegPolicy | OnlineRegPolicy
 
 // A union of dated policy primitives.
-export type RegDeadline = InPersonRegDeadline
+export type RegDeadline =
+  | InPersonRegDeadline
   | MailRegPostmarkedDeadline
   | MailRegReceivedDeadline
   | OnlineRegDeadline
@@ -69,7 +68,10 @@ export type RegDeadline = InPersonRegDeadline
 // For now these are the same types as in ./parseVoteGovDeadlines. Hopefully
 // they don't have to change and become V1 of the normalized universal types.
 
-type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable | RegNotNeeded
+type InPersonRegPolicy =
+  | InPersonRegDeadline
+  | InPersonRegNotAvailable
+  | RegNotNeeded
 
 type InPersonRegDeadline = {
   kind: 'InPersonRegDeadline'

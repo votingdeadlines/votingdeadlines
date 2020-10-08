@@ -14,17 +14,26 @@ if (!VOTEAMERICA_REG_FORMATTED_HTML_PATH || !VOTEAMERICA_REG_RAW_JSON_PATH) {
   throw new Error('Missing variables in extractVoteAmericaData.bin.ts.')
 }
 
-if (!VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH || !VOTEAMERICA_REG_STATUS_RAW_JSON_PATH) {
+if (
+  !VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH ||
+  !VOTEAMERICA_REG_STATUS_RAW_JSON_PATH
+) {
   throw new Error('Missing variables in extractVoteAmericaData.bin.ts.')
 }
 
 const root = `${__dirname}/../..`
-const regFormattedPath = resolve(`${root}/${VOTEAMERICA_REG_FORMATTED_HTML_PATH}`)
+const regFormattedPath = resolve(
+  `${root}/${VOTEAMERICA_REG_FORMATTED_HTML_PATH}`
+)
 const regRawJsonPath = resolve(`${root}/${VOTEAMERICA_REG_RAW_JSON_PATH}`)
 
 readExtractAndWriteVAData(regFormattedPath, regRawJsonPath)
 
-const statusFormattedPath = resolve(`${root}/${VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH}`)
-const statusRawJsonPath = resolve(`${root}/${VOTEAMERICA_REG_STATUS_RAW_JSON_PATH}`)
+const statusFormattedPath = resolve(
+  `${root}/${VOTEAMERICA_REG_STATUS_FORMATTED_HTML_PATH}`
+)
+const statusRawJsonPath = resolve(
+  `${root}/${VOTEAMERICA_REG_STATUS_RAW_JSON_PATH}`
+)
 
 readExtractAndWriteVARegStatusData(statusFormattedPath, statusRawJsonPath)

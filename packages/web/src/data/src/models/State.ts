@@ -1,4 +1,9 @@
-import type { MergedStateReg, MergedStateRegIndex, RegDeadline, RegPolicy } from '../mergeData'
+import type {
+  MergedStateReg,
+  MergedStateRegIndex,
+  RegDeadline,
+  RegPolicy,
+} from '../mergeData'
 import { DayjsType, v1 } from '../timeUtilities'
 
 const { dayjs } = v1
@@ -35,11 +40,11 @@ export class VDStateIndex {
     this.setCurrentTime()
     this.stateDataArray = vdStateDataArray
     const index = this
-    this.states = this.stateDataArray.map(state => new VDState(state, index))
+    this.states = this.stateDataArray.map((state) => new VDState(state, index))
   }
 
   static fromMap(stateDataMap: VDStateDataMap) {
-    console.warn("fromMap: Should pre-flatten map into array and sort instead.")
+    console.warn('fromMap: Should pre-flatten map into array and sort instead.')
     const stateDataArray = Object.values(stateDataMap)
     return new VDStateIndex(stateDataArray)
   }
@@ -100,8 +105,9 @@ export class VDStateIndex {
   //--------
 
   get(stateAbbrev: string): VDState | null {
-    return this.states.find((state: VDState) => state.abbrev === stateAbbrev)
-      || null
+    return (
+      this.states.find((state: VDState) => state.abbrev === stateAbbrev) || null
+    )
   }
 
   // TODO: fix or remove
@@ -181,15 +187,17 @@ export class VDStateIndex {
 
   get regions() {
     const regionMap = {
-      Northeast: "RI NY DE NJ PA MA ME MD DC CT VT NH".split(" "),
-      South: "SC FL GA KY AR MS TN TX OK VA WV LA AL NC".split(" "),
-      Midwest: "IN OH MO KS SD NE MI IL MN WI IA ND".split(" "),
-      West: "AK AZ OR NV NM HI ID WY UT CO MT CA WA".split(" "),
+      Northeast: 'RI NY DE NJ PA MA ME MD DC CT VT NH'.split(' '),
+      South: 'SC FL GA KY AR MS TN TX OK VA WV LA AL NC'.split(' '),
+      Midwest: 'IN OH MO KS SD NE MI IL MN WI IA ND'.split(' '),
+      West: 'AK AZ OR NV NM HI ID WY UT CO MT CA WA'.split(' '),
     }
 
     const { compareByFinalActiveDeadline } = this
     function _filter(states: Array<VDState>, region: string): Array<VDState> {
-      const filtered = states.filter(s => regionMap[region].includes(s.abbrev))
+      const filtered = states.filter((s) =>
+        regionMap[region].includes(s.abbrev)
+      )
       return filtered.sort(compareByFinalActiveDeadline)
     }
 
@@ -203,18 +211,16 @@ export class VDStateIndex {
 
   get senateRaces() {
     const closeRaces = 'MI AZ CO GA IA ME MT NC GA KS SC AK'.split(' ')
-    const states = this.states.filter(s => closeRaces.includes(s.abbrev))
+    const states = this.states.filter((s) => closeRaces.includes(s.abbrev))
     return states.sort(this.compareByFinalActiveDeadline)
   }
 
   get swingStates() {
     const stateAbbrevs = 'FL PA WI MI AZ MN NC NV CO OH GA IA ME NE'.split(' ')
-    const states = this.states.filter(s => stateAbbrevs.includes(s.abbrev))
+    const states = this.states.filter((s) => stateAbbrevs.includes(s.abbrev))
     return states.sort(this.compareByFinalActiveDeadline)
   }
 }
-
-
 
 //---------//
 // VDState //
@@ -388,7 +394,7 @@ export class VDState {
   // Short/countdown form of the deadline, e.g. 14 days. Does not handle
   // falsey values.
   get deadlinesDisplay(): [string | null, string | null, string | null] {
-    function _deadlineDisplay(days: number | null): string | null{
+    function _deadlineDisplay(days: number | null): string | null {
       if (days === null) return null
       if (days > 1) return `${days} days`
       if (days === 1) return 'tomorrow'
@@ -423,13 +429,13 @@ export class VDState {
 
   get truthyDeadlines() {
     const deadlines = this.deadlines
-    return deadlines.filter(deadline => deadline)
+    return deadlines.filter((deadline) => deadline)
   }
 
   // ❗️ An important method. Deadlines that exist and aren't in the past yet.
   get activeDeadlines() {
     const truthyDeadlines = this.truthyDeadlines
-    return truthyDeadlines.filter(deadline => {
+    return truthyDeadlines.filter((deadline) => {
       const isActive = deadline >= this.currentDate
       return isActive
     })
@@ -485,7 +491,7 @@ export class VDState {
     const range = [
       this.deadlineInDays(this.soonestActiveDeadline),
       this.deadlineInDays(this.finalActiveDeadline),
-   ]
+    ]
     // console.log(range)
     if (range.includes(null)) return null
     return range
@@ -504,8 +510,8 @@ export class VDState {
   // Returns activeDeadlineRangeInDaysString with enhancements.
   get activeDeadlineRangeInDaysDisplay() {
     const literalString = this.activeDeadlineRangeInDaysString
-    if (literalString === "") return "closed" // messy :/
-    if (literalString === "0") return "TODAY"
+    if (literalString === '') return 'closed' // messy :/
+    if (literalString === '0') return 'TODAY'
     return `${literalString}d`
   }
 
@@ -518,13 +524,13 @@ export class VDState {
       PASSED: { max: -1, colors: 'gray' },
       TODAY: { max: 0, colors: 'red' },
       SOONEST: { max: 5, colors: 'red' },
-      SOONER: { max: 10,  colors: 'yellow' },
+      SOONER: { max: 10, colors: 'yellow' },
       LATER: { max: null, colors: 'green' },
     }
 
-    const colorTiers = this.deadlinesInDays.map(d => {
+    const colorTiers = this.deadlinesInDays.map((d) => {
       if (isNaN(d)) {
-        throw new Error("NaN deadline passed to colors getter")
+        throw new Error('NaN deadline passed to colors getter')
       }
 
       if (d === null) return COLOR_TIERS.NA
@@ -625,7 +631,7 @@ export class VDState {
   get copy() {
     return {
       // Assumes "AZ " already prefixed, e.g. "10d" for "AZ 10d".
-      buttonCopy: this.activeDeadlineRangeInDaysDisplay
+      buttonCopy: this.activeDeadlineRangeInDaysDisplay,
     }
   }
 
@@ -644,9 +650,9 @@ export class VDState {
     }
 
     return {
-      title: "Online",
-      methodCaps: "Online",
-      byMethod: "online",
+      title: 'Online',
+      methodCaps: 'Online',
+      byMethod: 'online',
       summaryDeadlineDisplay, // the part visible before expanding the caret
       mainDeadlineDisplay: this.deadlinesDisplayLong[0], // Monday, October 2...
       thisIs: this.thisIs(this.deadlinesDisplay[0]), // details prefix
@@ -661,9 +667,9 @@ export class VDState {
     }
 
     return {
-      title: "In Person",
-      methodCaps: "In-person",
-      byMethod: "in person",
+      title: 'In Person',
+      methodCaps: 'In-person',
+      byMethod: 'in person',
       summaryDeadlineDisplay,
       mainDeadlineDisplay: this.deadlinesDisplayLong[1], // Monday, October 2...
       thisIs: this.thisIs(this.deadlinesDisplay[1]), // details prefix
@@ -678,9 +684,9 @@ export class VDState {
     }
 
     return {
-      title: "Mail",
-      methodCaps: "Mail", // workshop copy to clarify mail reg vs. mail voting
-      byMethod: "by mail",
+      title: 'Mail',
+      methodCaps: 'Mail', // workshop copy to clarify mail reg vs. mail voting
+      byMethod: 'by mail',
       summaryDeadlineDisplay,
       mainDeadlineDisplay: this.deadlinesDisplayLong[2], // Monday, October 2...
       thisIs: this.thisIs(this.deadlinesDisplay[2]), // details prefix
@@ -697,7 +703,8 @@ export class VDState {
 
   stringToSlug(string: string): string {
     const lcString = string.toLowerCase()
-    const saferString = lcString.replace(/[^a-z0-9 -]/g, '')
+    const saferString = lcString
+      .replace(/[^a-z0-9 -]/g, '')
       .replace(/\s+/g, '-')
       .replace(/-+/g, '-')
     return saferString
@@ -728,13 +735,13 @@ type RegUIType = 'ONLINE' | 'IN_PERSON' | 'MAIL'
 // High level user-facing projections of the policies in the data.
 // (How to best move into the class? The union/enum is also too loose.)
 type PolicyUIBooleans = {
-  isCountdown: boolean, // is generic/non-mail countdown, more precisely
-  isMailPostmarkedCountdown: boolean,
-  isMailReceivedCountdown: boolean,
-  isPassed: boolean,
-  isNotNeeded: boolean,
-  isUnavailable: boolean,
-  isUnsure: boolean,
+  isCountdown: boolean // is generic/non-mail countdown, more precisely
+  isMailPostmarkedCountdown: boolean
+  isMailReceivedCountdown: boolean
+  isPassed: boolean
+  isNotNeeded: boolean
+  isUnavailable: boolean
+  isUnsure: boolean
 }
 
 type PolicyUIBooleansTuple = {
@@ -743,24 +750,25 @@ type PolicyUIBooleansTuple = {
   mailUI: PolicyUIBooleans
 }
 
-type PolicyUIEnum = 'Countdown'
- | 'MailPostmarkedCountdown'
- | 'MailReceivedCountdown'
- | 'NotNeeded'
- | 'Passed'
- | 'Unavailable'
- | 'Unsure'
+type PolicyUIEnum =
+  | 'Countdown'
+  | 'MailPostmarkedCountdown'
+  | 'MailReceivedCountdown'
+  | 'NotNeeded'
+  | 'Passed'
+  | 'Unavailable'
+  | 'Unsure'
 
 type PolicyUICopy = OnlineUICopy | InPersonUICopy | MailUICopy
 
 type OnlineUICopy = {
-  [key: string]: string,
+  [key: string]: string
 }
 
 type InPersonUICopy = {
-  [key: string]: string,
+  [key: string]: string
 }
 
 type MailUICopy = {
-  [key: string]: string,
+  [key: string]: string
 }

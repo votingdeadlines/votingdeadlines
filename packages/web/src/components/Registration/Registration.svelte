@@ -57,28 +57,33 @@ const endingSoonest = vdStateIndex.endingSoonest(10)
 const currentTimeEls = currentTimeDisplay.split(' ')
 </script>
 
-<aside id="top" />
+<aside id="top"></aside>
 <h1>Voter Registration</h1>
 <p>
-  Days left as of {currentTimeEls[0]}
+  Days left as of
+  {currentTimeEls[0]}
   {currentTimeEls[1]}&nbsp;{currentTimeEls[2]}&nbsp;{currentTimeEls[3]}.
 </p>
 <p>
-  <a target="_blank" href="https://www.headcount.org/verify-voter-registration/">Triple-check your registration status</a> if you haven't already!
+  <a
+    target="_blank"
+    href="https://www.headcount.org/verify-voter-registration/"
+  >Triple-check your registration status</a>
+  if you haven't already!
 </p>
 <div class="map-wrapper">
-  <Map vdStateIndex={vdStateIndex} />
+  <Map vdStateIndex="{vdStateIndex}" />
 </div>
 
-<ButtonGroup heading='Swing states' states={swingStates} />
-<ButtonGroup heading='Ending soon' states={endingSoonest} />
-<ButtonGroup heading='Northeast' states={regions.Northeast} />
-<ButtonGroup heading='South' states={regions.South} />
-<ButtonGroup heading='Midwest' states={regions.Midwest} />
-<ButtonGroup heading='West' states={regions.West} />
-<ButtonGroup heading='Senate races' states={senateRaces} />
+<ButtonGroup heading="Swing states" states="{swingStates}" />
+<ButtonGroup heading="Ending soon" states="{endingSoonest}" />
+<ButtonGroup heading="Northeast" states="{regions.Northeast}" />
+<ButtonGroup heading="South" states="{regions.South}" />
+<ButtonGroup heading="Midwest" states="{regions.Midwest}" />
+<ButtonGroup heading="West" states="{regions.West}" />
+<ButtonGroup heading="Senate races" states="{senateRaces}" />
 
-<StateIndex stateIndex={vdStateIndex} />
+<StateIndex stateIndex="{vdStateIndex}" />
 
 <Footer />
 <!-- It seem that to import the DS CSS (e.g. :root vars), we need to include -->

@@ -132,8 +132,9 @@ header a:hover {
 
     <div class="title">
       <div class="title-copy">
-        <span class="words"><span class="voting">Voting</span> Deadlines</span><span class="period">.</span>
-        <span class='release'>alpha</span>
+        <span class="words"><span class="voting">Voting</span>
+          Deadlines</span><span class="period">.</span>
+        <span class="release">alpha</span>
       </div>
     </div>
   </a>

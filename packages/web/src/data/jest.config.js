@@ -12,5 +12,5 @@ module.exports = {
     '<rootDir>/data',
     '<rootDir>/data-sources',
     '<rootDir>/src',
-  ]
+  ],
 }

@@ -76,9 +76,9 @@ type Base64SVGPatternMap = {
 export const patternMap = buildBase64SVGs(['red', 'yellow', 'green', 'gray'])
 function buildBase64SVGs(colors: Array<string>): Base64SVGPatternMap {
   const permutationsMap = {}
-  colors.forEach(c1 => {
-    colors.forEach(c2 => {
-      colors.forEach(c3 => {
+  colors.forEach((c1) => {
+    colors.forEach((c2) => {
+      colors.forEach((c3) => {
         const key = `${c1}-${c2}-${c3}`
         // TODO: if c1 == c2 == c3, use "c1" and no SVG?
         permutationsMap[key] = base64CrosshatchSVG(
@@ -86,7 +86,7 @@ function buildBase64SVGs(colors: Array<string>): Base64SVGPatternMap {
           '-45',
           colorDefinition(c1),
           colorDefinition(c2),
-          colorDefinition(c3),
+          colorDefinition(c3)
         )
       })
     })

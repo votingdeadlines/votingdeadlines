@@ -38,7 +38,6 @@ h2 span {
 .top-link {
   font-size: 14px;
 }
-
 </style>
 
 <script lang="typescript" type="text/typescript">
@@ -54,18 +53,13 @@ const anchorId = stringToSlug(heading)
 const linkHref = `#${anchorId}`
 </script>
 
-<aside class='anchor' id="{anchorId}" />
-<div class='heading'>
-  <h2>
-    <a href={linkHref}>
-      <span>#</span>
-      {heading}
-    </a>
-  </h2>
-  <a class='top-link' href="#top">Top ⬆</a>
+<aside class="anchor" id="{anchorId}"></aside>
+<div class="heading">
+  <h2><a href="{linkHref}"> <span>#</span> {heading} </a></h2>
+  <a class="top-link" href="#top">Top ⬆</a>
 </div>
 <nav>
   {#each states as state}
-    <RegistrationButton state={state} />
+    <RegistrationButton state="{state}" />
   {/each}
 </nav>

@@ -104,7 +104,6 @@ li .copy {
 .register.tooLate {
   text-decoration: line-through;
 }
-
 </style>
 
 <script lang="ts" type="text/typescript">
@@ -134,61 +133,86 @@ const emoji = stateEmojis[abbrev]
 </script>
 
 <article>
-  <aside class='anchor' id="{abbrev}" />
-  <div class='heading'>
+  <aside class="anchor" id="{abbrev}"></aside>
+  <div class="heading">
     <h3>
-      <a class='emoji-link' target="_blank" href={linkHref}>{emoji}</a><span>&nbsp;</span>{name}
+      <a class="emoji-link" target="_blank" href="{linkHref}">{emoji}</a><span
+      >&nbsp;</span>{name}
     </h3>
-    <a class='top-link' href="#top">Top ⬆</a>
+    <a class="top-link" href="#top">Top ⬆</a>
   </div>
   <p>Voter registration deadlines:</p>
-  <div class='deadline-cards'>
-    <DeadlineCard state={state} type={DEADLINE_CARD_TYPES.ONLINE} />
-    <DeadlineCard state={state} type={DEADLINE_CARD_TYPES.IN_PERSON} />
-    <DeadlineCard state={state} type={DEADLINE_CARD_TYPES.MAIL} />
+  <div class="deadline-cards">
+    <DeadlineCard state="{state}" type="{DEADLINE_CARD_TYPES.ONLINE}" />
+    <DeadlineCard state="{state}" type="{DEADLINE_CARD_TYPES.IN_PERSON}" />
+    <DeadlineCard state="{state}" type="{DEADLINE_CARD_TYPES.MAIL}" />
   </div>
   <ul>
     {#if officialCheckRegStatusLink}
       <li>
-        <span class='dot'>🌐</span>
-        <span class='copy'>
+        <span class="dot">🌐</span>
+        <span class="copy">
           Check registration status (official):
-          <a target="_blank" href={officialCheckRegStatusLink}>{officialCheckRegStatusLink}</a>
+          <a
+            target="_blank"
+            href="{officialCheckRegStatusLink}"
+          >{officialCheckRegStatusLink}</a>
         </span>
       </li>
     {/if}
     <li>
-      <span class='dot'>🌐</span>
-      <span class='copy'>
-        Official state election info: <a target="_blank" href="{officialInfoLink}">{officialInfoLink}</a>
+      <span class="dot">🌐</span>
+      <span class="copy">
+        Official state election info:
+        <a target="_blank" href="{officialInfoLink}">{officialInfoLink}</a>
       </span>
     </li>
     {#if officialRegistrationLink}
       <li>
-        <span class='dot'>🌐</span>
-        <span class='copy register {isTooLateToRegisterOnline ? 'tooLate' : ''}'>
+        <span class="dot">🌐</span>
+        <span
+          class="copy register {isTooLateToRegisterOnline ? 'tooLate' : ''}"
+        >
           Register online (official):
-          <a target="_blank" href={officialRegistrationLink}>{officialRegistrationLink}</a>
+          <a
+            target="_blank"
+            href="{officialRegistrationLink}"
+          >{officialRegistrationLink}</a>
         </span>
       </li>
     {/if}
     <li>
-      <span class='dot'>🌐</span>
-      <span class='copy register {isTooLateToRegister ? 'tooLate' : ''}'>
+      <span class="dot">🌐</span>
+      <span class="copy register {isTooLateToRegister ? 'tooLate' : ''}">
         Register via:
-        <a target="_blank" href="https://www.headcount.org/registertovote/">Headcount</a>
+        <a
+          target="_blank"
+          href="https://www.headcount.org/registertovote/"
+        >Headcount</a>
         ·
-        <a target="_blank" href="https://www.voteamerica.com/register-to-vote-{slug}/">VoteAmerica</a>
+        <a
+          target="_blank"
+          href="https://www.voteamerica.com/register-to-vote-{slug}/"
+        >VoteAmerica</a>
       </span>
     </li>
     <li>
-      <span class='dot'>🌐</span>
-      <span class='copy'>More info:
-        <a target="_blank" href="https://projects.fivethirtyeight.com/how-to-vote-2020/#{abbrev}-info">538</a>
+      <span class="dot">🌐</span>
+      <span class="copy">More info:
+        <a
+          target="_blank"
+          href="https://projects.fivethirtyeight.com/how-to-vote-2020/#{abbrev}-info"
+        >538</a>
         ·
-        <a target="_blank" href="https://www.voteamerica.com/register-to-vote-{slug}/">VoteAmerica</a>
+        <a
+          target="_blank"
+          href="https://www.voteamerica.com/register-to-vote-{slug}/"
+        >VoteAmerica</a>
         ·
-        <a target="_blank" href="https://vote.gov/register/{abbrev.toLowerCase()}">Vote.gov</a>
+        <a
+          target="_blank"
+          href="https://vote.gov/register/{abbrev.toLowerCase()}"
+        >Vote.gov</a>
       </span>
     </li>
   </ul>

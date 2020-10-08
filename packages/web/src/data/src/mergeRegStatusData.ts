@@ -61,7 +61,11 @@ export function readMergeAndWriteRegStatusData(
 ): void {
   const mergedDataJson = readFile(mergedDataPath)
   const regStatusDataJson = readFile(regStatusDataPath)
-  const remergedData = mergeStateIndexRegStatus(mergedDataJson, regStatusDataJson, entities)
+  const remergedData = mergeStateIndexRegStatus(
+    mergedDataJson,
+    regStatusDataJson,
+    entities
+  )
   const remergedJson = JSON.stringify(remergedData, null, 2)
   writeFile(outputPath, remergedJson)
 }

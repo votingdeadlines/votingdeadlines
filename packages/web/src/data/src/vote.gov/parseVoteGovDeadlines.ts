@@ -48,7 +48,10 @@ export type RegNotNeeded = {
   isoDate: string // It is convenient to consider Election Day the "deadline".
 }
 
-type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable | RegNotNeeded
+type InPersonRegPolicy =
+  | InPersonRegDeadline
+  | InPersonRegNotAvailable
+  | RegNotNeeded
 
 type InPersonRegDeadline = {
   kind: 'InPersonRegDeadline'
@@ -103,9 +106,7 @@ function getRegNotNeededPolicy(): RegNotNeeded {
 }
 
 // Parse the JSON data for an individual state.
-function parseVGStateRegPolicies(
-  cleaned: CleanedVGState
-): ParsedVGStateReg {
+function parseVGStateRegPolicies(cleaned: CleanedVGState): ParsedVGStateReg {
   const {
     stateAbbrev,
     stateName,
@@ -114,7 +115,7 @@ function parseVGStateRegPolicies(
     bmDeadlines,
     olDeadline,
     registrationLinks,
-    moreInfoLinks
+    moreInfoLinks,
   } = cleaned
   const { NOT_NEEDED, IN_PERSON, ONLINE } = REGISTRATION_TYPES
 
@@ -238,7 +239,7 @@ function parseVGStateRegPolicies(
   // the entire pipeline, we allow it here, but similar mistakes should
   // still be investigated. (DC should get fixed when we merge in VoteAmerica
   // data, or we can do a manual correction.)
-  const isAllowableOlError = ["DC"].includes(stateAbbrev)
+  const isAllowableOlError = ['DC'].includes(stateAbbrev)
   const onlineError = !data.onlineRegPolicies.length && !isAllowableOlError
   if (onlineError) {
     const msg = `Could not parse olDeadline for ${stateAbbrev}: ${olDeadline}`

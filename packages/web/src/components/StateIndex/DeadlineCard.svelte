@@ -158,8 +158,8 @@ em {
 }
 
 /*section > :global(figure) {*/
-  /* This selector is a bit hacky pending named slotted custom components. */
-  /* For now let's assume the svg slot direct child will be a <figure>.
+/* This selector is a bit hacky pending named slotted custom components. */
+/* For now let's assume the svg slot direct child will be a <figure>.
   /* See also https://github.com/sveltejs/svelte/issues/1037 */
 /*  max-width: 96px;
   max-height: 96px;
@@ -172,7 +172,6 @@ em {
   flex: 1 1;
   margin: 12px 0 8px;
 }*/
-
 </style>
 
 <script lang="ts" type="text/typescript">
@@ -180,33 +179,33 @@ em {
 export let state
 export let type
 
-const { colors, deadlinesDisplay} = state
+const { colors, deadlinesDisplay } = state
 
 const ui = state.policyUIBooleans(type)
 const copy = state.policyUICopy(type)
 // TODO: const color = state.policyUIColor(type)
 const color = {
-  'ONLINE': colors.ol,
-  'IN_PERSON': colors.ip,
-  'MAIL': colors.ml,
+  ONLINE: colors.ol,
+  IN_PERSON: colors.ip,
+  MAIL: colors.ml,
 }[type]
 </script>
 
 <label>
-  <input type='checkbox' />
+  <input type="checkbox" />
 
-  <div class='caret'>
-    <svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 32 28'>
-      <polygon points='0,0 32,0 16,28' style='fill: #333' />
+  <div class="caret">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 28">
+      <polygon points="0,0 32,0 16,28" style="fill: #333"></polygon>
     </svg>
   </div>
 
-  <div class='card {color}'>
-    <div class='summary'>
+  <div class="card {color}">
+    <div class="summary">
       <span>{copy.title}:</span>&nbsp;<span>{copy.summaryDeadlineDisplay}</span>
     </div>
 
-    <div class='details'>
+    <div class="details">
       <!-- <figure>$SVG</figure> -->
 
       {#if ui.isCountdown}

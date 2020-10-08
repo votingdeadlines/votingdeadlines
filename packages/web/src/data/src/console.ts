@@ -11,4 +11,4 @@ replServer.context.data = data
 replServer.context.VDStateIndex = VDStateIndex
 const index = VDStateIndex.fromMap(data as MergedStateRegIndex)
 replServer.context.index = index
-replServer.context.ak = index.states.find(s => s.abbrev === 'AK')
+replServer.context.ak = index.states.find((s) => s.abbrev === 'AK')

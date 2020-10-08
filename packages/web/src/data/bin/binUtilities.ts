@@ -2,7 +2,6 @@ import * as fs from 'fs'
 import * as child_process from 'child_process'
 import * as path from 'path'
 
-
 export function exec(cmd: string): string {
   return child_process.execSync(cmd, { encoding: 'utf8' })
 }

@@ -14,6 +14,6 @@ const states = stateIndex.states // alpha?
 
 <ol>
   {#each states as state}
-    <StateItem state={state} />
+    <StateItem state="{state}" />
   {/each}
 </ol>
