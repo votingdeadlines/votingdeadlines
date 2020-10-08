@@ -1,0 +1,7 @@
+// Don't format the raw HTML files in data-sources:
+**/data-sources/**/*.raw.html
+**/data-sources/**/*.trimmed.html
+
+// Don't format JSON data files (just creates whitespace commits):
+**/data-sources/**/*.json
+**/data/data/*.json
