@@ -50,10 +50,10 @@
       "en": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information",
       "es": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information-sp"
     },
-    "ipDeadline": "Monday, October 5, 2020",
-    "olDeadline": "Monday, October 5, 2020",
+    "ipDeadline": "Friday, October 23, 2020",
+    "olDeadline": "Friday, October 23, 2020",
     "bmDeadlines": {
-      "postmarkedBy": "Monday, October 5, 2020"
+      "receivedBy": "Friday, October 23, 2020"
     }
   },
   "AR": {
