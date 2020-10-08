@@ -39,11 +39,11 @@ export class VDStateIndex {
   constructor(vdStateDataArray: VDStateDataArray) {
     this.setCurrentTime()
     this.stateDataArray = vdStateDataArray
-    const index = this
+    const index = this // eslint-disable-line @typescript-eslint/no-this-alias
     this.states = this.stateDataArray.map((state) => new VDState(state, index))
   }
 
-  static fromMap(stateDataMap: VDStateDataMap) {
+  static fromMap(stateDataMap: VDStateDataMap): VDStateIndex {
     console.warn('fromMap: Should pre-flatten map into array and sort instead.')
     const stateDataArray = Object.values(stateDataMap)
     return new VDStateIndex(stateDataArray)
@@ -158,7 +158,7 @@ export class VDStateIndex {
   // This could be interpreted/implemented multiple ways, e.g. with final or
   // first deadlines, etc. For now, let's assume we want to be able to get
   // "all states with their final deadline between min and max (inclusive)."
-  filterByDate(minDate: string, maxDate: string = '2020-11-03') {
+  filterByDate(minDate: string, maxDate = '2020-11-03') {
     function _filterByFinalActiveDeadline(state: VDState) {
       const date = state.finalActiveDeadline
       if (date === null) return false
@@ -178,7 +178,7 @@ export class VDStateIndex {
     return this.filterByDate(this.currentDate)
   }
 
-  endingSoonest(daysInFuture: number = 10) {
+  endingSoonest(daysInFuture = 10) {
     const nDaysInFuture = this.currentTime.add(daysInFuture, 'd')
     const nDaysInFutureIsoString = nDaysInFuture.format('YYYY-MM-DD')
     const states = this.filterByDate(this.currentDate, nDaysInFutureIsoString)
@@ -562,7 +562,7 @@ export class VDState {
   }
 
   get isTooLateToRegister(): boolean {
-    return !Boolean(this.finalActiveDeadline)
+    return !this.finalActiveDeadline
   }
 
   get onlinePolicyUIType(): PolicyUIEnum {
