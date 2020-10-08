@@ -1,9 +1,9 @@
 // https://day.js.org/docs/en/
 
-import { default as dayjs } from 'dayjs'
-import { default as customParseFormat } from 'dayjs/plugin/customParseFormat'
-import { default as utc } from 'dayjs/plugin/utc'
-import { default as weekday } from 'dayjs/plugin/weekday'
+import * as dayjs from 'dayjs'
+import * as customParseFormat from 'dayjs/plugin/customParseFormat'
+import * as utc from 'dayjs/plugin/utc'
+import * as weekday from 'dayjs/plugin/weekday'
 
 // Plugins
 //---------
