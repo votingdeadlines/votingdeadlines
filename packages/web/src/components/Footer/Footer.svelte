@@ -38,11 +38,11 @@
 
 <div class='footer'>
   <p>
-    <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Data</a> from <a href="https://vote.gov">Vote.gov</a> and <a href="https://voteamerica.com">VoteAmerica</a>, plus manual comparisons with data from <a href="projects.fivethirtyeight.com/how-to-vote-2020/">FiveThirtyEight</a> and <a href="https://vote.org">Vote.org</a>. Built with TypeScript and Svelte.
+    <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Data</a> from <a href="https://vote.gov">Vote.gov</a> and <a href="https://voteamerica.com">VoteAmerica</a>, plus manual comparisons with data from <a href="projects.fivethirtyeight.com/how-to-vote-2020/">FiveThirtyEight</a> and <a href="https://vote.org">Vote.org</a>. Made with 🔥 in California.
   <p>
 
   <p>
-    This is version v0.1.1, published October 7, 2020. (Biggest change: AZ has been pushed back to October 23.) The data should be almost identical to the <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Vote.gov data</a>, which may have errors, or be out of date; check your state's official website for the most authoritative information. Other errors may have been introduced by our code as well. For feedback or errors, email <a href="mailto:votingdeadlines@almnac.com">votingdeadlines@almnac.com</a>.
+    This is version v0.1.4, published October 8, 2020. (Biggest recent change: AZ has been pushed back to October 23.) The data should be almost identical to the <a href='https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json'>Vote.gov data</a>, which may have errors, or be out of date; other errors may have been introduced by our code. Check your state's official website for the most authoritative information. To give feedback or report errors, email <a href="mailto:votingdeadlines@almnac.com">votingdeadlines@almnac.com</a>.
   </p>
 
   <ul>
