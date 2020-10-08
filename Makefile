@@ -4,12 +4,16 @@ CWD := $(shell pwd)
 DATA_PIPELINE_DIR := $(shell pwd)/packages/web/src/data
 VERSION := $(shell cat version)
 
-chmod:
+#-------#
+# Setup #
+#-------#
+
+chmod: ## Setup for running `make process`
 	chmod +x packages/web/src/data/config.sh
 	chmod +x packages/web/src/data/bin/*.sh
 
-release:
-	cd packages/web && yarn export && cp -R __sapper__/export dist/$(VERSION)
+deps:
+	cd packages/web && yarn && cd src/data && yarn
 
 #---------#
 # Console #
@@ -72,50 +76,46 @@ parse-va: ## 6b. Parse cleaned VoteAmerica.com data
 # parse-vo: ## 6c. Parse cleaned VoteAmerica.com data
 # 	cd packages/web/src/data && yarn data:parse:vo
 
-diff:
-	diff -y packages/web/src/data/data-sources/vote.gov/state-data.parsed.json \
-		packages/web/src/data/data-sources/voteamerica.com/registration.parsed.json
-
 merge:
 	cd packages/web/src/data && yarn data:merge
-
-prepublish:
-	packages/web/src/data/bin/prepublish-data.sh $(DATA_PIPELINE_DIR)
-
-#--------#
-# Deploy #
-#--------#
-
-# deploy-staging:
-# deploy-production:
 
 #---------#
 # Metrics #
 #---------#
 
-metrics: print-metrics
+# This was set up with the vanilla Svelte app; disabled for now. TODO: restore
 
-print-metrics:
-	yarn metrics
+# metrics: print-metrics
 
-update-metrics:
-	yarn metrics:update
+# print-metrics:
+# 	yarn metrics
 
-#-------#
-# Tests #
-#-------#
-
-test:
-	cd packages/web/src/data && yarn test
+# update-metrics:
+# 	yarn metrics:update
 
 #-------------#
 # Screenshots #
 #-------------#
 
-ss: screenshot
+ss: screenshot ## -> screenshot
 
-screenshot:
+screenshot: ## Take a screenshot of the webapp (requires dev app to be running)
 	cd e2e && yarn screenshot
+
+#-------#
+# Tests #
+#-------#
+
+test: ## Run tests
+	cd packages/web/src/data && yarn test
+
+#---------#
+# Release #
+#---------#
+
+release: ## Build the website and copy to packages/web/dist/
+	@echo Building $(VERSION)...
+	cd packages/web && yarn export && cp -R __sapper__/export dist/$(VERSION)
 
 #------#
 # Help #
@@ -123,5 +123,6 @@ screenshot:
 
 # Via https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 help: ## List available commands
+	@echo "VotingDeadlines.ts $(VERSION)"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk \
 	'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-24s\033[0m %s\n", $$1, $$2}'
