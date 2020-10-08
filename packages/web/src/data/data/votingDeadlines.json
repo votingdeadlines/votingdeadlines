@@ -9,9 +9,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -20,9 +18,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -31,9 +27,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
     "moreInfoLinkEn": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote",
@@ -49,9 +43,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -60,9 +52,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -71,9 +61,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://voterregistration.alaska.gov/",
     "moreInfoLinkEn": "https://www.elections.alaska.gov/Core/voterregistration.php",
@@ -89,9 +77,7 @@
           "isoDate": "2020-10-23"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -100,9 +86,7 @@
           "isoDate": "2020-10-23"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -111,9 +95,7 @@
           "isoDate": "2020-10-23"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage",
     "moreInfoLinkEn": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information",
@@ -129,9 +111,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -140,9 +120,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -150,9 +128,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://www.sos.arkansas.gov/elections/voter-information/",
@@ -168,9 +144,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -179,9 +153,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -190,9 +162,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://registertovote.ca.gov/",
     "moreInfoLinkEn": "https://www.sos.ca.gov/elections/voting-resources/voting-california/registering-vote/",
@@ -208,9 +178,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -219,9 +187,7 @@
           "isoDate": "2020-10-26"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -230,9 +196,7 @@
           "isoDate": "2020-10-26"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml",
     "moreInfoLinkEn": "https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html",
@@ -248,9 +212,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -259,9 +221,7 @@
           "isoDate": "2020-10-27"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -270,9 +230,7 @@
           "isoDate": "2020-10-27"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://voterregistration.ct.gov/OLVR/welcome.do",
     "moreInfoLinkEn": "https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Voter-Fact-Sheet",
@@ -288,9 +246,7 @@
           "isoDate": "2020-10-10"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -299,9 +255,7 @@
           "isoDate": "2020-10-10"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -310,9 +264,7 @@
           "isoDate": "2020-10-10"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://ivote.de.gov/VoterView/",
     "moreInfoLinkEn": "https://elections.delaware.gov/voter/votereg.shtml",
@@ -328,9 +280,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -339,9 +289,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -350,9 +298,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://registertovoteflorida.gov/eligibilityreactive",
     "moreInfoLinkEn": "https://registertovoteflorida.gov/home",
@@ -368,9 +314,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -379,9 +323,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -390,9 +332,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
     "moreInfoLinkEn": "https://sos.ga.gov/index.php/Elections/register_to_vote",
@@ -408,9 +348,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -419,9 +357,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -430,9 +366,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://olvr.hawaii.gov/",
     "moreInfoLinkEn": "https://elections.hawaii.gov/voters/registration/",
@@ -448,9 +382,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -459,9 +391,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -470,9 +400,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://apps.idahovotes.gov/OnlineVoterRegistration",
     "moreInfoLinkEn": "https://idahovotes.gov/voting/",
@@ -488,9 +416,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -499,9 +425,7 @@
           "isoDate": "2020-10-06"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -510,9 +434,7 @@
           "isoDate": "2020-10-18"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://ova.elections.il.gov/",
     "moreInfoLinkEn": "https://www.elections.il.gov/Default.aspx",
@@ -528,9 +450,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -539,9 +459,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -550,9 +468,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://indianavoters.in.gov/",
     "moreInfoLinkEn": "https://www.in.gov/sos/elections/2403.htm",
@@ -568,9 +484,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -579,9 +493,7 @@
           "isoDate": "2020-10-24"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -590,9 +502,7 @@
           "isoDate": "2020-10-24"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
     "moreInfoLinkEn": "https://sos.iowa.gov/elections/voterinformation/voterregistration.html",
@@ -608,9 +518,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -619,9 +527,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -630,9 +536,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
     "moreInfoLinkEn": "https://sos.ks.gov/elections/voter-information.html",
@@ -648,9 +552,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -659,9 +561,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -670,9 +570,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://vrsws.sos.ky.gov/ovrweb/",
     "moreInfoLinkEn": "https://elect.ky.gov/Resources/Pages/Registration.aspx",
@@ -688,9 +586,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -699,9 +595,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -710,9 +604,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://voterportal.sos.la.gov/VoterRegistration",
     "moreInfoLinkEn": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
@@ -728,9 +620,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -739,9 +629,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -749,9 +637,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html",
@@ -767,9 +653,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -778,9 +662,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -789,9 +671,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",
     "moreInfoLinkEn": "https://www.elections.maryland.gov/voter_registration/application.html",
@@ -807,9 +687,7 @@
           "isoDate": "2020-10-24"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -818,9 +696,7 @@
           "isoDate": "2020-10-24"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -829,9 +705,7 @@
           "isoDate": "2020-10-24"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.sec.state.ma.us/ovr/",
     "moreInfoLinkEn": "https://www.sec.state.ma.us/ele/eleifv/howreg.htm",
@@ -847,9 +721,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -858,9 +730,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -869,9 +739,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://mvic.sos.state.mi.us/registervoter",
     "moreInfoLinkEn": "https://mvic.sos.state.mi.us/",
@@ -887,9 +755,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -898,9 +764,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -909,9 +773,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
     "moreInfoLinkEn": "https://www.sos.state.mn.us/elections-voting/register-to-vote/",
@@ -927,9 +789,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -938,9 +798,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -948,9 +806,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://www.sos.ms.gov/Vote/Pages/default.aspx",
@@ -966,9 +822,7 @@
           "isoDate": "2020-10-07"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -977,9 +831,7 @@
           "isoDate": "2020-10-07"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -988,9 +840,7 @@
           "isoDate": "2020-10-07"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://s1.sos.mo.gov/elections/voterregistration/",
     "moreInfoLinkEn": "https://www.sos.mo.gov/elections/goVoteMissouri/register",
@@ -1006,9 +856,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1017,9 +865,7 @@
           "isoDate": "2020-10-26"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1027,9 +873,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://sosmt.gov/elections/vote/",
@@ -1045,9 +889,7 @@
           "isoDate": "2020-10-23"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1056,9 +898,7 @@
           "isoDate": "2020-10-16"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1067,9 +907,7 @@
           "isoDate": "2020-10-16"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.nebraska.gov/apps-sos-voter-registration/",
     "moreInfoLinkEn": "https://sos.nebraska.gov/elections/voter-forms",
@@ -1085,9 +923,7 @@
           "isoDate": "2020-10-06"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1096,9 +932,7 @@
           "isoDate": "2020-10-06"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1107,9 +941,7 @@
           "isoDate": "2020-10-29"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.nvsos.gov/SOSVoterServices/start.aspx",
     "moreInfoLinkEn": "https://www.nvsos.gov/sos/elections/voters/registering-to-vote",
@@ -1125,9 +957,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1135,9 +965,7 @@
           "kind": "MailRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1145,9 +973,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://sos.nh.gov/elections/voters/register-to-vote/",
@@ -1163,9 +989,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1174,9 +998,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1185,9 +1007,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://voter.svrs.nj.gov/register",
     "moreInfoLinkEn": "https://nj.gov/state/elections/voter-registration.shtml",
@@ -1203,9 +1023,7 @@
           "isoDate": "2020-10-31"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1214,9 +1032,7 @@
           "isoDate": "2020-10-06"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1225,9 +1041,7 @@
           "isoDate": "2020-10-06"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",
     "moreInfoLinkEn": "https://www.sos.state.nm.us/voting-and-elections/voter-information/voter-registration-information/",
@@ -1243,9 +1057,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1254,9 +1066,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1265,9 +1075,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
     "moreInfoLinkEn": "https://www.elections.ny.gov/votingregister.html",
@@ -1283,9 +1091,7 @@
           "isoDate": "2020-10-31"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1294,9 +1100,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1305,9 +1109,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
     "moreInfoLinkEn": "https://www.ncsbe.gov/registering/how-register",
@@ -1323,9 +1125,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1334,9 +1134,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1345,9 +1143,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://vip.sos.nd.gov/PortalList.aspx",
@@ -1363,9 +1159,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1374,9 +1168,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1385,9 +1177,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://olvr.ohiosos.gov/",
     "moreInfoLinkEn": "https://ohio.gov/wps/portal/gov/site/government/resources/register-to-vote-or-update-your-registration",
@@ -1403,9 +1193,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1414,9 +1202,7 @@
           "isoDate": "2020-10-09"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1424,9 +1210,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html",
@@ -1442,9 +1226,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1453,9 +1235,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1464,9 +1244,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://secure.sos.state.or.us/orestar/vr/register.do",
     "moreInfoLinkEn": "https://sos.oregon.gov/voting/Pages/registration.aspx",
@@ -1482,9 +1260,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1493,9 +1269,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1504,9 +1278,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
     "moreInfoLinkEn": "https://www.pa.gov/guides/voting-and-elections/#RegisteringtoVote",
@@ -1522,9 +1294,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1533,9 +1303,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1544,9 +1312,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://vote.sos.ri.gov/Home/RegistertoVote",
     "moreInfoLinkEn": "https://vote.sos.ri.gov/Voter/RegisterToVote",
@@ -1562,9 +1328,7 @@
           "isoDate": "2020-10-02"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1573,9 +1337,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1584,9 +1346,7 @@
           "isoDate": "2020-10-04"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
     "moreInfoLinkEn": "https://www.scvotes.gov/south-carolina-voter-registration-information",
@@ -1602,9 +1362,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1613,9 +1371,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1623,9 +1379,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
@@ -1641,9 +1395,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1652,9 +1404,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1663,9 +1413,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://ovr.govote.tn.gov/",
     "moreInfoLinkEn": "https://sos.tn.gov/products/elections/register-vote",
@@ -1681,9 +1429,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1692,9 +1438,7 @@
           "isoDate": "2020-10-05"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1702,9 +1446,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://www.votetexas.gov/register-to-vote/index.html",
@@ -1720,9 +1462,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1731,9 +1471,7 @@
           "isoDate": "2020-10-23"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1742,9 +1480,7 @@
           "isoDate": "2020-10-23"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://secure.utah.gov/voterreg/index.html",
     "moreInfoLinkEn": "https://voteinfo.utah.gov/",
@@ -1760,9 +1496,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1771,9 +1505,7 @@
           "isoDate": "2020-10-30"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1782,9 +1514,7 @@
           "isoDate": "2020-10-30"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://olvr.vermont.gov/",
     "moreInfoLinkEn": "https://sos.vermont.gov/elections/voters/registration/",
@@ -1800,9 +1530,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1811,9 +1539,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1822,9 +1548,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/",
     "moreInfoLinkEn": "https://www.elections.virginia.gov/registration/how-to-register/",
@@ -1840,9 +1564,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1851,9 +1573,7 @@
           "isoDate": "2020-10-26"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1862,9 +1582,7 @@
           "isoDate": "2020-10-26"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://voter.votewa.gov/WhereToVote.aspx",
     "moreInfoLinkEn": "https://www.sos.wa.gov/elections/voters/",
@@ -1880,9 +1598,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1891,9 +1607,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1902,9 +1616,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
     "moreInfoLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
@@ -1920,9 +1632,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1931,9 +1641,7 @@
           "isoDate": "2020-10-14"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1942,9 +1650,7 @@
           "isoDate": "2020-10-14"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://myvote.wi.gov/en-us/RegisterToVote",
     "moreInfoLinkEn": "https://elections.wi.gov/voters/first-time",
@@ -1960,9 +1666,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
@@ -1971,9 +1675,7 @@
           "isoDate": "2020-10-19"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1981,9 +1683,7 @@
           "kind": "OnlineRegNotAvailable"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": null,
     "moreInfoLinkEn": "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx",
@@ -1999,9 +1699,7 @@
           "isoDate": "2020-11-03"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "mailRegPolicies": {
       "policies": [
