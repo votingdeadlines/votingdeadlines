@@ -178,7 +178,7 @@ const emoji = stateEmojis[abbrev]
         Register via:
         <a target="_blank" href="https://www.headcount.org/registertovote/">Headcount</a>
         ·
-        <a target="_blank" href="httpshttps://www.voteamerica.com/register-to-vote-{slug}/">VoteAmerica</a>
+        <a target="_blank" href="https://www.voteamerica.com/register-to-vote-{slug}/">VoteAmerica</a>
       </span>
     </li>
     <li>
