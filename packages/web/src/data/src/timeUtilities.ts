@@ -1,9 +1,16 @@
 // https://day.js.org/docs/en/
 
-import * as dayjs from 'dayjs'
-import * as customParseFormat from 'dayjs/plugin/customParseFormat'
-import * as utc from 'dayjs/plugin/utc'
-import * as weekday from 'dayjs/plugin/weekday'
+// These imports are in an bad TypeScript way. As `import * as dayjs`, they work
+// in the data pipeline, but break in dev. As `import dayjs` it's the reverse.
+// TODO: iron out TS inconsistencies and ideally unify the two projects
+// import * as dayjs from 'dayjs'
+// import * as customParseFormat from 'dayjs/plugin/customParseFormat'
+// import * as utc from 'dayjs/plugin/utc'
+// import * as weekday from 'dayjs/plugin/weekday'
+import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
+import utc from 'dayjs/plugin/utc'
+import weekday from 'dayjs/plugin/weekday'
 
 // Plugins
 //---------
