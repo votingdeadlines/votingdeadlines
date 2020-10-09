@@ -29,6 +29,14 @@ body {
 	color: #333;
 }
 
+:root {
+  --linkBlue: rgb(0, 0, 238);
+}
+
+a {
+  color: var(--linkBlue);
+}
+
 a:not(:hover) {
   text-decoration: none;
 }
