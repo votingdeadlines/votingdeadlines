@@ -2,9 +2,13 @@
 .footer {
   background: rgb(226, 226, 226);
   color: var(--taglineGray);
-  margin-top: 4rem;
+  margin-top: 3rem;
+  padding: 2rem 2rem 2rem;
 
-  padding: 2.5rem 2rem 2rem;
+  border: 3px solid var(--ctGray);
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 p {
@@ -48,25 +52,26 @@ import { version } from '../../../package.json'
     from
     <a href="https://vote.gov">Vote.gov</a>
     and
-    <a href="https://voteamerica.com">VoteAmerica</a>, plus manual comparisons
-    with data from
+    <a href="https://voteamerica.com">VoteAmerica</a>, with manual comparisons
+    to data from
     <a href="projects.fivethirtyeight.com/how-to-vote-2020/">FiveThirtyEight</a>
     and
-    <a href="https://vote.org">Vote.org</a>. Made with 🔥 in California.
+    <a href="https://vote.org">Vote.org</a>.
   </p>
-  <p></p>
   <p>
-    This is version {version}, published October 8, 2020. (Biggest recent change:
-    AZ has been pushed back to October 23.) The data should be almost identical
-    to the
+    The data is mostly identical to the
     <a
       href="https://github.com/usagov/vote-gov/blob/master/config/gulp/state-data.json"
-    >Vote.gov data</a>, which may have errors, or be out of date; other errors
+    >Vote.gov data</a>, which may contain errors, or be out of date; other errors
     may have been introduced by our code. Check your state's official website
-    for the most authoritative information. To give feedback or report errors,
-    email
-    <a href="mailto:votingdeadlines@almnac.com">votingdeadlines@almnac.com</a>.
+    for the most authoritative information.
   </p>
+  <p>
+    This is version v{version}, published October 9, 2020. (Biggest recent change:
+    interpreting <a href="/#NV">Nevada</a>'s policies to mean that in person registration ends on Election Day.)
+  </p>
+
+  <p>To give feedback or report errors:</p>
 
   <ul>
     <li>
@@ -76,16 +81,20 @@ import { version } from '../../../package.json'
       >github.com/votingdeadlines</a>
     </li>
     <li>
+      <span>🐦 Twitter:</span>
+      <a
+        href="https://twitter.com/votingdeadlines"
+      >@votingdeadlines</a>
+    </li>
+    <li>
       <span>🐘 Mastodon:</span>
       <a
         href="https://mastodon.social/@votingdeadlines"
       >@votingdeadlines@mastodon.social</a>
     </li>
     <li>
-      <span>🐦 Twitter:</span>
-      <a
-        href="https://twitter.com/votingdeadlines"
-      >@votingdeadlines@twitter.com</a>
+      <span>📫 Email:</span>
+      <a href="mailto:votingdeadlines@almnac.com">votingdeadlines@almnac.com</a>
     </li>
   </ul>
 
