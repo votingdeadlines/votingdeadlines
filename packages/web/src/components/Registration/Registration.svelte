@@ -1,7 +1,8 @@
 <style>
 h1 {
   text-align: center;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
 }
 
 p {
@@ -15,6 +16,10 @@ p ~ p {
   font-size: 1rem;
 }
 
+p a:visited {
+  color: var(--linkBlue);
+}
+
 .map-wrapper {
   margin-bottom: 2rem;
   /*display: none;*/
@@ -22,6 +27,9 @@ p ~ p {
 
 /* Desktop */
 @media screen and (min-width: 900px) {
+  h1 {
+    font-size: 3rem;
+  }
   .map-wrapper {
     margin-bottom: 4rem;
   }
