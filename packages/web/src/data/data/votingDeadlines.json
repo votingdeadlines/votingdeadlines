@@ -1708,9 +1708,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "onlineRegPolicies": {
       "policies": [
@@ -1719,9 +1717,7 @@
           "isoDate": "2020-10-13"
         }
       ],
-      "warnings": [
-        "Don't use this data until this warning is removed."
-      ]
+      "warnings": []
     },
     "registrationLinkEn": "https://forms.dc.gov/f/DC_Voter_Registration_Form",
     "moreInfoLinkEn": "https://www.vote4dc.com/ApplyInstructions/Register",
