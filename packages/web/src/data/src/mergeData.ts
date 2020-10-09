@@ -1,3 +1,5 @@
+import { strict as assert } from 'assert'
+
 import type {
   ParsedVAStatesIndex,
   ParsedVAStateRegPolicies,
@@ -8,7 +10,7 @@ import type {
   RegNotNeeded,
 } from './vote.gov/parseVoteGovDeadlines'
 import { UsaState, usaStatesAndDc } from './usaStates'
-import { readFile, writeFile } from './utilities'
+import { logProgress, readFile, writeFile } from './utilities'
 
 //-------//
 // Types //
@@ -125,36 +127,136 @@ type PremergeStatePolicies = {
   voteAmericaState: ParsedVAStateRegPolicies
 }
 
-// Merge an individual state.
+// Merge the data of an individual state. Give that Vote.gov's seems pretty
+// accurate now, we mostly defer to that but expect VoteAmerica's data to be
+// the same, or to be a known special case (e.g. RI is a special case, where
+// there is a main deadline and then a later presidential-only deadline).
 function mergeStateRegPolicies(
   premergeStatePolicies: PremergeStatePolicies
 ): MergedStateReg {
   const { voteGovState, voteAmericaState } = premergeStatePolicies
 
-  voteAmericaState // add in a future release
+  function _mergeInPersonRegPolicies(
+    abbrev: string,
+    vgPolicies: Array<InPersonRegPolicy>,
+    vaPolicies: Array<InPersonRegPolicy>
+  ): Array<InPersonRegPolicy> {
+    // The terminology is a bit confusing (TODO: standardize parsed vs. merged).
+    // Here "policies" means the inner policy arrays, which are more similar
+    // between VG and VA. (The outer/parent policy object has more keys in VG.)
+
+    // First, let's handle known discrepancies.
+    // Vote.gov seems to have the correct Alaska info (VoteAmerica notified):
+    // https://www.elections.alaska.gov/Core/electiondatesandhours.php
+    if ('AK' === abbrev) return vgPolicies
+    // VoteAmerica seems to have the delayed (now moot) Florida deadline.
+    if ('FL' === abbrev) return vaPolicies
+    // Nevada has slightly complex deadlines, in that in person registration
+    // "ends" on October 6 for ordinary locations, but once early voting is
+    // open, you can register and vote same-day at the polling place, up to
+    // election day. So essentially you can register up until election day.
+    if ('NV' === abbrev) return vaPolicies
+    // Rhode Island could go be described either way, given that they close
+    // most registration in October, but allow registrating to vote in the
+    // presidential election until election day. For now, let's use Vote.gov.
+    if ('RI' === abbrev) return vgPolicies
+
+    // Otherwise assert that they should be equal.
+    assert.deepStrictEqual(vgPolicies, vaPolicies)
+
+    // Assuming that was true, return one of them.
+    return vgPolicies
+  }
+
+  // Same as the previous function, but for online policies.
+  // (It might be more concise to handle all methods at once, but it seems to
+  // be causing TypeScript headaches to try to make these methods generic.)
+  function _mergeOnlinePolicies(
+    abbrev: string,
+    vgPolicies: Array<OnlineRegPolicy>,
+    vaPolicies: Array<OnlineRegPolicy>
+  ): Array<OnlineRegPolicy> {
+    // See comments on the in person method above.
+    if ('FL' === abbrev) return vaPolicies
+    // In VT, technically you can try to register online as late as election
+    // day, but they may not have your name on the list and you may need to
+    // re-register in person at the polls. As such it seems reasonable that
+    // Vote.gov has VT's requested online deadline of "the Friday before", but
+    // as it is more of a soft deadline let's go with VoteAmerica's 11-03.
+    if ('VT' === abbrev) return vaPolicies
+    // Vote.gov seems to be missing the DC online deadline.
+    if ('DC' === abbrev) return vaPolicies
+
+    // Otherwise assert that they should be equal.
+    assert.deepStrictEqual(vgPolicies, vaPolicies)
+
+    // Assuming that was true, return one of them.
+    return vgPolicies
+  }
+
+  // Same as the previous functions, but for mail policies.
+  function _mergeMailRegPolicies(
+    abbrev: string,
+    vgPolicies: Array<MailRegPolicy>,
+    vaPolicies: Array<MailRegPolicy>
+  ): Array<MailRegPolicy> {
+    // First, let's handle known discrepancies.
+    // Vote.gov seems to have the correct Alaska info (VoteAmerica notified):
+    // https://www.elections.alaska.gov/Core/electiondatesandhours.php
+    if ('AK' === abbrev) return vgPolicies
+    // TODO: verify Arizona postmarked vs. received
+    if ('AZ' === abbrev) return vgPolicies
+    // See comments on the in person method above.
+    if ('FL' === abbrev) return vaPolicies
+    // TODO: verify Georgia postmarked vs. received
+    if ('GA' === abbrev) return vgPolicies
+    // TODO: verify Hawaii postmarked vs. received
+    if ('HI' === abbrev) return vgPolicies
+    // TODO: verify Idaho postmarked vs. received
+    if ('ID' === abbrev) return vgPolicies
+    // TODO: verify Kentucky postmarked vs. received
+    if ('KY' === abbrev) return vgPolicies
+    // TODO: verify Maine deadline
+    if ('ME' === abbrev) return vgPolicies
+    // TODO: verify New Hampshire mail availability
+    if ('NH' === abbrev) return vgPolicies
+    // TODO: verify RI deadline
+    if ('RI' === abbrev) return vgPolicies
+    // TODO: verify VT deadline
+    if ('VT' === abbrev) return vgPolicies
+
+    // Otherwise assert that they should be equal.
+    assert.deepStrictEqual(vgPolicies, vaPolicies)
+
+    // Assuming that was true, return one of them.
+    return vgPolicies
+  }
 
   const mergedState = {
     stateAbbrev: voteGovState.stateAbbrev,
     stateName: voteGovState.stateName,
     inPersonRegPolicies: {
-      policies: [
-        ...voteGovState.inPersonRegPolicies,
-        // ...voteAmericaState.inPersonRegPolicies,
-      ],
+      policies: _mergeInPersonRegPolicies(
+        voteGovState.stateAbbrev,
+        voteGovState.inPersonRegPolicies,
+        voteAmericaState.inPersonRegPolicies,
+      ),
       warnings: [],
     },
     mailRegPolicies: {
-      policies: [
-        ...voteGovState.mailRegPolicies,
-        // ...voteAmericaState.mailRegPolicies,
-      ],
+      policies: _mergeMailRegPolicies(
+        voteGovState.stateAbbrev,
+        voteGovState.mailRegPolicies,
+        voteAmericaState.mailRegPolicies,
+      ),
       warnings: [],
     },
     onlineRegPolicies: {
-      policies: [
-        ...voteGovState.onlineRegPolicies,
-        // ...voteAmericaState.onlineRegPolicies
-      ],
+      policies: _mergeOnlinePolicies(
+        voteGovState.stateAbbrev,
+        voteGovState.onlineRegPolicies,
+        voteAmericaState.onlineRegPolicies
+      ),
       warnings: [],
     },
     registrationLinkEn: voteGovState.registrationLinkEn,
@@ -182,7 +284,8 @@ function mergeVGAndVAData(
       const vgState: ParsedVGStateReg = vgData[state.abbrev]
       const vaState: ParsedVAStateRegPolicies = vaData[state.abbrev]
 
-      console.log(`${'.'.repeat(i)}${state.abbrev}`)
+      logProgress('Merge data:', state.abbrev, i)
+
       if (!vgState) {
         throw new Error(`Could not find state ${state.abbrev} in parsed data.`)
       }
