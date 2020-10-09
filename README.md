@@ -49,12 +49,7 @@ There is some code to scrape Vote.org but it is not currently in use due to that
 
 ## Changelog
 
-* v0.2.1 (2020-10-08): Merge the updated Arizona deadlines into the production data.
-* v0.2.0 (2020-10-08): Update Arizona's deadlines in the source data.
-* v0.1.1 (2020-10-07): Minor fixes, e.g. a Safari font-size bug.
-* v0.1.0 (2020-10-06): Initial alpha release.
-* v0.0.1 (2020-09-22): First attempt at a webapp.
-* v0.0.0 (2020-09-22): First attempts at a data pipeline.
+See CHANGELOG.md in this folder.
 
 ## References
 
