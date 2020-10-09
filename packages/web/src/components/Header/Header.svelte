@@ -20,12 +20,14 @@
 header {
   /* If not in <main> column */
   padding: 16px 18px;
+  display: flex;
+  align-items: baseline;
 }
 
 header > a {
+  flex: 1;
   display: inline-block;
   /*margin: -2px 0 0 -2px;*/
-  text-align: center;
   display: flex;
   align-items: baseline; /* aligns copy */
 }
@@ -34,9 +36,25 @@ header a:hover {
   text-decoration: none;
 }
 
+.release {
+  display: none;
+}
+
+.header-right {
+  display: none;
+}
+
 @media screen and (min-width: 900px) {
   header > a {
     justify-content: flex-start;
+  }
+
+  .release {
+    display: unset;
+  }
+
+  .header-right {
+    display: unset;
   }
 }
 
@@ -81,13 +99,22 @@ header a:hover {
   padding-left: 2px;
 }
 
+/* TODO: simplify the logotype markup and styles */
 .release {
+  font-family: var(--fontFamilySystem);
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0;
   opacity: 0.25;
 }
 </style>
 
 <script lang="ts" type="text/typescript">
-// export let title: string
+import { version } from '../../../package.json'
+
+const edition = 'alpha'
+const fullVersion = `v${version}-${edition}`
 </script>
 
 <header>
@@ -134,8 +161,16 @@ header a:hover {
       <div class="title-copy">
         <span class="words"><span class="voting">Voting</span>
           Deadlines</span><span class="period">.</span>
-        <span class="release">alpha</span>
+        <span class="release">{fullVersion}</span>
       </div>
     </div>
   </a>
+
+  <div class='header-right'>
+    <a target="_blank" href="https://github.com/votingdeadlines/votingdeadlines">Source code</a>
+    &nbsp;&nbsp;
+    <a target="_blank" href="https://twitter.com/votingdeadlines">Twitter</a>
+    &nbsp;&nbsp;
+    <a target="_blank" href="https://mastodon.social/@votingdeadlines">Mastodon</a>
+  </div>
 </header>
