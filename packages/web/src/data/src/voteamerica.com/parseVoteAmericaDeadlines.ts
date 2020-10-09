@@ -1,6 +1,6 @@
 import type { CleanVAState } from './cleanVoteAmericaData'
 import { v1 } from '../timeUtilities'
-import { UsaState, usaStates } from '../usaStates'
+import { UsaState, usaStatesAndDc } from '../usaStates'
 import { readFile, writeFile } from '../utilities'
 
 const { parseUsaDateToNaiveIsoDate } = v1
@@ -249,7 +249,7 @@ export function parseVAStateRegPolicies(
 // Parse the JSON data for all states.
 export function parseVADeadlines(
   cleanJson: string,
-  entities = usaStates
+  entities = usaStatesAndDc
 ): ParsedVAStatesIndex {
   const cleanData = JSON.parse(cleanJson)
 
@@ -281,7 +281,7 @@ export function parseVADeadlines(
 export function readParseAndWriteVADeadlines(
   inputPath: string,
   outputPath: string,
-  entities = usaStates
+  entities = usaStatesAndDc
 ): void {
   const json = readFile(inputPath)
   const parsedData = parseVADeadlines(json, entities)
