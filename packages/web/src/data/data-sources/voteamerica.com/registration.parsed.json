@@ -958,13 +958,13 @@
     "mailRegPolicies": [
       {
         "kind": "MailRegPostmarkedDeadline",
-        "isoDate": "2020-10-21"
+        "isoDate": "2020-10-14"
       }
     ],
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-21"
+        "isoDate": "2020-10-14"
       }
     ]
   },
