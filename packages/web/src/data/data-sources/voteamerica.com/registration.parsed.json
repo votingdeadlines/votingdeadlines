@@ -657,17 +657,20 @@
   "ND": {
     "inPersonRegPolicies": [
       {
-        "kind": "InPersonRegNotAvailable"
+        "kind": "RegNotNeeded",
+        "isoDate": "2020-11-03"
       }
     ],
     "mailRegPolicies": [
       {
-        "kind": "MailRegNotAvailable"
+        "kind": "RegNotNeeded",
+        "isoDate": "2020-11-03"
       }
     ],
     "onlineRegPolicies": [
       {
-        "kind": "OnlineRegNotAvailable"
+        "kind": "RegNotNeeded",
+        "isoDate": "2020-11-03"
       }
     ]
   },

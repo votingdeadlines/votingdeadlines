@@ -30,6 +30,11 @@ export type ParsedVAStateRegPolicies = {
 // For now these are the same types as in ./parseVoteGovDeadlines. Hopefully
 // they don't have to change and become V1 of the normalized universal types.
 
+type RegNotNeeded = {
+  kind: 'RegNotNeeded'
+  isoDate: string // It is convenient to consider Election Day the "deadline".
+}
+
 type InPersonRegPolicy = InPersonRegDeadline | InPersonRegNotAvailable
 
 type InPersonRegDeadline = {
@@ -80,6 +85,7 @@ type OnlineRegNotAvailable = {
 
 // Parse the JSON data for an individual state.
 export function parseVAStateRegPolicies(
+  stateName: string,
   cleanState: CleanVAState
 ): ParsedVAStateRegPolicies {
   const { inPerson, byMail, online } = cleanState
@@ -90,7 +96,13 @@ export function parseVAStateRegPolicies(
     onlineRegPolicies: [],
   }
 
+  // N/A usually means e.g. online registration is not available, but in the
+  // case of ND, it's that registration isn't needed at all.
   const naRegex = /N\/A/
+  const northDakotaPolicy: RegNotNeeded = {
+    kind: 'RegNotNeeded',
+    isoDate: '2020-11-03'
+  }
 
   // InPerson
   //----------
@@ -116,10 +128,11 @@ export function parseVAStateRegPolicies(
     })
   }
 
-  // Otherwise, it could be not available, like ND.
+  // Otherwise, it could be not available or not needed, like ND.
   const ipNotAvailableMatch = inPerson.match(naRegex)
-  if (ipNotAvailableMatch) {
-    data.inPersonRegPolicies.push({ kind: 'InPersonRegNotAvailable' })
+  const isNorthDakota = stateName === "North Dakota"
+  if (ipNotAvailableMatch && isNorthDakota) {
+    data.inPersonRegPolicies.push(northDakotaPolicy)
   }
 
   // Check that at least one of the above worked.
@@ -171,18 +184,23 @@ export function parseVAStateRegPolicies(
 
   // Otherwise, it could be ND or NH. Verify that it is and not an error first.
   const mailNotAvailableMatch = inPerson.match(naRegex)
-  if (mailNotAvailableMatch) {
+
+  if (mailNotAvailableMatch && isNorthDakota) {
+    data.mailRegPolicies.push(northDakotaPolicy)
+  }
+
+  if (mailNotAvailableMatch && !isNorthDakota) {
     data.mailRegPolicies.push({ kind: 'MailRegNotAvailable' })
   }
 
   // Check that at least one of the above worked. In theory a max of one should
   // work on this source data. We may be able to support multiple later.
   if (!data.mailRegPolicies.length) {
-    throw new Error(`Could not parse byMail: '${byMail}'`)
+    throw new Error(`${stateName}: Could not parse byMail: '${byMail}'`)
   }
 
-  // InPerson
-  //----------
+  // Online
+  //--------
 
   const onlineRegex = /received by (\w+ \d{1,2}, \d{4})/
   const onlineMatch = online.match(onlineRegex)
@@ -207,7 +225,12 @@ export function parseVAStateRegPolicies(
 
   // Otherwise, it could be not available, like ND.
   const onlineNotAvailableMatch = online.match(naRegex)
-  if (onlineNotAvailableMatch) {
+
+  if (onlineNotAvailableMatch && isNorthDakota) {
+    data.onlineRegPolicies.push(northDakotaPolicy)
+  }
+
+  if (onlineNotAvailableMatch && !isNorthDakota) {
     data.onlineRegPolicies.push({ kind: 'OnlineRegNotAvailable' })
   }
 
@@ -240,7 +263,7 @@ export function parseVADeadlines(
         throw new Error(`Could not find state ${state.abbrev} in cleaned data.`)
       }
 
-      memo[state.abbrev] = parseVAStateRegPolicies(cleanedState)
+      memo[state.abbrev] = parseVAStateRegPolicies(state.name, cleanedState)
 
       return memo
     },
