@@ -12,6 +12,8 @@
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "echo 'TODO: migrate initial eslint setup to here'",
     "lint:prettier": "yarn prettier:defaults --check --debug-check",
+    "metrics": "cat metrics.json",
+    "metrics:update": "ts-node bin/updateMetrics.ts",
     "prettier": "prettier",
     "prettier:defaults": "prettier src",
     "start": "node __sapper__/build",
