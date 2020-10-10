@@ -16,7 +16,7 @@
     "data:merge": "yarn tsn bin/mergeData.bin.ts dotenv_config_path=config.sh",
     "format": "yarn prettier:defaults --write",
     "lint": "yarn lint:eslint",
-    "lint:eslint": "eslint . --ext .ts,.tsx --max-warnings=33",
+    "lint:eslint": "eslint . --ext .ts,.tsx --max-warnings=23",
     "test": "yarn lint && yarn test:jest",
     "test:jest": "jest",
     "test:cov": "jest --coverage",

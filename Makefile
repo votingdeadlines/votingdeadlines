@@ -84,15 +84,13 @@ merge:
 # Metrics #
 #---------#
 
-# This was set up with the vanilla Svelte app; disabled for now. TODO: restore
+metrics: update-metrics print-metrics
 
-# metrics: print-metrics
+print-metrics:
+	cd packages/web && yarn metrics
 
-# print-metrics:
-# 	yarn metrics
-
-# update-metrics:
-# 	yarn metrics:update
+update-metrics:
+	cd packages/web && yarn metrics:update
 
 #-------------#
 # Screenshots #

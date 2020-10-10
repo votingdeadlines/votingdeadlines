@@ -52,51 +52,52 @@ export class VDStateIndex {
   // Current time
   //--------------
 
-  get date() {
+  get date(): string {
     return this.currentDate // shorthand
   }
 
-  get time() {
+  // TODO: remove or rename if the aliased function is date only now
+  get time(): string {
     return this.currentTimeDisplay // shorthand
   }
 
-  get currentDate() {
+  get currentDate(): string {
     // By default, dayjs uses local time, although the underlying djs instance,
     // will be stored as UTC date (djs.$d is an ISO datetime ending in "Z").
     // https://day.js.org/docs/en/parse/utc
     return this.currentDjs.format('YYYY-MM-DD')
   }
 
-  get currentTime() {
+  get currentTime(): DayjsType {
     return this.currentDjs
   }
 
-  get currentTimeDisplay() {
+  get currentTimeDisplay(): string {
     // const compactDatetimeFormat = 'ddd, M/D @ h:mm a' // "Sun, 10/2 @ 3:45 pm"
     const longDatetimeFormat = 'dddd, MMMM D, YYYY'
     return this.currentDjs.format(longDatetimeFormat)
   }
 
-  setCurrentTime(djs = dayjs()) {
+  setCurrentTime(djs = dayjs()): DayjsType {
     this.currentDjs = djs
     if (!this.originalDjs) this.originalDjs = this.currentDjs // for debugging
     return this.currentDjs
   }
 
-  refreshCurrentTime() {
+  refreshCurrentTime(): DayjsType {
     return this.setCurrentTime()
   }
 
-  resetToOriginalTime() {
+  resetToOriginalTime(): DayjsType {
     return this.setCurrentTime(this.originalDjs)
   }
 
-  incrementCurrentTimeMs(ms: number) {
+  incrementCurrentTimeMs(ms: number): DayjsType {
     const incrementedDjs = this.currentDjs.add(ms, 'ms')
     return this.setCurrentTime(incrementedDjs)
   }
 
-  incrementCurrentTimeDays(days: number) {
+  incrementCurrentTimeDays(days: number): DayjsType {
     const MS_PER_DAY = 1000 * 60 * 60 * 24
     return this.incrementCurrentTimeMs(MS_PER_DAY * days)
   }
