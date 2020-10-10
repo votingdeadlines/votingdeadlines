@@ -1,6 +1,6 @@
-import * as rawStateData from './state-data.raw.json'
-import * as cleanedStateData from './state-data.cleaned.json'
-import * as parsedStateData from './state-data.cleaned.json'
+import { default as rawStateData } from './state-data.raw.json'
+import { default as cleanedStateData } from './state-data.cleaned.json'
+import { default as parsedStateData } from './state-data.cleaned.json'
 
 describe('vote.gov', () => {
   const rawKeys = Object.keys(rawStateData)

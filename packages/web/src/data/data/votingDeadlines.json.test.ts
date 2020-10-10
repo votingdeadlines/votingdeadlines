@@ -1,4 +1,4 @@
-import * as data from './votingDeadlines.json'
+import { default as data } from './votingDeadlines.json'
 
 describe('votingDeadlines.json', () => {
   const dataKeys = Object.keys(data)
