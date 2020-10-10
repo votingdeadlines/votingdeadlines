@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.1
+
+> 2020-10-09
+
+* Unify the two TypeScript projects to fix issues with tests vs. Svelte dev
+
 ## v0.3.0
 
 > 2020-10-09
