@@ -201,8 +201,13 @@ function mergeStateRegPolicies(
     vaPolicies: Array<MailRegPolicy>
   ): Array<MailRegPolicy> {
     // First, let's handle known discrepancies.
-    // Vote.gov seems to have the correct Alaska info (VoteAmerica notified):
-    // https://www.elections.alaska.gov/Core/electiondatesandhours.php
+
+    // Vote.gov seems to have the correct mail registration date for Maine,
+    // 21 days before an election (11/3 - 21 = 10/13):
+    // https://www.maine.gov/sos/cec/elec/images/VoterRegistrationCard20.pdf
+    if ('ME' === abbrev) return vgPolicies
+
+    // TODO: review the discrepancies below (some historical/moot).
     if ('AK' === abbrev) return vgPolicies
     // TODO: verify Arizona postmarked vs. received
     if ('AZ' === abbrev) return vgPolicies
@@ -216,8 +221,6 @@ function mergeStateRegPolicies(
     if ('ID' === abbrev) return vgPolicies
     // TODO: verify Kentucky postmarked vs. received
     if ('KY' === abbrev) return vgPolicies
-    // TODO: verify Maine deadline
-    if ('ME' === abbrev) return vgPolicies
     // TODO: verify New Hampshire mail availability
     if ('NH' === abbrev) return vgPolicies
     // TODO: verify RI deadline
