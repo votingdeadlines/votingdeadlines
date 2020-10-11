@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.4.0
+
+> 2020-10-10
+
+* Data: Prefer VoteAmerica's date for ME mail deadline (10/19) over Vote.gov's.
+
 ## v0.3.1
 
 > 2020-10-09

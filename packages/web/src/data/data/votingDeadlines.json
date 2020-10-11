@@ -626,7 +626,7 @@
       "policies": [
         {
           "kind": "MailRegReceivedDeadline",
-          "isoDate": "2020-10-13"
+          "isoDate": "2020-10-19"
         }
       ],
       "warnings": []

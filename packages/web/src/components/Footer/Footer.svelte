@@ -54,7 +54,7 @@ import { version } from '../../../package.json'
     and
     <a href="https://voteamerica.com">VoteAmerica</a>, with manual comparisons
     to data from
-    <a href="projects.fivethirtyeight.com/how-to-vote-2020/">FiveThirtyEight</a>
+    <a href="https://projects.fivethirtyeight.com/how-to-vote-2020/">FiveThirtyEight</a>
     and
     <a href="https://vote.org">Vote.org</a>.
   </p>
@@ -67,8 +67,8 @@ import { version } from '../../../package.json'
     for the most authoritative information.
   </p>
   <p>
-    This is version v{version}, published October 9, 2020. (Biggest recent change:
-    interpreting <a href="/#NV">Nevada</a>'s policies to mean that in person registration ends on Election Day.)
+    This is version v{version}-alpha, published October 10, 2020. (Biggest recent change:
+    using the later 10/19 deadline for registering by mail in <a href="/#ME">Maine</a>, which is correct on VoteAmerica and FiveThirtyEight but not Vote.gov currently.)
   </p>
 
   <p>To give feedback or report errors:</p>
