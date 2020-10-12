@@ -3,18 +3,20 @@ import { exec, resolve, writeFile } from './binUtilities'
 const webRoot = `${__dirname}/..`
 const METRICS_JSON_PATH = resolve(`${webRoot}/metrics.json`)
 
+const excludes = ["**/dist/**", "**/node_modules/**", "**/__sapper__/**"]
+
 main()
 
 function main() {
   const newMetrics = JSON.stringify(
     {
-      cssLOC: getLOC('*.css'),
-      jsonLOC: getLOC('*.json'),
-      jsLOC: getLOC('*.js'),
-      shLOC: getLOC('*.sh'),
+      cssLOC: getLOC('*.css', excludes),
+      jsonLOC: getLOC('*.json', excludes),
+      jsLOC: getLOC('*.js', excludes),
+      shLOC: getLOC('*.sh', excludes),
       TODOs: getTODOs(),
-      tsLOC: getLOC('*.ts'),
-      svelteLOC: getLOC('*.svelte'),
+      tsLOC: getLOC('*.ts', excludes),
+      svelteLOC: getLOC('*.svelte', excludes),
     },
     null,
     2
@@ -23,10 +25,10 @@ function main() {
   writeFile(METRICS_JSON_PATH, newMetrics)
 }
 
-// TODO: exclude build, sapper dirs
-function getLOC(pattern: string): string {
+function getLOC(pattern: string, excludeDirs: Array<string>): string {
+  const excludesString = excludeDirs.map(dir => `-not -path "${dir}"`).join(" ")
   const cmd = [
-    `find . -name "${pattern}" -not -path "**/node_modules/*"`,
+    `find . -name "${pattern}" ${excludesString}`,
     `| xargs wc -l | tail -n 1 | awk '{print $1}'`,
   ].join(" ")
   return exec(cmd).trim()
