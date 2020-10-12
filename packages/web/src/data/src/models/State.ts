@@ -48,7 +48,7 @@ export class VDStateIndex {
   }
 
   static fromMap(stateDataMap: VDStateDataMap): VDStateIndex {
-    console.warn('fromMap: Should pre-flatten map into array and sort instead.')
+    // console.warn('fromMap: Should pre-flatten map into array and sort instead.')
     const stateDataArray = Object.values(stateDataMap)
     return new VDStateIndex(stateDataArray)
   }
@@ -562,7 +562,6 @@ export class VDState {
   //-----------------
 
   get isTooLateToRegisterOnline(): boolean {
-    console.log({ oput: this.onlinePolicyUIType })
     return this.onlinePolicyUIType === 'Passed'
   }
 

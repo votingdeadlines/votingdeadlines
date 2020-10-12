@@ -45,7 +45,7 @@ p a:visited {
 // import Link from './Link.svelte'
 // import { getStateColorsIndex } from './colorUtilities'
 
-import { default as smoothscroll } from 'smoothscroll-polyfill'
+// import { default as smoothscroll } from 'smoothscroll-polyfill'
 import { default as datafile } from '../../data/data/votingDeadlines.json'
 import type { MergedStateRegIndex } from '../../data/src/mergeData'
 import { VDStateIndex } from '../../data/src/models/State'
