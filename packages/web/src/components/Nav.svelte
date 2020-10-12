@@ -1,12 +1,12 @@
 <style>
-[aria-current] {
+/*[aria-current] {
 }
-
-[aria-current]::after {
+*/
+/*[aria-current]::after {
 }
-
-a {
-}
+*/
+/*a {
+}*/
 </style>
 
 <script lang="ts">
