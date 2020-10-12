@@ -38,44 +38,32 @@ download-vg: ## 1a. Download Vote.gov data
 	packages/web/src/data/bin/vote.gov/download-vg-git.sh $(DATA_PIPELINE_DIR)
 download-va: ## 1b. Download VoteAmerica.com HTML
 	packages/web/src/data/bin/voteamerica.com/download-voteamerica-html.sh $(DATA_PIPELINE_DIR)
-# download-vo: ## 1. Download HTML
-# 	packages/web/src/data/bin/download-vote-org-html.sh $(DATA_PIPELINE_DIR)
 
 trim: trim-vg trim-va ## 2. Trim downloaded data
 trim-vg: ## 2a. Trim Vote.gov source files
 	packages/web/src/data/bin/vote.gov/trim-vg-files.sh $(DATA_PIPELINE_DIR)
 trim-va: ## 2b. Trim VoteAmerica.com HTML file
 	cd packages/web/src/data && yarn data:trim:va
-# trim-vo: ## 2. Trim Vote.org HTML
-# 	cd packages/web/src/data && yarn data:trim:vo
 
 format: format-va ## 3. Format trimmed HTML for easier reading
 format-va: # 3a. Format trimmed VoteAmerica.com HTML
 	packages/web/src/data/bin/voteamerica.com/format-voteamerica-html.sh $(DATA_PIPELINE_DIR)
-# format-vo: ## 3. Format HTML
-# 	packages/web/src/data/bin/format-vote-org-html.sh $(DATA_PIPELINE_DIR)
 
 extract: extract-va ## 4. Extract JSON data from formatted HTML
 extract-va: # 4. Extract JSON data from VoteAmerica.com HTML
 	cd packages/web/src/data && yarn data:extract:va
-# extract-vo: ## 4. Extract JSON data
-# 	cd packages/web/src/data && yarn data:extract:vo
 
 clean: clean-vg clean-va ## 5. Clean extracted JSON data
 clean-vg: ## 5a. Clean extracted Vote.gov JSON data
 	cd packages/web/src/data && yarn data:clean:vg
 clean-va: ## 5a. Clean extracted VoteAmerica.com JSON data
 	cd packages/web/src/data && yarn data:clean:va
-# clean-vo: ## 5. Clean JSON data
-# 	cd packages/web/src/data && yarn data:clean:vo
 
 parse: parse-vg parse-va ## 6. Parse cleaned data
 parse-vg: ## 6a. Parse cleaned Vote.gov data
 	cd packages/web/src/data && yarn data:parse:vg
 parse-va: ## 6b. Parse cleaned VoteAmerica.com data
 	cd packages/web/src/data && yarn data:parse:va
-# parse-vo: ## 6c. Parse cleaned VoteAmerica.com data
-# 	cd packages/web/src/data && yarn data:parse:vo
 
 merge:
 	cd packages/web/src/data && yarn data:merge

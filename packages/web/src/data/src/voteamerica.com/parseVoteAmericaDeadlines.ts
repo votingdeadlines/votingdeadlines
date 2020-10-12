@@ -1,7 +1,7 @@
 import type { CleanVAState } from './cleanVoteAmericaData'
 import { v1 } from '../timeUtilities'
 import { UsaState, usaStatesAndDc } from '../usaStates'
-import { readFile, writeFile } from '../utilities'
+import { logProgress, readFile, writeFile } from '../utilities'
 
 const { parseUsaDateToNaiveIsoDate } = v1
 
@@ -254,7 +254,7 @@ export function parseVADeadlines(
   const cleanData = JSON.parse(cleanJson)
 
   const rulesetMap = entities.reduce(
-    (memo: ParsedVAStatesIndex, state: UsaState): ParsedVAStatesIndex => {
+    (memo: ParsedVAStatesIndex, state: UsaState, i): ParsedVAStatesIndex => {
       // Maybe it would've been good to do a cleanup step even though it barely
       // needed it (state.name vs. state.abbrev for example).
       const cleanedState: CleanVAState = cleanData[state.name]
@@ -263,6 +263,7 @@ export function parseVADeadlines(
         throw new Error(`Could not find state ${state.abbrev} in cleaned data.`)
       }
 
+      logProgress('Parse VoteAmerica:', state.abbrev, i)
       memo[state.abbrev] = parseVAStateRegPolicies(state.name, cleanedState)
 
       return memo

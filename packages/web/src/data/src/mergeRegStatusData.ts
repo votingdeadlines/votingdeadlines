@@ -1,6 +1,6 @@
 import type { MergedStateRegIndex } from './mergeData'
 import { UsaState, usaStatesAndDc } from './usaStates'
-import { readFile, writeFile } from './utilities'
+import { logProgress, readFile, writeFile } from './utilities'
 
 //-------//
 // Types //
@@ -30,7 +30,7 @@ function mergeStateIndexRegStatus(
       const mergedState = mergedData[state.abbrev]
       const regStatusLink = regStatusData[state.abbrev]
 
-      console.log(`${'.'.repeat(i)}${state.abbrev}`)
+      logProgress('Merge registration status', state.abbrev, i)
       if (!regStatusLink) {
         throw new Error(`Could not find state ${state.abbrev} in status data.`)
       }
