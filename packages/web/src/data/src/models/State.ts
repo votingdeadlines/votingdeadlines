@@ -20,6 +20,10 @@ type VDStateDataArray = Array<VDStateData> // preferred
 
 type VDStateDataMap = MergedStateRegIndex // legacy
 
+type VDStateCategoryMap = {
+  [key: string]: Array<VDState>
+}
+
 //--------------//
 // VDStateIndex //
 //--------------//
@@ -116,7 +120,7 @@ export class VDStateIndex {
     return this.states // .filter(s => s.abbrev !== 'DC')
   }
 
-  get sortAlpha() {
+  get sortAlpha(): Array<VDState> {
     function _compareAlphabetically(state1: VDState, state2: VDState): number {
       if (state1.abbrev > state2.abbrev) return 1
       if (state1.abbrev < state2.abbrev) return -1
@@ -125,7 +129,7 @@ export class VDStateIndex {
     return this.states.sort(_compareAlphabetically)
   }
 
-  get sortByDate() {
+  get sortByDate(): Array<VDState> {
     return this.sortStatesByFinalActiveDeadline // shorthand
   }
 
@@ -150,7 +154,7 @@ export class VDStateIndex {
     return _byMeanActiveDeadline(state1, state2)
   }
 
-  get sortStatesByFinalActiveDeadline() {
+  get sortStatesByFinalActiveDeadline(): Array<VDState> {
     // v1: Final deadline date
     // (v2: Final active deadline date? Or move inactive to end of sort?)
     return this.states.sort(this.compareByFinalActiveDeadline)
@@ -159,7 +163,7 @@ export class VDStateIndex {
   // This could be interpreted/implemented multiple ways, e.g. with final or
   // first deadlines, etc. For now, let's assume we want to be able to get
   // "all states with their final deadline between min and max (inclusive)."
-  filterByDate(minDate: string, maxDate = '2020-11-03') {
+  filterByDate(minDate: string, maxDate = '2020-11-03'): Array<VDState> {
     function _filterByFinalActiveDeadline(state: VDState) {
       const date = state.finalActiveDeadline
       if (date === null) return false
@@ -175,18 +179,18 @@ export class VDStateIndex {
   // This will make it a bit inaccurate, especially in non-USA timezones.
   // (Previous versions were timezone accurate but perhaps overcomplex.)
   // TODO: restore dayjs().tz()? See also: <details> in vanilla svelte webapp.
-  get activeStates() {
+  get activeStates(): Array<VDState> {
     return this.filterByDate(this.currentDate)
   }
 
-  endingSoonest(daysInFuture = 10) {
+  endingSoonest(daysInFuture = 10): Array<VDState> {
     const nDaysInFuture = this.currentTime.add(daysInFuture, 'd')
     const nDaysInFutureIsoString = nDaysInFuture.format('YYYY-MM-DD')
     const states = this.filterByDate(this.currentDate, nDaysInFutureIsoString)
     return states.sort(this.compareByFinalActiveDeadline)
   }
 
-  get regions() {
+  get regions(): VDStateCategoryMap {
     const regionMap = {
       Northeast: 'RI NY DE NJ PA MA ME MD DC CT VT NH'.split(' '),
       South: 'SC FL GA KY AR MS TN TX OK VA WV LA AL NC'.split(' '),
@@ -210,13 +214,13 @@ export class VDStateIndex {
     }
   }
 
-  get senateRaces() {
+  get senateRaces(): Array<VDState> {
     const closeRaces = 'MI AZ CO GA IA ME MT NC GA KS SC AK'.split(' ')
     const states = this.states.filter((s) => closeRaces.includes(s.abbrev))
     return states.sort(this.compareByFinalActiveDeadline)
   }
 
-  get swingStates() {
+  get swingStates(): Array<VDState> {
     const stateAbbrevs = 'FL PA WI MI AZ MN NC NV CO OH GA IA ME NE'.split(' ')
     const states = this.states.filter((s) => stateAbbrevs.includes(s.abbrev))
     return states.sort(this.compareByFinalActiveDeadline)
