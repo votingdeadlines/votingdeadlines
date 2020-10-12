@@ -9,7 +9,7 @@ PKG_JSON_VERSION := $(shell cat packages/web/package.json | grep '"version":')
 # Setup #
 #-------#
 
-chmod: ## Setup for running `make process`
+chmod: ## Setup for running `make data`
 	chmod +x packages/web/src/data/config.sh
 	chmod +x packages/web/src/data/bin/*.sh
 
@@ -29,9 +29,9 @@ deps:
 # Data #
 #------#
 
-process:    download    trim    format    extract    clean    parse    merge ## Run data pipelines
-process-vg: download-vg trim-vg                      clean-vg parse-vg ## Run Vote.gov data pipeline
-process-va: download-va trim-va format-va extract-va clean-va parse-va ## Run VoteAmerica.com data pipeline
+data:    download    trim    format    extract    clean    parse    merge ## Run data pipelines
+data-vg: download-vg trim-vg                      clean-vg parse-vg ## Run Vote.gov data pipeline
+data-va: download-va trim-va format-va extract-va clean-va parse-va ## Run VoteAmerica.com data pipeline
 
 download: download-vg download-va ## 1. Download data
 download-vg: ## 1a. Download Vote.gov data
