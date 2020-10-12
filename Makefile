@@ -68,6 +68,16 @@ parse-va: ## 6b. Parse cleaned VoteAmerica.com data
 merge:
 	cd packages/web/src/data && yarn data:merge
 
+#-----#
+# Dev #
+#-----#
+
+dev: dev-web
+
+dev-web:
+	cd packages/web && \
+		docker-compose -f \votingdeadlines-web-dev.docker-compose.yaml up --build
+
 #---------#
 # Metrics #
 #---------#

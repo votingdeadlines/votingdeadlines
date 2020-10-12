@@ -1,0 +1,11 @@
+version: '2.4'
+services:
+  votingdeadlines-web-dev:
+    build:
+      context: .
+      dockerfile: votingdeadlines-web-dev.Dockerfile
+    command: yarn dev
+    ports:
+      - "3030:3000"
+      - "3031:3001"
+      - "3032:3002"
