@@ -103,10 +103,19 @@ screenshot: ## Take a screenshot of the webapp (requires dev app to be running)
 # Tests #
 #-------#
 
-test: ## Run tests
+test: test-unit ## -> test-unit
+
+test-ci: data test-unit test-integration ## Check the data, and run unit and integration tests.
+
+test-unit: ## Run unit tests
 	cd packages/web/src/data && yarn test
 
-upss: update-snapshots
+test-int: test-integration ## -> test-integration
+
+test-integration: ## Run integration tests
+	cd packages/web && yarn test:int
+
+upss: update-snapshots ## -> update-snapshots
 
 update-snapshots: ## Update jest snapshots
 	cd packages/web/src/data && yarn test:upss

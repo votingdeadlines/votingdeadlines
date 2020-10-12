@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y curl apt-transport-https && \
 # Install JS deps
 WORKDIR /votingdeadlines/packages/web
 COPY package.json .
+COPY yarn.lock .
 RUN yarn
 
 # Add remaining files
