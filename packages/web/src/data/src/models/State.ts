@@ -112,7 +112,7 @@ export class VDStateIndex {
   }
 
   // TODO: fix or remove
-  get nonDCStates() {
+  get nonDCStates(): Array<VDState> {
     return this.states // .filter(s => s.abbrev !== 'DC')
   }
 

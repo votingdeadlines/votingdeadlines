@@ -79,6 +79,7 @@ export let vdStateIndex
 
 const states = vdStateIndex.states
 const nonDCStates = vdStateIndex.nonDCStates
+console.warn(`TODO: Filter nonDCStates`)
 </script>
 
 <figure class="map-usa">
