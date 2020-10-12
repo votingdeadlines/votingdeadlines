@@ -83,8 +83,8 @@ const currentTimeEls = currentTimeDisplay.split(' ')
   <Map vdStateIndex="{vdStateIndex}" />
 </div>
 
-<ButtonGroup heading="Swing states" states="{swingStates}" />
 <ButtonGroup heading="Ending soon" states="{endingSoonest}" />
+<ButtonGroup heading="Swing states" states="{swingStates}" />
 <ButtonGroup heading="Northeast" states="{regions.Northeast}" />
 <ButtonGroup heading="South" states="{regions.South}" />
 <ButtonGroup heading="Midwest" states="{regions.Midwest}" />
