@@ -67,7 +67,7 @@ import { version } from '../../../package.json'
     for the most authoritative information.
   </p>
   <p>
-    This is version v{version}-alpha, published October 10, 2020. (Biggest recent change:
+    This is version v{version}, published October 12, 2020. (Biggest recent change:
     using the later 10/19 deadline for registering by mail in <a href="/#ME">Maine</a>, which is correct on VoteAmerica and FiveThirtyEight but not Vote.gov currently.)
   </p>
 

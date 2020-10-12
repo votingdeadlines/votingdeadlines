@@ -2,9 +2,15 @@
 
 ## Releases
 
-### v0.4.1
+### v0.4.1-alpha
 
-* Rebase v0.3.1 onto v0.4.0
+> 2020-10-12
+
+* Update `map.png` for crawlers.
+* Append `-alpha` to version in `package.json` (not just web copy).
+* Rebase `v0.3.1` onto `v0.4.0`.
+* Fix various TypeScript issues.
+* Dockerize webapp development environment.
 
 ### v0.4.0
 
