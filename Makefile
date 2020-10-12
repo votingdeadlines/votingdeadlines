@@ -14,7 +14,7 @@ chmod: ## Setup for running `make data`
 	chmod +x packages/web/src/data/bin/*.sh
 
 deps:
-	cd packages/web && yarn && cd src/data && yarn
+	cd packages/e2e && yarn && cd ../web && yarn && cd src/data && yarn
 
 #---------#
 # Console #
@@ -97,7 +97,7 @@ update-metrics:
 ss: screenshot ## -> screenshot
 
 screenshot: ## Take a screenshot of the webapp (requires dev app to be running)
-	cd e2e && yarn screenshot
+	cd packages/e2e && yarn screenshot
 
 #-------#
 # Tests #
