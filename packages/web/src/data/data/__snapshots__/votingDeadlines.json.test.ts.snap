@@ -1,0 +1,1730 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`votingDeadlines.json snapshot matches snapshot 1`] = `
+Object {
+  "AK": Object {
+    "checkRegStatusLink": "https://myvoterinformation.alaska.gov/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.elections.alaska.gov/Core/voterregistration.php",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://voterregistration.alaska.gov/",
+    "stateAbbrev": "AK",
+    "stateName": "Alaska",
+  },
+  "AL": Object {
+    "checkRegStatusLink": "https://myinfo.alabamavotes.gov/VoterView/RegistrantSearch.do",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.alabama.gov/alabama-votes/voter/register-to-vote",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
+    "stateAbbrev": "AL",
+    "stateName": "Alabama",
+  },
+  "AR": Object {
+    "checkRegStatusLink": "https://www.voterview.ar-nova.org/voterview",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.arkansas.gov/elections/voter-information/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "AR",
+    "stateName": "Arkansas",
+  },
+  "AZ": Object {
+    "checkRegStatusLink": "https://my.arizona.vote/WhereToVote.aspx?s=individual&Language=en",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-23",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-23",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-23",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://servicearizona.com/VoterRegistration/selectLanguage",
+    "stateAbbrev": "AZ",
+    "stateName": "Arizona",
+  },
+  "CA": Object {
+    "checkRegStatusLink": "https://voterstatus.sos.ca.gov/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.ca.gov/elections/voting-resources/voting-california/registering-vote/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://registertovote.ca.gov/",
+    "stateAbbrev": "CA",
+    "stateName": "California",
+  },
+  "CO": Object {
+    "checkRegStatusLink": "https://www.sos.state.co.us/voter/pages/pub/olvr/findVoterReg.xhtml",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-26",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.state.co.us/pubs/elections/vote/VoterHome.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-26",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.sos.state.co.us/voter/pages/pub/home.xhtml",
+    "stateAbbrev": "CO",
+    "stateName": "Colorado",
+  },
+  "CT": Object {
+    "checkRegStatusLink": "https://portaldir.ct.gov/sots/LookUp.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-27",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://portal.ct.gov/SOTS/Election-Services/Voter-Information/Voter-Fact-Sheet",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-27",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://voterregistration.ct.gov/OLVR/welcome.do",
+    "stateAbbrev": "CT",
+    "stateName": "Connecticut",
+  },
+  "DC": Object {
+    "checkRegStatusLink": "https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.vote4dc.com/ApplyInstructions/Register",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://forms.dc.gov/f/DC_Voter_Registration_Form",
+    "stateAbbrev": "DC",
+    "stateName": "District of Columbia",
+  },
+  "DE": Object {
+    "checkRegStatusLink": "https://ivote.de.gov/VoterView",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-10",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-10",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://elections.delaware.gov/voter/votereg.shtml",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-10",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://ivote.de.gov/VoterView/",
+    "stateAbbrev": "DE",
+    "stateName": "Delaware",
+  },
+  "FL": Object {
+    "checkRegStatusLink": "https://registration.elections.myflorida.com/CheckVoterStatus",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://registertovoteflorida.gov/home",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://registertovoteflorida.gov/eligibilityreactive",
+    "stateAbbrev": "FL",
+    "stateName": "Florida",
+  },
+  "GA": Object {
+    "checkRegStatusLink": "https://www.mvp.sos.ga.gov/MVP/mvp.do",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.ga.gov/index.php/Elections/register_to_vote",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button",
+    "stateAbbrev": "GA",
+    "stateName": "Georgia",
+  },
+  "HI": Object {
+    "checkRegStatusLink": "https://olvr.hawaii.gov/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://elections.hawaii.gov/voters/registration/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://olvr.hawaii.gov/",
+    "stateAbbrev": "HI",
+    "stateName": "Hawaii",
+  },
+  "IA": Object {
+    "checkRegStatusLink": "https://sos.iowa.gov/elections/voterreg/regtovote/search.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-24",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.iowa.gov/elections/voterinformation/voterregistration.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-24",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://mymvd.iowadot.gov/Account/Login?ReturnUrl=%2fVoterRegistration",
+    "stateAbbrev": "IA",
+    "stateName": "Iowa",
+  },
+  "ID": Object {
+    "checkRegStatusLink": "https://elections.sos.idaho.gov/ElectionLink/ElectionLink/VoterSearch.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://idahovotes.gov/voting/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://apps.idahovotes.gov/OnlineVoterRegistration",
+    "stateAbbrev": "ID",
+    "stateName": "Idaho",
+  },
+  "IL": Object {
+    "checkRegStatusLink": "https://ova.elections.il.gov/RegistrationLookup.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.elections.il.gov/Default.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-18",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://ova.elections.il.gov/",
+    "stateAbbrev": "IL",
+    "stateName": "Illinois",
+  },
+  "IN": Object {
+    "checkRegStatusLink": "https://indianavoters.in.gov/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.in.gov/sos/elections/2403.htm",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://indianavoters.in.gov/",
+    "stateAbbrev": "IN",
+    "stateName": "Indiana",
+  },
+  "KS": Object {
+    "checkRegStatusLink": "https://myvoteinfo.voteks.org/VoterView",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.ks.gov/elections/voter-information.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx",
+    "stateAbbrev": "KS",
+    "stateName": "Kansas",
+  },
+  "KY": Object {
+    "checkRegStatusLink": "https://vrsws.sos.ky.gov/VIC/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://elect.ky.gov/Resources/Pages/Registration.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://vrsws.sos.ky.gov/ovrweb/",
+    "stateAbbrev": "KY",
+    "stateName": "Kentucky",
+  },
+  "LA": Object {
+    "checkRegStatusLink": "https://voterportal.sos.la.gov/Home/VoterLogin",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://voterportal.sos.la.gov/VoterRegistration",
+    "stateAbbrev": "LA",
+    "stateName": "Louisiana",
+  },
+  "MA": Object {
+    "checkRegStatusLink": "https://www.sec.state.ma.us/voterregistrationsearch/myvoterregstatus.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-24",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-24",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sec.state.ma.us/ele/eleifv/howreg.htm",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-24",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.sec.state.ma.us/ovr/",
+    "stateAbbrev": "MA",
+    "stateName": "Massachusetts",
+  },
+  "MD": Object {
+    "checkRegStatusLink": "https://voterservices.elections.maryland.gov/VoterSearch",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.elections.maryland.gov/voter_registration/application.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://voterservices.elections.maryland.gov/OnlineVoterRegistration/InstructionsStep1",
+    "stateAbbrev": "MD",
+    "stateName": "Maryland",
+  },
+  "ME": Object {
+    "checkRegStatusLink": "https://www1.maine.gov/portal/government/edemocracy/voter_lookup.php",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "ME",
+    "stateName": "Maine",
+  },
+  "MI": Object {
+    "checkRegStatusLink": "https://mvic.sos.state.mi.us/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://mvic.sos.state.mi.us/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://mvic.sos.state.mi.us/registervoter",
+    "stateAbbrev": "MI",
+    "stateName": "Michigan",
+  },
+  "MN": Object {
+    "checkRegStatusLink": "https://mnvotes.sos.state.mn.us/VoterStatus.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.state.mn.us/elections-voting/register-to-vote/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://mnvotes.sos.state.mn.us/VoterRegistration/VoterRegistrationMain.aspx",
+    "stateAbbrev": "MN",
+    "stateName": "Minnesota",
+  },
+  "MO": Object {
+    "checkRegStatusLink": "https://s1.sos.mo.gov/elections/voterlookup/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-07",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-07",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.mo.gov/elections/goVoteMissouri/register",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-07",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://s1.sos.mo.gov/elections/voterregistration/",
+    "stateAbbrev": "MO",
+    "stateName": "Missouri",
+  },
+  "MS": Object {
+    "checkRegStatusLink": "https://www.msegov.com/sos/voter_registration/amiregistered/Search",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.ms.gov/Vote/Pages/default.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "MS",
+    "stateName": "Mississippi",
+  },
+  "MT": Object {
+    "checkRegStatusLink": "https://app.mt.gov/cgi-bin/voterinfo/voterinfo.cgi",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-26",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sosmt.gov/elections/vote/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "MT",
+    "stateName": "Montana",
+  },
+  "NC": Object {
+    "checkRegStatusLink": "https://vt.ncsbe.gov/RegLkup/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-31",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.ncsbe.gov/registering/how-register",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.ncdot.gov/dmv/offices-services/online/Pages/voter-registration-application.aspx",
+    "stateAbbrev": "NC",
+    "stateName": "North Carolina",
+  },
+  "ND": Object {
+    "checkRegStatusLink": "https://vip.sos.nd.gov/WhereToVoteID.aspx?tab=VoterLookup&ptlPKID=7&ptlhPKID=50",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "RegNotNeeded",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "RegNotNeeded",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://vip.sos.nd.gov/PortalList.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "RegNotNeeded",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "ND",
+    "stateName": "North Dakota",
+  },
+  "NE": Object {
+    "checkRegStatusLink": "https://www.votercheck.necvr.ne.gov/VoterView/RegistrantSearch.do",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-23",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-16",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.nebraska.gov/elections/voter-forms",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-16",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.nebraska.gov/apps-sos-voter-registration/",
+    "stateAbbrev": "NE",
+    "stateName": "Nebraska",
+  },
+  "NH": Object {
+    "checkRegStatusLink": "https://app.sos.nh.gov/Public/PartyInfo.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "MailRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.nh.gov/elections/voters/register-to-vote/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "NH",
+    "stateName": "New Hampshire",
+  },
+  "NJ": Object {
+    "checkRegStatusLink": "https://voter.svrs.nj.gov/registration-check",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://nj.gov/state/elections/voter-registration.shtml",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://voter.svrs.nj.gov/register",
+    "stateAbbrev": "NJ",
+    "stateName": "New Jersey",
+  },
+  "NM": Object {
+    "checkRegStatusLink": "https://voterportal.servis.sos.state.nm.us/wheretovote.aspx?AspxAutoDetectCookieSupport=1",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-31",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.state.nm.us/voting-and-elections/voter-information/voter-registration-information/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://portal.sos.state.nm.us/OVR/WebPages/InstructionsStep1.aspx",
+    "stateAbbrev": "NM",
+    "stateName": "New Mexico",
+  },
+  "NV": Object {
+    "checkRegStatusLink": "https://www.nvsos.gov/votersearch/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-06",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.nvsos.gov/sos/elections/voters/registering-to-vote",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-29",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.nvsos.gov/SOSVoterServices/start.aspx",
+    "stateAbbrev": "NV",
+    "stateName": "Nevada",
+  },
+  "NY": Object {
+    "checkRegStatusLink": "https://voterlookup.elections.ny.gov/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.elections.ny.gov/votingregister.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://dmv.ny.gov/more-info/electronic-voter-registration-application",
+    "stateAbbrev": "NY",
+    "stateName": "New York",
+  },
+  "OH": Object {
+    "checkRegStatusLink": "https://voterlookup.ohiosos.gov/voterlookup.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://ohio.gov/wps/portal/gov/site/government/resources/register-to-vote-or-update-your-registration",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://olvr.ohiosos.gov/",
+    "stateAbbrev": "OH",
+    "stateName": "Ohio",
+  },
+  "OK": Object {
+    "checkRegStatusLink": "https://okvoterportal.okelections.us/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-09",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.ok.gov/elections/Voter_Info/Register_to_Vote/index.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "OK",
+    "stateName": "Oklahoma",
+  },
+  "OR": Object {
+    "checkRegStatusLink": "https://secure.sos.state.or.us/orestar/vr/showVoterSearch.do",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.oregon.gov/voting/Pages/registration.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://secure.sos.state.or.us/orestar/vr/register.do",
+    "stateAbbrev": "OR",
+    "stateName": "Oregon",
+  },
+  "PA": Object {
+    "checkRegStatusLink": "https://www.pavoterservices.pa.gov/pages/voterregistrationstatus.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.pa.gov/guides/voting-and-elections/#RegisteringtoVote",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx",
+    "stateAbbrev": "PA",
+    "stateName": "Pennsylvania",
+  },
+  "RI": Object {
+    "checkRegStatusLink": "https://vote.sos.ri.gov/Home/UpdateVoterRecord?ActiveFlag=0",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://vote.sos.ri.gov/Voter/RegisterToVote",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://vote.sos.ri.gov/Home/RegistertoVote",
+    "stateAbbrev": "RI",
+    "stateName": "Rhode Island",
+  },
+  "SC": Object {
+    "checkRegStatusLink": "https://info.scvotes.sc.gov/eng/voterinquiry/VoterInformationRequest.aspx?PageMode=VoterInfo",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-02",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.scvotes.gov/south-carolina-voter-registration-information",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-04",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://info.scvotes.sc.gov/eng/ovr/start.aspx",
+    "stateAbbrev": "SC",
+    "stateName": "South Carolina",
+  },
+  "SD": Object {
+    "checkRegStatusLink": "https://vip.sdsos.gov/viplogin.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "SD",
+    "stateName": "South Dakota",
+  },
+  "TN": Object {
+    "checkRegStatusLink": "https://tnmap.tn.gov/voterlookup/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.tn.gov/products/elections/register-vote",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://ovr.govote.tn.gov/",
+    "stateAbbrev": "TN",
+    "stateName": "Tennessee",
+  },
+  "TX": Object {
+    "checkRegStatusLink": "https://teamrv-mvp.sos.texas.gov/MVP/mvp.do",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-05",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.votetexas.gov/register-to-vote/index.html",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "TX",
+    "stateName": "Texas",
+  },
+  "UT": Object {
+    "checkRegStatusLink": "https://secure.utah.gov/voterreg/login.html?selection=REGISTER",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-23",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://voteinfo.utah.gov/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-23",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://secure.utah.gov/voterreg/index.html",
+    "stateAbbrev": "UT",
+    "stateName": "Utah",
+  },
+  "VA": Object {
+    "checkRegStatusLink": "https://vote.elections.virginia.gov/VoterInformation",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.elections.virginia.gov/registration/how-to-register/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/",
+    "stateAbbrev": "VA",
+    "stateName": "Virginia",
+  },
+  "VT": Object {
+    "checkRegStatusLink": "https://mvp.vermont.gov/",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-30",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.vermont.gov/elections/voters/registration/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://olvr.vermont.gov/",
+    "stateAbbrev": "VT",
+    "stateName": "Vermont",
+  },
+  "WA": Object {
+    "checkRegStatusLink": "https://voter.votewa.gov/WhereToVote.aspx",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-26",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://www.sos.wa.gov/elections/voters/",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-26",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://voter.votewa.gov/WhereToVote.aspx",
+    "stateAbbrev": "WA",
+    "stateName": "Washington",
+  },
+  "WI": Object {
+    "checkRegStatusLink": "https://myvote.wi.gov/en-us/MyVoterInfo",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-14",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://elections.wi.gov/voters/first-time",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-14",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://myvote.wi.gov/en-us/RegisterToVote",
+    "stateAbbrev": "WI",
+    "stateName": "Wisconsin",
+  },
+  "WV": Object {
+    "checkRegStatusLink": "https://services.sos.wv.gov/Elections/Voter/AmIRegisteredToVote",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "MailRegPostmarkedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-13",
+          "kind": "OnlineRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": "https://ovr.sos.wv.gov/Register/Landing",
+    "stateAbbrev": "WV",
+    "stateName": "West Virginia",
+  },
+  "WY": Object {
+    "checkRegStatusLink": "http://soswy.state.wy.us/Elections/Docs/WYCountyClerks.pdf",
+    "inPersonRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-11-03",
+          "kind": "InPersonRegDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "mailRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "isoDate": "2020-10-19",
+          "kind": "MailRegReceivedDeadline",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "moreInfoLinkEn": "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx",
+    "onlineRegPolicies": Object {
+      "policies": Array [
+        Object {
+          "kind": "OnlineRegNotAvailable",
+        },
+      ],
+      "warnings": Array [],
+    },
+    "registrationLinkEn": null,
+    "stateAbbrev": "WY",
+    "stateName": "Wyoming",
+  },
+}
+`;

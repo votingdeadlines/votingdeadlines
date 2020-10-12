@@ -96,6 +96,11 @@ screenshot: ## Take a screenshot of the webapp (requires dev app to be running)
 test: ## Run tests
 	cd packages/web/src/data && yarn test
 
+upss: update-snapshots
+
+update-snapshots: ## Update jest snapshots
+	cd packages/web/src/data && yarn test:upss
+
 #---------#
 # Release #
 #---------#

@@ -19,6 +19,7 @@
     "lint:eslint": "eslint . --ext .ts,.tsx --max-warnings=23",
     "test": "yarn lint && yarn test:jest",
     "test:jest": "jest",
+    "test:upss": "jest --updateSnapshot",
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch",
     "trash": "trash",
