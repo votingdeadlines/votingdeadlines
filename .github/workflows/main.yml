@@ -21,5 +21,8 @@ jobs:
       - name: Install deps
         run: make deps
 
-      - name: Run all tests
-        run: make test-ci
+      - name: Run unit tests
+        run: make test
+
+      - name: Run integration tests
+        run: make test-integration
