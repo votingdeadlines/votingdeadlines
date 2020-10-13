@@ -146,20 +146,28 @@ function mergeStateRegPolicies(
     // between VG and VA. (The outer/parent policy object has more keys in VG.)
 
     // First, let's handle known discrepancies.
+
+    // AK:
     // Vote.gov seems to have the correct Alaska info (VoteAmerica notified):
     // https://www.elections.alaska.gov/Core/electiondatesandhours.php
+    // VoteAmerica points out though that there is a presidential-only deadline.
     if ('AK' === abbrev) return vgPolicies
-    // VoteAmerica seems to have the delayed (now moot) Florida deadline.
-    if ('FL' === abbrev) return vaPolicies
+
+    // NV:
     // Nevada has slightly complex deadlines, in that in person registration
     // "ends" on October 6 for ordinary locations, but once early voting is
     // open, you can register and vote same-day at the polling place, up to
     // election day. So essentially you can register up until election day.
     if ('NV' === abbrev) return vaPolicies
+
+    // RI:
     // Rhode Island could go be described either way, given that they close
     // most registration in October, but allow registrating to vote in the
     // presidential election until election day. For now, let's use Vote.gov.
     if ('RI' === abbrev) return vgPolicies
+
+      // Moot discrepancies (the deadline is in the past either way)
+    if ('FL' === abbrev) return vaPolicies
 
     // Otherwise assert that they should be equal.
     assert.deepStrictEqual(vgPolicies, vaPolicies)
@@ -176,16 +184,18 @@ function mergeStateRegPolicies(
     vgPolicies: Array<OnlineRegPolicy>,
     vaPolicies: Array<OnlineRegPolicy>
   ): Array<OnlineRegPolicy> {
-    // See comments on the in person method above.
-    if ('FL' === abbrev) return vaPolicies
     // In VT, technically you can try to register online as late as election
     // day, but they may not have your name on the list and you may need to
     // re-register in person at the polls. As such it seems reasonable that
     // Vote.gov has VT's requested online deadline of "the Friday before", but
     // as it is more of a soft deadline let's go with VoteAmerica's 11-03.
     if ('VT' === abbrev) return vaPolicies
-    // Vote.gov seems to be missing the DC online deadline.
+
+    // Vote.gov seems to be missing the DC online deadline. PR submitted.
     if ('DC' === abbrev) return vaPolicies
+
+    // Moot discrepancies (the deadline is in the past either way)
+    if ('FL' === abbrev) return vaPolicies
 
     // Otherwise assert that they should be equal.
     assert.deepStrictEqual(vgPolicies, vaPolicies)
@@ -254,10 +264,15 @@ function mergeStateRegPolicies(
     // although there is significant uncertainty. Let's keep using that data.
     if ('AZ' === abbrev) return vgPolicies
 
-    // TODO: verify New Hampshire mail availability
+    // TODO: verify New Hampshire mail availability. It seems to be up to the
+    // individual locality, so we may need a new type, e.g. 'ItsComplicated'.
     if ('NH' === abbrev) return vgPolicies
 
-    // TODO: verify VT deadline
+    // TODO: verify VT deadlines. It seems to be the case that VT is fuzzy,
+    // in that there is no hard pre-Election Day deadline, but the Friday before
+    // is recommended because if one's registration is not included on the list,
+    // one will have to register at the polls in order to vote. Make a decision
+    // and make it consistent between methods.
     if ('VT' === abbrev) return vgPolicies
 
     // Moot discrepancies (the deadline is in the past either way)
