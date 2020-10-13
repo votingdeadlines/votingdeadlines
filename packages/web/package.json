@@ -18,7 +18,6 @@
     "prettier:defaults": "prettier src",
     "start": "node __sapper__/build",
     "test": "yarn lint && yarn validate && yarn test:unit",
-    "test:dev": "ts-node ./web-dev.integration.ts --unhandled-rejections=strict",
     "test:unit": "jest",
     "test:int": "jest --config=./jest.integration.config.js",
     "validate": "svelte-check --ignore src/node_modules/@sapper"
