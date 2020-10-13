@@ -202,29 +202,72 @@ function mergeStateRegPolicies(
   ): Array<MailRegPolicy> {
     // First, let's handle known discrepancies.
 
+    // 1. ME:
     // VoteAmerica has what seems to be the correct deadline for Maine mail reg.
     // (Vote.gov seems to be out of date, using the original, pre-COVID date.)
     if ('ME' === abbrev) return vaPolicies
 
-    if ('AK' === abbrev) return vgPolicies
-    // TODO: verify Arizona postmarked vs. received
+    // 2. AZ:
+    // The case of Arizona is curious and currently being litigated by the SoS.
+    // The sooner one registers, the better, because it is not perfectly clear
+    // how the rules will be interpreted, or if they will be changed again.
+    //
+    // Normally, the registration date would be the following complex of rules:
+    //   - ARS §16-120, Eligibility to vote:
+    //     - https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/16/00120.htm
+    //     - A. Must be registered before midnight, 29 days before election
+    //     - B. If that's a weekend, the next business day works.
+    //   - ARS $16-134, Return of voter registrations
+    //     - https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/16/00134.htm
+    //     - C.
+    //       - 1. Must be postmarked >=29 days before an election and received
+    //            by 7pm on election day
+    //       - 2. Must be dated >=29 days before an election and received no
+    //            more than 5 days late
+    //
+    // This is complex, but basically you should have your registration
+    // _postmarked_ by the cutoff date, with about 5 days of wiggle room, and
+    // if it doesn't arrive until after election day it won't count.
+    //
+    // This level of complexity seems absent from the ruling, which just says,
+    // "accept all voter registrations received by 5pm on 10/23". It's unclear.
+    // It might be more conservative to assume "received by 10/23", and more
+    // optimistic to assume that "postmarked by 10/23" will be acceptable.
+    //
+    // The AZ SoS website says received by 5:00 pm, October 23
+    //
+    // Meanwhile, Vote.gov says:
+    //   - received by Oct 23
+    //   - previously said: postmarked by Oct 5
+    //   - https://github.com/usagov/vote-gov/commit/43afe2120ffc7561dd7c563f2be451f6edc3e66c#diff-c6279079562d6e54a9bc3cc3b487ed5d49eab8d0200ddc6bb73a7ccce35f46c1
+    // VoteAmerica:
+    //   - postmarked by October 23, 2020
+    //   - previously said: postmarked 29 days before election day
+    //   - https://web.archive.org/web/20200803181736/https://www.voteamerica.com/register-to-vote-arizona/
+    // 538: no info
+    //   - "Register to vote by October 23"
+    // Legal issues:
+    //   - 2020-10-05: SoS Hobbs says will not appeal https://twitter.com/SecretaryHobbs/status/1313352717407006725
+    //   - 2020-10-11: Hobs appeals https://ktar.com/story/3620036/arizona-secretary-of-state-hobbs-appeals-voter-registration-deadline/
+    //
+    // On balance, the Vote.gov data seems to the most likely to be correct,
+    // although there is significant uncertainty. Let's keep using that data.
     if ('AZ' === abbrev) return vgPolicies
-    // See comments on the in person method above.
-    if ('FL' === abbrev) return vaPolicies
-    // TODO: verify Georgia postmarked vs. received
-    if ('GA' === abbrev) return vgPolicies
-    // TODO: verify Hawaii postmarked vs. received
-    if ('HI' === abbrev) return vgPolicies
-    // TODO: verify Idaho postmarked vs. received
-    if ('ID' === abbrev) return vgPolicies
-    // TODO: verify Kentucky postmarked vs. received
-    if ('KY' === abbrev) return vgPolicies
+
     // TODO: verify New Hampshire mail availability
     if ('NH' === abbrev) return vgPolicies
-    // TODO: verify RI deadline
-    if ('RI' === abbrev) return vgPolicies
+
     // TODO: verify VT deadline
     if ('VT' === abbrev) return vgPolicies
+
+    // Moot discrepancies (the deadline is in the past either way)
+    if ('AK' === abbrev) return vgPolicies
+    if ('FL' === abbrev) return vaPolicies // correctly captures delay
+    if ('GA' === abbrev) return vgPolicies
+    if ('HI' === abbrev) return vgPolicies
+    if ('ID' === abbrev) return vgPolicies
+    if ('KY' === abbrev) return vgPolicies
+    if ('RI' === abbrev) return vgPolicies
 
     // Otherwise assert that they should be equal.
     assert.deepStrictEqual(vgPolicies, vaPolicies)
