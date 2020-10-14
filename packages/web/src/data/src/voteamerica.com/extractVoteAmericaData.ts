@@ -1,5 +1,5 @@
 import { parseHtmlV2 } from '../parseHtml'
-import { readFile, writeFile } from '../utilities'
+import { logProgress, readFile, writeFile } from '../utilities'
 
 interface RawVAData {
   [key: string]: {
@@ -16,9 +16,10 @@ export function extractVAData(html: string): RawVAData {
   const stateRowsNodes = parseHtmlV2(html, stateRowsSelector)
 
   const rawData = Array.from(stateRowsNodes).reduce(
-    (memo: RawVAData, stateRowsNode: HTMLTableRowElement): RawVAData => {
+    (memo: RawVAData, stateRowsNode: HTMLTableRowElement, i): RawVAData => {
       // jsdom seems to dislike parsing a <tr> by itself.
       const fakeTable = `<table>${stateRowsNode.outerHTML}</table>`
+
 
       // This is based on the order of the columns; double check the order.
       const stateCell = parseHtmlV2(fakeTable, 'td:nth-child(1)')[0]
@@ -33,6 +34,7 @@ export function extractVAData(html: string): RawVAData {
         online: olCell.textContent.trim(),
       }
 
+      logProgress('Extract VoteAmerica:', stateName, i)
       memo[stateName] = registrationDeadlines
 
       return memo

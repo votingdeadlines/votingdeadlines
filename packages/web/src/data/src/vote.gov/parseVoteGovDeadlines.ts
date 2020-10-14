@@ -3,7 +3,7 @@
 import type { CleanedVGState } from './cleanVoteGovData'
 import { v1 } from '../timeUtilities'
 import { UsaState, usaStatesAndDc } from '../usaStates'
-import { readFile, writeFile } from '../utilities'
+import { logProgress, readFile, writeFile } from '../utilities'
 
 const { parseUsaLongDateToNaiveIsoDate } = v1
 
@@ -138,7 +138,7 @@ function parseVGStateRegPolicies(cleaned: CleanedVGState): ParsedVGStateReg {
   try {
     ipIsoDate = parseUsaLongDateToNaiveIsoDate(ipDeadline)
   } catch {
-    console.warn(`Could not parse ipDeadline: ${ipDeadline}`)
+    // console.warn(`Could not parse ipDeadline: ${ipDeadline}`)
   }
 
   // If it worked, save it and continue.
@@ -213,7 +213,7 @@ function parseVGStateRegPolicies(cleaned: CleanedVGState): ParsedVGStateReg {
   try {
     onlineIsoDate = parseUsaLongDateToNaiveIsoDate(olDeadline)
   } catch {
-    console.warn(`Could not parse olDeadline for ${stateAbbrev}: ${olDeadline}`)
+    // console.warn(`Could not parse olDeadline for ${stateAbbrev}: ${olDeadline}`)
   }
 
   // If it worked, save it and continue.
@@ -280,14 +280,14 @@ export function parseVORules(
   const cleanedData = JSON.parse(cleanedJson)
 
   const rulesetMap = entities.reduce(
-    (memo: ParsedVGStateIndex, state: UsaState): ParsedVGStateIndex => {
+    (memo: ParsedVGStateIndex, state: UsaState, i): ParsedVGStateIndex => {
       const cleanedState: CleanedVGState = cleanedData[state.abbrev]
 
       if (!cleanedState) {
         throw new Error(`Could not find state ${state.abbrev} in cleaned data.`)
       }
 
-      console.log(state.abbrev)
+      logProgress('Parse Vote.gov:', state.abbrev, i)
       memo[state.abbrev] = parseVGStateRegPolicies(cleanedState)
 
       return memo

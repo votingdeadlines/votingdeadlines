@@ -23,7 +23,7 @@ On macOS, install `trash-cli` with `brew install macos-trash` (used by `bin/` sc
 * Run `yarn dev` in `packages/web` to start the Svelte webapp.
 * Run `yarn export` in `packages/web` to build a static version of the webapp.
 * Run `make help` to see a list of available commands.
-* Run `make process` at root to pull/scrape fresh data.
+* Run `make data` at root to pull/scrape fresh data.
 * Run `make merge` at root to merge source data to `packages/web/src/data/`.
 
 ## Data pipeline

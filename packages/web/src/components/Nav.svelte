@@ -1,17 +1,16 @@
 <style>
-[aria-current] {
+/*[aria-current] {
 }
-
-[aria-current]::after {
+*/
+/*[aria-current]::after {
 }
-
-a {
-}
+*/
 </style>
 
 <script lang="ts">
 import Header from './Header/Header.svelte'
 export let segment: string
+segment // use if adding more sections
 </script>
 
 <nav>

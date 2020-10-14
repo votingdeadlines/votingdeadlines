@@ -93,7 +93,7 @@ export function cleanVGData(
         throw new Error(`Could not find state '${state.slug}' in raw data.`)
       }
 
-      logProgress('Clean Vote.gov', state.abbrev, i)
+      logProgress('Clean Vote.gov:', state.abbrev, i)
       memo[state.abbrev] = cleanState(rawState)
 
       return memo

@@ -113,8 +113,7 @@ header a:hover {
 <script lang="ts" type="text/typescript">
 import { version } from '../../../package.json'
 
-const edition = 'alpha'
-const fullVersion = `v${version}-${edition}`
+const fullVersion = `v${version}`
 </script>
 
 <header>

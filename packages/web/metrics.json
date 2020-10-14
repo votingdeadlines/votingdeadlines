@@ -1,8 +1,9 @@
 {
-  "jsonLOC": "7700",
-  "jsLOC": "180",
+  "cssLOC": "72",
+  "jsonLOC": "7688",
+  "jsLOC": "197",
   "shLOC": "277",
-  "TODOs": "42",
-  "tsLOC": "3999",
-  "svelteLOC": "1620"
+  "TODOs": "90",
+  "tsLOC": "4093",
+  "svelteLOC": "1621"
 }

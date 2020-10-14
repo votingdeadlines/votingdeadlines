@@ -45,7 +45,7 @@ p a:visited {
 // import Link from './Link.svelte'
 // import { getStateColorsIndex } from './colorUtilities'
 
-import { default as smoothscroll } from 'smoothscroll-polyfill'
+// import { default as smoothscroll } from 'smoothscroll-polyfill'
 import { default as datafile } from '../../data/data/votingDeadlines.json'
 import type { MergedStateRegIndex } from '../../data/src/mergeData'
 import { VDStateIndex } from '../../data/src/models/State'
@@ -83,8 +83,8 @@ const currentTimeEls = currentTimeDisplay.split(' ')
   <Map vdStateIndex="{vdStateIndex}" />
 </div>
 
-<ButtonGroup heading="Swing states" states="{swingStates}" />
 <ButtonGroup heading="Ending soon" states="{endingSoonest}" />
+<ButtonGroup heading="Swing states" states="{swingStates}" />
 <ButtonGroup heading="Northeast" states="{regions.Northeast}" />
 <ButtonGroup heading="South" states="{regions.South}" />
 <ButtonGroup heading="Midwest" states="{regions.Midwest}" />
