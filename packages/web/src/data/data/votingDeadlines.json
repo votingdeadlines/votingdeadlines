@@ -1527,7 +1527,7 @@
       "policies": [
         {
           "kind": "InPersonRegDeadline",
-          "isoDate": "2020-10-13"
+          "isoDate": "2020-10-15"
         }
       ],
       "warnings": []
@@ -1536,7 +1536,7 @@
       "policies": [
         {
           "kind": "MailRegPostmarkedDeadline",
-          "isoDate": "2020-10-13"
+          "isoDate": "2020-10-15"
         }
       ],
       "warnings": []
@@ -1545,7 +1545,7 @@
       "policies": [
         {
           "kind": "OnlineRegDeadline",
-          "isoDate": "2020-10-13"
+          "isoDate": "2020-10-15"
         }
       ],
       "warnings": []

@@ -275,6 +275,11 @@ function mergeStateRegPolicies(
     // and make it consistent between methods.
     if ('VT' === abbrev) return vgPolicies
 
+    // VA:
+    // The original date was 10/13. Due to a website crash, it was extended to
+    // 10/15. Vote.gov seems to list this the most accurately.
+    if ('VA' === abbrev) return vgPolicies
+
     // Moot discrepancies (the deadline is in the past either way)
     if ('AK' === abbrev) return vgPolicies
     if ('FL' === abbrev) return vaPolicies // correctly captures delay
