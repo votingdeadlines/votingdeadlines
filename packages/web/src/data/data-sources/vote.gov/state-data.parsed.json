@@ -1076,19 +1076,19 @@
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
-        "isoDate": "2020-10-13"
+        "isoDate": "2020-10-15"
       }
     ],
     "mailRegPolicies": [
       {
         "kind": "MailRegPostmarkedDeadline",
-        "isoDate": "2020-10-13"
+        "isoDate": "2020-10-15"
       }
     ],
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-13"
+        "isoDate": "2020-10-15"
       }
     ],
     "registrationLinkEn": "https://www.elections.virginia.gov/citizen-portal/",

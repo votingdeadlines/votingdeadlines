@@ -895,7 +895,7 @@
     "inPersonRegPolicies": [
       {
         "kind": "InPersonRegDeadline",
-        "isoDate": "2020-10-13"
+        "isoDate": "2020-10-15"
       }
     ],
     "mailRegPolicies": [
@@ -907,7 +907,7 @@
     "onlineRegPolicies": [
       {
         "kind": "OnlineRegDeadline",
-        "isoDate": "2020-10-13"
+        "isoDate": "2020-10-15"
       }
     ]
   },
