@@ -67,8 +67,8 @@ import { version } from '../../../package.json'
     for the most authoritative information.
   </p>
   <p>
-    This is version v{version}, published October 12, 2020. (Biggest recent change:
-    using the later 10/19 deadline for registering by mail in <a href="/#ME">Maine</a>, which is correct on VoteAmerica and FiveThirtyEight but not Vote.gov currently.)
+    This is version v{version}, published October 14, 2020. (Biggest recent changes:
+    court orders extending <a href="/#VA">Virginia</a>'s deadline from 10/13 to 10/15, and shortening <a href="/#AZ">Arizona</a>'s from 10/23 to 10/15.
   </p>
 
   <p>To give feedback or report errors:</p>

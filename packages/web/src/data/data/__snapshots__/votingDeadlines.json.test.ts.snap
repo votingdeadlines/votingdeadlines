@@ -108,7 +108,7 @@ Object {
     "inPersonRegPolicies": Object {
       "policies": Array [
         Object {
-          "isoDate": "2020-10-23",
+          "isoDate": "2020-10-15",
           "kind": "InPersonRegDeadline",
         },
       ],
@@ -117,7 +117,7 @@ Object {
     "mailRegPolicies": Object {
       "policies": Array [
         Object {
-          "isoDate": "2020-10-23",
+          "isoDate": "2020-10-15",
           "kind": "MailRegReceivedDeadline",
         },
       ],
@@ -127,7 +127,7 @@ Object {
     "onlineRegPolicies": Object {
       "policies": Array [
         Object {
-          "isoDate": "2020-10-23",
+          "isoDate": "2020-10-15",
           "kind": "OnlineRegDeadline",
         },
       ],
@@ -1528,7 +1528,7 @@ Object {
     "inPersonRegPolicies": Object {
       "policies": Array [
         Object {
-          "isoDate": "2020-10-13",
+          "isoDate": "2020-10-15",
           "kind": "InPersonRegDeadline",
         },
       ],
@@ -1537,7 +1537,7 @@ Object {
     "mailRegPolicies": Object {
       "policies": Array [
         Object {
-          "isoDate": "2020-10-13",
+          "isoDate": "2020-10-15",
           "kind": "MailRegPostmarkedDeadline",
         },
       ],
@@ -1547,7 +1547,7 @@ Object {
     "onlineRegPolicies": Object {
       "policies": Array [
         Object {
-          "isoDate": "2020-10-13",
+          "isoDate": "2020-10-15",
           "kind": "OnlineRegDeadline",
         },
       ],
