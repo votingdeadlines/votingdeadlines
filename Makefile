@@ -103,7 +103,7 @@ screenshot: ## Take a screenshot of the webapp (requires dev app to be running)
 # Tests #
 #-------#
 
-test: test-unit ## -> test-unit
+test: test-version test-unit ## -> test-version test-unit
 
 test-ci: data test-unit test-integration ## Check the data, and run unit and integration tests.
 
@@ -115,6 +115,9 @@ test-int: test-integration ## -> test-integration
 test-integration: ## Run integration tests
 	cd packages/web && yarn test:int
 
+test-version:
+	test '$(PKG_JSON_VERSION)' = '  "version": "$(VERSION)",' || exit 1
+
 upss: update-snapshots ## -> update-snapshots
 
 update-snapshots: ## Update jest snapshots
@@ -124,8 +127,7 @@ update-snapshots: ## Update jest snapshots
 # Release #
 #---------#
 
-release: ## Build the website and copy to packages/web/dist/
-	test '$(PKG_JSON_VERSION)' = '  "version": "$(VERSION)",' || exit 1
+release: test-version ## Build the website and copy to packages/web/dist/
 	@echo Building v$(VERSION)...
 	cd packages/web && yarn export && cp -R __sapper__/export dist/v$(VERSION)
 
