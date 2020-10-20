@@ -901,7 +901,7 @@
     "mailRegPolicies": [
       {
         "kind": "MailRegPostmarkedDeadline",
-        "isoDate": "2020-10-13"
+        "isoDate": "2020-10-15"
       }
     ],
     "onlineRegPolicies": [
