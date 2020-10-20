@@ -2,6 +2,12 @@
 
 ## Releases
 
+### v0.5.0-alpha
+
+> 2020-10-14
+
+* Update data for Arizona and Virginia after new court orders.
+
 ### v0.4.1-alpha
 
 > 2020-10-12
