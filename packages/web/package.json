@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "votingdeadlines-web",
-  "version": "0.5.0-alpha",
+  "version": "0.5.2-alpha",
   "description": "Parse, validate, and republish voting deadline info.",
   "license": "UNLICENSED",
   "scripts": {
@@ -62,5 +62,8 @@
     "ts-node": "^9.0.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=12.19.0"
   }
 }
